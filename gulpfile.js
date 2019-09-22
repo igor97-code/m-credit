@@ -1,32 +1,134 @@
-var gulp           = require('gulp'),
-	gutil          = require('gulp-util'),
-	sass           = require('gulp-sass'),
-	browserSync    = require('browser-sync'),
-	autoprefixer   = require('gulp-autoprefixer'),
-	notify         = require("gulp-notify");
+// плагины галпа
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const sourcemaps = require('gulp-sourcemaps');
+const del = require('del');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
 
-// Сервер и автообновление страницы Browsersync
-gulp.task('browser-sync', function() {
-	browserSync({
-		server: {
-			baseDir: 'app'
-		},
-		notify: false
-	});
-});
+sass.compiler = require('node-sass');
 
-gulp.task('sass', function() {
-	return gulp.src('app/scss/**/*.scss')
-	.pipe(sass({outputStyle: 'expanded'}).on("error", notify.onError()))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.reload({stream: true}));
-});
+// файлы проекта
+const CSS_FILES = [
+    './src/css/libs/*.css',
+    './src/css/*.css'
+];
 
-gulp.task('watch', ['sass', 'browser-sync'], function() {
-	gulp.watch('app/scss/**/*.scss', ['sass']);
-	gulp.watch('app/js/*.js', browserSync.reload);
-	gulp.watch('app/*.html', browserSync.reload);
-});
+const JS_FILES = [
+    './src/js/libs/*.js',
+    './src/js/plugins/*.js',
+    './src/js/form.js',
+    './src/js/calculator-test.js',
+    './src/js/main.js'
+];
 
-gulp.task('default', ['watch']);
+
+// таск для стилей
+function styles() {
+    return gulp.src(CSS_FILES)
+
+    // объединяем файлы
+    .pipe(concat('style.css'))
+
+    // добавляем префиксы
+    .pipe(autoprefixer({
+        overrideBrowserslist: ['last 2 versions'],
+        cascade: false
+    }))
+
+    // минификация
+    .pipe(cleanCSS({
+        level: 2
+    }))
+
+    // перемещаем файлы
+    .pipe(gulp.dest('./build/css'))
+
+    // обновляем страницу
+    .pipe(browserSync.stream());
+}
+
+// sass to css
+function sassConvert() {
+    return gulp.src('./src/scss/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./src/css'));
+}
+
+// таск для скриптов
+function scripts() {
+    return gulp.src(JS_FILES)
+
+    .pipe(sourcemaps.init())
+
+    // babel
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+
+    // объединяем файлы
+    .pipe(concat('script.js'))
+
+    // минификация
+    .pipe(uglify({
+        toplevel: true
+    }))
+
+    .pipe(sourcemaps.write('.'))
+
+    // перемещаем файлы
+    .pipe(gulp.dest('./build/js'))
+
+    // обновляем страницу
+    .pipe(browserSync.stream());
+}
+
+// картинки проекта
+function images() {
+    return gulp.src('./src/img/**/*')
+    .pipe(gulp.dest('./build/img/'))
+}
+
+// шрифты проекта
+function fonts() {
+    return gulp.src('./src/fonts/**/*')
+    .pipe(gulp.dest('./build/fonts/'))
+}
+
+// очистка папки
+function clean() {
+    return del(['build/*'])
+}
+
+// отслеживание изменения в файлах
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+
+    gulp.watch('./src/scss/**/*.scss', sassConvert);
+    gulp.watch('./src/css/**/*.css', styles);
+    gulp.watch('./src/js/**/*.js', scripts);
+    gulp.watch('./src/img/**/*', images);
+    gulp.watch('./src/fonts/**/*', fonts);
+    
+    gulp.watch("./*.html").on('change', browserSync.reload);
+}
+
+gulp.task('sassConvert', sassConvert);
+gulp.task('styles', gulp.series(sassConvert, styles));
+gulp.task('scripts', scripts);
+gulp.task('del', clean);
+gulp.task('watch', watch);
+gulp.task('fonts', fonts);
+gulp.task('images', images);
+
+
+gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, images, fonts)));
+gulp.task('dev', gulp.series('build', 'watch'));

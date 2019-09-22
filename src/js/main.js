@@ -1,4 +1,5 @@
 $(function () {
+    alert('4');
 
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
