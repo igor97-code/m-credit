@@ -1,14 +1,8 @@
 {
-    "extends": [
-        "prettier"
-    ],
     "rules": {
-        "jsx-quotes": [
-            1,
-            "prefer-double"
+        "quotes": [
+            "error",
+            "single"
         ]
-    },
-    "plugins": [
-        "prettier"
-    ]
+    }
 }

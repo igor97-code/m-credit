@@ -31,6 +31,13 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
+    "lint:fix": "eslint src/*.js --fix",
+    "lint": "eslint src/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "keywords": [],
   "author": "",
