@@ -1,5 +1,5 @@
 $(function () {
-    alert('4');
+    alert('4'
 
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
@@ -10,6 +10,7 @@ $(function () {
         return false;
     });
 
+    var asd = "";
     initPlaceholders();
 
     initMask();
