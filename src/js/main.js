@@ -159,7 +159,7 @@ function initFeedbackForm() {
             var formData = new FormData($supportForm);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/mail/");
+            xhr.open('POST', '/mail/');
 
             xhr.onreadystatechange = function() {
                 if (xhr.readyState == 4) {
