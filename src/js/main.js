@@ -1,4 +1,7 @@
 $(function () {
+    var a = 2;
+    a = "";
+
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
 
