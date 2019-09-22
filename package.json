@@ -26,18 +26,26 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "husky": "^3.0.5",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^9.3.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2"
   },
   "scripts": {
     "lint:fix": "eslint ./src/js/*.js --fix",
-    "lint": "eslint ./src/js/*.js"
+    "lint": "eslint ./src/js/*.js",
+    "precommit": "lint-staged",
+    "prettier": "prettier --single-quote --use-tabs --trailing-comma es5 --write \"src/**/js/*.js\""
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  },
+  "lint-staged": {
+      "./src/js/*.js": [
+        "prettier --single-quote --use-tabs --trailing-comma es5 --write",
+        "git add"
+      ]
   },
   "keywords": [],
   "author": "",

@@ -1,4 +1,8 @@
 $(function () {
+    var object = {
+      asd: "asd"
+    };
+
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
 
