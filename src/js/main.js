@@ -1,13 +1,9 @@
 $(function () {
-    var object = {
-      asd: "asd"
-    };
-
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
 
     // переключение меню
-    $('body').on('click', '.toggle-mobile-menu', function() {
+    $('body').on('click', '.toggle-mobile-menu', function () {
         $('html').toggleClass('open-mobile-menu');
         return false;
     });
@@ -19,7 +15,7 @@ $(function () {
     $('select').styler({
         selectSmartPositioning: false,
         selectSearch: false,
-        onSelectOpened: function() {
+        onSelectOpened: function () {
             // $(this).parents('.field').removeClass('error success empty');
             $(this).find('.jq-selectbox__dropdown ul').jScrollPane();
         }
@@ -29,11 +25,11 @@ $(function () {
         filePlaceholder: 'Прикрепить файл'
     });
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         resizeModal();
     });
 
-    
+
 
     // форма обратной связи
     initFeedbackForm();
@@ -46,7 +42,7 @@ $(function () {
 
     // вкладки
     $('body')
-        .on('click', '.switches .switch', function() {
+        .on('click', '.switches .switch', function () {
             var tab = $(this).attr('data-tab');
             if ($(this).hasClass('active')) {
                 closeTab(tab);
@@ -56,14 +52,14 @@ $(function () {
             }
             return false;
         })
-        .on('click', '.close-tab-button', function() {
+        .on('click', '.close-tab-button', function () {
             var tab = $(this).parents('.tab').attr('data-tab');
             closeTab(tab);
             return false;
         });
 
     // спойлер
-    $('body').on('click', '.toggle-button', function() {
+    $('body').on('click', '.toggle-button', function () {
         $(this).parents('.toggle-block').toggleClass('open');
         return false;
     });
@@ -76,13 +72,13 @@ $(function () {
 function refreshHeightClass() {
     refresh();
 
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         refresh();
     });
 
     function refresh() {
         var viewportHeight = $(window).height();
-        
+
         var htmlClass = '';
         if (viewportHeight < 900) {
             $('html').addClass('height-medium');
@@ -108,7 +104,7 @@ function initFeedbackForm() {
         $feedbackFileList = $form.find('#feedback_file_list'),
         $supportSuccess = $('#support_success');
 
-    $feedbackType.on('change', function() {
+    $feedbackType.on('change', function () {
         if ($(this).val() === '5') {
             $feedbackThemeField.removeClass('hide');
 
@@ -122,7 +118,7 @@ function initFeedbackForm() {
     var fileCount = 1,
         fileCountMax = 3;
 
-    $form.on('change', '.feedback-file', function() {
+    $form.on('change', '.feedback-file', function () {
         if (!$(this).val()) return false;
 
         if (fileCount >= fileCountMax) return false;
@@ -137,7 +133,7 @@ function initFeedbackForm() {
 
         fileCount++;
     });
-    $('#support_wrapper').on('change', '.feedback_file', function() {
+    $('#support_wrapper').on('change', '.feedback_file', function () {
         if ($(this).val() != '') {
             // проверка на кол-во
             if ($('input.feedback_file').length < 3) {
@@ -152,20 +148,20 @@ function initFeedbackForm() {
     });
 
     // отслеживаем изменения в валидируемых полях
-    $form.on('change', 'input, select, textarea', function() {
+    $form.on('change', 'input, select, textarea', function () {
         validateField($(this));
     });
 
 
     // отправка формы
-    $form.on('submit', function() {
+    $form.on('submit', function () {
         if (validateForm($form)) {
             var formData = new FormData($supportForm);
 
             var xhr = new XMLHttpRequest();
             xhr.open('POST', '/mail/');
 
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4) {
                     if (xhr.status == 200) {
                         data = xhr.responseText;
@@ -179,7 +175,7 @@ function initFeedbackForm() {
             $supportSuccess.removeClass('hide');
         }
         return false;
-    });   
+    });
 }
 
 //ф-я центрирования контента модального окна
@@ -230,7 +226,7 @@ function initCalculator() {
     init();
     $.ajax({
         url: 'https://test3.migcredit.ru/ajax/calc2.php',
-        success: function(data) {
+        success: function (data) {
             calculatorData = data;
             init();
         }
@@ -271,7 +267,7 @@ function initCalculator() {
             min: defaultSumMin,
             max: defaultSumMax,
             step: 1000,
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 $calculatorSum.val(numberFormat(ui.value));
                 calculate();
             }
@@ -283,7 +279,7 @@ function initCalculator() {
             min: 0,
             max: periodSliderMax,
             step: 1,
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 period = ui.value;
                 //подпись и значение для текущего периода
                 var term = calculatorData.item[$sumSlider.slider('value')].data[ui.value].term,
@@ -297,7 +293,7 @@ function initCalculator() {
             }
         });
 
-        $calculatorPeriod.on('change', function() {
+        $calculatorPeriod.on('change', function () {
             var sum = +getClearVal($calculatorSum.val());
 
             if (!validateField($calculatorPeriod)) {
@@ -310,7 +306,7 @@ function initCalculator() {
                 //ищем введенный срок для суммы
                 for (var i = 0; i < calculatorData.item[sum].data.length * 1; i++) {
                     if (
-                        newTerm === calculatorData.item[sum].data[i].term 
+                        newTerm === calculatorData.item[sum].data[i].term
                         && typeCalculator === calculatorData.item[sum].data[i].term_type
                     ) {
                         termCheck++;
@@ -329,8 +325,8 @@ function initCalculator() {
             }
         });
 
-        
-        $calculatorSum.on('change', function() {
+
+        $calculatorSum.on('change', function () {
             //alert($(this).val());
             if (!validateField($calculatorSum)) {
                 $(this).val($sumSlider.slider('value'));
@@ -349,7 +345,7 @@ function initCalculator() {
                 if (val > defaultSumMax) {
                     $(this).val(defaultSumMax);
                     val = defaultSumMax;
-                    
+
                 } else if (val < defaultSumMin) {
                     $(this).val(defaultSumMin);
                     val = defaultSumMin;
@@ -364,7 +360,7 @@ function initCalculator() {
         });
 
         calculate();
-        
+
         $calculator.removeClass('load');
 
         function calculate() {
@@ -417,7 +413,7 @@ function initCalculator() {
             //console.log(typeCalc);
             var labelReturn = 'Платеж раз в 2 недели';
             if (typeCalculator === 'day') {
-                labelReturn = 'Возвращаете'; 
+                labelReturn = 'Возвращаете';
             }
             $calculatorLabel3.html(labelReturn);
 
@@ -435,7 +431,7 @@ function initCalculator() {
             console.log(discount);
             if (discount) {
                 $calculatorValue3.html('<span class="new">' + numberFormat(discount) + '</span><span class="old">' + numberFormat(payment) + '</span> руб.');
-               
+
             } else {
                 $calculatorValue3.html('<span>' + numberFormat(payment, 0, '', ' ') + '</span> руб.');
             }
@@ -443,7 +439,7 @@ function initCalculator() {
             //проверка показа сообщение
             //для суммы
             var noticeSum = +calculatorData.item[sum].data[period].notice_sum;
-            if (!noticeSum ) {
+            if (!noticeSum) {
                 $calculatorSumAlert.addClass('hide').html('');
 
             } else {
@@ -452,7 +448,7 @@ function initCalculator() {
 
             //для периода
             var noticeTerm = calculatorData.item[sum].data[period].notice_term;
-            if (!noticeTerm ) {
+            if (!noticeTerm) {
                 $calculatorPeriodAlert.addClass('hide').html('');
 
             } else {
@@ -468,7 +464,7 @@ function numberFormat(number, decimals, decPoint, thousandsSep) {
     if (!decimals) decimals = 0;
     if (!decPoint) decPoint = '';
     if (!thousandsSep) thousandsSep = ' ';
-    
+
 
     var i, j, kw, kd, km;
     if (isNaN(decimals = Math.abs(decimals))) {
@@ -528,22 +524,22 @@ function initProlongation() {
         $prolongationStep2 = $prolongation.find('#prolongation_step2');
 
     var countError = 0;
-    
-    $prolongationStep1.on('change', 'input[name="prlngTermValue"]', function() {
+
+    $prolongationStep1.on('change', 'input[name="prlngTermValue"]', function () {
         refreshResult();
     });
 
     refreshResult();
 
     //показ формы пролонгации
-    $('body').on('click', '.prolongation-show', function() {
+    $('body').on('click', '.prolongation-show', function () {
         $('#loan_wrapper').hide();
         $prolongation.show();
         return false;
     });
 
     //отправка 1 шага
-    $('#prolongation_submit').on('click', function() {
+    $('#prolongation_submit').on('click', function () {
         sendAjax('createContract');
         return false;
     });
@@ -598,7 +594,7 @@ function initProlongation() {
                             'prlngAmountAmount': prlngAmountAmount,
                             'prlngAmountCurrencyCode': prlngAmountCurrencyCode
                         },
-                        success: function(data) {
+                        success: function (data) {
                             if (data.status == 1) {
                                 countError = 0;
                                 window.location.href = data.url;
@@ -610,7 +606,7 @@ function initProlongation() {
                                 errorAjax();
                             }
                         },
-                        error: function(data) {
+                        error: function (data) {
                             errorAjax();
 
                         },
@@ -623,7 +619,7 @@ function initProlongation() {
 
         function errorAjax() {
             countError++;
-            setTimeout(function() { sendAjax(step); }, 7000);
+            setTimeout(function () { sendAjax(step); }, 7000);
         }
     }
 
@@ -657,9 +653,9 @@ function initFormPasswordChange() {
 
     //проверка колва попыток ввода СМС
     var smsCheckCount = 0;
-    
+
     $('body')
-        .on('click', '.open-form-password-change', function() {
+        .on('click', '.open-form-password-change', function () {
             if (!$(this).hasClass('disabled')) {
                 // показ формы изменения пароля
                 openForm();
@@ -667,13 +663,13 @@ function initFormPasswordChange() {
 
             return false;
         })
-        .on('click', '.close-form-password-change', function() {
+        .on('click', '.close-form-password-change', function () {
             // закрытие формы изменения пароля
             closeForm();
 
             return false;
         })
-        .on('click', '.form-password-send-sms-button', function() {
+        .on('click', '.form-password-send-sms-button', function () {
             // отправить смс-код повторно
             if (!$(this).hasClass('disabled')) {
                 sendAjax('getsms');
@@ -681,11 +677,11 @@ function initFormPasswordChange() {
 
             return false;
         })
-        .on('click', '.form-password-goto-step-button', function() {
+        .on('click', '.form-password-goto-step-button', function () {
             // переход к шагам формы изменения пароля
             $fieldSmscode.val('').trigger('blur');
 
-            var step  = $(this).attr('data-step');
+            var step = $(this).attr('data-step');
             if (step === 'step1') {
                 nextStep('step1');
             }
@@ -698,19 +694,19 @@ function initFormPasswordChange() {
         });
 
     // отслеживаем изменения в валидируемых полях ввода
-    $form.on('change', 'input.validate', function() {
+    $form.on('change', 'input.validate', function () {
         validateField($(this));
     });
 
     // отправка 1 шага формы
-    $formStep1Submit.on('click', function() {
+    $formStep1Submit.on('click', function () {
         var error = 0;
-        
+
         if (validateForm($formStep1)) {
             // если форма заполнена валидно - проверяем пароли на совпадение
             var passwordNew = getClearVal($fieldPasswordNew.val()),
                 passwordNewRepeat = getClearVal($fieldPasswordNewRepeat.val());
-            
+
             if (passwordNew !== passwordNewRepeat) {
                 $formStep1Error.html('Пароль был подтвержден не верно').parents('.col').removeClass('hide');
                 $fieldPasswordNewRepeat.parents('.field').addClass('error');
@@ -732,7 +728,7 @@ function initFormPasswordChange() {
     });
 
     // проверка смс
-    $formStep2Submit.on('click', function() {
+    $formStep2Submit.on('click', function () {
         if (validateForm($formStep2)) {
             sendAjax('checksms');
         }
@@ -744,7 +740,7 @@ function initFormPasswordChange() {
         $form.find('.step').addClass('hide');
         $formStep1Error.parents('.col').addClass('hide');
         $formStep2Error.parents('.col').addClass('hide');
-        
+
         switch (step) {
             case 'step1':
                 $formStep1.removeClass('hide');
@@ -779,7 +775,7 @@ function initFormPasswordChange() {
                     data: {
                         'action': 'sendsms'
                     },
-                    success: function(data) {
+                    success: function (data) {
                         //если СМС успешно отправлена!
                         if (data.status == 1) {
                             smsId = data.sms_id;
@@ -797,7 +793,7 @@ function initFormPasswordChange() {
                             $formStep1Error.html('Ошибка при отправке СМС!').parents('.col').removeClass('hide');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         nextStep('step1');
                         $formStep1Error.html('Ошибка при отправке СМС!').parents('.col').removeClass('hide');
                     }
@@ -817,7 +813,7 @@ function initFormPasswordChange() {
                         'code': smscode,
                         'sms_id': smsId
                     },
-                    success: function(data) {
+                    success: function (data) {
                         smsCheckCount++;
 
                         //если верификация успешна
@@ -843,7 +839,7 @@ function initFormPasswordChange() {
                             nextStep('error');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         var text = '';
                         if (smsCheckCount >= 5) {
                             text = 'К сожалению, исчерпан лимит попыток ввода смс-кода.';
@@ -876,10 +872,10 @@ function initFormPasswordChange() {
                         'oldpassword': passwordOld,
                         'password': passwordNew
                     },
-                    success: function(data) {
+                    success: function (data) {
                         if (data.status == 1) {
                             nextStep('success');
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 closeForm();
                             }, 2000);
 
@@ -894,7 +890,7 @@ function initFormPasswordChange() {
                             nextStep('error');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         var text = 'Введен неверный текущий пароль. <br><a href="#" class="form-password-goto-step-button color-main" data-step="step1">Попробуйте еще раз.</a>';
                         $formStepError.html('<p class="align-center m-t-50 m-b-50">' + text + '</p>');
                         nextStep('error');
@@ -912,15 +908,15 @@ function initFormPasswordChange() {
             $('.form-password-send-sms-button').addClass('disabled');
             $timerSmscode.html(time).removeClass('hide');
             time--;
-            timerId = setTimeout(function() { timer(time); }, 1000);
- 
+            timerId = setTimeout(function () { timer(time); }, 1000);
+
         } else {
             if (timerId) clearTimeout(timerId);
             $('.form-password-send-sms-button').removeClass('disabled');
             $timerSmscode.addClass('hide').html('');
         }
     }
- 
+
     // показ формы изменения пароля
     function openForm() {
         $('.open-form-password-change').addClass('hide');
@@ -938,7 +934,7 @@ function initFormPasswordChange() {
         nextStep('step1');
         if (timerId) clearTimeout(timerId);
     }
-} 
+}
 
 // форма изменения пароля
 function initFormMobilePhoneChange() {
@@ -961,9 +957,9 @@ function initFormMobilePhoneChange() {
 
     //проверка колва попыток ввода СМС
     var smsCheckCount = 0;
-    
+
     $('body')
-        .on('click', '.open-form-mobile-phone-change', function() {
+        .on('click', '.open-form-mobile-phone-change', function () {
             // показ формы изменения пароля
             if (!$(this).hasClass('no-editable')) {
                 openForm();
@@ -971,13 +967,13 @@ function initFormMobilePhoneChange() {
 
             return false;
         })
-        .on('click', '.close-form-mobile-phone-change', function() {
+        .on('click', '.close-form-mobile-phone-change', function () {
             // закрытие формы изменения пароля
             closeForm();
 
             return false;
         })
-        .on('click', '.form-mobile-phone-send-sms-button', function() {
+        .on('click', '.form-mobile-phone-send-sms-button', function () {
             // отправить смс-код повторно
             if (!$(this).hasClass('disabled')) {
                 sendAjax('getsms');
@@ -985,11 +981,11 @@ function initFormMobilePhoneChange() {
 
             return false;
         })
-        .on('click', '.form-mobile-phone-goto-step-button', function() {
+        .on('click', '.form-mobile-phone-goto-step-button', function () {
             // переход к шагам формы изменения пароля
             $fieldSmscode.val('').trigger('blur');
 
-            var step  = $(this).attr('data-step');
+            var step = $(this).attr('data-step');
             if (step === 'step1') {
                 nextStep('step1');
             }
@@ -1002,14 +998,14 @@ function initFormMobilePhoneChange() {
         });
 
     // отслеживаем изменения в валидируемых полях ввода
-    $form.on('change', 'input.validate', function() {
+    $form.on('change', 'input.validate', function () {
         validateField($(this));
     });
 
     // отправка 1 шага формы
-    $formStep1Submit.on('click', function() {
+    $formStep1Submit.on('click', function () {
         var error = 0;
-        
+
         if (validateForm($formStep1)) {
             sendAjax('getsms');
 
@@ -1018,14 +1014,14 @@ function initFormMobilePhoneChange() {
         }
 
         if (error === 0) {
-            
+
         }
 
         return false;
     });
 
     // проверка смс
-    $formStep2Submit.on('click', function() {
+    $formStep2Submit.on('click', function () {
         if (validateForm($formStep2)) {
             sendAjax('checksms');
         }
@@ -1037,7 +1033,7 @@ function initFormMobilePhoneChange() {
         $form.find('.step').addClass('hide');
         $formStep1Error.parents('.col').addClass('hide');
         $formStep2Error.parents('.col').addClass('hide');
-        
+
         switch (step) {
             case 'step1':
                 $formStep1.removeClass('hide');
@@ -1072,7 +1068,7 @@ function initFormMobilePhoneChange() {
                     data: {
                         'action': 'sendsms'
                     },
-                    success: function(data) {
+                    success: function (data) {
                         //если СМС успешно отправлена!
                         if (data.status == 1) {
                             smsId = data.sms_id;
@@ -1090,7 +1086,7 @@ function initFormMobilePhoneChange() {
                             $formStep1Error.html('Ошибка при отправке СМС!').parents('.col').removeClass('hide');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         nextStep('step1');
                         $formStep1Error.html('Ошибка при отправке СМС!').parents('.col').removeClass('hide');
                     }
@@ -1110,7 +1106,7 @@ function initFormMobilePhoneChange() {
                         'code': smscode,
                         'sms_id': smsId
                     },
-                    success: function(data) {
+                    success: function (data) {
                         smsCheckCount++;
 
                         //если верификация успешна
@@ -1136,7 +1132,7 @@ function initFormMobilePhoneChange() {
                             nextStep('error');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         var text = '';
                         if (smsCheckCount >= 5) {
                             text = 'К сожалению, исчерпан лимит попыток ввода смс-кода.';
@@ -1168,11 +1164,11 @@ function initFormMobilePhoneChange() {
                         'newphone': phone,
                         'password': password
                     },
-                    success: function(data) {
+                    success: function (data) {
                         if (data.status == 1) {
                             nextStep('success');
 
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 closeForm();
 
                                 // обновляем номер телефона в HTML
@@ -1190,7 +1186,7 @@ function initFormMobilePhoneChange() {
                             nextStep('error');
                         }
                     },
-                    error: function() {
+                    error: function () {
                         var text = 'Введен неверный текущий пароль. <br><a href="#" class="form-mobile-phone-goto-step-button color-main" data-step="step1">Попробуйте еще раз.</a>';
                         $formStepError.html('<p class="align-center m-t-50 m-b-50">' + text + '</p>');
                         nextStep('error');
@@ -1209,15 +1205,15 @@ function initFormMobilePhoneChange() {
             $('.form-mobile-phone-send-sms-button').addClass('disabled');
             $timerSmscode.html(time).removeClass('hide');
             time--;
-            timerId = setTimeout(function() { timer(time); }, 1000);
- 
+            timerId = setTimeout(function () { timer(time); }, 1000);
+
         } else {
             if (timerId) clearTimeout(timerId);
             $('.form-mobile-phone-send-sms-button').removeClass('disabled');
             $timerSmscode.addClass('hide').html('');
         }
     }
- 
+
     // показ формы изменения пароля
     function openForm() {
         $('.open-form-password-change').addClass('disabled');
@@ -1336,7 +1332,7 @@ function initPrepayment() {
         }
     });
 
-    $prepayment.on('change', '.validate', function() {
+    $prepayment.on('change', '.validate', function () {
         validateField($(this));
     });
 
@@ -1353,14 +1349,14 @@ function initPrepayment() {
 
             sendAjax('CalcDP', data);
         }
-   
+
         return false;
     });
 
     $('.reject-goto-final-message').on('click', function () {
         nextStep('final', 'reject_message');
-        
-        return false; 
+
+        return false;
     });
     //END ШАГ 2
 
@@ -1495,7 +1491,7 @@ function initPrepayment() {
                     },
                     success: function (data) {
                         var status = data.status;
-                        
+
                         smsCount = data.sms_count;
 
                         if (status == '1') {
@@ -1528,7 +1524,7 @@ function initPrepayment() {
                 });
                 break;
 
-                //расчет досрочного погашения
+            //расчет досрочного погашения
             case 'CalcDP':
                 $.ajax({
                     url: '/prepayment/lib/core/save.php',
@@ -1547,9 +1543,9 @@ function initPrepayment() {
 
                             //для погашения до 1 платежа формируем сразу финальное окно!
                             if ($prepaymentTypeValue.val() == 'Repayment before the first payment') {
-                                var text =  '<p class="color-main">Дата досрочного погашения ' + date + '</p>';
-                                    text += '<p class="color-main">Сумма для ДП на выбранную дату ' + sum + ' руб.</p>';
-                                    text += '<p>Обращаем Ваше внимание на то, что сумма актуальна только на указанную дату!</p>';
+                                var text = '<p class="color-main">Дата досрочного погашения ' + date + '</p>';
+                                text += '<p class="color-main">Сумма для ДП на выбранную дату ' + sum + ' руб.</p>';
+                                text += '<p>Обращаем Ваше внимание на то, что сумма актуальна только на указанную дату!</p>';
 
                                 nextStep('final', 'success_first_payment', text);
 
@@ -1573,7 +1569,7 @@ function initPrepayment() {
                 });
                 break;
 
-                //отказ от досрочного погашения
+            //отказ от досрочного погашения
             case 'sendSMS':
                 $.ajax({
                     url: '/prepayment/lib/core/save.php',
@@ -1614,7 +1610,7 @@ function initPrepayment() {
                 });
                 break;
 
-                //подпись досрочного погашения
+            //подпись досрочного погашения
             case 'Approve':
                 $.ajax({
                     url: '/prepayment/lib/core/save.php',
@@ -1655,7 +1651,7 @@ function initPrepayment() {
                 });
                 break;
 
-                //отказ от досрочного погашения
+            //отказ от досрочного погашения
             case 'Reject':
                 $.ajax({
                     url: '/prepayment/lib/core/save.php',
@@ -1700,29 +1696,29 @@ function initPrepayment() {
                 $prepaymentStep1.show();
                 break;
 
-                //1й шаг - выбор варианта досрочного погашения
+            //1й шаг - выбор варианта досрочного погашения
             case 'step1_1':
                 $prepaymentType.removeClass('load').show();
                 $submitApplication.hide();
                 $prepaymentStep1.show();
                 break;
 
-                //2й шаг - параметры досрочного погашения
+            //2й шаг - параметры досрочного погашения
             case 'step2':
                 $prepaymentStep2.show();
                 break;
 
-                //3й шаг - условия досрочного погашения
+            //3й шаг - условия досрочного погашения
             case 'step3':
                 $prepaymentStep3.show();
                 break;
 
-                //4й шаг - смс подтверждение условий досрочного погашения
+            //4й шаг - смс подтверждение условий досрочного погашения
             case 'step4':
                 $prepaymentStep4.show();
                 break;
 
-                //финальный экран
+            //финальный экран
             case 'final':
                 //формируем HTML финального экрана
                 var finalMessageHTML = '';
@@ -1737,7 +1733,7 @@ function initPrepayment() {
                     finalMessageHTML += '<p class="big-text">Уважаемый(ая) ' + fio + ',</p><p>Вы успешно подписали заявление на досрочное погашение!</p>';
                     finalMessageHTML += '<p class="color-main">Дата досрочного погашения ' + $prepaymentDate.val() + '</p>';
                     finalMessageHTML += '<div class="sms-field m-t-40"><a href="/" class="button button-secondary">Продолжить</a></div>';
-                                
+
                 }
 
                 //успешное погашение до 1 платежа
