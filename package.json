@@ -31,16 +31,6 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "precommit": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/",
-    "prettier": "prettier --write src/js/**/*.js"
-  },
-  "lint-staged": {
-    "*.{js, jsx}": [
-      "node_modules/.bin/eslint --max-warnings=0",
-      "prettier --write",
-      "git add"
-    ]
   },
   "keywords": [],
   "author": "",
