@@ -1,0 +1,564 @@
+// Типографика форм
+.field {
+    display: block;
+    position: relative;
+    z-index: 3;
+    margin: 20px 0;
+
+    &.for-select {
+        z-index: 5;
+    }
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .label {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        left: 15px;
+        right: 15px;
+        top: 14px;
+        font-size: 12px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorBorder;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        transition: all .1s ease;
+
+        &:after {
+            content: "";
+            color: $colorError;
+        }
+    }
+
+    .error-message {
+        display: none;
+        margin: 5px 0 0 0;
+        font-size: 12px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: $colorError;
+    }
+
+    .input-text {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 22px 15px 0 15px;
+        width: 100%;
+        height: 65px;
+        background: #fff;
+        border: 1px solid $colorBorder;
+        font-family: $fontBase;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorText;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+        transition: all .2s ease;
+    }
+
+    .textarea {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 33px 15px 0 15px;
+        width: 100%;
+        height: 140px;
+        background: #fff;
+        border: 1px solid $colorBorder;
+        font-family: $fontBase;
+        font-size: 16px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: $colorText;
+        border-radius: 3px;
+        outline: none;
+        resize: none;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .2s ease;
+    }
+
+    .selectwrap {
+        display: block !important;
+        z-index: 5 !important;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 65px;
+        background: #fff;
+        border: 1px solid $colorBorder;
+        font-family: $fontBase;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorText;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+        transition: all .2s ease;
+    }
+
+    .jq-file {
+        display: block;
+        position: relative;
+        z-index: 2;
+        margin: 0;
+        padding: 24px 40px 0 15px;
+        width: 100%;
+        height: 65px;
+        background: $colorBg;
+        border: 1px solid $colorBg;
+        font-family: $fontBase;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorText;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+
+        &:before {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            margin: -8px 0 0 0;
+            font-size: 16px;
+            color: $colorMain;
+        }
+
+        &.changed {
+            background: $colorWhite;
+            border-color: $colorBorder;
+        }
+
+        &__name {
+            margin: 0 15;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &__browse {
+            display: none;
+        }
+    }
+
+    .jq-selectbox {
+        display: block !important;
+        z-index: 4 !important;
+        margin: 0;
+        width: 100%;
+        height: 65px;
+        font-family: $fontBase;
+        font-size: 16px;
+        line-height: 1em;
+        font-weight: 400;
+        color: $colorText;
+        border-radius: 3px;
+        outline: none;
+        box-sizing: border-box;
+
+        &__select-text {
+            display: block;
+            margin: 0 30px 0 15px;
+            padding: 35px 0 0 0;
+
+            &.placeholder {
+                display: none !important;
+            }
+        }
+
+        &__select {
+            display: block;
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        &__dropdown {
+            display: block;
+            position: absolute;
+            left: -1px;
+            right: -1px;
+            top: 60px;
+            background: $colorWhite;
+            border: 1px solid $colorBorder;
+            border-radius: 0 0 3px 3px;
+            border-top: none;
+
+            ul {
+                display: block;
+                margin: 0 0 5px 0;
+                padding: 0;
+                max-height: 300px;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            li {
+                display: block;
+                margin: 0;
+                padding: 10px 15px 10px 15px;
+                font-size: 14px;
+                line-height: 1.2em;
+                font-weight: 400;
+                color: $colorText;
+                cursor: pointer;
+
+                &:hover {
+                    color: $colorMain;
+                }
+
+                &.selected {
+                    color: $colorMain;
+                }
+            }
+        }
+
+        &__trigger {
+            display: block;
+            position: absolute;
+            z-index: 3;
+            right: 15px;
+            top: 50%;
+            margin: -5px 0 0 0;
+            width: 10px;
+            font-family: 'serif';
+            font-size: 10px;
+            color: $colorText;
+        }
+
+        &.opened {
+            .jq-selectbox__trigger {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .jspVerticalBar {
+            right: 5px;
+        }
+    }
+
+    &.required {
+        .label {
+            &:after {
+                content: " *";
+            }
+        }
+
+    }
+
+    &.empty {
+        .label {
+            top: 24px;
+            font-size: 16px;
+            line-height: 1em;
+            color: $colorText;
+        }
+
+        .input-text,
+        .textarea,
+        .selectwrap {
+            background: $colorBg;
+            border-color: $colorBg;
+        }
+
+        .jq-selectbox {
+            &__dropdown {
+                background: $colorBg;
+                border-color: $colorBg;
+            }
+        }
+    }
+
+    &.error {
+        .error-message {
+            display: block;
+        }
+
+        .input-text,
+        .textarea,
+        .selectwrap,
+        .jq-file {
+            border-color: $colorError;
+        }
+    }
+
+    &.success {
+
+        .input-text,
+        .textarea,
+        .selectwrap,
+        .jq-file {
+            border-color: $colorGray1;
+        }
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        right: 15px; top: 50%;
+        margin: -13px 0 0 0;
+        font-size: 26px;
+        color: $colorBorder;
+    }
+}
+
+.radio-button {
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    padding: 0 0 0 30px;
+
+    input[type="radio"] {
+        display: none;
+    }
+
+    .radio-icon {
+        display: block;
+        position: absolute;
+        left: 0; top: 50%;
+        margin: -10px 0 0 0;
+        width: 20px; height: 20px;
+        background: $colorBg;
+        border: 1px solid $colorBorder;
+        border-radius: 50%;
+        transition: all .2s ease;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            border: 2px solid $colorBg;
+            border-radius: 50%;
+        }
+    }
+
+    input[type="radio"]:checked+.radio-icon {
+        border-color: $colorMain;
+        background-color: $colorMain;
+
+        &:before {
+            border-color: $colorWhite;
+        }
+    }
+
+    .label {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $colorText;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .field {
+        .jq-selectbox {
+            select {
+                z-index: 5;
+            }
+        }
+    }
+
+    .radio-button {
+        .label {
+            font-size: 16px;
+        }
+    }
+}
+
+.button {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    height: 65px;
+    background: $colorMain;
+    font-family: $fontBase;
+    font-size: 16px;
+    line-height: 61px;
+    font-weight: 500;
+    color: $colorWhite !important;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    transition: all .2s ease;
+
+    .icon {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 3px;
+
+        &:before {
+            line-height: 61px;
+        }
+    }
+
+    &-inline {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &-small {
+        height: 40px;
+        font-size: 12px;
+        line-height: 36px;
+
+        .icon {    
+            &:before {
+                line-height: 36px;
+            }
+        }
+    }
+
+    &-medium {
+        height: 46px;
+        font-size: 14px;
+        line-height: 42px;
+
+        .icon {    
+            &:before {
+                line-height: 42px;
+            }
+        }
+    }
+
+    &-big {
+        height: 80px;
+        font-size: 18px;
+        line-height: 76px;
+
+        .icon {    
+            &:before {
+                line-height: 76px;
+            }
+        }
+    }
+
+    &-secondary {
+        background: $colorMain3;
+        color: $colorText !important;
+    }
+
+    &-cancel {
+        background: $colorBg;
+        color: $colorGray1 !important;
+    }
+
+    &-remove {
+        background: $colorError;
+        color: $colorWhite !important;
+    }
+
+    &-border {
+        border-color: $colorMain;
+        background: $colorWhite;
+        color: $colorText !important;
+    }
+
+    &-for-text {
+        background: transparent;
+        border-color: transparent;
+        cursor: default;
+        opacity: 1 !important;
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: .2 !important;
+        cursor: default;
+    }
+}
+
+button.button,
+input.button {
+    line-height: 1.2em !important;
+}
+
+@media (min-width: 1000px) {
+    .button {
+        &:hover {
+            opacity: .75;
+        }
+
+        &-border:not(.disabled):hover {
+            background: $colorMain;
+            color: $colorWhite !important;
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .button {
+        height: 50px;
+        line-height: 46px;
+
+        .icon {    
+            &:before {
+                line-height: 46px;
+            }
+        }
+
+        &-small {
+            height: 34px;
+            line-height: 30px;
+
+            .icon {    
+                &:before {
+                    line-height: 30px;
+                }
+            }
+        }
+    
+        &-medium {
+            height: 40px;
+            font-size: 14px;
+            line-height: 36px;
+
+            .icon {    
+                &:before {
+                    line-height: 36px;
+                }
+            }
+        }
+
+        &-for-text {
+            height: auto;
+            padding-bottom: 10px;
+        }
+    }
+}

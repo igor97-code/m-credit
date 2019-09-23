@@ -14,16 +14,16 @@ sass.compiler = require('node-sass');
 
 // файлы проекта
 const CSS_FILES = [
-    './src/css/libs/*.css',
-    './src/css/*.css'
+    './app/css/libs/*.css',
+    './app/css/*.css'
 ];
 
 const JS_FILES = [
-    './src/js/libs/*.js',
-    './src/js/plugins/*.js',
-    './src/js/form.js',
-    './src/js/calculator-test.js',
-    './src/js/main.js'
+    './app/js/libs/*.js',
+    './app/js/plugins/*.js',
+    './app/js/form.js',
+    './app/js/calculator-test.js',
+    './app/js/main.js'
 ];
 
 
@@ -46,7 +46,7 @@ function styles() {
     }))
 
     // перемещаем файлы
-    .pipe(gulp.dest('./build/css'))
+    .pipe(gulp.dest('./dist/css'))
 
     // обновляем страницу
     .pipe(browserSync.stream());
@@ -54,9 +54,9 @@ function styles() {
 
 // sass to css
 function sassConvert() {
-    return gulp.src('./src/scss/*.scss')
+    return gulp.src('./app/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./src/css'));
+    .pipe(gulp.dest('./app/css'));
 }
 
 // таск для скриптов
@@ -76,7 +76,7 @@ function scripts() {
     .pipe(sourcemaps.write('.'))
 
     // перемещаем файлы
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./dist/js'))
 
     // обновляем страницу
     .pipe(browserSync.stream());
@@ -93,7 +93,7 @@ function scriptsDev() {
     .pipe(sourcemaps.write('.'))
 
     // перемещаем файлы
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./dist/js'))
 
     // обновляем страницу
     .pipe(browserSync.stream());
@@ -101,36 +101,42 @@ function scriptsDev() {
 
 // картинки проекта
 function images() {
-    return gulp.src('./src/img/**/*')
-    .pipe(gulp.dest('./build/img/'))
+    return gulp.src('./app/img/**/*')
+    .pipe(gulp.dest('./dist/img/'))
 }
 
 // шрифты проекта
 function fonts() {
-    return gulp.src('./src/fonts/**/*')
-    .pipe(gulp.dest('./build/fonts/'))
+    return gulp.src('./app/fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts/'))
+}
+
+// html проекта
+function html() {
+    return gulp.src('./app/**/*.html')
+    .pipe(gulp.dest('./dist/'))
 }
 
 // очистка папки
 function clean() {
-    return del(['build/*'])
+    return del(['dist/*'])
 }
 
 // отслеживание изменения в файлах
 function watch() {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './dist/'
         }
     });
 
-    gulp.watch('./src/scss/**/*.scss', sassConvert);
-    gulp.watch('./src/css/**/*.css', styles);
-    gulp.watch('./src/js/**/*.js', scriptsDev);
-    gulp.watch('./src/img/**/*', images);
-    gulp.watch('./src/fonts/**/*', fonts);
+    gulp.watch('./app/scss/**/*.scss', sassConvert);
+    gulp.watch('./app/css/**/*.css', styles);
+    gulp.watch('./app/js/**/*.js', scriptsDev);
+    gulp.watch('./app/img/**/*', images);
+    gulp.watch('./app/fonts/**/*', fonts);
     
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch('./app/**/*.html').on('change', browserSync.reload);
 }
 
 gulp.task('sassConvert', sassConvert);
@@ -141,7 +147,8 @@ gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('fonts', fonts);
 gulp.task('images', images);
+gulp.task('html', html);
 
 
-gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, images, fonts)));
-gulp.task('dev', gulp.series(clean, gulp.parallel(styles, scriptsDev, images, fonts), 'watch'));
+gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, scripts, images, fonts)));
+gulp.task('dev', gulp.series(clean, gulp.parallel(html, styles, scriptsDev, images, fonts), 'watch'));

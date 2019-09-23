@@ -1,3 +1,4 @@
+// сетка
 .row {
     margin: 0 -10px;
 
@@ -83,10 +84,6 @@
             &.w-50-tablet {
                 float: left;
                 width: 50% !important;
-
-                &.float-right {
-                    float: right;
-                }
             }
         }
     }
