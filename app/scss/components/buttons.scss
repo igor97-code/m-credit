@@ -1,0 +1,188 @@
+
+.button {
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    height: 50px;
+    background: $colorMain;
+    font-family: $fontBase;
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 500;
+    color: $colorWhite !important;
+    cursor: pointer;
+    text-align: center;
+    text-transform: none;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    overflow: hidden;
+    transition: all .2s ease;
+
+    .icon {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+
+        &:before {
+            line-height: 48px;
+        }
+    }
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-inline {
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &-small {
+        height: 40px;
+        line-height: 38px;
+
+        .icon {    
+            &:before {
+                line-height: 38px;
+            }
+        }
+    }
+
+    &-medium {
+        height: 60px;
+        font-size: 16px;
+        line-height: 58px;
+
+        .icon {    
+            &:before {
+                line-height: 58px;
+            }
+        }
+    }
+
+    &-big {
+        height: 65px;
+        font-size: 18px;
+        line-height: 63px;
+
+        .icon {
+            &:before {
+                line-height: 63px;
+            }
+        }
+    }
+
+    &-uppercase {
+        letter-spacing: .1em;
+        text-transform: uppercase;
+    }
+
+    &-secondary {
+        background: $colorMain2;
+        color: $colorText !important;
+    }
+
+    &-gray {
+        background: $colorGray;
+        color: $colorText !important;
+    }
+
+    &-text {
+        background: transparent;
+        color: $colorText !important;
+    }
+
+    &-shadow {
+        position: relative;
+        background: $colorWhite;
+        border-color: $colorBg;
+        color: $colorText !important;
+        overflow: visible;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+            z-index: -1;
+            transition: all .2s ease;
+        }
+    }
+
+    &-border {
+        border-color: $colorMain;
+        background: $colorWhite;
+        color: $colorText !important;
+    }
+
+    &-app {
+        background: transparent;
+        color: $colorText !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &:disabled,
+    &.disabled {
+        opacity: .4 !important;
+        cursor: default;
+    }
+}
+
+button.button,
+input.button {
+    line-height: 1.2em !important;
+}
+
+@media (min-width: 1000px) {
+    .button {
+        &:hover {
+            background: $colorMainHover;
+        }
+
+        &-secondary:hover {
+            background: $colorMain2Hover;
+        }
+
+        &-gray:hover {
+            background: $colorGray;
+            color: rgba(51, 51, 51, .4) !important;
+        }
+
+        &-text:hover {
+            background: transparent;
+            color: $colorMain !important;
+        }
+    
+        &-shadow:hover {
+            background: $colorWhite;
+            color: $colorText !important;
+            transform: translateY(-5px);
+
+            &:after {
+                // transform: translateY(5px);
+                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+
+        &-border:hover {
+            background: $colorMainHover;
+            color: $colorMain !important;
+        }
+
+        &-app:hover {
+            background: transparent;
+            color: $colorText !important;
+            opacity: .8;
+        }
+    }
+}

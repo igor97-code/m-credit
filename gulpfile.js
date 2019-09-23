@@ -135,6 +135,7 @@ function watch() {
     gulp.watch('./app/js/**/*.js', scriptsDev);
     gulp.watch('./app/img/**/*', images);
     gulp.watch('./app/fonts/**/*', fonts);
+    gulp.watch('./app/**/*.html', html);
     
     gulp.watch('./app/**/*.html').on('change', browserSync.reload);
 }

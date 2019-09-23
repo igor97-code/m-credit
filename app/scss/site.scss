@@ -1,16 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300italic,300,400,500,500italic,400italic,700,700italic&subset=latin,cyrillic);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&subset=latin,cyrillic,cyrillic-ext);
-
 // переменные
 $fontBase: 'Roboto', sans-serif;
-$fontAccent: 'Roboto Condensed', sans-serif;
+$fontAccent: 'Roboto', sans-serif;
 $colorMain: #7dc041;
+$colorMainHover: #82C943;
 $colorMain2: #005498;
+$colorMain2Hover : #024e8b;
 $colorMain3: #ffcd2b;
-$colorBg: #f4f4f4;
+$colorMain3Hover: #FFD54F;
+$colorBg: #efefef;
+$colorBgHover: #e4e4e4;
 $colorText: #333333;
-$colorGray1: #7e7e7e;
-$colorBorder: #c2c2c2;
+$colorGray: #7e7e7e;    
+$colorBorder: #efefef;
 $colorError: #e94551;
 $colorWhite: #ffffff;
 $colorLink: #7dc041;
@@ -20,8 +21,8 @@ $colorLink: #7dc041;
 @import './components/helper.scss';
 @import './components/grid.scss';
 @import './components/forms.scss';
+@import './components/buttons.scss';
 @import './components/typographic.scss';
-
 
 .body {
     min-height: 100%;
@@ -35,7 +36,7 @@ $colorLink: #7dc041;
 .container {
     margin: 0 auto;
     padding: 1px 10px;
-    max-width: 1200px;
+    max-width: 980px;
 
     &.fullscreen {
         max-width: 100%;
@@ -46,10 +47,6 @@ $colorLink: #7dc041;
 // стили проекта
 
 // HEADER
-.header-margin {
-    height: 100px;
-}
-
 .header {
     display: block;
     position: fixed;
@@ -60,6 +57,10 @@ $colorLink: #7dc041;
     height: 100px;
     background: $colorWhite;
     border-bottom: 1px solid $colorBorder;
+
+    &-margin {
+        height: 100px;
+    }
 
     &-left {
         display: block;
@@ -100,42 +101,45 @@ $colorLink: #7dc041;
 
     .logo {
         display: block;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         background: url('../img/logo.svg') center center no-repeat;
         background-size: cover;
     }
 
     p {
-        margin: 0;
+        margin: 3px 0;
         font-size: 15px;
         line-height: 1.2em;
         font-weight: 300;
         color: $colorText;
 
         &.title {
-            font-size: 20px;
+            font-size: 22px;
             line-height: 1.2em;
-            font-weight: 500;
         }
 
         &.remark {
             font-size: 12px;
             line-height: 1.2em;
-            color: $colorGray1;
+            color: $colorGray;
             font-weight: 400;
         }
+    }
+
+    .container {
+        position: relative;
+        height: 100%;
     }
 }
 
 .height-small {
-
-    .header-margin {
-        height: 60px;
-    }
-
     .header {
         height: 60px;
+
+        &-margin {
+            height: 60px;
+        }
 
         &-col {
             height: 60px;
@@ -172,15 +176,15 @@ $colorLink: #7dc041;
 }
 
 @media (max-width: 1000px) {
-    .header-margin {
-        height: 60px;
-    }
-
     .header {
-        height: 60px;
+        height: 55px;
+
+        &-margin {
+            height: 55px;
+        }
 
         &-col {
-            height: 60px;
+            height: 55px;
             padding-left: 10px;
             padding-right: 10px;
             border-left: none;
@@ -192,8 +196,8 @@ $colorLink: #7dc041;
         }
 
         .logo {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
         }
 
         p {
@@ -201,12 +205,12 @@ $colorLink: #7dc041;
             line-height: 1.2em;
 
             &.title {
-                font-size: 15px;
+                font-size: 12px;
                 line-height: 1em;
             }
 
             &.remark {
-                font-size: 11px;
+                font-size: 8px;
                 line-height: 1.2em;
             }
         }
@@ -221,214 +225,219 @@ $colorLink: #7dc041;
     display: block;
     position: fixed;
     z-index: 800;
-    left: 0;
-    top: 180px;
-    margin: 0 0 0 -300px;
-    width: 276px;
+    left: 0; top: 100px;
+    margin: 0;
+    width: 100%;
+    background: #7dc041;
 
-    .link {
+    &-margin {
+        margin: 0;
+        height: 40px;
+    }
+
+    &-content {
         display: block;
-        position: relative;
-        margin: 10px 0;
-        padding: 0 0 0 20px;
-        font-size: 15px;
-        line-height: 50px;
-        font-weight: 700;
-        color: $colorWhite;
-        background-position: 0 0;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        transition: padding .2s ease;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 40px;
 
-        &.with-icon {
-            padding-left: 45px;
-        }
-
-        .icon {
+        & > li {
             display: block;
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            margin: -11px 0 0 0;
-            font-size: 22px;
-            color: $colorWhite;
+            position: relative;
+            z-index: 300;
+            float: left;
+            margin: 0;
+            padding: 0 13px;
+
+            &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+            }
+
+            &.burger {
+                padding-left: 0;
+                padding-right: 0;
+                float: right;
+                position: static;
+                width: 40px; height: 40px;
+
+                
+            }
+
+            &:hover {
+                .submenu {
+                    top: 100%;
+                    opacity: 1;
+                }
+            }
+
+            .icon {
+                display: block;
+                position: relative;
+                top: 5px;
+                height: 40px;
+                font-size: 26px;
+                color: $colorWhite;
+            }
         }
+    }
 
-        .arrow {
-            display: block;
-            position: absolute;
-            left: -12px;
-            top: 50%;
-            margin: -6px 0 0 0;
-            font-size: 12px;
-            color: $colorMain;
-            transition: left .2s ease;
+    .menu-link {
+        display: block;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+        transition: color .2s ease;
+    }
+
+    .submenu {
+        display: block;
+        position: absolute;
+        top: -10000px;
+        left: 0;
+        margin: 0;
+        padding: 30px;
+        background: #fff;
+        text-align: left;
+        opacity: 0;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .08);
+        transition: opacity .3s ease, transform .3s ease;
+
+        &.right {
+            left: auto;
+            right: 0;
         }
+        &.fullwidth {
+            left: 0; right: 0;
+            padding-left: 0; padding-right: 0;
 
-        &:first-child {
-            margin-top: 0;
-        }
-
-        &:hover {
-            background-image: url('../img/menu-hover-bg.png');
-            padding-left: 45px;
-
-            .arrow {
-                left: 16px;
+            .submenu-link {
+                white-space: normal;
             }
         }
 
-        &.active {
-            cursor: default;
-            background-image: url('../img/menu-active-bg.png');
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: block;
+                margin: 15px 0 0 0;
+                padding: 0;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
         }
+
+        &-link {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1em;
+            color: $colorGray;
+            text-decoration: none;
+            white-space: nowrap;
+
+            &.big {
+                font-size: 18px;
+                line-height: 1em;
+                font-weight: 500;
+                color: $colorText;
+            }
+
+            &:hover {
+                color: $colorMain;
+            }
+        }
+    }
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
 .height-small {
     .main-menu {
-        top: 90px;
+        top: 60px;
     }
 }
 
 @media (max-width: 1000px) {
     .main-menu {
         display: none;
-    }
-}
 
-.mobile-content-menu {
-    display: block;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    text-align: left;
-
-    .link {
-        display: inline-block;
-        vertical-align: top;
-        position: relative;
-        margin: 10px 50px 10px 0;
-        padding: 0 0 0 30px;
-        font-size: 13px;
-        line-height: 30px;
-        color: $colorWhite;
-
-        .icon {
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 50%;
-            margin: -10px 0 0 0;
-            font-size: 20px;
-        }
-
-        &.active {
-            color: $colorMain;
-        }
-    }
-}
-
-.menu-button {
-    display: block;
-    position: relative;
-    margin: 0;
-    width: 50px;
-    height: 60px;
-    color: $colorMain;
-    overflow: hidden;
-
-    .icon {
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin: -8px 0 0 -8px;
-        font-size: 16px;
-
-        &.open {
-            display: block;
-        }
-
-        &.close {
+        &-margin {
             display: none;
         }
-    }
-}
-
-.mobile-menu {
-    display: none;
-    position: fixed;
-    z-index: 950;
-    left: 100%;
-    top: 60px;
-    bottom: 0;
-    width: 100%;
-    background: $colorBg;
-    overflow: auto;
-    transition: left .2s ease;
-
-    .user-data {
-        display: block;
-        position: relative;
-        margin: 20px 0;
-        padding: 10px 60px 10px 0;
-
-        p {
-            margin: 0;
-            font-size: 20px;
-            line-height: 1.2em;
-            font-weight: 400;
-        }
-
-        .for-button {
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin: 0;
-        }
-    }
-
-    .link {
-        display: block;
-        margin: 20px 0;
-        padding: 0;
-        font-size: 16px;
-        line-height: 1.2em;
-        font-weight: 400;
-        color: $colorGray1;
-        text-align: left;
-    }
-}
-
-@media (max-width: 1000px) {
-    .mobile-menu {
-        display: block;
-    }
-}
-
-.open-mobile-menu {
-    .menu-button {
-        .icon {
-            &.open {
-                display: none;
-            }
-
-            &.close {
-                display: block;
-            }
-        }
-    }
-
-    .mobile-menu {
-        left: 0;
     }
 }
 
 // END Главное меню
 
 
+
+// слайдер на главной
+.main-slider {
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+
+    .slider {
+        display: block;
+        position: relative;
+        z-index: 3;
+        height: 660px;
+        overflow: hidden;
+    }
+
+    .slide {
+        position: relative;
+        z-index: 3;
+        margin: 0;
+        height: 100%;
+        background: $colorBg;
+
+        .img {
+            display: block;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0; bottom: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .text {
+            display: block;
+            position: absolute;
+            left: 50%; bottom: 60px;
+            margin: 0 0 0 -490px;
+            width: 490px;
+        }
+    }
+
+    .swiper-pagination {
+        display: block;
+        position: absolute;
+        left: 50%; bottom: 22px;
+        margin: 0 0 0 -490px;
+        width: 980px;
+    }
+}
 
 
 
@@ -534,7 +543,7 @@ $colorLink: #7dc041;
             margin: 0;
             font-size: 12px;
             line-height: 1.2em;
-            color: $colorGray1;
+            color: $colorGray;
 
             &.value {
                 margin-top: 5px;
@@ -570,7 +579,7 @@ $colorLink: #7dc041;
             font-size: 14px;
             line-height: 1em;
             font-weight: 400;
-            color: $colorGray1;
+            color: $colorGray;
 
             &.min {
                 left: 0;
@@ -789,7 +798,7 @@ $colorLink: #7dc041;
         margin: 0;
         font-size: 12px;
         font-weight: 400;
-        color: $colorGray1;
+        color: $colorGray;
         line-height: 1.2em;
         text-transform: none;
     }
@@ -1376,7 +1385,7 @@ $colorLink: #7dc041;
         left: 0; top: 50%;
         margin: -10px 0 0 0;
         font-size: 20px;
-        color: $colorGray1;
+        color: $colorGray;
     }
     .arrow {
         display: block;
@@ -1489,7 +1498,7 @@ $colorLink: #7dc041;
         top: 50%;
         margin: -6px 0 0 0;
         font-size: 12px;
-        color: $colorGray1;
+        color: $colorGray;
     }
 
     p {

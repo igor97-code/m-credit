@@ -29,13 +29,15 @@
     "husky": "^3.0.5",
     "lint-staged": "^9.3.0",
     "node-sass": "^4.12.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "sass-google-fonts": "^1.0.1",
+    "sass-lint": "^1.13.1"
   },
   "scripts": {
     "lint:fix": "eslint ./app/js/*.js --fix",
     "lint": "eslint ./app/js/*.js",
     "precommit": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/"
+    "eslint": "node_modules/.bin/eslint ./app/"
   },
   "husky": {
     "hooks": {
