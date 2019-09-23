@@ -65,11 +65,6 @@ function scripts() {
 
     .pipe(sourcemaps.init())
 
-    // babel
-    // .pipe(babel({
-    //     presets: ['@babel/env']
-    // }))
-
     // объединяем файлы
     .pipe(concat('script.js'))
 
@@ -78,6 +73,23 @@ function scripts() {
         toplevel: true
     }))
 
+    .pipe(sourcemaps.write('.'))
+
+    // перемещаем файлы
+    .pipe(gulp.dest('./build/js'))
+
+    // обновляем страницу
+    .pipe(browserSync.stream());
+}
+
+// просто конкатенация скриптов для разработки
+function scriptsDev() {
+    return gulp.src(JS_FILES)
+
+    .pipe(sourcemaps.init())
+
+    // объединяем файлы
+    .pipe(concat('script.js'))
     .pipe(sourcemaps.write('.'))
 
     // перемещаем файлы
@@ -114,7 +126,7 @@ function watch() {
 
     gulp.watch('./src/scss/**/*.scss', sassConvert);
     gulp.watch('./src/css/**/*.css', styles);
-    gulp.watch('./src/js/**/*.js', scripts);
+    gulp.watch('./src/js/**/*.js', scriptsDev);
     gulp.watch('./src/img/**/*', images);
     gulp.watch('./src/fonts/**/*', fonts);
     
@@ -124,6 +136,7 @@ function watch() {
 gulp.task('sassConvert', sassConvert);
 gulp.task('styles', gulp.series(sassConvert, styles));
 gulp.task('scripts', scripts);
+gulp.task('scriptsDev', scriptsDev);
 gulp.task('del', clean);
 gulp.task('watch', watch);
 gulp.task('fonts', fonts);
@@ -131,4 +144,4 @@ gulp.task('images', images);
 
 
 gulp.task('build', gulp.series(clean, gulp.parallel(styles, scripts, images, fonts)));
-gulp.task('dev', gulp.series('build', 'watch'));
+gulp.task('dev', gulp.series(clean, gulp.parallel(styles, scriptsDev, images, fonts), 'watch'));
