@@ -32,8 +32,8 @@
     "prettier": "^1.18.2"
   },
   "scripts": {
-    "lint:fix": "eslint ./src/js/*.js --fix",
-    "lint": "eslint ./src/js/*.js",
+    "lint:fix": "eslint ./app/js/*.js --fix",
+    "lint": "eslint ./app/js/*.js",
     "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/"
   },
