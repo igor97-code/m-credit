@@ -14,8 +14,7 @@
 .jq-selectbox__trigger:before,
 .jq-file:before,
 .ui-datepicker-prev,
-.ui-datepicker-next,
-.ui-slider-handle {
+.ui-datepicker-next {
     font-family: 'migcredit';
     font-style: normal;
     font-weight: normal;
@@ -623,7 +622,6 @@
     content: "\e036";
 }
 
-.ui-slider .ui-slider-handle:before,
 .icon-moveright:before {
     content: "\e037";
 }

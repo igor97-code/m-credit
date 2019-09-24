@@ -17615,14 +17615,12 @@ $(function () {
         initMainSlider();
     }
 
+    // инициализация калькуляторов
+    initCalculators();
+
     // форма обратной связи
     initFeedbackForm();
 
-
-    // основной калькулятор
-    if ($('#calculator').length) {
-        initCalculator();
-    }
 
     // вкладки
     $('body')
@@ -17782,164 +17780,95 @@ function resizeModal() {
     }
 }
 
-function initCalculator() {
-    // основные HTML элементы
-    var $calculator = $('#calculator'),
-        $calculatorPeriod = $calculator.find('#calculator_period'),
-        $calculatorPeriodLabel = $calculator.find('#calculator_period_label'),
-        $calculatorPeriodMin = $calculator.find('#calculator_period_min'),
-        $calculatorPeriodMinLabel = $calculator.find('#calculator_period_min_label'),
-        $calculatorPeriodMax = $calculator.find('#calculator_period_max'),
-        $calculatorPeriodMaxLabel = $calculator.find('#calculator_period_max_label'),
-        $calculatorPeriodAlert = $calculator.find('#calculator_period_alert'),
-        $calculatorSum = $calculator.find('#calculator_sum'),
-        $calculatorSumMin = $calculator.find('#calculator_sum_min'),
-        $calculatorSumMax = $calculator.find('#calculator_sum_max'),
-        $calculatorSumAlert = $calculator.find('#calculator_sum_alert'),
-        $calculatorLabel1 = $calculator.find('#calculator_label1'),
-        $calculatorValue1 = $calculator.find('#calculator_value1'),
-        $calculatorLabel2 = $calculator.find('#calculator_label2'),
-        $calculatorValue2 = $calculator.find('#calculator_value2'),
-        $calculatorLabel3 = $calculator.find('#calculator_label3'),
-        $calculatorValue3 = $calculator.find('#calculator_value3'),
-        $calculatorPeriodType = $calculator.find('#calculator_period_type');
+// калькулятор займов
+function initCalculators() {
+    var $calculators = $('[data-calculator]');
+    if (!$calculators.length) return;
 
     // данные калькулятора для расчетов
     var calculatorData = calculatorTestData;
+    setTimeout(function() {
+        $calculators.each(function() {
+            init($(this));
+        });
+    },  1500);
 
-    init();
     $.ajax({
-        url: 'https://test3.migcredit.ru/ajax/calc2.php',
+        url: 'https://migcredit.ru/ajax/calc2.php',
         success: function (data) {
             calculatorData = data;
-            init();
+            $calculators.each(function() {
+                init($(this));
+            });
         }
     });
 
-    function init() {
+    function init($calculator) {
+        // основные HTML элементы
+        var $term = $calculator.find('[data-term]'),
+            $termLabel = $calculator.find('[data-term_label]'),
+            $termMin = $calculator.find('[data-term_min]'),
+            $termMinLabel = $calculator.find('[data-term_min_label]'),
+            $termMax = $calculator.find('[data-term_max_label]'),
+            $termMaxLabel = $calculator.find('[data-term_max_label]'),
+            $sum = $calculator.find('[data-sum]'),
+            $sumMin = $calculator.find('[data-sum_min]'),
+            $sumMax = $calculator.find('[data-sum_max]'),
+            $resultDeadline = $calculator.find('[data-result_deadline]'),
+            $resultSum = $calculator.find('[data-result_sum]'),
+            $resultSumLabel = $calculator.find('[data-result_sum_label]'),
+            $termType = $calculator.find('[data-term_type]');
+
         var defaultSumMin = +calculatorData.setting.sum_min,
             defaultSumMax = +calculatorData.setting.sum_max,
             defaultSumCur = +calculatorData.setting.sum_cur;
 
-        $calculatorSumMin.html(numberFormat(defaultSumMin));
+        $sumMin.html(numberFormat(defaultSumMin));
+        $sumMax.html(numberFormat((defaultSumMax + 2000)));
+        $sum.html(numberFormat(defaultSumCur));
 
-        if (MIGONE) {
-            $calculatorSumMax.html(numberFormat(defaultSumMax));
+        var termSliderMax = calculatorData.item[defaultSumCur].data.length * 1 + 1,
+            termSliderValue = Math.round(termSliderMax / 2);
 
-        } else {
-            $calculatorSumMax.html(numberFormat((defaultSumMax + 2000)));
-        }
+        var term = termSliderValue;
 
-
-        $calculatorSum.val(numberFormat(defaultSumCur));
-
-        var periodSliderMax = calculatorData.item[defaultSumCur].data.length * 1 + 1,
-            periodSliderValue = Math.round(periodSliderMax / 2);
-
-        var period = periodSliderValue;
-
-        var typeCalculator = calculatorData.item[defaultSumCur].data[period].term_type;
+        var typeCalculator = calculatorData.item[defaultSumCur].data[term].term_type;
 
         //строка для сравнения - нужна для переинициализации ползунка периода
         var strSlider = '';
 
-        $calculatorPeriodType.val(typeCalculator);
+        $termType.val(typeCalculator);
 
-        var $sumSlider = $('#calculator_sum_slider').slider({
+        var $sumSlider = $calculator.find('[data-sum_slider]').slider({
             range: 'min',
             value: defaultSumCur,
             min: defaultSumMin,
             max: defaultSumMax,
             step: 1000,
             slide: function (event, ui) {
-                $calculatorSum.val(numberFormat(ui.value));
+                $sum.html(numberFormat(ui.value));
                 calculate();
             }
         });
 
-        var $periodSlider = $('#calculator_period_slider').slider({
+        var $termSlider = $calculator.find('[data-term_slider]').slider({
             range: 'min',
-            value: periodSliderValue,
+            value: termSliderValue,
             min: 0,
-            max: periodSliderMax,
+            max: termSliderMax,
             step: 1,
             slide: function (event, ui) {
-                period = ui.value;
+                term = ui.value;
+
                 //подпись и значение для текущего периода
-                var term = calculatorData.item[$sumSlider.slider('value')].data[ui.value].term,
+                var termValue = calculatorData.item[$sumSlider.slider('value')].data[ui.value].term,
                     termLabel = calculatorData.item[$sumSlider.slider('value')].data[ui.value].term_type_ru;
 
-                $calculatorPeriodLabel.html(termLabel);
-                $calculatorPeriod.val(term);
+                $termLabel.html(termLabel);
+                $term.html(termValue);
 
                 typeCalculator = calculatorData.item[$sumSlider.slider('value')].data[ui.value].term_type;
                 calculate();
-            }
-        });
-
-        $calculatorPeriod.on('change', function () {
-            var sum = +getClearVal($calculatorSum.val());
-
-            if (!validateField($calculatorPeriod)) {
-                $(this).val(calculatorData.item[sum].data[period].term);
-
-            } else {
-                var termCheck = 0;
-                var newTerm = jQuery.trim($(this).val()) * 1;
-
-                //ищем введенный срок для суммы
-                for (var i = 0; i < calculatorData.item[sum].data.length * 1; i++) {
-                    if (
-                        newTerm === calculatorData.item[sum].data[i].term
-                        && typeCalculator === calculatorData.item[sum].data[i].term_type
-                    ) {
-                        termCheck++;
-                        $calculatorPeriodLabel.html(calculatorData.item[sum].data[i].term_type_ru);
-                        $periodSlider.slider('value', i);
-                        period = i;
-
-                        calculate();
-                    }
-                }
-
-                //если указанный срок не найден найден
-                if (!termCheck) {
-                    $(this).val(calculatorData.item[sum].data[period].term);
-                }
-            }
-        });
-
-
-        $calculatorSum.on('change', function () {
-            //alert($(this).val());
-            if (!validateField($calculatorSum)) {
-                $(this).val($sumSlider.slider('value'));
-
-            } else {
-                var val = +getClearVal($(this).val());
-
-                var ost = val % 1000;
-                if (ost >= 500) {
-                    val = Math.ceil(val / 1000) * 1000;
-
-                } else if (ost < 500 && ost > 0) {
-                    val = Math.floor(val / 1000) * 1000;
-                }
-
-                if (val > defaultSumMax) {
-                    $(this).val(defaultSumMax);
-                    val = defaultSumMax;
-
-                } else if (val < defaultSumMin) {
-                    $(this).val(defaultSumMin);
-                    val = defaultSumMin;
-                }
-
-
-                $sumSlider.slider('value', val);
-                $calculatorSum.val(numberFormat(val));
-                calculate();
-
             }
         });
 
@@ -17948,96 +17877,71 @@ function initCalculator() {
         $calculator.removeClass('load');
 
         function calculate() {
-            var sum = getClearVal($calculatorSum.val());
+            var sum = getClearVal($sum.text());
 
             //в случае если изменяется период для суммы - переинициализация ползунков
             var strSliderNew = calculatorData.item[sum].str;
             if (strSliderNew != strSlider) {
                 strSlider = strSliderNew;
-                var sliderPeriodMin = 0,
-                    sliderPeriodMax = calculatorData.item[sum].data.length * 1 - 1,
-                    sliderPeriodValue = Math.round(sliderPeriodMax / 2) + 1;
 
-                period = sliderPeriodValue;
+                var sliderTermMin = 0,
+                    sliderTermMax = calculatorData.item[sum].data.length * 1 - 1,
+                    sliderTermValue = Math.round(sliderTermMax / 2) + 1;
 
-                typeCalculator = calculatorData.item[sum].data[period].term_type;
-                $calculatorPeriodType.val(typeCalculator);
+                term = sliderTermValue;
+
+                typeCalculator = calculatorData.item[sum].data[term].term_type;
+                $termType.val(typeCalculator);
 
                 //подписи для min/max значения периода
                 var termLabelMin = calculatorData.item[sum].data[0].term_type_ru,
                     termMin = calculatorData.item[sum].data[0].term;
 
-                $calculatorPeriodMin.html(termMin);
-                $calculatorPeriodMinLabel.html(termLabelMin);
+                $termMin.html(termMin);
+                $termMinLabel.html(termLabelMin);
 
-                var termLabelMax = calculatorData.item[sum].data[sliderPeriodMax].term_type_ru,
-                    termMax = calculatorData.item[sum].data[sliderPeriodMax].term;
+                var termLabelMax = calculatorData.item[sum].data[sliderTermMax].term_type_ru,
+                    termMax = calculatorData.item[sum].data[sliderTermMax].term;
 
-                $calculatorPeriodMax.html(termMax);
-                $calculatorPeriodMaxLabel.html(termLabelMax);
+                $termMax.html(termMax);
+                $termMaxLabel.html(termLabelMax);
 
                 //подпись и значение для текущего периода
-                var term = calculatorData.item[sum].data[period].term,
-                    termLabel = calculatorData.item[sum].data[period].term_type_ru;
+                var termValue = calculatorData.item[sum].data[term].term,
+                    termLabel = calculatorData.item[sum].data[term].term_type_ru;
 
-                $calculatorPeriod.val(term);
-                $calculatorPeriodLabel.html(termLabel);
+                $term.val(termValue);
+                $termLabel.html(termLabel);
 
                 //переинициализация позунка периода
                 //обновляем max/value
-                $periodSlider.slider('option', {
+                $termSlider.slider('option', {
                     min: 0,
-                    max: sliderPeriodMax,
-                    value: sliderPeriodValue
+                    max: sliderTermMax,
+                    value: sliderTermValue
                 });
 
             }
 
 
-            //console.log(typeCalc);
+            // подпись к сумме
             var labelReturn = 'Платеж раз в 2 недели';
             if (typeCalculator === 'day') {
                 labelReturn = 'Возвращаете';
             }
-            $calculatorLabel3.html(labelReturn);
-
-            //подставляем данные по платежу
-            $calculatorValue1.html($calculatorSum.val());
-
-            //дата возврата
-            var deadline = calculatorData.item[sum].data[period].deadline;
-            $calculatorValue2.html(deadline);
+            $resultSumLabel.html(labelReturn);
 
             //сумма возврата/сумма со скидкой
-            var payment = +calculatorData.item[sum].data[period].payment,
-                discount = +calculatorData.item[sum].data[period].discount;
+            var payment = +calculatorData.item[sum].data[term].payment,
+                discount = +calculatorData.item[sum].data[term].discount;
 
-            console.log(discount);
-            if (discount) {
-                $calculatorValue3.html('<span class="new">' + numberFormat(discount) + '</span><span class="old">' + numberFormat(payment) + '</span> руб.');
+            if (discount) payment = discount;
+            
+            $resultSum.html(numberFormat(payment));
 
-            } else {
-                $calculatorValue3.html('<span>' + numberFormat(payment, 0, '', ' ') + '</span> руб.');
-            }
-
-            //проверка показа сообщение
-            //для суммы
-            var noticeSum = +calculatorData.item[sum].data[period].notice_sum;
-            if (!noticeSum) {
-                $calculatorSumAlert.addClass('hide').html('');
-
-            } else {
-                $calculatorSumAlert.html(calculatorData.notice.sum[noticeSum]).removeClass('hide');
-            }
-
-            //для периода
-            var noticeTerm = calculatorData.item[sum].data[period].notice_term;
-            if (!noticeTerm) {
-                $calculatorPeriodAlert.addClass('hide').html('');
-
-            } else {
-                $calculatorPeriodAlert.html(calculatorData.notice.term[noticeTerm]).removeClass('hide');
-            }
+            //дата возврата
+            var deadline = calculatorData.item[sum].data[term].deadline;
+            $resultDeadline.html(deadline);
         }
     }
 

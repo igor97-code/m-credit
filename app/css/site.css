@@ -10,8 +10,7 @@
 .jq-selectbox__trigger:before,
 .jq-file:before,
 .ui-datepicker-prev,
-.ui-datepicker-next,
-.ui-slider-handle {
+.ui-datepicker-next {
   font-family: 'migcredit';
   font-style: normal;
   font-weight: normal;
@@ -471,7 +470,6 @@
 .icon-minus:before {
   content: "\e036"; }
 
-.ui-slider .ui-slider-handle:before,
 .icon-moveright:before {
   content: "\e037"; }
 
@@ -1113,7 +1111,8 @@ body {
     background: transparent;
     color: #333333 !important;
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    margin-left: 20px; }
   .button:disabled, .button.disabled {
     opacity: .4 !important;
     cursor: default; }
@@ -1396,6 +1395,10 @@ input.button {
   .container.fullscreen {
     max-width: 100%; }
 
+@media (max-width: 1000px) {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .header {
   display: block;
   position: fixed;
@@ -1432,6 +1435,11 @@ input.button {
     .header-col:first-child, .header-col.no-border {
       padding-left: 10px;
       border-left: none; }
+    .header-col:last-child {
+      padding-right: 10px; }
+    .header-col.for-logo {
+      padding-left: 10px;
+      padding-right: 0; }
   .header-info {
     padding-left: 0;
     max-width: 170px; }
@@ -1718,9 +1726,9 @@ input.button {
     z-index: 10;
     left: 50%;
     top: 50%;
-    margin: -261px 0 0 190px;
+    margin: -261px 0 0 185px;
     padding: 50px 0 0 0;
-    width: 310px;
+    width: 315px;
     height: 522px; }
     .main-slider-info .button-block {
       display: block;
@@ -1728,12 +1736,6 @@ input.button {
       left: 0;
       right: 0;
       top: 0; }
-    .main-slider-info .calculator {
-      margin: 20px 0 0 0;
-      padding: 1px 20px 0 20px;
-      background: #ffffff;
-      border-radius: 3px;
-      overflow: hidden; }
 
 @media (max-width: 1000px) {
   .main-slider .slide {
@@ -1752,8 +1754,8 @@ input.button {
       left: 0;
       bottom: 13px;
       margin-left: 0;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
       width: 100%;
       max-width: 400px; }
     .main-slider .slide p {
@@ -1764,7 +1766,7 @@ input.button {
         line-height: 35px; }
       .main-slider .slide p.small {
         font-size: 12px;
-        line-height: 14px; }
+        line-height: 16px; }
   .main-slider .swiper-pagination {
     position: relative;
     left: auto;
@@ -1778,7 +1780,23 @@ input.button {
       opacity: .2; }
       .main-slider .swiper-pagination-bullet-active {
         background: #7dc041;
-        opacity: 1; } }
+        opacity: 1; }
+  .main-slider-info {
+    position: relative;
+    z-index: 10;
+    left: auto;
+    top: auto;
+    margin: 0 15px;
+    padding-top: 0;
+    width: auto;
+    height: auto; }
+    .main-slider-info .button-block {
+      display: block;
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+      margin-top: 20px; } }
 
 .swiper-pagination-bullet {
   display: inline-block;
@@ -1826,7 +1844,13 @@ input.button {
 
 .calculator {
   display: block;
-  position: relative; }
+  position: relative;
+  z-index: 5;
+  margin: 0;
+  padding: 1px 20px 0 20px;
+  background: #ffffff;
+  border-radius: 3px;
+  overflow: hidden; }
   .calculator:before {
     content: "";
     display: none;
@@ -1836,19 +1860,23 @@ input.button {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.8) url("../img/load.gif") center center no-repeat; }
-  .calculator.load {
-    position: relative;
-    z-index: 5; }
-    .calculator.load * {
-      visibility: hidden; }
-    .calculator.load:before {
-      display: block;
-      visibility: visible; }
+    background: url("../img/load.gif") center center no-repeat; }
+  .calculator.load * {
+    visibility: hidden; }
+  .calculator.load:before {
+    display: block;
+    visibility: visible; }
   .calculator-item {
     display: block;
     margin: 35px 0;
     padding: 1px 0; }
+    .calculator-item.result {
+      margin: 25px -20px 0 -20px;
+      padding: 1px 20px;
+      background: #efefef; }
+      .calculator-item.result .calculator-row {
+        margin-top: 17px;
+        margin-bottom: 17px; }
     .calculator-item p {
       margin: 0;
       font-size: 14px;
@@ -1857,12 +1885,16 @@ input.button {
       color: #333333; }
       .calculator-item p.big {
         font-size: 24px;
-        line-height: 28px; }
+        line-height: 28px;
+        font-weight: 400; }
+      .calculator-item p.medium-label {
+        line-height: 20px; }
       .calculator-item p.big-label {
         line-height: 28px; }
       .calculator-item p.medium {
         font-size: 16px;
-        line-height: 1.2em; }
+        line-height: 20px;
+        font-weight: 400; }
       .calculator-item p.small {
         font-size: 12px;
         line-height: 1.2em; }
@@ -1885,25 +1917,24 @@ input.button {
   .calculator-slider {
     display: block;
     margin: 0;
+    padding: 7px 0 0 0;
     height: 20px; }
 
-@media (max-width: 760px) {
-  .calculator .item {
-    margin-top: 20px; }
-  .calculator .info {
-    margin-top: 20px; }
-    .calculator .info .col {
-      display: block;
-      margin: 0;
-      padding: 10px 25px;
-      border-bottom: 1px solid #efefef;
-      max-width: 100%;
-      width: 100%; }
-      .calculator .info .col:first-child {
-        padding-left: 25px;
-        border-top: 1px solid #efefef; }
-      .calculator .info .col:before {
-        display: none; } }
+@media (max-width: 1000px) {
+  .calculator {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .calculator-item {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+      .calculator-item.result {
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 15px;
+        padding-right: 15px; } }
 
 .ui-slider {
   display: block;
@@ -1914,57 +1945,43 @@ input.button {
   .ui-slider-handle {
     position: absolute;
     z-index: 2;
-    width: 34px;
-    height: 34px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     -ms-touch-action: none;
     touch-action: none;
     background: #7dc041;
-    border: 5px solid #d7e3cd;
     padding: 0 !important;
     outline: none;
     box-sizing: border-box;
-    -webkit-border-radius: 50%;
-    border-radius: 50%; }
-    .ui-slider-handle:before {
-      display: block;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin: -5px 0 0 -5px;
-      font-size: 10px;
-      line-height: 1em;
-      color: #ffffff; }
+    border-radius: 5px; }
     .ui-slider-handle.ui-state-hover {
-      border-color: #7dc041; }
+      background: #82C943; }
     .ui-slider-handle.ui-state-active {
-      border-color: #7dc041; }
+      background: #82C943; }
   .ui-slider-range {
+    display: block;
     position: absolute;
     z-index: 1;
     font-size: .7em;
-    display: block;
-    border: 0;
-    border-radius: 6px;
-    background: #7dc041; }
+    background: #efefef; }
   .ui-slider.ui-state-disabled .ui-slider-handle {
     filter: inherit; }
   .ui-slider.ui-state-disabled .ui-slider-range {
     filter: inherit; }
-
-.ui-slider-horizontal {
-  height: 6px;
-  background: #efefef; }
-  .ui-slider-horizontal .ui-slider-handle {
-    top: -14px;
-    margin-left: -16px; }
-  .ui-slider-horizontal .ui-slider-range {
-    top: 0;
-    height: 100%; }
-  .ui-slider-horizontal .ui-slider-range-min {
-    left: 1px; }
-  .ui-slider-horizontal .ui-slider-range-max {
-    right: 1px; }
+  .ui-slider-horizontal {
+    height: 2px;
+    background: #efefef; }
+    .ui-slider-horizontal .ui-slider-handle {
+      top: -9px;
+      margin-left: -9px; }
+    .ui-slider-horizontal .ui-slider-range {
+      top: 0;
+      height: 100%; }
+    .ui-slider-horizontal .ui-slider-range-min {
+      left: 1px; }
+    .ui-slider-horizontal .ui-slider-range-max {
+      right: 1px; }
 
 #ui-datepicker-div {
   z-index: 110 !important; }

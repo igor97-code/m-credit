@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- фиксированные блоки -->
+    <!-- header -->
     <div class="header">
         <div class="container">
             <div class="header-left">
-                <div class="header-col no-border">
+                <div class="header-col for-logo no-border">
                     <div class="table-block">
                         <div class="cell">
                             <div class="logo"></div>
@@ -54,6 +54,7 @@
         </div>
     </div>
 
+    <!-- главное меню -->
     <div id="main_menu" class="main-menu">
         <div class="container">
             <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
@@ -260,7 +261,7 @@
             </div>
 
             <div class="main-slider-info">
-                <form class="calculator" data-calculator method="POST" action="/dengi3/">
+                <form class="calculator load" data-calculator method="POST" action="/dengi3/">
                     <div class="calculator-item">
                         <div class="calculator-row">
                             <div class="left">
@@ -300,10 +301,10 @@
                         </div>
                         <div class="calculator-row m-t-0">
                             <div class="left">
-                                <p class="small color-gray"><nobr><span data-term_min>10</span> <span data-term_min_label>недели</span></nobr></p>
+                                <p class="small color-gray"><nobr><span data-term_min>10</span> <span data-term_min_label>недель</span></nobr></p>
                             </div>
                             <div class="right">
-                                <p class="small color-gray"><nobr><span data-term_max>44</span> <span data-term_min_label>недели</span></nobr></p>
+                                <p class="small color-gray"><nobr><span data-term_max>44</span> <span data-term_max_label>недели</span></nobr></p>
                             </div>
                             <div class="clr"></div>
                         </div>
@@ -312,7 +313,26 @@
                     <input type="hidden" name="calc_period_type" data-term_type value="week">
                     <button type="submit" class="button button-medium button-form button-uppercase">Получить деньги</button>
 
-                    <div class="calculator-result"></div>
+                    <div class="calculator-item result">
+                        <div class="calculator-row">
+                            <div class="left">
+                                <p class="medium-label color-gray"><span data-result_sum_label>Платеж раз в 2 недели</span></p>
+                            </div>
+                            <div class="right">
+                                <p class="medium"><nobr><span data-result_sum>44 000</span> ₽</nobr></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="calculator-row">
+                            <div class="left">
+                                <p class="medium-label color-gray">До (включительно)</p>
+                            </div>
+                            <div class="right">
+                                <p class="medium"><span data-result_deadline>27 декабря 2019</span></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
                 </form>
                 
                 <div class="button-block">
