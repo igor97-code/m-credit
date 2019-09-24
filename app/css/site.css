@@ -1430,6 +1430,7 @@ input.button {
     height: 100px;
     border-left: 1px solid #efefef; }
     .header-col:first-child, .header-col.no-border {
+      padding-left: 10px;
       border-left: none; }
   .header-info {
     padding-left: 0;
@@ -1532,11 +1533,12 @@ input.button {
       position: relative;
       z-index: 300;
       float: left;
-      margin: 0;
-      padding: 0 13px; }
+      margin: 0; }
       .main-menu-content > li:first-child {
         margin-left: 0;
         padding-left: 0; }
+        .main-menu-content > li:first-child .menu-link {
+          padding-left: 0; }
       .main-menu-content > li.burger {
         padding-left: 0;
         padding-right: 0;
@@ -1544,6 +1546,8 @@ input.button {
         position: static;
         width: 40px;
         height: 40px; }
+      .main-menu-content > li:hover .menu-link {
+        opacity: .8; }
       .main-menu-content > li:hover .submenu {
         top: 100%;
         opacity: 1; }
@@ -1556,6 +1560,8 @@ input.button {
         color: #ffffff; }
   .main-menu .menu-link {
     display: block;
+    margin: 0;
+    padding: 0 18px;
     height: 40px;
     font-size: 12px;
     line-height: 40px;

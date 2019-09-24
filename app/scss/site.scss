@@ -90,6 +90,7 @@ $colorLink: #7dc041;
 
         &:first-child,
         &.no-border {
+            padding-left: 10px;
             border-left: none;
         }
     }
@@ -248,11 +249,14 @@ $colorLink: #7dc041;
             z-index: 300;
             float: left;
             margin: 0;
-            padding: 0 13px;
 
             &:first-child {
                 margin-left: 0;
                 padding-left: 0;
+
+                .menu-link {
+                    padding-left: 0;
+                }
             }
 
             &.burger {
@@ -266,6 +270,10 @@ $colorLink: #7dc041;
             }
 
             &:hover {
+                .menu-link {
+                    opacity: .8;
+                }
+
                 .submenu {
                     top: 100%;
                     opacity: 1;
@@ -285,6 +293,8 @@ $colorLink: #7dc041;
 
     .menu-link {
         display: block;
+        margin: 0;
+        padding: 0 18px;
         height: 40px;
         font-size: 12px;
         line-height: 40px;
