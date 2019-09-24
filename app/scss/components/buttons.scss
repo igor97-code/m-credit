@@ -24,8 +24,13 @@
         vertical-align: top;
         margin-right: 10px;
 
+        &-big {
+            font-size: 36px;
+            margin-right: 20px;
+        }
+
         &:before {
-            line-height: 48px;
+            line-height: 42px;
         }
     }
 
@@ -48,9 +53,9 @@
         height: 40px;
         line-height: 38px;
 
-        .icon {    
+        .icon {   
             &:before {
-                line-height: 38px;
+                line-height: 34px;
             }
         }
     }
@@ -62,7 +67,7 @@
 
         .icon {    
             &:before {
-                line-height: 58px;
+                line-height: 50px;
             }
         }
     }
@@ -74,7 +79,7 @@
 
         .icon {
             &:before {
-                line-height: 63px;
+                line-height: 57px;
             }
         }
     }
@@ -86,6 +91,11 @@
 
     &-secondary {
         background: $colorMain2;
+        color: $colorWhite !important;
+    }
+
+    &-form {
+        background: $colorMain3;
         color: $colorText !important;
     }
 
@@ -153,6 +163,10 @@ input.button {
             background: $colorMain2Hover;
         }
 
+        &-form:hover {
+            background: $colorMain3Hover;
+        }
+
         &-gray:hover {
             background: $colorGray;
             color: rgba(51, 51, 51, .4) !important;
@@ -166,11 +180,10 @@ input.button {
         &-shadow:hover {
             background: $colorWhite;
             color: $colorText !important;
-            transform: translateY(-5px);
+            transform: translateY(-3px);
 
             &:after {
-                // transform: translateY(5px);
-                box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
+                box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08);
             }
         }
 

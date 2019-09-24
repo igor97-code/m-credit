@@ -523,10 +523,23 @@ function closeTab(tab) {
 
 function initMainSlider() {
     const slider = new Swiper('#main_slider', {
+        effect: 'fade',
+        loop: true,
         preloadImages: false,
         lazy: true,
+        pagination: {
+            el: '.main-slider-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.main-slider-button-next',
+            prevEl: '.main-slider-button-prev'
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
         autoplay: {
-            delay: 5000,
+            delay: 995000,
         }
     });
 }

@@ -400,7 +400,6 @@ $colorLink: #7dc041;
         display: block;
         position: relative;
         z-index: 3;
-        height: 660px;
         overflow: hidden;
     }
 
@@ -408,8 +407,10 @@ $colorLink: #7dc041;
         position: relative;
         z-index: 3;
         margin: 0;
-        height: 100%;
+        height: 660px;
         background: $colorBg;
+        text-decoration: none;
+        outline: none;
 
         .img {
             display: block;
@@ -419,6 +420,16 @@ $colorLink: #7dc041;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0; right: 0;
+                bottom: 0;
+                height: 50%;
+                background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.3) 100%);
+            }
         }
 
         .text {
@@ -426,29 +437,225 @@ $colorLink: #7dc041;
             position: absolute;
             left: 50%; bottom: 60px;
             margin: 0 0 0 -490px;
-            width: 490px;
+            width: 600px;
+        }
+
+        p {
+            margin: 4px 0;
+            font-size: 34px;
+            line-height: 40px;
+            color: $colorWhite;
+            font-weight: 500;
+            text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.55);
+
+            &.big {
+                font-size: 56px;
+                line-height: 66px;
+                font-weight: 900;
+            }
+
+            &.small {
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
+                text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.55);
+            }
         }
     }
 
-    .swiper-pagination {
+    .swiper {
+        &-pagination {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            left: 50%; bottom: 22px;
+            margin: 0 0 0 -490px;
+            width: 980px;
+            text-align: left;
+        }
+
+        &-arrow {
+            z-index: 10;
+            width: 100px;
+
+            &-prev {
+                left: 0;
+            }
+            &-next {
+                right: 0;
+            }
+
+            .icon {
+                color: $colorWhite;
+            }
+        }
+    }
+
+    &-info {
         display: block;
         position: absolute;
-        left: 50%; bottom: 22px;
-        margin: 0 0 0 -490px;
-        width: 980px;
+        z-index: 10;
+        left: 50%; top: 50%;
+        margin: -261px 0 0 190px;
+        padding: 50px 0 0 0;
+        width: 310px; height: 522px;
+
+        .button-block {
+            display: block;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0;
+        }
+
+        .calculator {
+            margin: 20px 0 0 0;
+            padding: 1px 20px 0 20px;
+            background: $colorWhite;
+            border-radius: 3px;
+            overflow: hidden;
+        }
     }
 }
 
+@media (max-width: 1000px) {
+    .main-slider {
+        .slide {
+            height: auto;
+            overflow: hidden;
+
+            .img {
+                background-position: 0 center;
+                &:before {
+                    height: 75%;
+                }
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                padding-top: 56%;
+            }
+
+            .text {
+                left: 0;
+                bottom: 13px;
+                margin-left: 0;
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+                max-width: 400px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 21px;
+    
+                &.big {
+                    font-size: 30px;
+                    line-height: 35px;
+                }
+    
+                &.small {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+
+        .swiper {
+            &-pagination {
+                position: relative;
+                left: auto; bottom: auto;
+                margin-left: 0;
+                margin-top: 16px;
+                width: 100%;
+                text-align: center;
+
+                &-bullet {
+                    background: #000;
+                    opacity: .2;
+
+                    &-active {
+                        background: $colorMain;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+// END слайдер на главной
+
+
+// swiper style
+.swiper {
+    &-pagination {
+        &-bullet {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            width: 8px; height: 8px;
+            background: $colorWhite;
+            border-radius: 50%;
+            opacity: .2;
+            transition: all .2s ease;
+    
+            &-active {
+                opacity: 1;
+                background: $colorMain;
+            }
+        }
+    }
+    
+    &-arrow {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        top: 0; bottom: 0;
+        width: 60px;
+        cursor: pointer;
+    
+        &-prev {
+            left: -60px;
+        }
+        &-next {
+            right: -60px;
+        }
+
+        .icon {
+            display: block;
+            position: absolute;
+            top: 50%; left: 50%;
+            margin: -10px 0 0 -10px;
+            width: 20px; height: 20px;
+            font-size: 20px;
+            color: $colorGray;
+            transition: color .2s ease;
+        }
+
+        &:hover {
+            .icon {
+                color: $colorMain;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .swiper {
+        &-arrow {
+            display: none;
+        }
+    }
+}
+// END swiper-style
 
 
 // Калькулятор
 .calculator {
     display: block;
     position: relative;
-    z-index: 5;
-    max-width: 470px;
-    margin: 20px auto;
-    padding: 1px 0;
 
     &:before {
         content: "";
@@ -462,139 +669,81 @@ $colorLink: #7dc041;
         background: rgba(255, 255, 255, .8) url('../img/load.gif') center center no-repeat;
     }
 
-    .item {
+    &.load {
+        position: relative;
+        z-index: 5;
+
+        * {
+            visibility: hidden;
+        }
+
+        &:before {
+            display: block;
+            visibility: visible;
+        }
+    }
+
+    &-item {
         display: block;
-        margin: 40px 0 0 0;
+        margin: 35px 0;
+        padding: 1px 0;
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.2em;
+            font-weight: 300;
+            color: $colorText;
+
+            &.big {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
+            &.big-label {
+                line-height: 28px;
+            }
+
+            &.medium {
+                font-size: 16px;
+                line-height: 1.2em;
+            }
+
+            &.small {
+                font-size: 12px;
+                line-height: 1.2em;
+            }
+
+        }
+    }
+
+    &-row {
+        display: block;
+        margin: 10px 0;
+        overflow: hidden;
 
         &:first-child {
             margin-top: 0;
         }
 
-        .label {
-            margin: 0;
-            font-size: 20px;
-            line-height: 34px;
-            color: $colorText;
-        }
-
-        input {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 10px;
-            padding: 0;
-            width: 100px;
-            height: 34px;
-            font-family: $fontBase;
-            font-size: 16px;
-            line-height: 1.2em;
-            font-weight: 500;
-            color: $colorText;
-            text-align: center;
-            border: 2px solid $colorBorder;
-            border-radius: 3px;
-
-            &.period-input {
-                width: 60px;
-                text-align: center;
-            }
-        }
-    }
-
-    .info {
-        display: block;
-        margin: 40px 0 0 0;
-        font-size: 0;
-        text-align: left;
-
-        .col {
-            display: inline-block;
-            vertical-align: top;
-            position: relative;
-            margin: 0;
-            padding: 0 15px;
-            max-width: 37%;
-
-            &:before {
-                content: "";
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin: -20px 0 0 0;
-                width: 1px;
-                height: 40px;
-                background: $colorBg;
-            }
-
-            &:first-child {
-                padding-left: 0;
-
-                &:before {
-                    display: none;
-                }
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-
-        p {
-            margin: 0;
-            font-size: 12px;
-            line-height: 1.2em;
-            color: $colorGray;
-
-            &.value {
-                margin-top: 5px;
-                font-size: 16px;
-                line-height: 1.2em;
-                font-weight: 400;
-                color: $colorText;
-            }
-
-            .new {
-                color: $colorMain;
-                font-size: 16px;
-                font-weight: 500;
-            }
-
-            .old {
-                padding-left: 5px;
-                text-decoration: line-through;
-            }
-        }
-    }
-
-    .range-slider {
-        display: block;
-        position: relative;
-        margin: 20px 0;
-        padding: 0 0 35px 0;
-
-        .range {
+        .left {
             display: block;
-            position: absolute;
-            bottom: 0;
-            font-size: 14px;
-            line-height: 1em;
-            font-weight: 400;
-            color: $colorGray;
-
-            &.min {
-                left: 0;
-            }
-
-            &.max {
-                right: 0;
-            }
+            float: left;
+            margin: 0;
+            text-align: left;
+        }
+        .right {
+            display: block;
+            float: right;
+            margin: 0;
+            text-align: right;
         }
     }
 
-    &.load {
-        &:before {
-            display: block;
-        }
+    &-slider {
+        display: block;
+        margin: 0;
+        height: 20px;
     }
 }
 
@@ -630,393 +779,6 @@ $colorLink: #7dc041;
 
 // END Калькулятор
 
-
-// Предодобренные предложения
-.offers-list {
-    display: block;
-    margin: 0;
-    padding: 0;
-    border-top: 1px solid $colorBorder;
-
-    .item {
-        display: block;
-        position: relative;
-        margin: 0;
-        padding: 10px 0;
-        border-bottom: 1px solid $colorBorder;
-
-        p {
-            margin: 15px 0;
-            font-size: 18px;
-            line-height: 1.2em;
-            font-weight: 400;
-            color: $colorText;
-            text-transform: uppercase;
-
-            &.deadline {
-                margin-top: -5px;
-                font-size: 13px;
-                line-height: 1.2em;
-                text-transform: none;
-            }
-
-            &.amount {
-                font-size: 20px;
-                line-height: 1.5em;
-                font-weight: 400;
-            }
-        }
-
-        // .info {
-        //     display: block;
-        //     margin: 0;
-        //     padding: 1px 0;
-        //     width: 46%;
-
-        //     p {
-        //         margin: 0 0 0 25px;
-        //         font-size: 18px;
-        //         line-height: 1.2em;
-        //         font-weight: 400;
-        //         color: $colorText;
-        //         text-transform: uppercase;
-
-        //         &.deadline {
-        //             margin-top: 0;
-        //             font-size: 13px;
-        //             line-height: 1.2em;
-        //             text-transform: none;
-        //         }
-        //     }
-        // }
-
-        // .amount {
-        //     display: block;
-        //     position: absolute;
-        //     left: 48%; top: 50%;
-        //     margin: -15px 0 0 0;
-        //     padding: 0 0 0 10px;
-        //     height: 30px;
-        //     font-size: 20px;
-        //     line-height: 30px;
-        //     font-weight: 400;
-        //     color: $colorText;
-        // }
-
-        .term {
-            display: block;
-            position: relative;
-            margin: 15px 0;
-            padding: 0 0 0 40px;
-            font-size: 15px;
-            line-height: 15px;
-
-            .type {
-                display: block;
-                font-size: 12px;
-            }
-
-            .icon {
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 50%;
-                margin: -14px 0 0 0;
-                font-size: 28px;
-                color: $colorMain;
-            }
-        }
-
-        // .form {
-        //     display: block;
-        //     position: absolute;
-        //     right: 25px; top: 50%;
-        //     margin: -20px 0 0 0;
-        //     width: 135px;
-        // }
-    }
-}
-
-// END Предодобренные предложения
-
-
-// Форма техподдержки
-.support-button {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0 0 0 60px;
-    height: 45px;
-    font-size: 15px;
-    line-height: 45px;
-    font-weight: 400;
-    color: $colorBorder;
-
-    .icon {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin: -22.5px 0 0 0;
-        width: 45px;
-        height: 45px;
-        background: $colorBorder;
-        border-radius: 50%;
-
-        i {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -11px 0 0 -11px;
-            font-size: 22px;
-            color: $colorWhite;
-        }
-    }
-}
-
-.support-popup {
-    display: block;
-    position: fixed;
-    z-index: 910;
-    right: -50%;
-    top: 100px;
-    bottom: 0;
-    margin: 0;
-    padding: 30px 30px 10px 30px;
-    width: 50%;
-    background: $colorWhite;
-    overflow: auto;
-    transition: all .2s ease;
-
-    .col {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .remark {
-        margin: 0;
-        font-size: 12px;
-        font-weight: 400;
-        color: $colorGray;
-        line-height: 1.2em;
-        text-transform: none;
-    }
-}
-
-.open-support-popup {
-    overflow: hidden;
-
-    .support-button {
-        .icon {
-            background: $colorMain;
-        }
-    }
-
-    .support-popup {
-        right: 0;
-    }
-
-    .bg-pxl {
-        left: 0;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 1400px) {
-    .support-popup {
-        width: 75%;
-        right: -75%;
-    }
-}
-
-
-@media (min-width: 1000px) {
-    .support-button:hover {
-        color: $colorText;
-    }
-}
-
-@media (max-width: 1000px) {
-    .support-button {
-        padding-left: 30px;
-        height: 30px;
-
-        .icon {
-            margin-top: -15px;
-            width: 30px;
-            height: 30px;
-
-            i {
-                margin-left: -8px;
-                margin-top: -8px;
-                font-size: 16px;
-            }
-        }
-    }
-
-    .support-popup {
-        top: 60px;
-        right: -100%;
-        width: 100%;
-        padding: 15px;
-    }
-}
-
-// END Форма техподдержки
-
-
-// Форма выхода из ЛК
-.logout-button {
-    display: block;
-    position: relative;
-    margin: 0;
-    width: 45px;
-    height: 45px;
-    color: $colorMain;
-
-    .icon {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -11px 0 0 -11px;
-        font-size: 22px;
-    }
-}
-
-@media (min-width: 1000px) {
-    .logout-button:hover {
-        opacity: .8;
-    }
-}
-
-// END Форма выхода из ЛК
-
-
-// Модальные окна
-.modal-window {
-    display: none;
-    position: fixed;
-    z-index: 998;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 1px 0;
-    min-width: 320px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: auto;
-
-    .modal-bg-pxl {
-        display: block;
-        position: absolute;
-        z-index: 1;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.8);
-    }
-
-    .close-modal {
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        margin: 0 0 0 20px;
-        font-size: 20px;
-        color: #fff;
-    }
-
-    .close-modal:hover {
-        opacity: .8;
-    }
-
-    .modal-content {
-        display: block;
-        position: relative;
-        z-index: 5;
-        margin: 30px auto;
-        padding: 30px;
-        width: 500px;
-        background: #fff;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        -webkit-border-radius: 5px;
-        border-radius: 5px;
-        -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-        -ms-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    a {
-        color: $colorLink;
-    }
-
-    p {
-        margin: 20px 0;
-        font-size: 20px;
-        line-height: 1.2em;
-        color: $colorText;
-        font-weight: 300;
-
-        &.caption {
-            font-size: 26px;
-            line-height: 1.2em;
-            font-weight: 400;
-        }
-
-        &.big-text,
-        .big-text {
-            font-size: 26px;
-            line-height: 1.2em;
-        }
-
-        &.normal-text,
-        .normal-text {
-            font-size: 16px;
-            line-height: 1.2em;
-        }
-
-        &.small-text,
-        .small-text {
-            font-size: 12px;
-            line-height: 1.2em;
-        }
-
-        .icon {
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 5px;
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .modal-window {
-        .close-modal {
-            left: auto;
-            margin-left: 0;
-            right: 10px;
-            top: 10px;
-            color: $colorText;
-        }
-
-        .modal-content {
-            margin-left: 15px;
-            margin-right: 15px;
-            padding-top: 40px;
-            padding-left: 15px;
-            padding-right: 15px;
-            width: auto;
-        }
-    }
-}
-
-// END Модальные окна
 
 
 // jquery ui slider range
@@ -1206,241 +968,6 @@ $colorLink: #7dc041;
 // END jquery ui datepicker
 
 
-// Информация о займе
-.loan-item {
-    display: block;
-    margin: 20px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid $colorBorder;
-
-    p {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-size: 14px;
-        line-height: 20px;
-
-        b,
-        strong {
-            font-size: 20px;
-            font-weight: 500;
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .loan-item {
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        p {
-            font-size: 12px;
-            line-height: 1.2em;
-
-            b {
-                font-size: 16px;
-                line-height: 1.2em;
-            }
-        }
-    }
-}
-
-
-// Вкладки
-.switches {
-    display: block;
-    margin: 20px 0;
-    font-size: 0;
-
-    .switch {
-        display: inline-block;
-        vertical-align: top;
-        margin: 5px 0 0 25px;
-        font-size: 16px;
-        line-height: 30px;
-        font-weight: 400;
-        color: $colorBorder;
-        border-bottom: 3px solid $colorBorder;
-        transition: all .2s ease;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &.active {
-            color: $colorMain;
-            border-color: $colorMain;
-            cursor: default;
-        }
-    }
-}
-
-.tabs {
-    display: block;
-    margin: 20px 0;
-    padding: 0;
-
-    .tab {
-        display: none;
-        margin: 0;
-        padding: 1px 0;
-
-        &.active {
-            display: block;
-        }
-    }
-
-    .tab-content {
-        margin: 0;
-        padding: 1px 0;
-        border: 1px solid $colorBorder;
-        border-radius: 3px;
-    }
-
-    .tab-caption {
-        display: block;
-        position: relative;
-        margin: 30px 30px 0 30px;
-        padding: 0 50px 0 0;
-        font-size: 26px;
-        line-height: 1.2em;
-        font-weight: 400;
-        color: $colorText;
-    }
-
-    .tab-inner {
-        margin: 0 30px;
-        padding: 0;
-    }
-
-    .close {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin: 0;
-        font-size: 26px;
-        color: $colorBorder;
-        transition: color .2s ease;
-    }
-}
-
-@media (max-width: 1200px) {
-    .tabs {
-        .tab-caption {
-            margin-top: 15px;
-            margin-left: 15px;
-            margin-right: 15px;
-            font-size: 20px;
-            line-height: 1.2em;
-        }
-        .tab-inner {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .tabs {
-        &.no-hidden-mobile {
-            .tab {
-                display: block;
-            }
-        }
-    }
-}
-
-@media (min-width: 1000px) {
-    .switches {
-        .switch {
-            &:hover {
-                color: $colorMain;
-                border-color: $colorMain;
-            }
-        }
-    }
-
-    .tabs {
-        .close {
-            &:hover {
-                color: $colorMain !important;
-            }
-        }
-    }
-}
-
-// END Вкладки
-
-
-// Информация  об оплате
-.payment-item {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0 40px;
-
-    .status {
-        display: block;
-        position: absolute;
-        left: 0; top: 50%;
-        margin: -10px 0 0 0;
-        font-size: 20px;
-        color: $colorGray;
-    }
-    .arrow {
-        display: block;
-        position: absolute;
-        right: 0; top: 50%;
-        margin: -8px 0 0 0;
-        font-size: 16px;
-        color: $colorBorder;
-    }
-
-    p {
-        margin: 20px 0;
-        font-size: 16px;
-        line-height: 1.2em;
-        font-weight: 400;
-
-        &.label {
-            color: $colorBorder;
-        }
-    }
-}
-.payment-desc {
-    display: block;
-    margin: 0 -30px;
-    padding: 10px 30px;
-    background: $colorWhite;
-    border-top: 1px solid $colorBorder;
-    word-wrap: break-word;
-
-    p {
-        margin: 10px 0;
-        font-size: 16px;
-        line-height: 1.2em;
-        font-weight: 400;
-
-        &.label {
-            color: $colorBorder;
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .payment-desc {
-        margin-left: -20px;
-        margin-right: -20px;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        p {
-            font-size: 14px;
-            line-height: 1.2em;
-        }
-    }
-}
-// END Информация об оплате
 
 
 // Вопросы и ответы
@@ -1556,283 +1083,6 @@ $colorLink: #7dc041;
 // END Акции и конкурсы
 
 
-// Досрочное погашение
-.prepayment {
-    display: block;
-    margin: 0;
-    padding: 0;
-
-    .history-link {
-        margin-top: 25px;
-        font-size: 16px;
-        line-height: 1.2em;
-        text-align: right;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.4em;
-    }
-
-    .toggle-caption {
-        p {
-            font-size: 20px;
-            line-height: 1em;
-        }
-    }
-
-    .prepayment-type {
-        display: block;
-
-        &.load {
-            * {
-                display: none;
-            }
-            .loader {
-                display: block;
-            }
-        }
-
-        .loader {
-            display: none;
-            margin: 0;
-            padding: 40px 0 0 0;
-            background: #fff url(../img/load.gif) center 0 no-repeat;
-            font-size: 14px;
-            line-height: 1.2em;
-            color: $colorText;
-            text-align: center;
-        }
-    }
-
-    .loan-item {
-        p {
-            font-size: 14px;
-            line-height: 1.2em;
-        }
-    }
-
-    .sms-field {
-        display: block;
-        margin: 20px auto;
-        max-width: 300px;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .prepayment {
-        .history-link {
-            margin-top: 20px;
-            font-size: 24px;
-            line-height: 1em;
-        }
-
-        p {
-            font-size: 14px;
-            line-height: 1.4em;
-        }
-    }
-}
-// END Досрочное погашение
-
-
-// Блок-шапка для СМС-подписи
-.header-sms-block {
-    display: block;
-    margin: -30px -30px 0 -30px;
-    padding: 20px 30px;
-    background: $colorMain;
-    border-radius: 5px 5px 0 0;
-}
-.header-sms-block {
-    p {
-        margin: 10px 0;
-        color: #fff;
-        text-align: center;
-    }
-}
-
-@media (max-width: 760px) {
-    .header-sms-block {
-        margin: -20px -20px 0 -20px;
-        border-radius: 0px;
-    }
-}
-// END Блок-шапка для СМС-подписи
-
-
-// история досрочных погашений
-.history-item {
-    display: block;
-    margin: 10px 0;
-    padding: 1px 0;
-    border-bottom: 1px solid $colorBorder;
-
-    p {
-        margin: 10px 0;
-        font-size: 14px;
-        line-height: 20px;
-
-        b,
-        strong {
-            font-size: 20px;
-            font-weight: 500;
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .history-item {
-        p {
-            font-size: 12px;
-            line-height: 1.2em;
-
-            b {
-                font-size: 16px;
-                line-height: 1.2em;
-            }
-        }
-    }
-}
-// END история досрочных погашений
-
-
-// Приведи друга
-.friends-block {
-    display: block;
-    position: relative;
-    margin: -20px -30px 0 -30px;
-    padding: 0;
-
-    .img {
-        img {
-            width: 100%;
-        }
-    }
-
-    .switches {
-        display: block;
-        position: absolute;
-        right: 0; top: -45px;
-        margin: 0;
-        text-align: right;
-
-        .switch {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 0 0 40px;
-            font-size: 14px;
-            line-height: 1.2em;
-            font-weight: 400;
-            color: #fff;
-            border-bottom: 1px dotted $colorWhite;
-
-            &:hover {
-                border-color: transparent;
-            }
-
-            &.active {
-                color: $colorMain;
-                border-color: transparent;
-                cursor: default;
-            }
-        }
-    }
-
-    .section {
-        display: block;
-        margin: 0;
-        padding: 30px;
-        background: $colorWhite;
-
-        &-gray {
-            background: $colorBg;
-        }
-    }
-
-    .promo-code {
-        display: block;
-        margin: 30px auto;
-        padding: 15px;
-        width: 320px;
-        max-width: 100%;
-        background: #fff;
-        font-family: $fontBase;
-        font-size: 16px;
-        line-height: 1.2em;
-        color: $colorText;
-        text-align: center;
-        border: 1px solid $colorBorder;
-        border-radius: 5px;
-    }
-
-    .social {
-        display: block;
-        margin: 30px 0;
-        font-size: 16px;
-        text-align: center;
-
-        a {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 10px;
-            font-size: 30px;
-            line-height: 1em;
-
-            &.vk {
-                color: #2a91c9;
-            }
-
-            &.ok {
-                color: #ffa033;
-            }
-
-            &.fb {
-                color: #305c96;
-            }
-        }
-    }
-
-    p.sum {
-        font-size: 36px;
-        line-height: 1.2em;
-    }
-}
-
-.height-small {
-    .friends-block {
-        .switches {
-            top: 5px;
-            right: 30px;
-
-            .switch {
-                color: $colorText;
-                border-color: $colorText;
-
-                &.active {
-                    color: $colorMain;
-                    border-color: transparent;
-                }
-            }
-        }
-    }
-}
-@media (max-width: 1000px) {
-    .friends-block {
-        margin: 0 -20px 0 -20px;
-        padding: 0;
-
-        .switches {
-            display: none;
-        }
-
-        .section {
-            padding: 20px 10px;
-        }
-    }
-}
-// END Приведи друга
 
 
 

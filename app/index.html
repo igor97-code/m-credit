@@ -188,35 +188,133 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide">
-                            <div class="img swiper-lazy" data-background="/img/slides/01.jpg"></div>
+                            <div class="img swiper-lazy" data-background="/img/slides/1.jpg"></div>
                             <div class="text">
-                                <p class="big">Летние скидки</p>
-                                <p>одобрение за 3 минуты <br>до 100 000 ₽</p>
+                                <p class="big">МигКредит в твоем мобильном</p>
+                                <p>скачай и получай займы оперативно</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide">
-                            <div class="img swiper-lazy" data-background="/img/slides/01.jpg"></div>
+                            <div class="img swiper-lazy" data-background="/img/slides/2.jpg"></div>
                             <div class="text">
-                                <p class="big">Летние скидки</p>
-                                <p>одобрение за 3 минуты <br>до 100 000 ₽</p>
+                                <p class="big">Одобрение<br> за 3 минуты</p>
+                                <p>до 100 000 ₽</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="slide">
-                            <div class="img swiper-lazy" data-background="/img/slides/01.jpg"></div>
+                            <div class="img swiper-lazy" data-background="/img/slides/3.jpg"></div>
                             <div class="text">
-                                <p class="big">Летние скидки</p>
-                                <p>одобрение за 3 минуты <br>до 100 000 ₽</p>
+                                <p class="big">Деньги через СМС</p>
+                                <p>нужная сумма за 5 минут</p>
+                                <p class="small">* только для повторных клиентов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="img swiper-lazy" data-background="/img/slides/4.jpg"></div>
+                            <div class="text">
+                                <p class="big">До 13% годовых</p>
+                                <p>инвестиции в мигкредит</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="img swiper-lazy" data-background="/img/slides/5.jpg"></div>
+                            <div class="text">
+                                <p class="big">Компании года 2018</p>
+                                <p>по версии Banki.ru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="img swiper-lazy" data-background="/img/slides/6.jpg"></div>
+                            <div class="text">
+                                <p class="big">Увеличивай свой доход!</p>
+                                <p>Вступай в ряды агентов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <div class="img swiper-lazy" data-background="/img/slides/7.jpg"></div>
+                            <div class="text">
+                                <p class="big">Приведите друга <nobr>и получите</nobr> 1 000 ₽</p>
+                                <p>одобрение за 3 минуты <br><nobr>до 100 000 ₽</nobr></p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-pagination main-slider-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-arrow swiper-arrow-prev main-slider-button-prev"><i class="icon icon-left2"></i></div>
+                <div class="swiper-arrow swiper-arrow-next main-slider-button-next"><i class="icon icon-right2"></i></div>
+            </div>
+
+            <div class="main-slider-info">
+                <form class="calculator" data-calculator method="POST" action="/dengi3/">
+                    <div class="calculator-item">
+                        <div class="calculator-row">
+                            <div class="left">
+                                <p class="big-label">Требуемая сумма</p>
+                            </div>
+                            <div class="right">
+                                <p class="big"><nobr><span data-sum>69 000</span> ₽</nobr></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="calculator-slider">
+                            <div data-sum_slider></div>
+                        </div>
+                        <div class="calculator-row m-t-0">
+                            <div class="left">
+                                <p class="small color-gray"><nobr><span data-sum_min>3 000</span> ₽</nobr></p>
+                            </div>
+                            <div class="right">
+                                <p class="small color-gray"><nobr><span data-sum_max>100 000</span> ₽</nobr></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+
+                    <div class="calculator-item">
+                        <div class="calculator-row">
+                            <div class="left">
+                                <p class="big-label">На срок</p>
+                            </div>
+                            <div class="right">
+                                <p class="big"><nobr><span data-term>24</span> <span data-term_label>недели</span></nobr></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                        <div class="calculator-slider">
+                            <div data-term_slider></div>
+                        </div>
+                        <div class="calculator-row m-t-0">
+                            <div class="left">
+                                <p class="small color-gray"><nobr><span data-term_min>10</span> <span data-term_min_label>недели</span></nobr></p>
+                            </div>
+                            <div class="right">
+                                <p class="small color-gray"><nobr><span data-term_max>44</span> <span data-term_min_label>недели</span></nobr></p>
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="calc_period_type" data-term_type value="week">
+                    <button type="submit" class="button button-medium button-form button-uppercase">Получить деньги</button>
+
+                    <div class="calculator-result"></div>
+                </form>
+                
+                <div class="button-block">
+                    <a href="#" class="button button-secondary button-uppercase m-t-0 m-b-0"><i class="icon icon-big icon-bank-card"></i> Онлайн погашение</a>
+                </div>
             </div>
         </div>
         
