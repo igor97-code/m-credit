@@ -119,7 +119,7 @@ function html() {
 
 // очистка папки
 function clean() {
-    return del(['dist/*'])
+    return del(['dist/**/*'])
 }
 
 // отслеживание изменения в файлах
