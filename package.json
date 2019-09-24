@@ -45,7 +45,7 @@
     }
   },
   "lint-staged": {
-    "*.{js, jsx}": [
+    "./app/*.js": [
       "node_modules/.bin/eslint --max-warnings=0",
       "prettier --single-quote --use-tabs --trailing-comma es5 --write",
       "git add"
