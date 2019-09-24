@@ -18008,7 +18008,7 @@ function closeTab(tab) {
 
 
 function initMainSlider() {
-    const slider = new Swiper('#main_slider', {
+    new Swiper('#main_slider', {
         effect: 'fade',
         loop: true,
         preloadImages: false,
