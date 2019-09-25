@@ -141,7 +141,7 @@ function watch() {
 }
 
 gulp.task('sassConvert', sassConvert);
-gulp.task('styles', gulp.series(sassConvert, styles));
+gulp.task('styles', styles);
 gulp.task('scripts', scripts);
 gulp.task('scriptsDev', scriptsDev);
 gulp.task('del', clean);
@@ -151,5 +151,5 @@ gulp.task('images', images);
 gulp.task('html', html);
 
 
-gulp.task('build', gulp.series(clean, gulp.parallel(html, styles, scripts, images, fonts)));
-gulp.task('dev', gulp.series(clean, gulp.parallel(html, styles, scriptsDev, images, fonts), 'watch'));
+gulp.task('build', gulp.series(clean, sassConvert, gulp.parallel(html, styles, scripts, images, fonts)));
+gulp.task('dev', gulp.series(clean, sassConvert, gulp.parallel(html, styles, scriptsDev, images, fonts), 'watch'));

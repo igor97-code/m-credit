@@ -1,3 +1,6 @@
+* {
+  outline: none; }
+
 @font-face {
   font-family: "migcredit";
   src: url("../fonts/migcredit.eot");
