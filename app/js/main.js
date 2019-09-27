@@ -1,7 +1,7 @@
 $(function () {
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
-
+    
     // переключение меню
     $('body').on('click', '.toggle-mobile-menu', function () {
         $('html').toggleClass('open-mobile-menu');
@@ -38,7 +38,6 @@ $(function () {
 
     // форма обратной связи
     initFeedbackForm();
-
 
     // вкладки
     $('body')
