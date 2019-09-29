@@ -16,6 +16,34 @@
             text-decoration: none;
             transition: all .2s ease;
         }
+
+        .button-block {
+            margin: 45px 0 0 0;
+            width: 320px;
+        }
+
+        .app-link {
+            display: block;
+            margin: 0;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden;
+
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                padding-top: 29.6%;
+            }
+
+            &.appstore {
+                background-image: url('../img/button-appstore-white.svg');
+            }
+            &.googleplay {
+                background-image: url('../img/button-googleplay-white.svg');
+            }
+        }
     }
 }
 
@@ -26,6 +54,41 @@
                 &:hover {
                     opacity: .8;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .mobapp-index {
+
+        .info {
+            display: block;
+            position: relative;
+            padding: 10px 0;
+            height: 300px;
+            //max-width: 100%;
+    
+            .table-block {
+                display: block;
+                
+                .cell {
+                    display: block;
+                }
+            }
+            
+            .button-block {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+                margin: 0;
+                width: auto;
+            }
+
+            .app-link {
+
             }
         }
     }

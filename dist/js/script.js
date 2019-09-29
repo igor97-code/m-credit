@@ -18029,7 +18029,10 @@ function initProductsSlider() {
         effect: 'slide',
         loop: false,
         slidesPerView: 3,
+        watchSlidesVisibility: true,
         spaceBetween: 20,
+        // slidesOffsetBefore: 20,
+        // slidesOffsetAfter: 20,
         navigation: {
             nextEl: '.products-slider-button-next',
             prevEl: '.products-slider-button-prev'

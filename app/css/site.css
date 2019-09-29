@@ -726,24 +726,29 @@ body {
     clear: both; }
 
 @media (max-width: 1000px) {
-  .row .col {
-    float: none;
-    width: 100% !important; }
-    .row .col.w-25-mobile {
-      float: left;
-      width: 25% !important; }
-      .row .col.w-25-mobile.float-right {
-        float: right; }
-    .row .col.w-50-mobile {
-      float: left;
-      width: 50% !important; }
-      .row .col.w-50-mobile.float-right {
-        float: right; }
-    .row .col.w-75-mobile {
-      float: left;
-      width: 75% !important; }
-      .row .col.w-75-mobile.float-right {
-        float: right; } }
+  .row {
+    margin-left: -5px;
+    margin-right: -5px; }
+    .row .col {
+      float: none;
+      width: 100% !important;
+      padding-left: 5px;
+      padding-right: 5px; }
+      .row .col.w-25-mobile {
+        float: left;
+        width: 25% !important; }
+        .row .col.w-25-mobile.float-right {
+          float: right; }
+      .row .col.w-50-mobile {
+        float: left;
+        width: 50% !important; }
+        .row .col.w-50-mobile.float-right {
+          float: right; }
+      .row .col.w-75-mobile {
+        float: left;
+        width: 75% !important; }
+        .row .col.w-75-mobile.float-right {
+          float: right; } }
 
 @media (min-width: 760px) and (max-width: 1000px) {
   .row .col.w-33-tablet {
@@ -1483,6 +1488,32 @@ input.button {
       font-size: 18px;
       line-height: 22px; } }
 
+.shadow-block {
+  display: block;
+  position: relative;
+  transition: transform .2s ease; }
+  .shadow-block:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    z-index: -1;
+    transition: all .2s ease; }
+
+@media (max-width: 1000px) {
+  .shadow-block:after {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08); } }
+
+@media (min-width: 1000px) {
+  .shadow-block:hover {
+    transform: translateY(-3px); }
+    .shadow-block:hover:after {
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08); } }
+
 .toggle-block {
   display: block;
   margin: 0;
@@ -2163,12 +2194,11 @@ input.button {
 
 .product-card {
   display: block;
-  margin: 5px;
+  margin: 20px 0;
   padding: 0;
   background: #ffffff;
   text-decoration: none;
-  outline: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08); }
+  outline: none; }
   .product-card .head {
     display: block;
     position: relative;
@@ -2235,47 +2265,64 @@ input.button {
       background: #7dc041;
       border-radius: 4px; }
 
-@media (max-width: 1000px) {
-  .product-card .head {
-    height: 160px;
-    padding: 15px; }
-    .product-card .head .text {
-      font-weight: 400; }
-      .product-card .head .text.caption {
-        line-height: 15px; }
-      .product-card .head .text.with-icon {
-        padding-left: 22px; }
-      .product-card .head .text .icon {
-        font-size: 15px; }
-  .product-card .info {
-    height: 160px;
-    padding: 15px; }
-  .product-card .text {
-    margin: 10px 0;
-    font-size: 12px;
-    line-height: 1.3em; }
-    .product-card .text.caption {
-      font-size: 17px;
-      line-height: 20px;
-      font-weight: 400; }
-    .product-card .text.sum {
-      font-size: 18px;
-      line-height: 21px;
-      margin-bottom: 20px; }
-    .product-card .text.with-icon {
-      padding-left: 26px; }
-    .product-card .text .icon {
-      font-size: 12px; }
-    .product-card .text .label {
-      font-size: 11px; }
+@media (min-width: 1000px) {
   .products-slider {
+    margin: 0;
+    padding: 0; }
+    .products-slider .swiper-slider {
+      overflow: visible; }
+    .products-slider .swiper-slide {
+      opacity: 0;
+      transform: scale(0.75);
+      transition: opacity .2s ease, transform .4s ease; }
+      .products-slider .swiper-slide-visible {
+        transform: scale(1);
+        opacity: 1; } }
+
+@media (max-width: 1000px) {
+  .product-card {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .product-card .head {
+      height: 160px;
+      padding: 15px; }
+      .product-card .head .text {
+        font-weight: 400; }
+        .product-card .head .text.caption {
+          line-height: 15px; }
+        .product-card .head .text.with-icon {
+          padding-left: 22px; }
+        .product-card .head .text .icon {
+          font-size: 15px; }
+    .product-card .info {
+      height: 160px;
+      padding: 15px; }
+    .product-card .text {
+      margin: 10px 0;
+      font-size: 12px;
+      line-height: 1.3em; }
+      .product-card .text.caption {
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400; }
+      .product-card .text.sum {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 20px; }
+      .product-card .text.with-icon {
+        padding-left: 26px; }
+      .product-card .text .icon {
+        font-size: 12px; }
+      .product-card .text .label {
+        font-size: 11px; }
+  .products-slider .swiper-slider {
     margin-left: -10px;
     margin-right: -10px;
     padding-left: 10px;
     padding-right: 10px; }
-    .products-slider .swiper-slide {
-      width: 75%;
-      max-width: 320px; } }
+  .products-slider .swiper-slide {
+    width: 75%;
+    max-width: 320px; } }
 
 .product-bg {
   display: block;
@@ -2343,10 +2390,48 @@ input.button {
     .mobapp-index .info a {
       text-decoration: none;
       transition: all .2s ease; }
+    .mobapp-index .info .button-block {
+      margin: 45px 0 0 0;
+      width: 320px; }
+    .mobapp-index .info .app-link {
+      display: block;
+      margin: 0;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      overflow: hidden; }
+      .mobapp-index .info .app-link:before {
+        content: "";
+        display: block;
+        float: left;
+        padding-top: 29.6%; }
+      .mobapp-index .info .app-link.appstore {
+        background-image: url("../img/button-appstore-white.svg"); }
+      .mobapp-index .info .app-link.googleplay {
+        background-image: url("../img/button-googleplay-white.svg"); }
 
 @media (min-width: 1000px) {
   .mobapp-index .info a:hover {
     opacity: .8; } }
+
+@media (max-width: 760px) {
+  .mobapp-index .info {
+    display: block;
+    position: relative;
+    padding: 10px 0;
+    height: 300px; }
+    .mobapp-index .info .table-block {
+      display: block; }
+      .mobapp-index .info .table-block .cell {
+        display: block; }
+    .mobapp-index .info .button-block {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      margin: 0;
+      width: auto; } }
 
 .question-list {
   display: block;
