@@ -24,3 +24,22 @@ body {
     outline: none;
     box-sizing: border-box;
 }
+
+.body {
+    min-height: 100%;
+    height: auto !important;
+    min-width: 320px;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1px 10px;
+    max-width: 980px;
+
+    &.fullscreen {
+        max-width: 100%;
+    }
+}

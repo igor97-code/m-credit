@@ -1,7 +1,7 @@
 $(function () {
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
-    
+
     // переключение меню
     $('body').on('click', '.toggle-mobile-menu', function () {
         $('html').toggleClass('open-mobile-menu');
@@ -9,7 +9,6 @@ $(function () {
     });
 
     initPlaceholders();
-
     initMask();
 
     $('select').styler({
@@ -25,12 +24,21 @@ $(function () {
         filePlaceholder: 'Прикрепить файл'
     });
 
+    // lazyload
+    $('.lazy').Lazy();
+
     $(window).on('resize', function () {
         resizeModal();
     });
 
+    // основной слайдер на главной
     if ($('#main_slider').length) {
         initMainSlider();
+    }
+
+    // слайдер продуктов
+    if ($('#products_slider').length) {
+        initProductsSlider();
     }
 
     // инициализация калькуляторов
@@ -64,6 +72,9 @@ $(function () {
     });
 
 
+
+    // скрываем прелоадер страницы
+    $('#page_preloader').hide('fade', 400);
 });
 
 
@@ -76,19 +87,16 @@ function refreshHeightClass() {
     });
 
     function refresh() {
-        var viewportHeight = $(window).height();
+        var viewportHeight = +$(window).height();
 
-        var htmlClass = '';
         if (viewportHeight < 800) {
             $('html').addClass('height-medium');
-
         } else {
             $('html').removeClass('height-medium');
         }
 
         if (viewportHeight < 700) {
             $('html').addClass('height-small');
-
         } else {
             $('html').removeClass('height-small');
         }
@@ -133,7 +141,7 @@ function initFeedbackForm() {
         fileCount++;
     });
     $('#support_wrapper').on('change', '.feedback_file', function () {
-        if ($(this).val() != '') {
+        if ($(this).val() !== '') {
             // проверка на кол-во
             if ($('input.feedback_file').length < 3) {
                 var br = $('<br>');
@@ -370,7 +378,6 @@ function numberFormat(number, decimals, decPoint, thousandsSep) {
     if (!decPoint) decPoint = '';
     if (!thousandsSep) thousandsSep = ' ';
 
-
     var i, j, kw, kd, km;
     if (isNaN(decimals = Math.abs(decimals))) {
         decimals = 2;
@@ -395,23 +402,9 @@ function numberFormat(number, decimals, decPoint, thousandsSep) {
 
 //фукнция склонения
 function declOfNum(number, titles) {
-    cases = [2, 0, 1, 1, 1, 2];
+    var cases = [2, 0, 1, 1, 1, 2];
     return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
 }
-
-// показ/закрытие подтверждения выхода из ЛК
-function openLogoutModal() {
-    $('html').addClass('open-modal');
-    $('#logout_modal').show();
-    resizeModal();
-}
-
-function closeLogoutModal() {
-    $('html').removeClass('open-modal');
-    $('#logout_modal').hide();
-}
-
-
 
 // открытие|закрытие вкладок
 function openTab(tab) {
@@ -423,7 +416,7 @@ function closeTab(tab) {
 }
 
 
-
+// слайдер на главной
 function initMainSlider() {
     new Swiper('#main_slider', {
         effect: 'fade',
@@ -442,7 +435,30 @@ function initMainSlider() {
         nextSlideMessage: '',
         prevSlideMessage: '',
         autoplay: {
-            delay: 995000,
+            delay: 5000,
+        }
+    });
+}
+
+// слайдер продуктов
+function initProductsSlider() {
+    var slider = new Swiper('#products_slider', {
+        effect: 'slide',
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.products-slider-button-next',
+            prevEl: '.products-slider-button-prev'
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
+        breakpoints: {
+            1000: {
+                slidesPerView: 'auto',
+                freeMode: true,
+                spaceBetween: 10
+            }
         }
     });
 }

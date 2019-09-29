@@ -1,0 +1,242 @@
+//карточка продуктов на главной
+.product-card {
+    display: block;
+    margin: 5px;
+    padding: 0;
+    background: $colorWhite;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.08);
+
+    .head {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 20px;
+        height: 215px;
+        overflow: hidden;
+
+        .text {
+            opacity: 0.5;
+            font-weight: 700;
+
+
+            &.caption {
+                line-height: 18px;
+                opacity: 1;
+            }
+
+            &.with-icon {
+                padding-left: 30px;
+            }
+
+            .icon {
+                color: $colorText;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .info {
+        display: block;
+        margin: 0;
+        padding: 20px;
+        height: 215px;
+    }
+
+    .text {
+        display: block;
+        position: relative;
+        z-index: 3;
+        margin: 20px 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 1.3em;
+        font-weight: 400;
+        color: $colorText;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &.caption {
+            font-size: 18px;
+            line-height: 1.2em;
+            font-weight: 700;
+        }
+
+        &.sum {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 700;
+        }
+
+        &.with-icon {
+            padding-left: 38px;
+        }
+
+        .icon {
+            display: block;
+            position: absolute;
+            left: 0; top: 0;
+            font-size: 16px;
+            color: $colorMain;
+        }
+
+        .label {
+            display: block;
+            position: absolute;
+            right: 0; top: 50%;
+            margin: -9px 0 0 0;
+            padding: 0 8px;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 400;
+            color: $colorWhite;
+            background: $colorMain;
+            border-radius: 4px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-card {
+        .head {
+            height: 160px;
+            padding: 15px;
+
+            .text {
+                font-weight: 400;
+
+                &.caption {
+                    line-height: 15px;
+                }
+
+                &.with-icon {
+                    padding-left: 22px;
+                }
+
+                .icon {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .info {
+            height: 160px;
+            padding: 15px;
+        }
+
+        .text {
+            margin: 10px 0;
+            font-size: 12px;
+            line-height: 1.3em;
+
+            &.caption {
+                font-size: 17px;
+                line-height: 20px;
+                font-weight: 400;
+            }
+
+            &.sum {
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 20px;
+            }
+
+            &.with-icon {
+                padding-left: 26px;
+            }
+
+            .icon {
+                font-size: 12px;
+            }
+
+            .label {
+                font-size: 11px;
+            }
+        }
+    }
+    .products-slider {
+        margin-left: -10px;
+        margin-right: -10px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .swiper-slide {
+            width: 75%;
+            max-width: 320px;
+        }
+    }
+}
+//END карточка продуктов на главной
+
+// фоны продуктов
+.product-bg {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &.bg-1 {
+        background: linear-gradient(54.96deg, #D0E2C1 0%, #EFFFE9 100%);
+        &:before {
+            background-image: url('../img/products/1.png');
+        }
+    }
+    &.bg-2 {
+        background: linear-gradient(54.75deg, #FFD988 0%, #FFCB67 100%);
+        &:before {
+            background-image: url('../img/products/2.png');
+        }
+    }
+    &.bg-3 {
+        background: linear-gradient(54.86deg, #EAEFF8 0%, #AEBCC2 100%);
+        &:before {
+            background-image: url('../img/products/3.png');
+        }
+    }
+    &.bg-4 {
+        background: linear-gradient(54.83deg, #CEE0E9 0%, #F5F5F5 100%);
+        &:before {
+            background-image: url('../img/products/4.png');
+        }
+    }
+    &.bg-5 {
+        background: linear-gradient(54.86deg, #DADDE6 0%, #A3A4A9 100%);
+        &:before {
+            background-image: url('../img/products/5.png');
+        }
+    }
+    &.bg-6 {
+        background: linear-gradient(54.86deg, #B9D1D5 0%, #FBF9FF 100%);
+        &:before {
+            background-image: url('../img/products/6.png');
+        }
+    }
+    &.bg-7 {
+        background: linear-gradient(54.86deg, #EBE2D9 0%, #E6DDD6 100%);
+        &:before {
+            background-image: url('../img/products/7.png');
+        }
+    }
+    &.bg-8 {
+        background: #EFEFEF;
+        &:before {
+            background-image: url('../img/products/8.png');
+        }
+    }
+}
+// END фоны продуктов

@@ -81,6 +81,10 @@
 @media (min-width: 760px) and (max-width: 1000px) {
     .row {
         .col {
+            &.w-33-tablet {
+                float: left;
+                width: 33.33333333% !important;
+            }
             &.w-50-tablet {
                 float: left;
                 width: 50% !important;

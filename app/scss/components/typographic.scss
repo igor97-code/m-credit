@@ -11,62 +11,111 @@
     color: $colorError !important;
 }
 
-.font-weight-light {
-    font-weight: 300 !important;
-}
-.font-weight-normal {
-    font-weight: 400 !important;
+.color-white {
+    color: $colorWhite !important;
 }
 
-.text-content {
-    margin: 80px 0 20px 300px;
-    padding: 30px;
-    background: #fff;
-    border-radius: 5px;
+.section {
+    margin: 0;
+    padding: 50px 0;
+    background-color: $colorWhite;
 
-    &.without-menu {
-        margin-left: 0;
+    &.gray {
+        background-color: $colorBg;
+    }
+
+    h1, .h1 {
+        margin: 50px 0;
+        font-size: 34px;
+        line-height: 1.5em;
+        font-weight: 300;
+        text-align: center;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2, .h2 {
+        margin: 30px 0;
+        font-size: 24px;
+        line-height: 1.2em;
+        font-weight: 300;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h3, .h3 {
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 1.2em;
+        font-weight: 300;
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     a {
         color: $colorLink;
     }
 
+    @media (min-width: 1000px) {
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    b, strong {
+        font-weight: 700;
+    }
+
     p {
         margin: 20px 0;
-        font-size: 20px;
-        line-height: 1.2em;
+        font-size: 16px;
+        line-height: 1.5em;
         color: $colorText;
-        font-weight: 300;
+        font-weight: 400;
 
-        &.caption {
-            font-size: 26px;
-            line-height: 1.2em;
-            font-weight: 400;
-        }
-
-        &.big-text,
-        .big-text {
-            font-size: 26px;
-            line-height: 1.2em;
-        }
-
-        &.normal-text,
-        .normal-text {
-            font-size: 16px;
-            line-height: 1.2em;
+        &.medium-text,
+        .medium-text {
+            font-size: 14px;
+            line-height: 1.5em;
         }
 
         &.small-text,
         .small-text {
             font-size: 12px;
-            line-height: 1.2em;
+            line-height: 1.5em;
         }
 
         .icon {
             display: inline-block;
             vertical-align: top;
             margin-right: 10px;
+            margin-left: 10px;
+
+            &:before {
+                line-height: 1.5em;
+            }
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
@@ -79,9 +128,9 @@
         li {
             position: relative;
             margin: 20px 0;
-            padding: 0 0 0 30px;
+            padding: 0 0 0 46px;
             font-size: 16px;
-            line-height: 1.2em;
+            line-height: 1.3em;
             font-weight: 300;
             color: $colorText;
 
@@ -90,8 +139,21 @@
                 display: block;
                 position: absolute;
                 left: 0; top: 8px;
-                width: 16px; height: 2px;
+                width: 20px; height: 2px;
                 background: $colorMain;
+            }
+        }
+
+        &.medium-text {
+            li {
+                font-size: 14px;
+                line-height: 1.3em;
+            }
+        }
+        &.small-text {
+            li {
+                font-size: 12px;
+                line-height: 1.3em;
             }
         }
     }
@@ -134,7 +196,7 @@
                 }
 
                 &.for-image {
-                    max-width: 100px; 
+                    max-width: 100px;
                 }
 
                 &.for-icon {
@@ -193,12 +255,35 @@
     }
 }
 
-.height-small {
-    .text-content {
-        margin-top: 30px;
+@media (max-width: 1000px) {
+    .section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h1, .h1 {
+            margin: 30px 0;
+            font-size: 26px;
+            line-height: 30px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        h2, .h2 {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        h3, .h3 {
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 }
-
 
 // переключатели
 .toggle-block {

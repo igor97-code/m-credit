@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div id="page_preloader" style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;"></div>
+
     <!-- header -->
     <div class="header">
         <div class="container">
@@ -188,7 +190,7 @@
         <div class="main-menu-margin"></div>
 
         <div class="main-slider">
-            <div id="main_slider" class="slider">
+            <div id="main_slider" class="swiper-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide">
@@ -311,7 +313,7 @@
                     </div>
 
                     <input type="hidden" name="calc_period_type" data-term_type value="week">
-                    <button type="submit" class="button button-medium button-form button-uppercase">Получить деньги</button>
+                    <button type="submit" class="button button-medium button-form uppercase">Получить деньги</button>
 
                     <div class="calculator-item result">
                         <div class="calculator-row">
@@ -336,11 +338,216 @@
                 </form>
                 
                 <div class="button-block">
-                    <a href="#" class="button button-secondary button-uppercase m-t-0 m-b-0"><i class="icon icon-big icon-bank-card"></i> Онлайн погашение</a>
+                    <a href="#" class="button button-secondary uppercase m-t-0 m-b-0"><i class="icon icon-big icon-bank-card"></i> Онлайн погашение</a>
                 </div>
             </div>
         </div>
-        
+
+        <div class="section">
+            <div class="container">
+                <div class="swiper-slider-wrapper">
+                    <div id="products_slider" class="swiper-slider products-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">До зарплаты</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        за 5 минут
+                                    </span>
+                                    <span class="product-bg bg-1"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">
+                                        До 15 000 ₽
+                                        <span class="label">Онлайн</span>
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        На карту
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">Оптимальный</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        за 1 день
+                                    </span>
+                                    <span class="product-bg bg-2"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">До 100 000 ₽</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        На карту
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        Через платежную систему
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-lk-pay"></i>
+                                        Доставка карты
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">Под залог ПТС</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        в течение 3 дней
+                                    </span>
+                                    <span class="product-bg bg-3"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">До 600 000 ₽</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        На карту
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        Через платежную систему
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">POS-займы</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        за 5 минут
+                                    </span>
+                                    <span class="product-bg bg-7"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">До 75 000 ₽</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        Займы на оплату товаров в магазинах-партнерах
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">Автокредит</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        в течение 3 дней
+                                    </span>
+                                    <span class="product-bg bg-6"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">До 1 000 000 ₽</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        На карту
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        Через платежную систему
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="product-card">
+                                <span class="head">
+                                    <span class="text caption">Предпринимателям</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-clock"></i>
+                                        в течение 3 дней
+                                    </span>
+                                    <span class="product-bg bg-5"></span>
+                                </span>
+                                    <span class="info">
+                                    <span class="text sum">До 300 000 ₽</span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        На карту
+                                    </span>
+                                    <span class="text with-icon">
+                                        <i class="icon icon-bank-card"></i>
+                                        Через платежную систему
+                                    </span>
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-arrow swiper-arrow-prev products-slider-button-prev"><i class="icon icon-left2"></i></div>
+                    <div class="swiper-arrow swiper-arrow-next products-slider-button-next"><i class="icon icon-right2"></i></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section gray">
+            <div class="container">
+                <h1>Деньги в долг быстро, удобно и легко</h1>
+                <div class="infographic with-arrows">
+                    <div class="row">
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-lk-pay"></i></div>
+                                <div class="text">Оформите заявку</div>
+                                <div class="text label">от 10 минут</div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-car-icon"></i></div>
+                                <div class="text">Получите ответ</div>
+                                <div class="text label">до 1 минуты</div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <div class="icon"><i class="icon-lk-pay"></i></div>
+                                <div class="text">Получите деньги</div>
+                                <div class="text label">до 24 часов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section section-mobile-application p-t-0 p-b-0">
+            <div class="mobapp-index lazy" data-src="./img/mobapp-bg.jpg">
+                <div class="container">
+                    <div class="info">
+                        <div class="table-block">
+                            <div class="cell">
+                                <p class="h1 m-b-20 color-white align-left">Мобильное приложение МигКредит</p>
+                                <p><a href="#">Подробнее<i class="icon icon-right2"></i></a></p>
+                                <div class="button-block">
+                                    <a target="_blank" href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in" class="app-link appstore" target="_blank"></a>
+                                    <a href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in" class="app-link googleplay" target="_blank"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-margin"></div>
     </div>
 

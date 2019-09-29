@@ -1,0 +1,33 @@
+// блок на главной
+.mobapp-index {
+    display: block;
+    margin: 0;
+    padding: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .info {
+        margin: 0;
+        max-width: 400px;
+        height: 422px;
+
+        a {
+            text-decoration: none;
+            transition: all .2s ease;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .mobapp-index {
+        .info {
+            a {
+                &:hover {
+                    opacity: .8;
+                }
+            }
+        }
+    }
+}
+// END блок на главной
