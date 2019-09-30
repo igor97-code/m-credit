@@ -46,9 +46,14 @@
 
 @media (max-width: 1000px) {
     .row {
+        margin-left: -5px;
+        margin-right: -5px;
+
         .col {
             float: none;
             width: 100% !important;
+            padding-left: 5px;
+            padding-right: 5px;
 
             &.w-25-mobile {
                 float: left;
@@ -81,6 +86,10 @@
 @media (min-width: 760px) and (max-width: 1000px) {
     .row {
         .col {
+            &.w-33-tablet {
+                float: left;
+                width: 33.33333333% !important;
+            }
             &.w-50-tablet {
                 float: left;
                 width: 50% !important;

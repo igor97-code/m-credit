@@ -392,3 +392,173 @@
         }
     }
 }
+
+// jquery ui slider range
+.ui-slider {
+    display: block;
+    position: relative;
+    margin: 0;
+    text-align: left;
+    border-radius: 6px;
+
+    &-handle {
+        position: absolute;
+        z-index: 2;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        -ms-touch-action: none;
+        touch-action: none;
+        background: $colorMain;
+        padding: 0 !important;
+        outline: none;
+        box-sizing: border-box;
+        border-radius: 5px;
+
+        &.ui-state-hover {
+            background: $colorMainHover;
+        }
+
+        &.ui-state-active {
+            background: $colorMainHover;
+        }
+    }
+
+    &-range {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        font-size: .7em;
+        background: $colorBg;
+    }
+
+    &.ui-state-disabled {
+        .ui-slider-handle {
+            filter: inherit;
+        }
+
+        .ui-slider-range {
+            filter: inherit;
+        }
+    }
+
+    &-horizontal {
+        height: 2px;
+        background: $colorBg;
+
+        .ui-slider-handle {
+            top: -9px;
+            margin-left: -9px;
+        }
+
+        .ui-slider-range {
+            top: 0;
+            height: 100%;
+        }
+
+        .ui-slider-range-min {
+            left: 1px;
+        }
+
+        .ui-slider-range-max {
+            right: 1px;
+        }
+    }
+}
+// END jquery ui slider range
+
+// jquery ui datepicker
+#ui-datepicker-div {
+    z-index: 110 !important;
+}
+.ui-datepicker {
+    display: none;
+    width: 280px;
+    padding: .2em .2em 0;
+    background: $colorWhite;
+    border: 1px solid $colorMain !important;
+
+    &-header {
+        position: relative;
+        padding: .2em 0;
+    }
+
+    &-prev,
+    &-next {
+        display: block;
+        position: absolute;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        color: $colorMain;
+
+        &:before {
+            display: block;
+            position: absolute;
+            left: 50%; top: 50%;
+            margin: -6px 0 0 -6px;
+            font-size: 12px;
+        }
+    }
+    &-prev {
+        left: 2px;
+    }
+    &-next {
+        right: 2px;
+    }
+
+    &-title {
+        margin: 0 2.3em;
+        line-height: 1.8em;
+        font-size: 16px;
+        text-align: center;
+        color: $colorText;
+    }
+
+    table {
+        width: 100%;
+        font-size: .9em;
+        border-collapse: collapse;
+        margin: 0 0 .4em;
+    }
+
+    th {
+        padding: .7em .3em;
+        text-align: center;
+        font-weight: bold;
+        border: 0;
+        color: $colorText;
+        font-size: 14px;
+    }
+
+    td {
+        border: 0;
+        padding: 1px;
+
+        span, a {
+            display: block;
+            padding: .2em;
+            text-align: right;
+            text-decoration: none;
+            border: 1px solid $colorMain;
+            font-size: 14px;
+            font-weight: 400;
+            color: $colorText;
+
+            &:hover {
+                background: $colorMain;
+                color: $colorWhite;
+            }
+        }
+    }
+
+    .ui-state-active {
+        background: $colorMain;
+        color: #fff;
+    }
+    .ui-state-disabled {
+        opacity: .2;
+        cursor: default;
+    }
+}
+// END jquery ui datepicker

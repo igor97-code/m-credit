@@ -1,0 +1,174 @@
+// Главное меню
+.main-menu {
+    display: block;
+    position: fixed;
+    z-index: 800;
+    left: 0; top: 100px;
+    margin: 0;
+    width: 100%;
+    background: #7dc041;
+
+    &-margin {
+        margin: 0;
+        height: 40px;
+    }
+
+    &-content {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 40px;
+
+        & > li {
+            display: block;
+            position: relative;
+            z-index: 300;
+            float: left;
+            margin: 0;
+
+            &:first-child {
+                margin-left: 0;
+                padding-left: 0;
+
+                .menu-link {
+                    padding-left: 0;
+                }
+            }
+
+            &.burger {
+                padding-left: 0;
+                padding-right: 0;
+                float: right;
+                position: static;
+                width: 40px; height: 40px;
+
+                
+            }
+
+            &:hover {
+                .menu-link {
+                    opacity: .8;
+                }
+
+                .submenu {
+                    top: 100%;
+                    opacity: 1;
+                }
+            }
+
+            .icon {
+                display: block;
+                position: relative;
+                top: 5px;
+                height: 40px;
+                font-size: 26px;
+                color: $colorWhite;
+            }
+        }
+    }
+
+    .menu-link {
+        display: block;
+        margin: 0;
+        padding: 0 18px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+        font-weight: 500;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+        outline: none;
+        transition: color .2s ease;
+    }
+
+    .submenu {
+        display: block;
+        position: absolute;
+        top: -10000px;
+        left: 0;
+        margin: 0;
+        padding: 30px;
+        background: #fff;
+        text-align: left;
+        opacity: 0;
+        box-shadow: 0 20px 20px rgba(0, 0, 0, .08);
+        transition: opacity .3s ease, transform .3s ease;
+
+        &.right {
+            left: auto;
+            right: 0;
+        }
+        &.fullwidth {
+            left: 0; right: 0;
+            padding-left: 0; padding-right: 0;
+
+            .submenu-link {
+                white-space: normal;
+            }
+        }
+
+        ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: block;
+                margin: 15px 0 0 0;
+                padding: 0;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &-link {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            font-size: 15px;
+            line-height: 1em;
+            color: $colorGray;
+            text-decoration: none;
+            white-space: nowrap;
+
+            &.big {
+                font-size: 18px;
+                line-height: 1em;
+                font-weight: 500;
+                color: $colorText;
+            }
+
+            &:hover {
+                color: $colorMain;
+            }
+        }
+    }
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+.height-small {
+    .main-menu {
+        top: 60px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .main-menu {
+        display: none;
+
+        &-margin {
+            display: none;
+        }
+    }
+}
+// END Главное меню
