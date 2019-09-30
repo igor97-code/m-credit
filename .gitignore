@@ -2,3 +2,5 @@ node_modules/
 PSD/
 old/
 build/
+.idea
+/.idea
