@@ -233,6 +233,12 @@
                     color: $colorMain;
                 }
             }
+
+            select {
+                @include mobile {
+                    z-index: 5;
+                }
+            }
         }
 
         &__trigger {
@@ -373,21 +379,7 @@
         line-height: 20px;
         font-weight: 400;
         color: $colorText;
-    }
-}
-
-
-@media (max-width: 1000px) {
-    .field {
-        .jq-selectbox {
-            select {
-                z-index: 5;
-            }
-        }
-    }
-
-    .radio-button {
-        .label {
+        @include mobile {
             font-size: 16px;
         }
     }

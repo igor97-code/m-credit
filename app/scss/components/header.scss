@@ -8,9 +8,15 @@
     height: 100px;
     background: $colorWhite;
     border-bottom: 1px solid $colorBorder;
+    @include mobile {
+        height: 55px;
+    }
 
     &-margin {
         height: 100px;
+        @include mobile {
+            height: 55px;
+        }
     }
 
     &-left {
@@ -38,6 +44,12 @@
         padding: 0 20px;
         height: 100px;
         border-left: 1px solid $colorBorder;
+        @include mobile {
+            height: 55px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-left: none;
+        }
 
         &:first-child,
         &.no-border {
@@ -58,6 +70,10 @@
     &-info {
         padding-left: 0;
         max-width: 170px;
+        @include mobile {
+            padding-left: 0;
+            max-width: 120px;
+        }
     }
 
     .logo {
@@ -66,6 +82,10 @@
         height: 70px;
         background: url('../img/logo.svg') center center no-repeat;
         background-size: cover;
+        @include mobile {
+            width: 40px;
+            height: 40px;
+        }
     }
 
     p {
@@ -122,57 +142,27 @@
         p {
             font-size: 13px;
             line-height: 1.2em;
+            @include mobile {
+                font-size: 13px;
+                line-height: 1.2em;
+            }
 
             &.title {
                 font-size: 15px;
                 line-height: 1em;
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 1em;
+                }
             }
 
             &.remark {
                 font-size: 11px;
                 line-height: 1.2em;
-            }
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .header {
-        height: 55px;
-
-        &-margin {
-            height: 55px;
-        }
-
-        &-col {
-            height: 55px;
-            padding-left: 10px;
-            padding-right: 10px;
-            border-left: none;
-        }
-
-        &-info {
-            padding-left: 0;
-            max-width: 120px;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-        }
-
-        p {
-            font-size: 13px;
-            line-height: 1.2em;
-
-            &.title {
-                font-size: 12px;
-                line-height: 1em;
-            }
-
-            &.remark {
-                font-size: 8px;
-                line-height: 1.2em;
+                @include mobile {
+                    font-size: 8px;
+                    line-height: 1.2em;
+                }
             }
         }
     }

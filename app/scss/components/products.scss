@@ -6,6 +6,10 @@
     background: $colorWhite;
     text-decoration: none;
     outline: none;
+    @include mobile {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
     .head {
         display: block;
@@ -14,24 +18,40 @@
         padding: 20px;
         height: 215px;
         overflow: hidden;
+        @include mobile {
+            height: 160px;
+            padding: 15px;
+        }
 
         .text {
             opacity: 0.5;
             font-weight: 700;
+            @include mobile {
+                font-weight: 400;
+            }
 
 
             &.caption {
                 line-height: 18px;
                 opacity: 1;
+                @include mobile {
+                    line-height: 15px;
+                }
             }
 
             &.with-icon {
                 padding-left: 30px;
+                @include mobile {
+                    padding-left: 22px;
+                }
             }
 
             .icon {
                 color: $colorText;
                 font-size: 18px;
+                @include mobile {
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -41,6 +61,10 @@
         margin: 0;
         padding: 20px;
         height: 215px;
+        @include mobile {
+            height: 160px;
+            padding: 15px;
+        }
     }
 
     .text {
@@ -53,6 +77,11 @@
         line-height: 1.3em;
         font-weight: 400;
         color: $colorText;
+        @include mobile {
+            margin: 10px 0;
+            font-size: 12px;
+            line-height: 1.3em;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -62,16 +91,29 @@
             font-size: 18px;
             line-height: 1.2em;
             font-weight: 700;
+            @include mobile {
+                font-size: 17px;
+                line-height: 20px;
+                font-weight: 400;
+            }
         }
 
         &.sum {
             font-size: 24px;
             line-height: 28px;
             font-weight: 700;
+            @include mobile {
+                font-size: 18px;
+                line-height: 21px;
+                margin-bottom: 20px;
+            }
         }
 
         &.with-icon {
             padding-left: 38px;
+            @include mobile {
+                padding-left: 26px;
+            }
         }
 
         .icon {
@@ -80,6 +122,9 @@
             left: 0; top: 0;
             font-size: 16px;
             color: $colorMain;
+            @include mobile {
+                font-size: 12px;
+            }
         }
 
         .label {
@@ -94,104 +139,49 @@
             color: $colorWhite;
             background: $colorMain;
             border-radius: 4px;
-        }
-    }
-}
-
-@media (min-width: 1000px) {
-    .products-slider {
-        margin: 0;
-        padding: 0;
-
-        .swiper-slider {
-            overflow: visible;
-        }
-
-        .swiper-slide {
-            opacity: 0;
-            transform: scale(0.75);
-            transition: opacity .2s ease, transform .4s ease;
-
-            &-visible {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    }
-}
-
-@media (max-width: 1000px) {
-    .product-card {
-        margin-top: 10px;
-        margin-bottom: 10px;
-
-        .head {
-            height: 160px;
-            padding: 15px;
-
-            .text {
-                font-weight: 400;
-
-                &.caption {
-                    line-height: 15px;
-                }
-
-                &.with-icon {
-                    padding-left: 22px;
-                }
-
-                .icon {
-                    font-size: 15px;
-                }
-            }
-        }
-
-        .info {
-            height: 160px;
-            padding: 15px;
-        }
-
-        .text {
-            margin: 10px 0;
-            font-size: 12px;
-            line-height: 1.3em;
-
-            &.caption {
-                font-size: 17px;
-                line-height: 20px;
-                font-weight: 400;
-            }
-
-            &.sum {
-                font-size: 18px;
-                line-height: 21px;
-                margin-bottom: 20px;
-            }
-
-            &.with-icon {
-                padding-left: 26px;
-            }
-
-            .icon {
-                font-size: 12px;
-            }
-
-            .label {
+            @include mobile {
                 font-size: 11px;
             }
         }
     }
-    .products-slider {
-        .swiper-slider {
+}
+
+.products-slider {
+    @include desktop {
+        margin: 0;
+        padding: 0;
+    }
+
+    .swiper-slider {
+        @include desktop {
+            overflow: visible;
+        }
+
+        @include mobile {
             margin-left: -10px;
             margin-right: -10px;
             padding-left: 10px;
             padding-right: 10px;
         }
+    }
 
-        .swiper-slide {
+    .swiper-slide {
+        @include desktop {
+            opacity: 0;
+            transform: scale(0.75);
+            transition: opacity .2s ease, transform .4s ease;
+        }
+
+        @include mobile {
             width: 75%;
             max-width: 320px;
+        }
+
+        &-visible {
+            @include desktop {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     }
 }

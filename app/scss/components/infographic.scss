@@ -2,6 +2,9 @@
     .item {
         display: block;
         margin: 20px 0;
+        @include only-mobile {
+            margin: 10px 0;
+        }
 
         .icon {
             display: block;
@@ -11,6 +14,12 @@
             height: 88px;
             background: $colorWhite;
             border-radius: 20px;
+            @include only-mobile {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+                border-radius: 15px;
+            }
 
             i {
                 display: block;
@@ -20,6 +29,11 @@
                 margin: -29px 0 0 -29px;
                 font-size: 58px;
                 color: $colorMain;
+                @include only-mobile {
+                    margin-top: -20px;
+                    margin-left: -20px;
+                    font-size: 40px;
+                }
             }
         }
 
@@ -34,11 +48,21 @@
             font-weight: 300;
             color: $colorText;
             text-align: center;
+            @include only-mobile {
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 18px;
+                line-height: 21px;
+            }
 
             &.label {
                 font-size: 14px;
                 font-weight: 700;
                 color: $colorMain;
+                @include only-mobile {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
             }
         }
     }
@@ -46,6 +70,33 @@
     &.with-arrows {
         .item {
             position: relative;
+            @include only-mobile {
+                position: relative;
+                min-height: 60px;
+                padding-top: 5px;
+                padding-left: 80px;
+            }
+
+            &.with-arrow {
+                @include only-mobile {
+                    padding-bottom: 40px;
+                }
+            }
+
+            .icon {
+                @include only-mobile {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin: 0;
+                }
+            }
+
+            .text {
+                @include only-mobile {
+                    text-align: left;
+                }
+            }
 
             .arrow  {
                 display: block;
@@ -57,66 +108,7 @@
                 height: 88px;
                 background: url('../img/arrow-infographic.svg') center center no-repeat;
                 background-size: contain;
-            }
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .infographic {
-        .item {
-            margin: 10px 0;
-
-            .icon {
-                width: 60px;
-                height: 60px;
-                margin-bottom: 10px;
-                border-radius: 15px;
-
-                i {
-                    margin-top: -20px;
-                    margin-left: -20px;
-                    font-size: 40px;
-                }
-            }
-
-            .text {
-                margin-top: 5px;
-                margin-bottom: 5px;
-                font-size: 18px;
-                line-height: 21px;
-
-                &.label {
-                    font-size: 11px;
-                    line-height: 13px;
-                }
-            }
-        }
-
-
-        &.with-arrows {
-            .item {
-                position: relative;
-                min-height: 60px;
-                padding-top: 5px;
-                padding-left: 80px;
-
-                &.with-arrow {
-                    padding-bottom: 40px;
-                }
-
-                .icon {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    margin: 0;
-                }
-
-                .text {
-                    text-align: left;
-                }
-
-                .arrow {
+                @include only-mobile {
                     left: 0;
                     top: 67.5px;
                     margin: 0;

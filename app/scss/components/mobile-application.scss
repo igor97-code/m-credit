@@ -11,15 +11,44 @@
         margin: 0;
         max-width: 400px;
         height: 422px;
+        @include only-mobile {
+            display: block;
+            position: relative;
+            padding: 10px 0;
+            height: 300px;
+            //max-width: 100%;
+
+            .table-block {
+                display: block;
+
+                .cell {
+                    display: block;
+                }
+            }
+        }
 
         a {
             text-decoration: none;
             transition: all .2s ease;
+            @include desktop {
+                &:hover {
+                    opacity: .8;
+                }
+            }
         }
 
         .button-block {
             margin: 45px 0 0 0;
             width: 320px;
+            @include only-mobile {
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 10px;
+                margin: 0;
+                width: auto;
+            }
         }
 
         .app-link {
@@ -42,53 +71,6 @@
             }
             &.googleplay {
                 background-image: url('../img/button-googleplay-white.svg');
-            }
-        }
-    }
-}
-
-@media (min-width: 1000px) {
-    .mobapp-index {
-        .info {
-            a {
-                &:hover {
-                    opacity: .8;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 760px) {
-    .mobapp-index {
-
-        .info {
-            display: block;
-            position: relative;
-            padding: 10px 0;
-            height: 300px;
-            //max-width: 100%;
-    
-            .table-block {
-                display: block;
-                
-                .cell {
-                    display: block;
-                }
-            }
-            
-            .button-block {
-                display: block;
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 10px;
-                margin: 0;
-                width: auto;
-            }
-
-            .app-link {
-
             }
         }
     }

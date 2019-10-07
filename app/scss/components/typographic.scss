@@ -19,6 +19,10 @@
     margin: 0;
     padding: 50px 0;
     background-color: $colorWhite;
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
     &.gray {
         background-color: $colorBg;
@@ -30,6 +34,11 @@
         line-height: 1.5em;
         font-weight: 300;
         text-align: center;
+        @include mobile {
+            margin: 30px 0;
+            font-size: 26px;
+            line-height: 30px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -44,6 +53,10 @@
         font-size: 24px;
         line-height: 1.2em;
         font-weight: 300;
+        @include mobile {
+            font-size: 22px;
+            line-height: 26px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -58,6 +71,10 @@
         font-size: 18px;
         line-height: 1.2em;
         font-weight: 300;
+        @include mobile {
+            font-size: 18px;
+            line-height: 22px;
+        }
 
         &:first-child {
             margin-top: 0;
@@ -69,11 +86,10 @@
 
     a {
         color: $colorLink;
-    }
-
-    @media (min-width: 1000px) {
-        a:hover {
-            text-decoration: none;
+        @include mobile {
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
@@ -255,41 +271,20 @@
     }
 }
 
-@media (max-width: 1000px) {
-    .section {
-        padding-top: 30px;
-        padding-bottom: 30px;
-
-        h1, .h1 {
-            margin: 30px 0;
-            font-size: 26px;
-            line-height: 30px;
-
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        h2, .h2 {
-            font-size: 22px;
-            line-height: 26px;
-        }
-
-        h3, .h3 {
-            font-size: 18px;
-            line-height: 22px;
-        }
-    }
-}
-
 // блок с тенью
 .shadow-block {
     display: block;
     position: relative;
     transition: transform .2s ease;
+    @include desktop {
+        &:hover {
+            transform: translateY(-3px);
+
+            &:after {
+                box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08);
+            }
+        }
+    }
 
     &:after {
         content: "";
@@ -300,23 +295,8 @@
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
         z-index: -1;
         transition: all .2s ease;
-    }
-}
-@media (max-width: 1000px) {
-    .shadow-block {
-        &:after {
+        @include mobile {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
-        }
-    }
-}
-@media (min-width: 1000px) {
-    .shadow-block {
-        &:hover {
-            transform: translateY(-3px);
-
-            &:after {
-                box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.08);
-            }
         }
     }
 }
@@ -367,11 +347,9 @@
             display: block;
         }
     }
-}
 
-@media (max-width: 1000px) {
-    .toggle-block {
-        &.mobile-no-toggle {
+    &.mobile-no-toggle {
+        @include mobile {
             .toggle-caption {
                 padding-right: 0;
             }

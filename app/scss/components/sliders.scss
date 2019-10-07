@@ -25,6 +25,9 @@
         top: 0; bottom: 0;
         width: 60px;
         cursor: pointer;
+        @include mobile {
+            display: none;
+        }
 
         &-prev {
             left: -60px;
@@ -66,14 +69,6 @@
         }
     }
 }
-
-@media (max-width: 1000px) {
-    .swiper {
-        &-arrow {
-            display: none;
-        }
-    }
-}
 // END swiper-style
 
 
@@ -97,6 +92,17 @@
         background: $colorBg;
         text-decoration: none;
         outline: none;
+        @include mobile {
+            height: auto;
+            overflow: hidden;
+
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                padding-top: 56%;
+            }
+        }
 
         .img {
             display: block;
@@ -106,6 +112,9 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            @include mobile {
+                background-position: 0 center;
+            }
 
             &:before {
                 content: "";
@@ -115,6 +124,9 @@
                 bottom: 0;
                 height: 50%;
                 background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, rgba(51, 51, 51, 0.3) 100%);
+                @include mobile {
+                    height: 75%;
+                }
             }
         }
 
@@ -124,6 +136,15 @@
             left: 50%; bottom: 60px;
             margin: 0 0 0 -490px;
             width: 600px;
+            @include mobile {
+                left: 0;
+                bottom: 13px;
+                margin-left: 0;
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 100%;
+                max-width: 400px;
+            }
         }
 
         p {
@@ -133,11 +154,19 @@
             color: $colorWhite;
             font-weight: 500;
             text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.55);
+            @include mobile {
+                font-size: 18px;
+                line-height: 21px;
+            }
 
             &.big {
                 font-size: 56px;
                 line-height: 66px;
                 font-weight: 900;
+                @include mobile {
+                    font-size: 30px;
+                    line-height: 35px;
+                }
             }
 
             &.small {
@@ -145,6 +174,10 @@
                 line-height: 16px;
                 font-weight: 400;
                 text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.55);
+                @include mobile {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
             }
         }
     }
@@ -158,6 +191,26 @@
             margin: 0 0 0 -490px;
             width: 980px;
             text-align: left;
+            @include mobile {
+                position: relative;
+                left: auto; bottom: auto;
+                margin-left: 0;
+                margin-top: 16px;
+                width: 100%;
+                text-align: center;
+            }
+
+            &-bullet {
+                @include mobile {
+                    background: #000;
+                    opacity: .2;
+
+                    &-active {
+                        background: $colorMain;
+                        opacity: 1;
+                    }
+                }
+            }
         }
 
         &-arrow {
@@ -185,95 +238,21 @@
         margin: -261px 0 0 185px;
         padding: 70px 0 0 0;
         width: 315px; height: 522px;
-
-        .button-block {
-            display: block;
-            position: absolute;
-            left: 0; right: 0;
-            top: 0;
-        }
-
-
-    }
-}
-
-@media (max-width: 1000px) {
-    .main-slider {
-
-        .slide {
-            height: auto;
-            overflow: hidden;
-
-            .img {
-                background-position: 0 center;
-                &:before {
-                    height: 75%;
-                }
-            }
-
-            &:before {
-                content: "";
-                display: block;
-                float: left;
-                padding-top: 56%;
-            }
-
-            .text {
-                left: 0;
-                bottom: 13px;
-                margin-left: 0;
-                padding-left: 15px;
-                padding-right: 15px;
-                width: 100%;
-                max-width: 400px;
-            }
-
-            p {
-                font-size: 18px;
-                line-height: 21px;
-
-                &.big {
-                    font-size: 30px;
-                    line-height: 35px;
-                }
-
-                &.small {
-                    font-size: 12px;
-                    line-height: 16px;
-                }
-            }
-        }
-
-        .swiper {
-            &-pagination {
-                position: relative;
-                left: auto; bottom: auto;
-                margin-left: 0;
-                margin-top: 16px;
-                width: 100%;
-                text-align: center;
-
-                &-bullet {
-                    background: #000;
-                    opacity: .2;
-
-                    &-active {
-                        background: $colorMain;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-
-        &-info {
+        @include mobile {
             position: relative;
             z-index: 10;
             left: auto; top: auto;
             margin: 0 15px;
             padding-top: 0;
             width: auto; height: auto;
+        }
 
-            .button-block {
+        .button-block {
+            display: block;
+            position: absolute;
+            left: 0; right: 0;
+            top: 0;
+            @include mobile {
                 display: block;
                 position: relative;
                 left: auto; right: auto;
@@ -281,8 +260,8 @@
                 margin-top: 20px;
             }
         }
+
+
     }
 }
 // END слайдер на главной
-
-

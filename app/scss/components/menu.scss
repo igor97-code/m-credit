@@ -7,10 +7,16 @@
     margin: 0;
     width: 100%;
     background: #7dc041;
+    @include mobile {
+        display: none;
+    }
 
     &-margin {
         margin: 0;
         height: 40px;
+        @include mobile {
+            display: none;
+        }
     }
 
     &-content {
@@ -159,16 +165,6 @@
 .height-small {
     .main-menu {
         top: 60px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .main-menu {
-        display: none;
-
-        &-margin {
-            display: none;
-        }
     }
 }
 // END Главное меню
