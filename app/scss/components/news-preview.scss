@@ -1,0 +1,21 @@
+.news-preview {
+    .item {
+        @include mobile {
+            margin: 40px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .date {
+            font-size: 14px;
+            font-weight: 700;
+            color: $colorMain;
+            @include mobile {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+}

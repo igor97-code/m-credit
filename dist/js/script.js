@@ -17608,7 +17608,13 @@ $(function () {
     });
 
     // lazyload
-    $('.lazy').Lazy();
+    $('.lazy').Lazy({
+        effect: "fadeIn",
+        effectTime: 2000,
+        // afterLoad: function(element) {
+        //     // called after an element was successfully handled
+        // },
+    });
 
     $(window).on('resize', function () {
         resizeModal();
@@ -17622,6 +17628,34 @@ $(function () {
     // слайдер продуктов
     if ($('#products_slider').length) {
         initProductsSlider();
+    }
+
+    // слайдер инфографики
+    if ($('#infographic_slider').length) {
+        initInfographicSliderInMain();
+    }
+
+    // слайдер отзывов
+    if ($('#comments_slider').length) {
+        initCommentsSlider();
+    }
+
+    // слайдер отзывов
+    if ($('#experts_slider').length) {
+        initExpertsSliderInMain();
+    }
+
+    // читать полностью
+    if ($('.show-more').length) {
+        $('.show-more').on('click', function() {
+            var $this = $(this);
+
+            $this.fadeOut('fast');
+
+            $this.parents('.section').find('.more-mobile-content').removeClass('more-mobile-content');
+
+            return false
+        })
     }
 
     // инициализация калькуляторов
@@ -18044,6 +18078,104 @@ function initProductsSlider() {
                 slidesPerView: 'auto',
                 freeMode: true,
                 spaceBetween: 10
+            }
+        }
+    });
+}
+
+// слайдер инфографики
+function initInfographicSliderInMain()  {
+    var slider = new Swiper('#infographic_slider', {
+        effect: 'slide',
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 3,
+        // slidesPerColumn: 1,
+        pagination: {
+            el: '.infographic-slider-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.infographic-slider-button-next',
+            prevEl: '.infographic-slider-button-prev'
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
+        breakpoints: {
+            575: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+                slidesPerGroup: 2,
+                // slidesPerColumn: 3,
+                // pagination: false,
+                // noSwipingClass: 'swiper-slide',
+                // noSwiping: true
+            }
+        }
+    });
+}
+
+// слайдер отзывов
+function initCommentsSlider() {
+    var slider = new Swiper('#comments_slider', {
+        effect: 'slide',
+        loop: false,
+        watchSlidesVisibility: true,
+        spaceBetween: 20,
+        // slidesOffsetBefore: 20,
+        // slidesOffsetAfter: 20,
+        pagination: {
+            el: '.comments-slider-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.comments-slider-button-next',
+            prevEl: '.comments-slider-button-prev'
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
+        // breakpoints: {
+        //     1000: {
+        //         spaceBetween: 10
+        //     }
+        // }
+    });
+}
+
+// слайдер экспертов
+function initExpertsSliderInMain()  {
+    var slider = new Swiper('#experts_slider', {
+        effect: 'slide',
+        loop: false,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        watchSlidesVisibility: true,
+        noSwipingClass: 'swiper-slide',
+        noSwiping: true,
+        pagination: {
+            el: '.experts-slider-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.experts-slider-button-next',
+            prevEl: '.experts-slider-button-prev'
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
+        breakpoints: {
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                noSwiping: false,
+            },
+            575: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                noSwiping: false,
             }
         }
     });

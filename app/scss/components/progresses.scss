@@ -1,0 +1,53 @@
+.progresses {
+
+    .progress-card {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 0;
+        background: $colorWhite;
+        white-space: nowrap;
+        @include mobile {
+            margin: 5px 0;
+        }
+        @include only-mobile {
+            min-height: 120px;
+        }
+
+        .img {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 54px;
+            height: 54px;
+            border-radius: 15px;
+            background-size: contain !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            margin: 0;
+            @include only-mobile {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        .text {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 130px;
+            font-size: 11px;
+            font-weight: 400;
+            color: $colorText;
+            margin-left: 15px;
+            line-height: 124.69%;
+            white-space: normal;
+            @include only-mobile {
+                display: block;
+                margin-top: 10px;
+                text-align: center;
+                max-width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+}

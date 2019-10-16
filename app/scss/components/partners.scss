@@ -1,0 +1,17 @@
+.partners {
+    .partner {
+        position: relative;
+        display: block;
+        width: 147px;
+        height: 74px;
+        background-color: $colorWhite !important;
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        margin: 10px 0;
+        @include mobile {
+            width: 100%;
+            margin: 5px 0;
+        }
+    }
+}

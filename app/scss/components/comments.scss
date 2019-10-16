@@ -1,0 +1,125 @@
+.comments {
+
+    .comment-card {
+        padding: 10px 60px;
+        @include mobile {
+            padding: 10px 30px;
+        }
+
+        .img {
+            position: relative;
+            display: block;
+            width: 120px;
+            height: 120px;
+            margin: 15px auto;
+            border-radius: 100%;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 300;
+            line-height: 38px;
+            text-align: center;
+            color: $colorText;
+            @include mobile {
+                font-size: 18px;
+                line-height: 21px;
+                margin: 15px 0;
+            }
+        }
+
+        .info {
+            margin: 0 auto;
+            color: $colorMain;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+
+            .date {
+                position: relative;
+                padding-right: 19px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    right: 9px;
+                    width: 1px;
+                    background: $colorMain;
+
+                }
+            }
+        }
+
+        .medium-text {
+            text-align: center;
+            color: $colorGray;
+            line-height: 179.19%;
+            margin: 20px 0;
+        }
+    }
+
+    .comments-slider {
+        @include desktop {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-slider {
+            margin-bottom: 50px;
+            @include mobile {
+                margin-bottom: 40px;
+                margin-top: -10px;
+            }
+
+            @include desktop {
+                overflow: visible;
+            }
+
+            @include mobile {
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .swiper-slide {
+            @include desktop {
+                cursor: pointer;
+                opacity: 0;
+                transform: scale(0.75);
+                transition: opacity .2s ease, transform .4s ease;
+            }
+
+            @include mobile {
+                padding: 10px 0;
+            }
+
+            &-visible {
+                @include desktop {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .comments-slider-pagination{
+            width: 100%;
+            bottom: -50px;
+
+            .swiper-pagination-bullet {
+                background: $colorGray;
+
+                &.swiper-pagination-bullet-active {
+                    background: $colorMain;
+                }
+            }
+        }
+    }
+}

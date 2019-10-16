@@ -1,0 +1,108 @@
+.experts {
+
+    .experts-slider {
+        @include desktop {
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-slider {
+            @include desktop {
+                overflow: visible;
+            }
+
+            @include mobile {
+                margin-left: -10px;
+                margin-right: -10px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        .swiper-slide {
+            @include desktop {
+                opacity: 0;
+                transform: scale(0.75);
+                transition: opacity .2s ease, transform .4s ease;
+            }
+
+            &-visible {
+                @include desktop {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .swiper-pagination {
+            width: 100%;
+            @include desktop {
+                display: none;
+            }
+
+            .swiper-pagination-bullet {
+                background: $colorGray;
+
+                &.swiper-pagination-bullet-active {
+                    background: $colorMain;
+                }
+            }
+        }
+    }
+
+    .expert-card {
+        position: relative;
+        padding: 20px;
+        min-height: 265px;
+        text-decoration: none;
+        margin: 20px 0;
+
+        .img {
+            position: absolute;
+            display: block;
+            top: 20px;
+            left: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 100%;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            margin: 0;
+        }
+
+        .name {
+            font-size: 16px;
+            font-weight: 700;
+            padding-left: 110px;
+            margin-bottom: 10px;
+        }
+
+        .post {
+            font-size: 12px;
+            color: $colorGray;
+            padding-left: 110px;
+            margin: 10px 0 40px 0;
+        }
+
+        .desc {
+            padding-bottom: 20px;
+        }
+
+        .link {
+            position: absolute;
+            display: block;
+            bottom: 20px;
+            left: 20px;
+            font-size: 16px;
+            color: $colorMain;
+
+            .icon {
+                position: absolute;
+                display: block;
+                right: -20px;
+                bottom: 2px;
+            }
+        }
+    }
+}

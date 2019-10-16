@@ -1,0 +1,59 @@
+.credit-rating {
+
+    .diagram {
+        position: relative;
+        display: block;
+        width: 265px;
+        height: 265px;
+        background-color: $colorGrayHover;
+        background-image: url(../img/rating.svg);
+        //background: $colorGray, radial-gradient(50% 50% at 100% 50%, #E94551 0%, #FFCD2B 191.37%, #7DC041 100%) center no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        margin: 0 auto;
+        @include mobile {
+            margin: 30px auto;
+            margin-bottom: 60px;
+        }
+
+        .value {
+            position: absolute;
+            display: block;
+            width: 195px;
+            height: 195px;
+            border-radius: 100%;
+            background: $colorWhite;
+            top: 50%;
+            left: 50%;
+            margin-top: -97.5px;
+            margin-left: -97.5px;
+            padding: 50px 5px;
+
+            .number {
+                font-size: 60px;
+                font-weight: 900;
+                line-height: 70px;
+                text-align: center;
+                margin: 0;
+            }
+
+            .points {
+                font-size: 20px;
+                font-weight: 400;
+                text-align: center;
+                margin: 0;
+            }
+
+        }
+    }
+
+    .button-block {
+        margin: 45px 0 0;
+        width: 320px;
+        @include mobile {
+            width: auto;
+        }
+    }
+}
