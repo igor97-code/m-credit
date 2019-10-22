@@ -14,6 +14,89 @@
         padding-right: 15px;
     }
 
+    &.inner {
+        padding: 1px 0;
+        overflow: visible;
+        @include mobile {
+            margin: 0;
+        }
+
+        .shadow-block {
+            padding: 0 20px;
+            @include mobile {
+                padding: 1px 20px;
+            }
+
+            &:hover {
+                transform: none;
+            }
+        }
+
+        .calculator-item {
+            max-width: 230px;
+            margin: 22px 0;
+            @include mobile {
+                max-width: 100%;
+            }
+
+            &.center {
+                margin: 22px auto;
+            }
+
+            &.result {
+                margin: 0 20px;
+                padding: 0;
+                max-width: 100%;
+                border-radius: 0 0 3px 3px;
+                @include xs-mobile {
+                    margin: 0 10px;
+                }
+
+                .after-divider {
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -5px;
+                        right: -.5px;
+                        width: 1px;
+                        height: 10px;
+                        background: $colorGray;
+                        @include mobile {
+                            content: none;
+                            //bottom: -.5px;
+                            //top: auto;
+                            //right: auto;
+                            //width: 100px;
+                            //height: 1px;
+                            //left: 50%;
+                            //margin-left: -50px;
+                        }
+                    }
+                }
+
+                .min-margin {
+                    margin: 1px 0;
+
+                    .medium,.medium-label {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .button {
+            max-width: 230px;
+            float: right;
+            @include mobile {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
     &:before {
         content: "";
         display: none;

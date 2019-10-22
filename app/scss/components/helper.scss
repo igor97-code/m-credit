@@ -97,6 +97,10 @@
     }
 }
 
+.m-t--60 {
+    margin-top: -60px !important;
+}
+
 .m-t-40 {
     margin-top: 40px !important;
 }
@@ -129,12 +133,20 @@
     padding-bottom: 0 !important;
 }
 
+.p-b-30 {
+    padding-bottom: 30px !important;
+}
+
 .p-l-0 {
     padding-left: 0 !important;
 }
 
 .p-r-0 {
     padding-right: 0 !important;
+}
+
+.p-all-0 {
+    padding: 0 !important;
 }
 
 .text-align-left {
@@ -168,4 +180,8 @@
 
 .color-green {
     color: $colorMain;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }

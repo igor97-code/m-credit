@@ -1,0 +1,27 @@
+.ipad {
+    position: relative;
+    display: block;
+    height: 450px;
+    background: url(../img/ipad.png) no-repeat center;
+    background-size: contain;
+    @include mobile {
+        margin-top: 30px;
+    }
+
+    .logo {
+        position: absolute;
+        display: block;
+        background: $colorWhite url(../img/logo.svg) no-repeat center;
+        background-size: 55%;
+        top: 42.4px;
+        left: 86px;
+        right: 152px;
+        bottom: 105px;
+        @include mobile {
+            top: 42.4px;
+            left: 32.7%;
+            right: 40.6%;
+            bottom: 104px;
+        }
+    }
+}

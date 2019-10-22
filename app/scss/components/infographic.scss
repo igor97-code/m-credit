@@ -88,6 +88,11 @@
                     font-size: 11px;
                     line-height: 13px;
                 }
+
+                &.default {
+                    color: inherit;
+                    font-weight: inherit;
+                }
             }
         }
     }

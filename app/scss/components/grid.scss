@@ -50,6 +50,17 @@
             }
         }
 
+        &.w-60-mobile {
+            @include mobile {
+                float: left;
+                width: 60% !important;
+
+                &.float-right {
+                    float: right;
+                }
+            }
+        }
+
         &.w-75-mobile {
             @include mobile {
                 float: left;
@@ -74,6 +85,11 @@
             &.w-50-tablet {
                 float: left;
                 width: 50% !important;
+            }
+
+            &.w-60-tablet {
+                float: left;
+                width: 60% !important;
             }
         }
 
@@ -101,8 +117,16 @@
             width: 50%;
         }
 
+        &.w-60 {
+            width: 60%;
+        }
+
         &.w-66 {
             width: 66%;
+        }
+
+        &.w-75 {
+            width: 75%;
         }
     }
 

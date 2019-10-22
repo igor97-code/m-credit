@@ -1,4 +1,5 @@
 $(function () {
+    console.log(0);
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
 
@@ -26,7 +27,7 @@ $(function () {
 
     // lazyload
     $('.lazy').Lazy({
-        effect: "fadeIn",
+        effect: 'fadeIn',
         effectTime: 2000,
         // afterLoad: function(element) {
         //     // called after an element was successfully handled
@@ -104,7 +105,6 @@ $(function () {
         $(this).parents('.toggle-block').toggleClass('open');
         return false;
     });
-
 
 
     // скрываем прелоадер страницы
@@ -395,7 +395,7 @@ function initCalculators() {
                 discount = +calculatorData.item[sum].data[term].discount;
 
             if (discount) payment = discount;
-            
+
             $resultSum.html(numberFormat(payment));
 
             //дата возврата
