@@ -1268,7 +1268,7 @@ input.button {
     opacity: .5; }
 
 .seo-content p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   color: #7e7e7e;
   line-height: 179.19%; }
@@ -2264,15 +2264,16 @@ input.button {
     position: relative; }
     .product-card.big-head .product-bg:before {
       background-position: 75% bottom; }
+    .product-card.big-head .product-bg.bg-pos-left:before {
+      background-position: left bottom; }
     .product-card.big-head .head {
       height: auto;
       min-height: 500px;
       padding: 20px 0 80px;
       z-index: 2; }
-      @media (max-width: 1000px) {
+      @media (min-width: 1280px) and (max-width: 1600px) {
         .product-card.big-head .head {
-          height: auto;
-          padding: 20px 0 180px; } }
+          min-height: 400px; } }
       .product-card.big-head .head .text {
         font-size: 14px;
         line-height: 179.19%;
@@ -2396,6 +2397,49 @@ input.button {
       background-image: url("../img/products/8.png"); }
     .product-bg.bg-8.small:before {
       background-image: url("../img/products/8-small.png"); }
+  .product-bg.bg-9 {
+    background: #ffffff; }
+    .product-bg.bg-9:before {
+      background-image: url("../img/products/11.png");
+      width: 45%; }
+      @media (max-width: 1000px) {
+        .product-bg.bg-9:before {
+          width: auto; } }
+
+.info-wrapper {
+  height: 560px; }
+  @media (max-width: 1000px) {
+    .info-wrapper {
+      height: auto; } }
+
+.image-wrapper {
+  height: 500px;
+  margin: 25px auto; }
+  @media (max-width: 1000px) {
+    .image-wrapper {
+      height: 300px; } }
+  .image-wrapper .image {
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.logos .logo-item {
+  display: inline-block;
+  height: 30px;
+  margin: 10px 15px 0 0; }
+  .logos .logo-item:last-child {
+    margin-right: 0; }
+  .logos .logo-item img {
+    max-height: 100%; }
+
+.logos.logos-vertical {
+  text-align: center;
+  font-size: 0; }
+  .logos.logos-vertical .logo-item {
+    height: auto;
+    display: block;
+    margin: 15px auto; }
 
 .mobapp-index {
   display: block;

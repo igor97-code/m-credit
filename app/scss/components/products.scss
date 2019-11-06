@@ -205,6 +205,10 @@
             &:before {
                 background-position: 75% bottom;
             }
+
+            &.bg-pos-left:before{
+                background-position: left bottom;
+            }
         }
 
         .head {
@@ -212,9 +216,8 @@
             min-height: 500px;
             padding: 20px 0 80px;
             z-index: 2;
-            @include mobile {
-                height: auto;
-                padding: 20px 0 180px;
+            @include sm-desktop{
+                min-height: 400px;
             }
 
             .text {
@@ -401,16 +404,76 @@
         }
     }
     &.bg-8 {
-        background: #EFEFEF;
-        &:before {
-            background-image: url('../img/products/8.png');
-        }
+             background: #EFEFEF;
+             &:before {
+                 background-image: url('../img/products/8.png');
+             }
 
-        &.small {
-            &:before {
-                background-image: url('../img/products/8-small.png');
+             &.small {
+                 &:before {
+                     background-image: url('../img/products/8-small.png');
+                 }
+             }
+         }
+    &.bg-9 {
+        background: $colorWhite;
+        &:before {
+            background-image: url('../img/products/11.png');
+            width: 45%;
+
+            @include mobile{
+                width: auto;
             }
         }
     }
+
 }
 // END фоны продуктов
+
+//Блок текст центрируется картинки - слева, справа
+    .info-wrapper{
+        height: 560px;
+        @include mobile{
+            height: auto;
+        }
+    }
+
+    .image-wrapper{
+        height: 500px;
+        margin: 25px auto;
+        @include mobile{
+            height: 300px;
+        }
+        .image {
+            background-size: contain;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+.logos{
+    .logo-item{
+        display: inline-block;
+        height: 30px;
+        margin: 10px 15px 0 0;
+
+        &:last-child{
+            margin-right: 0;
+        }
+        img{
+            max-height: 100%;
+        }
+    }
+
+    &.logos-vertical{
+        text-align: center;
+        font-size: 0;
+        .logo-item{
+            height: auto;
+            display: block;
+            margin: 15px auto;
+        }
+    }
+}
+//END Блок текст центрируется картинки - слева, справа
