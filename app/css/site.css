@@ -286,6 +286,9 @@ body {
   margin: 0 auto;
   padding: 1px 15px;
   max-width: 980px; }
+  .container.relative {
+    position: relative;
+    z-index: 2; }
   .container.fullscreen {
     max-width: 100%; }
 
@@ -1072,6 +1075,9 @@ input.button {
     .section {
       padding-top: 30px;
       padding-bottom: 30px; } }
+  .section.relative {
+    position: relative;
+    z-index: 2; }
   .section.gray {
     background-color: #efefef; }
   .section h1, .section .h1 {
@@ -1174,6 +1180,16 @@ input.button {
     .section ul.small-text li, .section ol.small-text li {
       font-size: 12px;
       line-height: 1.3em; }
+  .section ol {
+    counter-reset: myCounter; }
+    .section ol li:before {
+      counter-increment: myCounter;
+      content: counter(myCounter) ".";
+      top: 0;
+      background: none;
+      font-size: 16px;
+      width: auto;
+      color: #7dc041; }
   .section .table {
     display: block;
     margin: 20px 0;
@@ -1237,7 +1253,7 @@ input.button {
     margin: 20px 0; }
     .section .img img {
       display: block;
-      margin: 0;
+      margin: 0 auto;
       max-width: 100%; }
   .section .show-more {
     position: relative;
@@ -2267,7 +2283,6 @@ input.button {
     .product-card.big-head .product-bg.bg-pos-left:before {
       background-position: left bottom; }
     .product-card.big-head .head {
-      height: auto;
       min-height: 500px;
       padding: 20px 0 80px;
       z-index: 2; }
@@ -2405,6 +2420,10 @@ input.button {
       @media (max-width: 1000px) {
         .product-bg.bg-9:before {
           width: auto; } }
+  .product-bg.bg-10 {
+    background-image: url("../img/products/avtokreditovanie/bg11.png"); }
+    .product-bg.bg-10:before {
+      background-image: url("../img/products/avtokreditovanie/driver.png"); }
 
 .info-wrapper {
   height: 560px; }

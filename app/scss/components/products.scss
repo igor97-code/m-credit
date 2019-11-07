@@ -212,7 +212,7 @@
         }
 
         .head {
-            height: auto;
+            //height: auto;
             min-height: 500px;
             padding: 20px 0 80px;
             z-index: 2;
@@ -415,6 +415,7 @@
                  }
              }
          }
+
     &.bg-9 {
         background: $colorWhite;
         &:before {
@@ -425,6 +426,14 @@
                 width: auto;
             }
         }
+    }
+
+    &.bg-10 {
+        background-image: url('../img/products/avtokreditovanie/bg11.png');
+        &:before {
+            background-image: url('../img/products/avtokreditovanie/driver.png');
+        }
+
     }
 
 }
