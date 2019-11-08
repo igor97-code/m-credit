@@ -1,0 +1,13 @@
+.document-row {
+    border-top: 1px solid $colorBorder;
+
+    &:last-child {
+        border-bottom: 1px solid $colorBorder;
+    }
+
+    .document-item {
+        text-decoration: none;
+        display: block;
+        margin: 20px 0;
+    }
+}

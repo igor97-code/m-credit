@@ -1047,6 +1047,13 @@ body {
         background: transparent;
         color: #333333;
         opacity: .8; } }
+  .button-w-35 {
+    width: 35%;
+    margin-right: auto;
+    margin-left: auto; }
+    @media (max-width: 1000px) {
+      .button-w-35 {
+        width: 100%; } }
   .button:disabled, .button.disabled {
     opacity: .5 !important;
     cursor: default; }
@@ -1066,6 +1073,9 @@ input.button {
 
 .color-white {
   color: #ffffff !important; }
+
+.color-blue {
+  color: #005498 !important; }
 
 .section {
   margin: 0;
@@ -1133,6 +1143,10 @@ input.button {
     line-height: 1.5em;
     color: #333333;
     font-weight: 400; }
+    .section p.big-text,
+    .section p .big-text {
+      font-size: 24px;
+      line-height: 1.5em; }
     .section p.medium-text,
     .section p .medium-text {
       font-size: 14px;
@@ -1194,7 +1208,8 @@ input.button {
     display: block;
     margin: 20px 0;
     padding: 0;
-    background: none; }
+    background: none;
+    overflow: auto; }
     .section .table:last-child {
       margin-bottom: 0; }
     .section .table table {
@@ -1368,6 +1383,41 @@ input.button {
       display: none; }
     .toggle-block.mobile-no-toggle .toggle-content {
       display: block; } }
+
+.tabs-switchers {
+  font-size: 0;
+  margin: 30px 0;
+  text-align: center; }
+  .tabs-switchers .switcher {
+    display: inline-block;
+    color: #333333;
+    font-size: 14px;
+    line-height: 16px;
+    width: 150px;
+    border: 1px solid #7dc041;
+    background-color: #ffffff;
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+    text-decoration: none; }
+    .tabs-switchers .switcher:first-child {
+      border-radius: 4px 0px 0px 4px; }
+    .tabs-switchers .switcher:last-child {
+      border-radius: 0px 4px 4px 0px; }
+    .tabs-switchers .switcher.active {
+      background-color: #7dc041;
+      color: #ffffff;
+      cursor: default; }
+      .tabs-switchers .switcher.active:hover {
+        color: #ffffff; }
+    .tabs-switchers .switcher:hover {
+      color: #7dc041; }
+
+.tabs-block .tab {
+  display: none; }
+  .tabs-block .tab.active {
+    display: block; }
 
 .header {
   display: block;
@@ -2873,6 +2923,81 @@ input.button {
         left: 32.7%;
         right: 40.6%;
         bottom: 104px; } }
+
+.document-row {
+  border-top: 1px solid #efefef; }
+  .document-row:last-child {
+    border-bottom: 1px solid #efefef; }
+  .document-row .document-item {
+    text-decoration: none;
+    display: block;
+    margin: 20px 0; }
+
+.loan-types .item {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden; }
+  .loan-types .item .image {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin: 0; }
+    .loan-types .item .image .icon {
+      font-size: 30px; }
+      .loan-types .item .image .icon:before {
+        line-height: 50px;
+        color: #7e7e7e; }
+  .loan-types .item .number {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #c2c2c2;
+    background-color: #fff;
+    color: #7e7e7e;
+    border-radius: 50%;
+    top: -15px;
+    left: 25px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px; }
+    .loan-types .item .number.final {
+      background-color: #7dc041;
+      border-color: #7dc041;
+      color: #ffffff; }
+  .loan-types .item-big {
+    height: 120px;
+    white-space: normal;
+    position: relative;
+    overflow: visible; }
+    @media (max-width: 1000px) {
+      .loan-types .item-big {
+        margin: 20px 0; }
+        .loan-types .item-big:last-child {
+          margin-bottom: 0; } }
+    .loan-types .item-big .image {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .loan-types .item-big .image .icon {
+        font-size: 50px; }
+        .loan-types .item-big .image .icon:before {
+          color: #7dc041; }
+    .loan-types .item-big .info {
+      padding-left: 60px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+  .loan-types .item .info {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px; }
 
 .question-list {
   display: block;

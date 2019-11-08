@@ -65,6 +65,12 @@
 // ipad
 @import './components/ipad';
 
+// Документы
+@import './components/documents';
+
+// Виды займов
+@import './components/loan-types';
+
 // Вопросы и ответы
 .question-list {
     display: block;
