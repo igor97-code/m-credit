@@ -196,6 +196,16 @@
         }
     }
 
+    &-w-35{
+        width: 35%;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include mobile{
+            width: 100%;
+        }
+    }
+
     &:disabled,
     &.disabled {
         opacity: .5 !important;
