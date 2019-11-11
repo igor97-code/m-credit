@@ -223,9 +223,49 @@
         background: none;
         overflow: auto;
 
+        &.payment-table{
+
+            .bg-gray{
+                background-color: #EFEFEF;
+            }
+
+            tr{
+                &:last-child{
+                    border-bottom: 1px solid $colorBorder;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+
+                .img{
+                    img{
+                        min-width: 50px;
+                    }
+                }
+
+                a{
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
+            }
+
+
+            td, th{
+                vertical-align: middle;
+
+                .biggest-text{
+                    font-size: 34px;
+                    line-height: 1.2em;
+                    font-weight: 100;
+                }
+            }
+        }
+
         &:last-child {
             margin-bottom: 0;
         }
+
 
         table {
             margin: 0;
@@ -305,6 +345,12 @@
     .img {
         display: block;
         margin: 20px 0;
+
+        &.small-img{
+            width: 112px;
+            height: 112px;
+            margin: 0 auto;
+        }
 
         img {
             display: block;

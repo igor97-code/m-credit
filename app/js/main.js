@@ -63,6 +63,12 @@ $(function () {
         initExpertsSliderInMain();
     }
 
+    //Сео слайдер макбук
+
+    if($('#macbook_slider').length){
+        initSeoMacbookSlider();
+    }
+
     // читать полностью
     if ($('.show-more').length) {
         $('.show-more').on('click', function() {
@@ -595,5 +601,22 @@ function initExpertsSliderInMain()  {
                 noSwiping: false,
             }
         }
+    });
+}
+
+// Seo macbook
+function initSeoMacbookSlider() {
+    new Swiper('#macbook_slider', {
+        effect: 'fade',
+        loop: true,
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.macbook-slider-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        nextSlideMessage: '',
+        prevSlideMessage: '',
     });
 }

@@ -1210,6 +1210,23 @@ input.button {
     padding: 0;
     background: none;
     overflow: auto; }
+    .section .table.payment-table .bg-gray {
+      background-color: #EFEFEF; }
+    .section .table.payment-table tr:last-child {
+      border-bottom: 1px solid #efefef; }
+    .section .table.payment-table tr p {
+      font-size: 14px; }
+    .section .table.payment-table tr .img img {
+      min-width: 50px; }
+    .section .table.payment-table tr a {
+      font-size: 16px;
+      white-space: nowrap; }
+    .section .table.payment-table td, .section .table.payment-table th {
+      vertical-align: middle; }
+      .section .table.payment-table td .biggest-text, .section .table.payment-table th .biggest-text {
+        font-size: 34px;
+        line-height: 1.2em;
+        font-weight: 100; }
     .section .table:last-child {
       margin-bottom: 0; }
     .section .table table {
@@ -1266,6 +1283,10 @@ input.button {
   .section .img {
     display: block;
     margin: 20px 0; }
+    .section .img.small-img {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto; }
     .section .img img {
       display: block;
       margin: 0 auto;
@@ -1905,6 +1926,52 @@ input.button {
           right: auto;
           top: auto;
           margin-top: 20px; } }
+
+.seo-macbook-slider {
+  position: relative;
+  margin: 0 auto 50px auto;
+  width: 100%; }
+  .seo-macbook-slider .swiper-pagination {
+    width: 100%;
+    bottom: -40px; }
+    .seo-macbook-slider .swiper-pagination .swiper-pagination-bullet {
+      background: #7e7e7e; }
+    .seo-macbook-slider .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #7dc041; }
+  .seo-macbook-slider .macbook {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 943px;
+    min-width: 300px;
+    background: url(/img/mac.png) center center no-repeat;
+    background-size: cover;
+    z-index: 10;
+    overflow: hidden; }
+    .seo-macbook-slider .macbook .macbook-content {
+      display: block;
+      position: absolute;
+      margin: 0;
+      left: 17.5%;
+      top: 8.5%;
+      width: 65%;
+      max-width: 900px;
+      height: 79%;
+      right: 0;
+      z-index: 3; }
+      .seo-macbook-slider .macbook .macbook-content img {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; }
+    .seo-macbook-slider .macbook:after {
+      content: "";
+      float: left;
+      padding-top: 51%; }
 
 .calculator {
   display: block;
