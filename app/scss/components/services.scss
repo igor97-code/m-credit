@@ -1,0 +1,178 @@
+.services-wrapper{
+    margin: 30px 0 0 0;
+    .item{
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        margin: 10px 0;
+
+        .photo{
+            position: relative;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 6px 6px 0 0;
+
+            &.bg-1{
+                background-image: url(/img/services/1.jpg);
+            }
+            &.bg-2{
+                background-image: url(/img/services/2.jpg);
+            }
+            &.bg-3{
+                background-image: url(/img/services/3.jpg);
+            }
+            &.bg-4{
+                background-image: url(/img/services/4.jpg);
+            }
+            &.bg-5{
+                background-image: url(/img/services/5.jpg);
+            }
+            &.bg-6{
+                background-image: url(/img/services/6.jpg);
+            }
+
+            &:before{
+                content: '';
+                padding-top: 65.89%;
+                display: block;
+            }
+        }
+        .info{
+            padding: 20px;
+            min-height: 310px;
+            .service-description{
+                height: 205px;
+                overflow: hidden;
+                line-height: 25px;
+            }
+            .service-title{
+                max-height: 42px;
+                overflow: hidden;
+            }
+        }
+
+        .button-block{
+            padding: 0 20px 20px 20px;
+        }
+    }
+}
+
+.section{
+    &.service-bg{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        z-index: 2;
+
+        &:before{
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        &-1{
+            background-image: url(/img/services/bg-s1.jpg);
+        }
+        &-2{
+            background-image: url(/img/services/bg-s2.jpg);
+        }
+        &-3{
+            background-image: url(/img/services/bg-s3.jpg);
+        }
+    }
+}
+
+.service-cards{
+ .item {
+    background: $colorWhite;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    margin: 20px 0;
+    padding: 20px 30px;
+    position: relative;
+
+     @include mobile{
+         padding: 20px;
+     }
+
+    .image {
+        width: 60px;
+        height: 60px;
+        font-size: 60px;
+        color: $colorMain;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        margin-top: -30px;
+
+        @include mobile{
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            margin-top: -20px;
+            left: 20px;
+        }
+    }
+    .info {
+        margin-left: 90px;
+
+        @include mobile{
+            margin-left: 60px;
+        }
+    }
+}
+}
+
+.service-tariffs {
+    .item {
+        background: #FFFFFF;
+        border-radius: 6px;
+        margin: 20px 0;
+
+        .head {
+            padding: 27px 23px;
+        }
+
+        .info {
+            padding: 0 23px 10px 23px;
+
+            .info-item {
+                border-top: 1px solid #EFEFEF;
+                padding: 7px 0 7px 37px;
+                position: relative;
+
+                .icon{
+                    position: absolute;
+                    left: 0;
+                    width: 16px;
+                    top: 50%;
+                    margin-top: -8px;
+                    height: 16px;
+                    font-size: 16px;
+                    color:$colorMain;
+                }
+
+                .name {
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+                .desc {
+                    font-size: 12px;
+                    color: #7E7E7E;
+                    line-height: 25px;
+                }
+                .price{
+                    color: $colorMain;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

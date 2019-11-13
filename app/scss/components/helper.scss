@@ -97,6 +97,12 @@
     }
 }
 
+.mobile-m-b-0 {
+    @include mobile {
+        margin-bottom: 0px !important;
+    }
+}
+
 .m-t--60 {
     margin-top: -60px !important;
 }

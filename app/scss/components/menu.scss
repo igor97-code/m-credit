@@ -168,3 +168,51 @@
     }
 }
 // END Главное меню
+
+//Меню второго уровня
+.secondary-menu{
+    text-align: center;
+    margin: 20px 0;
+
+    @include mobile{
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .menu-item{
+        display: inline-block;
+        vertical-align: top;
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-family: $fontBase;
+        background: #efefef;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 500;
+        color: #333;
+        cursor: pointer;
+        text-align: center;
+        text-transform: none;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 1px solid transparent;
+        overflow: hidden;
+        -webkit-transition: .2s;
+        transition: .2s;
+
+        &:hover{
+            border: 1px solid $colorMain;
+        }
+
+        &-active{
+            background: $colorMain;
+            border: 1px solid $colorMain;
+            color: $colorWhite;
+            cursor: default;
+        }
+    }
+}
+//END Меню второго уровня
