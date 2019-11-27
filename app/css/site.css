@@ -1349,7 +1349,6 @@ input.button {
   font-size: 12px;
   font-weight: 400;
   color: #7e7e7e;
-  line-height: 180%;
   margin-top: 50px;
   margin-bottom: 5px; }
   @media (max-width: 1000px) {
@@ -2936,7 +2935,7 @@ input.button {
   .experts .experts-slider .swiper-slide {
     opacity: 0;
     transform: scale(0.75);
-    transition: opacity .2s ease, transform .4s ease; } }
+    transition: opacity 0.2s ease, transform 0.4s ease; } }
 
 @media (min-width: 1000px) {
   .experts .experts-slider .swiper-slide-visible {
@@ -2954,16 +2953,28 @@ input.button {
       background: #7dc041; }
 
 .experts .expert-card {
+  display: block;
   position: relative;
   padding: 20px;
-  min-height: 265px;
+  outline: none;
   text-decoration: none;
-  margin: 20px 0; }
+  color: #333333;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08); }
+  @media (max-width: 1000px) {
+    .experts .expert-card {
+      margin: 10px 0; } }
+  @media (min-width: 760px) {
+    .experts .expert-card {
+      margin: 5px 0; } }
+  @media (min-width: 1000px) {
+    .experts .expert-card {
+      margin: 10px 0; } }
   .experts .expert-card .img {
     position: absolute;
     display: block;
-    top: 20px;
-    left: 20px;
+    top: 24px;
+    left: 26px;
     width: 90px;
     height: 90px;
     border-radius: 100%;
@@ -2972,17 +2983,42 @@ input.button {
     background-repeat: no-repeat !important;
     margin: 0; }
   .experts .expert-card .name {
+    margin: 20px 0;
+    font-style: normal;
+    font-weight: bold;
     font-size: 16px;
-    font-weight: 700;
+    line-height: 179.19%;
     padding-left: 110px;
     margin-bottom: 10px; }
+    @media (max-width: 1000px) {
+      .experts .expert-card .name {
+        height: auto; } }
+    @media (min-width: 760px) {
+      .experts .expert-card .name {
+        height: 30px; } }
   .experts .expert-card .post {
     font-size: 12px;
     color: #7e7e7e;
     padding-left: 110px;
     margin: 10px 0 40px 0; }
+    @media (max-width: 1000px) {
+      .experts .expert-card .post {
+        height: auto; } }
+    @media (min-width: 760px) {
+      .experts .expert-card .post {
+        height: 30px; } }
   .experts .expert-card .desc {
-    padding-bottom: 20px; }
+    padding-bottom: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 179.19%; }
+    @media (max-width: 1000px) {
+      .experts .expert-card .desc {
+        height: auto; } }
+    @media (min-width: 760px) {
+      .experts .expert-card .desc {
+        height: 181px; } }
   .experts .expert-card .link {
     position: absolute;
     display: block;
@@ -2995,6 +3031,13 @@ input.button {
       display: block;
       right: -20px;
       bottom: 2px; }
+
+.experts .expert-card-mini {
+  height: 265px;
+  box-shadow: none; }
+  .experts .expert-card-mini .img {
+    top: 29px;
+    left: 19px; }
 
 .progresses .progress-card {
   margin: 10px 0;
