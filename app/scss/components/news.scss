@@ -1,0 +1,45 @@
+.news {
+    .item {
+        margin-top: 85px;
+        display: block;        
+        outline: none;
+        text-decoration: none;        
+        &:hover {
+            color: $colorGray;
+            cursor: pointer;
+        }
+
+        @include mobile {
+            margin: 40px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .h2 {
+            margin: .8em 0;
+        }
+
+        .date {
+            margin-bottom: 15px;
+
+            font-size: 14px;
+            font-weight: 700;
+            color: $colorMain;
+            @include mobile {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+
+        .desc {           
+            font-size: 14px;
+            line-height: 180%;
+        }
+    }
+
+    .item-compact {
+        margin-top: 35px;
+    }
+}

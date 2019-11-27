@@ -41,13 +41,13 @@
 // кредитный рейтинг
 @import './components/credit-rating';
 
-// превью новостей на главном
-@import './components/news-preview';
+// новости на главном и страница новости
+@import './components/news';
 
 // отзывы на главном
 @import './components/comments';
 
-// пресса о нас на главном
+// пресса о нас на главном и на странице пресса
 @import './components/press';
 
 // комментарии экспертов на главном
@@ -73,6 +73,7 @@
 
 // Услуги
 @import './components/services';
+
 
 // Вопросы и ответы
 .question-list {
