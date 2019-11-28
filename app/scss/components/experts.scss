@@ -51,9 +51,8 @@
 
     .expert-card {
         display: block;
-        position: relative;
-
-        padding: 20px;
+        
+        padding: 17px 20px 20px;
 
         outline: none;
         text-decoration: none;
@@ -71,94 +70,100 @@
         @include desktop {
             margin: 10px 0;
         }
+        .head {
+            position: relative;                     
+            height: 114px;            
+                          
+            .expert-img {             
+                position: absolute;
+                left: 0;
+                top: 50%;
+                margin-top: -45px;                
+                
+                width: 90px;
+                height: 90px;
 
-        .img {
-            position: absolute;
-            display: block;
-            top: 24px;
-            left: 26px;
-            width: 90px;
-            height: 90px;
-            border-radius: 100%;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-            margin: 0;
+                border-radius: 100%;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;                
+            }
         }
-
-        .name {
-            margin: 20px 0;
+        .name {            
+            padding-top: 20px;
+            padding-left: 110px;
+            margin-bottom: 10px; 
+            
+            max-height: 60px;
 
             font-style: normal;
             font-weight: bold;
             font-size: 16px;
-            line-height: 179.19%;
-            padding-left: 110px;
-            margin-bottom: 10px;
+            line-height: 120%;
 
-            @include mobile {
-                height: auto;
-            }
-            @include tablet {
-                height: 30px;
-            }
+            overflow: hidden;
         }
+    
+        .post {  
+            padding-bottom: 20px;
+            padding-left: 110px;
+            margin-top: 10px;
 
-        .post {
+            max-height: 45px;
+            
             font-size: 12px;
-            color: $colorGray;
-            padding-left: 110px;
-            margin: 10px 0 40px 0;
+            color: $colorGray;    
+            line-height: 180%;
 
-            @include mobile {
-                height: auto;
-            }
-            @include tablet {
-                height: 30px;
-            }
+            overflow: hidden;
         }
-
+    
         .desc {
-            // height: 181px;
-
-            padding-bottom: 40px;
-
+            height: 140px;
+    
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 179.19%;
-
+    
+            overflow: hidden;
             @include mobile {
                 height: auto;
             }
             @include tablet {
-                height: 181px;
+                height: 140px;
             }
         }
-
-        .link {
-            position: absolute;
-            display: block;
-            bottom: 20px;
-            left: 20px;
+    
+        .desc-small {
+            height: 70px;
+    
+            overflow: hidden;
+            @include mobile {
+                height: auto;
+            }
+            @include tablet {
+                height: 70px;
+            }
+        }
+    
+        .link {    
+            position: relative;
+    
+            margin-top: 20px;        
             font-size: 16px;
             color: $colorMain;
-
+    
             .icon {
                 position: absolute;
                 display: block;
-                right: -20px;
-                bottom: 2px;
+                left: 123px;
+                bottom: 1px;
             }
-        }
-    }
 
-    .expert-card-mini {
-        height: 265px;
-        box-shadow: none;
-        .img {
-            top: 29px;
-            left: 19px;
-        }
-    }
+            &:hover {
+                color: $colorMainHover;
+            }
+        }    
+    } 
 }
