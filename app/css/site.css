@@ -413,7 +413,7 @@ body {
   text-align: right !important; }
 
 .disabled {
-  opacity: .5 !important;
+  opacity: 0.5 !important;
   cursor: default; }
 
 .font-weight-light {
@@ -430,6 +430,24 @@ body {
 
 .overflow-hidden {
   overflow: hidden; }
+
+.toggle-block .toggle-content {
+  display: none; }
+
+.toggle-block .open-text {
+  display: block; }
+
+.toggle-block .close-text {
+  display: none; }
+
+.toggle-block.open .toggle-content {
+  display: block; }
+
+.toggle-block.open .open-text {
+  display: none; }
+
+.toggle-block.open .close-text {
+  display: block; }
 
 .row {
   margin: 0 -10px; }
@@ -1079,7 +1097,7 @@ button.button,
 input.button {
   line-height: 1.2em !important; }
 
-.button-wrapper-150 {
+.button-w-150 {
   width: 150px; }
 
 .color-main {

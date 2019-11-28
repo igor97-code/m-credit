@@ -81,7 +81,7 @@ $(function () {
             return false
         })
     }
-
+  
     // инициализация калькуляторов
     initCalculators();
 
