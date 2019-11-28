@@ -1,669 +1,1137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
-    <link rel="manifest" href="./img/icons/site.webmanifest">
-    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041">
-    <meta name="msapplication-TileColor" content="#7dc041">
-    <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+        <link rel="manifest" href="./img/icons/site.webmanifest" />
+        <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+        <meta name="msapplication-TileColor" content="#7dc041" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <title>МигКредит</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <div id="page_preloader" style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;"></div>
+        <title>МигКредит</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div
+            id="page_preloader"
+            style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;"
+        ></div>
 
-    <!-- header -->
-    <div class="header">
-        <div class="container">
-            <div class="header-left">
-                <div class="header-col for-logo no-border">
-                    <div class="table-block">
-                        <div class="cell">
-                            <div class="logo"></div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="header-col header-info no-border">
-                    <div class="table-block">
-                        <div class="cell">
-                            <p class="title">Лидер рынка</p>
-                            <p class="remark">микрофинансовых организаций</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="header-right hide-mobile">
-                <div class="header-col">
-                    <div class="table-block">
-                        <div class="cell">
-                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный кабинет</a>
-                            <a target="_blank" href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in" class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img src="./img/icon-appstore.svg"></a>
-                            <a target="_blank" href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in" class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img src="./img/icon-googleplay.svg"></a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-    <!-- главное меню -->
-    <div id="main_menu" class="main-menu">
-        <div class="container">
-            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
-            <ul class="main-menu-content">
-                <li>
-                    <a href="#" class="menu-link">Займы</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
-                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/#products" class="menu-link ">Продукты</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
-                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
-                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/get/" class="menu-link ">Как получить</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
-                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
-                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
-                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
-                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская карта</a></li>
-                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
-                            <li><a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a></li>
-                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
-                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
-                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
-                            <li><a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a></li>
-                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
-                            <li><a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный телефон</a></li>
-                            <li><a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в банке</a></li>
-                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
-                        </ul>
-                    </div>
-                </li>
-                
-                <li>
-                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
-                </li>
-
-                <li>
-                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
-                </li>
-                
-                <li>
-                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
-                    <div class="submenu right">
-                        <ul>
-                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
-                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
-                            <li><a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное страхование</a></li>
-                        </ul>
-                    </div>
-                </li>
-                
-                
-               
-                <li class="burger">
-                    <i class="icon icon-menu-button"></i>
-                    <div class="submenu fullwidth">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col w-25">
-                                    <ul>
-                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
-                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
-                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
-                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
-                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
-                                        <li><a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a></li>
-                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
-                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
-                                        <li><a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие информации</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col w-25">
-                                    <ul>
-                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
-                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
-                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
-                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
-                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col w-25">
-                                    <ul>
-                                        <li><a href="#/privilegii-klientam/privilegii-klientam/" class="submenu-link big">Акции</a></li>
-                                        <li><a href="#/privilegii-klientam/privilegii-klientam/" class="submenu-link">Привилегии клиентам</a></li>
-                                        <li><a href="#/privilegii-klientam/aktsii-i-konkursy/" class="submenu-link">Акции и конкурсы</a></li>
-                                        <li><a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи друга</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col w-25">
-                                    <ul>
-                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
-                                        <li><a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская программа</a></li>
-                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- основной контент -->
-    <div class="body">
-        <div class="header-margin"></div>
-        <div class="main-menu-margin"></div>
-
-        <div class="main-slider">
-            <div id="main_slider" class="swiper-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img swiper-lazy" style="background: url(img/slides/1-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/1.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">МигКредит в твоем мобильном</p>
-                                <p>скачай и получай займы оперативно</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img" style="background: url(img/slides/2-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/2.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">Одобрение<br> за 3 минуты</p>
-                                <p>до 100 000 ₽</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img" style="background: url(img/slides/3-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/3.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">Деньги через СМС</p>
-                                <p>нужная сумма за 5 минут</p>
-                                <p class="small">* только для повторных клиентов</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img swiper-lazy" style="background: url(img/slides/4-blur.jpg)">
-                                <div class="bg swiper-lazy"data-background="./img/slides/4.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">До 13% годовых</p>
-                                <p>инвестиции в мигкредит</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img swiper-lazy" style="background: url(img/slides/5-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/5.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">Компании года 2018</p>
-                                <p>по версии Banki.ru</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img swiper-lazy" style="background: url(img/slides/6-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/6.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">Увеличивай свой доход!</p>
-                                <p>Вступай в ряды агентов</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide">
-                            <div class="img swiper-lazy" style="background: url(img/slides/7-blur.jpg)">
-                                <div class="bg swiper-lazy" data-background="./img/slides/7.jpg"></div>
-                            </div>
-                            <div class="text">
-                                <p class="big">Приведите друга <nobr>и получите</nobr> 1 000 ₽</p>
-                                <p>одобрение за 3 минуты <br><nobr>до 100 000 ₽</nobr></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination main-slider-pagination"></div>
-                <div class="swiper-arrow swiper-arrow-prev main-slider-button-prev"><i class="icon icon-left1"></i></div>
-                <div class="swiper-arrow swiper-arrow-next main-slider-button-next"><i class="icon icon-right1"></i></div>
-            </div>
-
-            <div class="main-slider-info">
-                <form class="calculator load" data-calculator method="POST" action="/dengi3/">
-                    <div class="calculator-item">
-                        <div class="calculator-row">
-                            <div class="left">
-                                <p class="big-label">Требуемая сумма</p>
-                            </div>
-                            <div class="right">
-                                <p class="big"><nobr><span data-sum>69 000</span> ₽</nobr></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                        <div class="calculator-slider">
-                            <div data-sum_slider></div>
-                        </div>
-                        <div class="calculator-row m-t-0">
-                            <div class="left">
-                                <p class="small color-gray"><nobr><span data-sum_min>3 000</span> ₽</nobr></p>
-                            </div>
-                            <div class="right">
-                                <p class="small color-gray"><nobr><span data-sum_max>100 000</span> ₽</nobr></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-
-                    <div class="calculator-item">
-                        <div class="calculator-row">
-                            <div class="left">
-                                <p class="big-label">На срок</p>
-                            </div>
-                            <div class="right">
-                                <p class="big"><nobr><span data-term>24</span> <span data-term_label>недели</span></nobr></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                        <div class="calculator-slider">
-                            <div data-term_slider></div>
-                        </div>
-                        <div class="calculator-row m-t-0">
-                            <div class="left">
-                                <p class="small color-gray"><nobr><span data-term_min>10</span> <span data-term_min_label>недель</span></nobr></p>
-                            </div>
-                            <div class="right">
-                                <p class="small color-gray"><nobr><span data-term_max>44</span> <span data-term_max_label>недели</span></nobr></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-
-                    <input type="hidden" name="calc_period_type" data-term_type value="week">
-                    <button type="submit" class="button button-medium button-form uppercase">Получить деньги</button>
-
-                    <div class="calculator-item result">
-                        <div class="calculator-row">
-                            <div class="left">
-                                <p class="medium-label color-gray"><span data-result_sum_label>Платеж раз в 2 недели</span></p>
-                            </div>
-                            <div class="right">
-                                <p class="medium"><nobr><span data-result_sum>44 000</span> ₽</nobr></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                        <div class="calculator-row">
-                            <div class="left">
-                                <p class="medium-label color-gray">До (включительно)</p>
-                            </div>
-                            <div class="right">
-                                <p class="medium"><span data-result_deadline>27 декабря 2019</span></p>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
-                    </div>
-                </form>
-                
-                <div class="button-block">
-                    <a href="#" class="button button-secondary uppercase m-t-0 m-b-0"><i class="icon icon-big icon-card2"></i> Онлайн погашение</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" >
+        <!-- header -->
+        <div class="header">
             <div class="container">
-                <div class="swiper-slider-wrapper products-slider">
-                    <div id="products_slider" class="swiper-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">До зарплаты</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            за 5 минут
-                                        </span>
-                                        <span class="product-bg bg-1 small"></span>
-                                    </span>
-                                        <span class="info">
-                                        <span class="text sum">
-                                            До 15 000 ₽
-                                            <span class="label">Онлайн</span>
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-card1"></i>
-                                            На карту
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">Оптимальный</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            за 1 день
-                                        </span>
-                                        <span class="product-bg bg-2 small"></span>
-                                    </span>
-                                    <span class="info">
-                                        <span class="text sum">До 100 000 ₽</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-card1"></i>
-                                            На карту
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-bank"></i>
-                                            Через платежную систему
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-courier"></i>
-                                            Доставка карты
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">Под залог ПТС</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            в течение 3 дней
-                                        </span>
-                                        <span class="product-bg bg-3 small"></span>
-                                    </span>
-                                        <span class="info">
-                                        <span class="text sum">До 600 000 ₽</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-card1"></i>
-                                            На карту
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-bank"></i>
-                                            Через платежную систему
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">POS-займы</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            за 5 минут
-                                        </span>
-                                        <span class="product-bg bg-7 small"></span>
-                                    </span>
-                                    <span class="info">
-                                        <span class="text sum">До 75 000 ₽</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-tag"></i>
-                                            Займы на оплату товаров в магазинах-партнерах
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">Автокредит</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            в течение 3 дней
-                                        </span>
-                                        <span class="product-bg bg-6 small"></span>
-                                    </span>
-                                        <span class="info">
-                                        <span class="text sum">До 1 000 000 ₽</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-card1"></i>
-                                            На карту
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-bank"></i>
-                                            Через платежную систему
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="product-card shadow-block">
-                                    <span class="head">
-                                        <span class="text caption">Предпринимателям</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-time1"></i>
-                                            в течение 3 дней
-                                        </span>
-                                        <span class="product-bg bg-5 small"></span>
-                                    </span>
-                                        <span class="info">
-                                        <span class="text sum">До 300 000 ₽</span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-card1"></i>
-                                            На карту
-                                        </span>
-                                        <span class="text with-icon">
-                                            <i class="icon icon-bank"></i>
-                                            Через платежную систему
-                                        </span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-arrow swiper-arrow-prev products-slider-button-prev"><i class="icon icon-left1"></i></div>
-                    <div class="swiper-arrow swiper-arrow-next products-slider-button-next"><i class="icon icon-right1"></i></div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="section gray">
-            <div class="container">
-                <h1 class="text-align-center">Деньги в долг быстро, удобно и легко</h1>
-                <div class="infographic with-arrows">
-                    <div class="row">
-                        <div class="col w-33 w-33-tablet">
-                            <div class="item with-arrow">
-                                <div class="icon"><i class="icon-mobile"></i></div>
-                                <div class="text">Оформите заявку</div>
-                                <div class="text label">от 10 минут</div>
-                                <div class="arrow"></div>
-                            </div>
-                        </div>
-                        <div class="col w-33 w-33-tablet">
-                            <div class="item with-arrow">
-                                <div class="icon"><i class="icon-mail"></i></div>
-                                <div class="text">Получите ответ</div>
-                                <div class="text label">до 1 минуты</div>
-                                <div class="arrow"></div>
-                            </div>
-                        </div>
-                        <div class="col w-33 w-33-tablet">
-                            <div class="item">
-                                <div class="icon"><i class="icon-wallet1"></i></div>
-                                <div class="text">Получите деньги</div>
-                                <div class="text label">до 24 часов</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="section section-mobile-application p-t-0 p-b-0">
-            <div class="mobapp-index lazy" data-src="./img/mobapp-bg.jpg">
-                <div class="container">
-                    <div class="info">
+                <div class="header-left">
+                    <div class="header-col for-logo no-border">
                         <div class="table-block">
                             <div class="cell">
-                                <p class="h1 m-b-20 color-white text-align-left">Мобильное приложение МигКредит</p>
-                                <p><a href="#" class="link">Подробнее<i class="icon icon-right1"></i></a></p>
+                                <div class="logo"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header-col header-info no-border">
+                        <div class="table-block">
+                            <div class="cell">
+                                <p class="title">Лидер рынка</p>
+                                <p class="remark">микрофинансовых организаций</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right hide-mobile">
+                    <div class="header-col">
+                        <div class="table-block">
+                            <div class="cell">
+                                <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0"
+                                    >Личный кабинет</a
+                                >
+                                <a
+                                    target="_blank"
+                                    href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                    class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"
+                                    ><img src="./img/icon-appstore.svg"
+                                /></a>
+                                <a
+                                    target="_blank"
+                                    href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                    class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"
+                                    ><img src="./img/icon-googleplay.svg"
+                                /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- главное меню -->
+        <div id="main_menu" class="main-menu">
+            <div class="container">
+                <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+                <ul class="main-menu-content">
+                    <li>
+                        <a href="#" class="menu-link">Займы</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                                <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#/#products" class="menu-link ">Продукты</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                                <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                                <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#/get/" class="menu-link ">Как получить</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                                <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                                <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                                <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                                <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                        <div class="submenu">
+                            <ul>
+                                <li>
+                                    <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link"
+                                        >Банковская карта</a
+                                    >
+                                </li>
+                                <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                                <li>
+                                    <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                                </li>
+                                <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                                <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                                <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                                <li>
+                                    <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link"
+                                        >Золотая корона</a
+                                    >
+                                </li>
+                                <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                                <li>
+                                    <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link"
+                                        >Мобильный телефон</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link"
+                                        >Со счета в банке</a
+                                    >
+                                </li>
+                                <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                    </li>
+
+                    <li>
+                        <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                    </li>
+
+                    <li>
+                        <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                        <div class="submenu right">
+                            <ul>
+                                <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                                <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                                <li>
+                                    <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link"
+                                        >Пенсионное страхование</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="burger">
+                        <i class="icon icon-menu-button"></i>
+                        <div class="submenu fullwidth">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col w-25">
+                                        <ul>
+                                            <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                            <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                            <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                            <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                            <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                            <li>
+                                                <a href="#/about/otzyvy-klientov/" class="submenu-link"
+                                                    >Отзывы клиентов</a
+                                                >
+                                            </li>
+                                            <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                            <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                            <li>
+                                                <a href="#/about/raskrytie-informacii/" class="submenu-link"
+                                                    >Раскрытие информации</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col w-25">
+                                        <ul>
+                                            <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                            <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                            <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                            <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                            <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col w-25">
+                                        <ul>
+                                            <li>
+                                                <a
+                                                    href="#/privilegii-klientam/privilegii-klientam/"
+                                                    class="submenu-link big"
+                                                    >Акции</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="#/privilegii-klientam/privilegii-klientam/"
+                                                    class="submenu-link"
+                                                    >Привилегии клиентам</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="#/privilegii-klientam/aktsii-i-konkursy/" class="submenu-link"
+                                                    >Акции и конкурсы</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link"
+                                                    >Приведи друга</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col w-25">
+                                        <ul>
+                                            <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                            <li>
+                                                <a href="#/partnerskaya-programma/" class="submenu-link big"
+                                                    >Партнерская программа</a
+                                                >
+                                            </li>
+                                            <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- основной контент -->
+        <div class="body">
+            <div class="header-margin"></div>
+            <div class="main-menu-margin"></div>
+
+            <div class="main-slider">
+                <div id="main_slider" class="swiper-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img swiper-lazy" style="background: url(img/slides/1-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/1.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">МигКредит в твоем мобильном</p>
+                                    <p>скачай и получай займы оперативно</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img" style="background: url(img/slides/2-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/2.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">
+                                        Одобрение<br />
+                                        за 3 минуты
+                                    </p>
+                                    <p>до 100 000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img" style="background: url(img/slides/3-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/3.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">Деньги через СМС</p>
+                                    <p>нужная сумма за 5 минут</p>
+                                    <p class="small">* только для повторных клиентов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img swiper-lazy" style="background: url(img/slides/4-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/4.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">До 13% годовых</p>
+                                    <p>инвестиции в мигкредит</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img swiper-lazy" style="background: url(img/slides/5-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/5.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">Компании года 2018</p>
+                                    <p>по версии Banki.ru</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img swiper-lazy" style="background: url(img/slides/6-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/6.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">Увеличивай свой доход!</p>
+                                    <p>Вступай в ряды агентов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <div class="img swiper-lazy" style="background: url(img/slides/7-blur.jpg)">
+                                    <div class="bg swiper-lazy" data-background="./img/slides/7.jpg"></div>
+                                </div>
+                                <div class="text">
+                                    <p class="big">Приведите друга <nobr>и получите</nobr> 1 000 ₽</p>
+                                    <p>одобрение за 3 минуты <br /><nobr>до 100 000 ₽</nobr></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination main-slider-pagination"></div>
+                    <div class="swiper-arrow swiper-arrow-prev main-slider-button-prev">
+                        <i class="icon icon-left1"></i>
+                    </div>
+                    <div class="swiper-arrow swiper-arrow-next main-slider-button-next">
+                        <i class="icon icon-right1"></i>
+                    </div>
+                </div>
+
+                <div class="main-slider-info">
+                    <form class="calculator load" data-calculator method="POST" action="/dengi3/">
+                        <div class="calculator-item">
+                            <div class="calculator-row">
+                                <div class="left">
+                                    <p class="big-label">Требуемая сумма</p>
+                                </div>
+                                <div class="right">
+                                    <p class="big">
+                                        <nobr><span data-sum>69 000</span> ₽</nobr>
+                                    </p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="calculator-slider">
+                                <div data-sum_slider></div>
+                            </div>
+                            <div class="calculator-row m-t-0">
+                                <div class="left">
+                                    <p class="small color-gray">
+                                        <nobr><span data-sum_min>3 000</span> ₽</nobr>
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p class="small color-gray">
+                                        <nobr><span data-sum_max>100 000</span> ₽</nobr>
+                                    </p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+
+                        <div class="calculator-item">
+                            <div class="calculator-row">
+                                <div class="left">
+                                    <p class="big-label">На срок</p>
+                                </div>
+                                <div class="right">
+                                    <p class="big">
+                                        <nobr><span data-term>24</span> <span data-term_label>недели</span></nobr>
+                                    </p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="calculator-slider">
+                                <div data-term_slider></div>
+                            </div>
+                            <div class="calculator-row m-t-0">
+                                <div class="left">
+                                    <p class="small color-gray">
+                                        <nobr
+                                            ><span data-term_min>10</span> <span data-term_min_label>недель</span></nobr
+                                        >
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p class="small color-gray">
+                                        <nobr
+                                            ><span data-term_max>44</span> <span data-term_max_label>недели</span></nobr
+                                        >
+                                    </p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="calc_period_type" data-term_type value="week" />
+                        <button type="submit" class="button button-medium button-form uppercase">
+                            Получить деньги
+                        </button>
+
+                        <div class="calculator-item result">
+                            <div class="calculator-row">
+                                <div class="left">
+                                    <p class="medium-label color-gray">
+                                        <span data-result_sum_label>Платеж раз в 2 недели</span>
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p class="medium">
+                                        <nobr><span data-result_sum>44 000</span> ₽</nobr>
+                                    </p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                            <div class="calculator-row">
+                                <div class="left">
+                                    <p class="medium-label color-gray">До (включительно)</p>
+                                </div>
+                                <div class="right">
+                                    <p class="medium"><span data-result_deadline>27 декабря 2019</span></p>
+                                </div>
+                                <div class="clr"></div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="button-block">
+                        <a href="#" class="button button-secondary uppercase m-t-0 m-b-0"
+                            ><i class="icon icon-big icon-card2"></i> Онлайн погашение</a
+                        >
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <div class="swiper-slider-wrapper products-slider">
+                        <div id="products_slider" class="swiper-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">До зарплаты</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                за 5 минут
+                                            </span>
+                                            <span class="product-bg bg-1 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">
+                                                До 15 000 ₽
+                                                <span class="label">Онлайн</span>
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-card1"></i>
+                                                На карту
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">Оптимальный</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                за 1 день
+                                            </span>
+                                            <span class="product-bg bg-2 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">До 100 000 ₽</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-card1"></i>
+                                                На карту
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-bank"></i>
+                                                Через платежную систему
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-courier"></i>
+                                                Доставка карты
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">Под залог ПТС</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                в течение 3 дней
+                                            </span>
+                                            <span class="product-bg bg-3 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">До 600 000 ₽</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-card1"></i>
+                                                На карту
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-bank"></i>
+                                                Через платежную систему
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">POS-займы</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                за 5 минут
+                                            </span>
+                                            <span class="product-bg bg-7 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">До 75 000 ₽</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-tag"></i>
+                                                Займы на оплату товаров в магазинах-партнерах
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">Автокредит</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                в течение 3 дней
+                                            </span>
+                                            <span class="product-bg bg-6 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">До 1 000 000 ₽</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-card1"></i>
+                                                На карту
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-bank"></i>
+                                                Через платежную систему
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#" class="product-card shadow-block">
+                                        <span class="head">
+                                            <span class="text caption">Предпринимателям</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-time1"></i>
+                                                в течение 3 дней
+                                            </span>
+                                            <span class="product-bg bg-5 small"></span>
+                                        </span>
+                                        <span class="info">
+                                            <span class="text sum">До 300 000 ₽</span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-card1"></i>
+                                                На карту
+                                            </span>
+                                            <span class="text with-icon">
+                                                <i class="icon icon-bank"></i>
+                                                Через платежную систему
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-arrow swiper-arrow-prev products-slider-button-prev">
+                            <i class="icon icon-left1"></i>
+                        </div>
+                        <div class="swiper-arrow swiper-arrow-next products-slider-button-next">
+                            <i class="icon icon-right1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section gray">
+                <div class="container">
+                    <h1 class="text-align-center">Деньги в долг быстро, удобно и легко</h1>
+                    <div class="infographic with-arrows">
+                        <div class="row">
+                            <div class="col w-33 w-33-tablet">
+                                <div class="item with-arrow">
+                                    <div class="icon"><i class="icon-mobile"></i></div>
+                                    <div class="text">Оформите заявку</div>
+                                    <div class="text label">от 10 минут</div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-33-tablet">
+                                <div class="item with-arrow">
+                                    <div class="icon"><i class="icon-mail"></i></div>
+                                    <div class="text">Получите ответ</div>
+                                    <div class="text label">до 1 минуты</div>
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                            <div class="col w-33 w-33-tablet">
+                                <div class="item">
+                                    <div class="icon"><i class="icon-wallet1"></i></div>
+                                    <div class="text">Получите деньги</div>
+                                    <div class="text label">до 24 часов</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section section-mobile-application p-t-0 p-b-0">
+                <div class="mobapp-index lazy" data-src="./img/mobapp-bg.jpg">
+                    <div class="container">
+                        <div class="info">
+                            <div class="table-block">
+                                <div class="cell">
+                                    <p class="h1 m-b-20 color-white text-align-left">Мобильное приложение МигКредит</p>
+                                    <p>
+                                        <a href="#" class="link">Подробнее<i class="icon icon-right1"></i></a>
+                                    </p>
+                                    <div class="button-block">
+                                        <div class="row">
+                                            <div class="col w-50 w-50-mobile">
+                                                <a
+                                                    target="_blank"
+                                                    href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                                    class="app-link appstore"
+                                                    target="_blank"
+                                                ></a>
+                                            </div>
+                                            <div class="col w-50 w-50-mobile">
+                                                <a
+                                                    href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                                    class="app-link googleplay"
+                                                    target="_blank"
+                                                ></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section gray">
+                <div class="container">
+                    <p class="h1 text-align-center">Почему МигКредит?</p>
+                    <div class="swiper-slider-wrapper infographic-slider">
+                        <div id="infographic_slider" class="swiper-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-passport"></i></div>
+                                            <div class="text">Только паспорт</div>
+                                            <div class="text label">для получения займа</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-safe"></i></div>
+                                            <div class="text">Безопасно</div>
+                                            <div class="text label">и конфиденциально</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-calendar1"></i></div>
+                                            <div class="text">7 дней в неделю</div>
+                                            <div class="text label">включая праздники</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-russia"></i></div>
+                                            <div class="text">По всей России</div>
+                                            <div class="text label">вам доступен займ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-result"></i></div>
+                                            <div class="text">950 000 займов</div>
+                                            <div class="text label">выдано за 7 лет</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="infographic">
+                                        <div class="item">
+                                            <div class="icon"><i class="icon-girl"></i></div>
+                                            <div class="text">79% клиентов</div>
+                                            <div class="text label">обращаются повторно</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination infographic-slider-pagination"></div>
+                        <div class="swiper-arrow swiper-arrow-prev infographic-slider-button-prev">
+                            <i class="icon icon-left1"></i>
+                        </div>
+                        <div class="swiper-arrow swiper-arrow-next infographic-slider-button-next">
+                            <i class="icon icon-right1"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <p class="h1 text-align-center">
+                        Ваш кредитный рейтинг <span class="color-green">бесплатно!</span>
+                    </p>
+                    <div class="credit-rating">
+                        <div class="row">
+                            <div class="col w-50 float-right">
+                                <div class="diagram">
+                                    <div class="value">
+                                        <p class="number">750</p>
+                                        <p class="points">Баллов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col w-50">
+                                <p class="h2">Получите полную информацию о том...</p>
+                                <ul>
+                                    <li>Сколько у вас кредитов действующих и закрытых</li>
+                                    <li>Есть ли у вас открытые задолженности</li>
+                                    <li>Какова вероятность получить кредит в Банке и МФО</li>
+                                </ul>
                                 <div class="button-block">
                                     <div class="row">
                                         <div class="col w-50 w-50-mobile">
-                                            <a target="_blank" href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in" class="app-link appstore" target="_blank"></a>
+                                            <a href="#" class="button">Получить</a>
                                         </div>
                                         <div class="col w-50 w-50-mobile">
-                                            <a href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in" class="app-link googleplay" target="_blank"></a>
+                                            <a href="#" class="button button-gray">Подробнее</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section gray">
-            <div class="container">
-                <p class="h1 text-align-center">Почему МигКредит?</p>
-                <div class="swiper-slider-wrapper infographic-slider">
-                    <div id="infographic_slider" class="swiper-slider">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-passport"></i></div>
-                                        <div class="text">Только паспорт</div>
-                                        <div class="text label">для получения займа</div>
-                                    </div>
+            <div class="section gray">
+                <div class="container">
+                    <p class="h1 text-align-center">Новости</p>
+                    <div>
+                        <div class="news">
+                            <div class="row">
+                                <div class="col w-33">
+                                    <a class="item item-compact">
+                                        <span class="date">16 мая 2019</span>
+                                        <p class="desc">
+                                            Персональные коммуникации на розничном финансовом рынке: «МигКредит»
+                                            автоматизировал систему общения с клиентами
+                                        </p>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-safe"></i></div>
-                                        <div class="text">Безопасно</div>
-                                        <div class="text label">и конфиденциально</div>
-                                    </div>
+                                <div class="col w-33">
+                                    <a class="item item-compact">
+                                        <span class="date">16 мая 2019</span>
+                                        <p class="desc">
+                                            «МигКредит» будет развивать систему «виртуальных собеседников» для клиентов
+                                        </p>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-calendar1"></i></div>
-                                        <div class="text">7 дней в неделю</div>
-                                        <div class="text label">включая праздники</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-russia"></i></div>
-                                        <div class="text">По всей России</div>
-                                        <div class="text label">вам доступен займ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-result"></i></div>
-                                        <div class="text">950 000 займов</div>
-                                        <div class="text label">выдано за 7 лет</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="infographic">
-                                    <div class="item">
-                                        <div class="icon"><i class="icon-girl"></i></div>
-                                        <div class="text">79% клиентов</div>
-                                        <div class="text label">обращаются повторно</div>
-                                    </div>
+                                <div class="col w-33">
+                                    <a class="item item-compact">
+                                        <span class="date">16 мая 2019</span>
+                                        <p class="desc">
+                                            «МигКредит» увеличил частоту брендовых запросов в Яндексе на 47%
+                                        </p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination infographic-slider-pagination"></div>
-                    <div class="swiper-arrow swiper-arrow-prev infographic-slider-button-prev"><i class="icon icon-left1"></i></div>
-                    <div class="swiper-arrow swiper-arrow-next infographic-slider-button-next"><i class="icon icon-right1"></i></div>
                 </div>
             </div>
-        </div>
 
-        <div class="section">
-            <div class="container">
-                <p class="h1 text-align-center">Ваш кредитный рейтинг <span class="color-green">бесплатно!</span></p>
-                <div class="credit-rating">
+            <div class="section">
+                <div class="container">
+                    <p class="h1 text-align-center">Отзывы</p>
+                    <div class="comments">
+                        <div class="swiper-slider-wrapper comments-slider">
+                            <div id="comments_slider" class="swiper-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="comment-card shadow-block">
+                                            <div class="img" style="background: url(img/comments/1.jpg)"></div>
+                                            <p class="name">Фатхуллина Гульчачак Айратовна</p>
+                                            <div class="info">
+                                                <span class="date">04 сентября 2018</span
+                                                ><span class="city">Санкт-Петербург</span>
+                                            </div>
+                                            <p class="medium-text">
+                                                В начале марта обратилась в компанию МигКредит, так как срочно нужны
+                                                были деньги на ремонт. Что-то случилось с трубами, надо было быстро
+                                                решать вопрос. Начала искать компании, которые готовы быстро оформить
+                                                кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не
+                                                надеялась на то, что смогу решить все свои проблемы быстро.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination comments-slider-pagination"></div>
+                            <div class="swiper-arrow swiper-arrow-prev comments-slider-button-prev">
+                                <i class="icon icon-left1"></i>
+                            </div>
+                            <div class="swiper-arrow swiper-arrow-next comments-slider-button-next">
+                                <i class="icon icon-right1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section gray">
+                <div class="container">
+                    <p class="h1 text-align-center">Пресса о нас</p>
+                    <div class="press">
+                        <div class="row">
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/kommersant.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/forbes.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/vedomosti.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/rambler.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div
+                                    class="item shadow-block"
+                                    style="background: url(img/press/bankisegodnya.png)"
+                                ></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/rg.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/bankiru.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/rbk.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/zaimcom.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/bo.svg)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/expert.png)"></div>
+                            </div>
+                            <div class="col w-25 w-33-mobile">
+                                <div class="item shadow-block" style="background: url(img/press/bankrf.svg)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="container">
+                    <p class="h1 text-align-center">Комментарии экспертов</p>
+                    <div class="experts">
+                        <div class="swiper-slider-wrapper experts-slider">
+                            <div id="experts_slider" class="swiper-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#" alt="expert" class="expert-card shadow-block">
+                                            <div class="head">
+                                                <div class="expert-img" style="background: url(img/experts/1.png)" ></div>
+                                                <div class="name">Олег Гришин</div>
+                                                <div class="post">Генеральный директор</div>
+                                            </div>
+                                            <div class="desc desc-small">
+                                                Холодный душ для МФО: что изменится после 1 июля 2019 года
+                                            </div>
+                                            <div class="link">Читать статью<i class="icon icon-right1"></i></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" alt="expert" class="expert-card shadow-block">
+                                            <div class="head">
+                                                <div class="expert-img" style="background: url(img/experts/2.png)"></div>
+                                                <div class="name">Владимир Курашев</div>
+                                                <div class="post">Директор Казначейства</div>
+                                            </div>
+                                            <div class="desc desc-small">
+                                                На что обратить внимание инвестору в МФО
+                                            </div>
+                                            <div class="link">Читать статью<i class="icon icon-right1"></i></div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#" alt="expert" class="expert-card shadow-block">
+                                            <div class="head">
+                                                <div class="expert-img" style="background: url(img/experts/3.png)"></div>
+                                                <div class="name">Надежда Денисова</div>
+                                                <div class="post">Директор по маркетингу МФО «МигКредит»</div>
+                                            </div>
+                                            <div class="desc desc-small">Технологичность МФО как фактор роста микрозаймов</div>
+                                            <div class="link">Читать статью<i class="icon icon-right1"></i></div>
+                                        </a>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination experts-slider-pagination"></div>
+                            <div class="swiper-arrow swiper-arrow-prev experts-slider-button-prev">
+                                <i class="icon icon-left1"></i>
+                            </div>
+                            <div class="swiper-arrow swiper-arrow-next experts-slider-button-next">
+                                <i class="icon icon-right1"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section gray">
+                <div class="container">
                     <div class="row">
-                        <div class="col w-50 float-right">
-                            <div class="diagram">
-                                <div class="value">
-                                    <p class="number">750</p>
-                                    <p class="points">Баллов</p>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col w-50">
-                            <p class="h2">Получите полную информацию о том...</p>
-                            <ul>
-                                <li>Сколько у вас кредитов действующих и закрытых</li>
-                                <li>Есть ли у вас открытые задолженности</li>
-                                <li>Какова вероятность получить кредит в Банке и МФО</li>
-                            </ul>
-                            <div class="button-block">
+                            <p class="h2">Наши достижения</p>
+                            <div class="progresses">
                                 <div class="row">
                                     <div class="col w-50 w-50-mobile">
-                                        <a href="#" class="button">Получить</a>
+                                        <div class="progress-card shadow-block">
+                                            <div class="img" style="background: url(img/progresses/banki.svg)"></div>
+                                            <div class="text">Компания года 2018 по версии Banki.ru</div>
+                                        </div>
                                     </div>
                                     <div class="col w-50 w-50-mobile">
-                                        <a href="#" class="button button-gray">Подробнее</a>
+                                        <div class="progress-card shadow-block">
+                                            <div class="img" style="background: url(img/progresses/bo.svg)"></div>
+                                            <div class="text">Лауреат премии “Банковская сфера”</div>
+                                        </div>
+                                    </div>
+                                    <div class="clr"></div>
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="progress-card shadow-block">
+                                            <div class="img" style="background: url(img/progresses/akra.svg)"></div>
+                                            <div class="text">Рейтинг АКРА</div>
+                                        </div>
+                                    </div>
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="progress-card shadow-block">
+                                            <div class="img" style="background: url(img/progresses/cb.svg)"></div>
+                                            <div class="text">Организация занесена в Гос. реестр МФО ЦБ РФ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-50 mobile-m-t-30">
+                            <p class="h2">Наши партнеры</p>
+                            <div class="partners">
+                                <div class="row">
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-mir.svg)"
+                                        ></div>
+                                    </div>
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-contact.svg)"
+                                        ></div>
+                                    </div>
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-banki.svg)"
+                                        ></div>
+                                    </div>
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-cyberplat.svg)"
+                                        ></div>
+                                    </div>
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-qiwi.svg)"
+                                        ></div>
+                                    </div>
+                                    <div class="col w-33 w-50-mobile">
+                                        <div
+                                            class="partner shadow-block"
+                                            style="background: url(img/logos/logo-eleksnet.svg)"
+                                        ></div>
                                     </div>
                                 </div>
                             </div>
@@ -671,389 +1139,180 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="section gray">
-            <div class="container">
-                <p class="h1 text-align-center">Новости</p>
-                <div>
-
-                <div class="news">
+            <div class="section p-b-0">
+                <div class="container">
+                    <div class="seo-content">
+                        <h2 class="bottom-border">МигКредит – онлайн займы для всех</h2>
                         <div class="row">
-                            <div class="col w-33">
-                                <a class="item item-compact">
-                                    <span class="date">16 мая 2019</span>
-                                    <p class="desc">Персональные коммуникации на розничном финансовом рынке: «МигКредит» автоматизировал систему общения с клиентами</p>
-                                </a>
+                            <div class="col w-50">
+                                <p>
+                                    Минимум требований для получения денег. В МигКредит вам не придется собирать пакет
+                                    документов и долго ждать решения. Займ может получить гражданин РФ, которому уже
+                                    исполнился 21 год. Также потребуется постоянная регистрация, регулярные доходы и
+                                    паспорт. Кроме того, для удостоверения личности может понадобиться второй документ
+                                    на ваш выбор – СНИЛС, ИНН, пенсионное удостоверение, свидетельство о регистрации
+                                    автомобиля, водительское удостоверение, военный билет или загранпаспорт.
+                                </p>
+                                <p class="more-mobile-content">
+                                    Наши условия – для вашего удобства. Вы самостоятельно выбираете сумму и длительность
+                                    кредитования: от 3 000 до 14 000 рублей на срок от 3 до 29 дней для займов с
+                                    погашением единовременно и от 15 000 до 55 000 рублей на срок от 10 до 48 недель для
+                                    займов с постепенным погашением. Постоянные клиенты получают займы на специальных
+                                    условиях – от 15 000 до 98 000 рублей на срок от 10 до 48 недель.
+                                </p>
+                                <p class="more-mobile-content">
+                                    Получайте онлайн займы на карту круглосуточно, из дома или офиса. Все условия
+                                    кредитования прозрачны – нет никаких дополнительных платежей, а ставки составляют от
+                                    0,2685% в день. Также важно, что взять кредит можно даже с испорченной кредитной
+                                    историей.
+                                </p>
                             </div>
-                            <div class="col w-33">
-                                <a class="item item-compact">
-                                    <span class="date">16 мая 2019</span>
-                                    <p class="desc">«МигКредит» будет развивать систему «виртуальных собеседников» для клиентов</p>
-                                </a>
-                            </div>
-                            <div class="col w-33">
-                                <a class="item item-compact">
-                                    <span class="date">16 мая 2019</span>
-                                    <p class="desc">«МигКредит» увеличил частоту брендовых запросов в Яндексе на 47%</p>
-                                </a>
-                            </div>
-                        </div>
-               </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="container">
-                <p class="h1 text-align-center">Отзывы</p>
-                <div class="comments">
-                    <div class="swiper-slider-wrapper comments-slider">
-                        <div id="comments_slider" class="swiper-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="comment-card shadow-block">
-                                        <div class="img" style="background: url(img/comments/1.jpg)"></div>
-                                        <p class="name">Фатхуллина Гульчачак Айратовна</p>
-                                        <div class="info"><span class="date">04 сентября 2018</span><span class="city">Санкт-Петербург</span></div>
-                                        <p class="medium-text">В начале марта обратилась в компанию МигКредит, так как срочно
-                                            нужны
-                                            были деньги на ремонт. Что-то случилось с трубами, надо было быстро решать вопрос. Начала искать компании, которые готовы быстро оформить кредит и сразу наткнулась на МигКредит. Когда пришла в офис, даже не надеялась на то, что смогу решить все свои проблемы быстро.</p>
-                                    </div>
-                                </div>
+                            <div class="col w-50 more-mobile-content">
+                                <p>
+                                    Моментальные онлайн займы на карту. Получить онлайн займ легко – просто заполните
+                                    заявку на сайте или в мобильном приложении и дождитесь решения. Если вы – уже клиент
+                                    МигКредит и берете займ не впервые, создайте заявку в личном кабинете. Затем
+                                    получите СМС с кодом, подпишите заявку и выберите, как хотите получить деньги –
+                                    безналичным переводом на карту или наличными с помощью систем Золотая корона,
+                                    Contact.
+                                </p>
+                                <p>
+                                    После получения договора в электронном виде подпишите его – на указанный номер
+                                    телефона придет код подтверждения. Деньги будут доступны к использованию уже в это
+                                    же день.
+                                </p>
+                                <p>
+                                    Погашать платежи так же удобно, как и получать – прямо на сайте с банковской карты,
+                                    со счета мобильного телефона, через терминалы Московского кредитного банка,
+                                    CyberPlat, а также Qiwi и Элекснет, салоны Связной, Золотая Корона и Contact.
+                                </p>
                             </div>
                         </div>
-                        <div class="swiper-pagination comments-slider-pagination"></div>
-                        <div class="swiper-arrow swiper-arrow-prev comments-slider-button-prev"><i class="icon icon-left1"></i></div>
-                        <div class="swiper-arrow swiper-arrow-next comments-slider-button-next"><i class="icon icon-right1"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section gray">
-            <div class="container">
-                <p class="h1 text-align-center">Пресса о нас</p>
-                <div class="press">
-                    <div class="row">
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/kommersant.svg)"></div>
+                        <h2 class="bottom-border more-mobile-content">Онлайн займы</h2>
+                        <div class="row more-mobile-content">
+                            <div class="col w-50">
+                                <p>
+                                    Комфорт. МигКредит – крупнейшая в стране микрофинансовая организация, которая
+                                    помогает сотням тысяч клиентов. Получите онлайн займ на карту или наличными всего за
+                                    15 минут. Если нет возможности завести заявку через интернет, вы всегда можете
+                                    обратиться в наше представительство в вашем городе. Офисы компании расположены более
+                                    чем 50 российских городах во всех федеральных округах – не только в Москве и
+                                    Санкт-Петербурге, но и в Поволжье, на Урале, в Сибири и других. Полный перечень
+                                    городов присутствия офисов МигКредит представлен в разделе «Регионы».
+                                </p>
+                                <p>
+                                    Гарантия. Мы не требуем документального подтверждения платежеспособности. Займ могут
+                                    получить студенты, домохозяйки, а также пенсионеры.
+                                </p>
+                            </div>
+                            <div class="col w-50">
+                                <p>
+                                    Безопасность. Получите онлайн займ без рисков. Компания МигКредит оказывает услуги,
+                                    полностью соответствующие законодательству РФ. Мы состоим в государственном реестре
+                                    микрофинансовых организаций, гарантируя безопасность получения всех займов и
+                                    исполнение обязательств по договору независимо от условий кредитования.
+                                </p>
+                                <p>
+                                    Если у вас остались вопросы, мы с удовольствием на них ответим – вы можете
+                                    обратиться к специалистам МигКредит. Пишите нам через форму обратной связи,
+                                    приходите на консультацию в офис в своем городе или звоните по номеру 8 800 100 06
+                                    09 – звонок бесплатный.
+                                </p>
+                            </div>
                         </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/forbes.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/vedomosti.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/rambler.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/bankisegodnya.png)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/rg.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/bankiru.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/rbk.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/zaimcom.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/bo.svg)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/expert.png)"></div>
-                        </div>
-                        <div class="col w-25 w-33-mobile">
-                            <div class="item shadow-block" style="background: url(img/press/bankrf.svg)"></div>
+                        <span class="show-more hide-desktop">Читать полностью<i class="icon icon-down1"></i></span>
+                        <div class="asterisk">
+                            *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка
+                            среди МФО по обьему портфеля.
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="footer-margin"></div>
         </div>
 
-        <div class="section">
-            <div class="container">
-                <p class="h1 text-align-center">Комментарии экспертов</p>
-                <div class="experts">
-                    <div class="swiper-slider-wrapper experts-slider">
-                        <div id="experts_slider" class="swiper-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="#" class="expert-card  expert-card-mini shadow-block">
-                                        <span class="img" style="background: url(img/experts/1.png)"></span>
-                                        <p class="name">Олег Гришин</p>
-                                        <p class="post">Генеральный директор</p>
-                                        <p class="desc">Холодный душ для МФО: что изменится после 1 июля 2019 года</p>
-                                        <span class="link">Читать статью<i class="icon icon-right1"></i></span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="expert-card expert-card-mini  shadow-block">
-                                        <span class="img" style="background: url(img/experts/2.png)"></span>
-                                        <p class="name">Владимир Курашев</p>
-                                        <p class="post">Директор Казначейства</p>
-                                        <p class="desc">На что обратить внимание инвестору в МФО</p>
-                                        <span class="link">Читать статью<i class="icon icon-right1"></i></span>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a href="#" class="expert-card expert-card-mini shadow-block">
-                                        <span class="img" style="background: url(img/experts/3.png)"></span>
-                                        <p class="name">Надежда Денисова</p>
-                                        <p class="post">Директор по маркетингу МФО «МигКредит»</p>
-                                        <p class="desc">Технологичность МФО как фактор роста микрозаймов</p>
-                                        <span class="link">Читать статью<i class="icon icon-right1"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination experts-slider-pagination"></div>
-                        <div class="swiper-arrow swiper-arrow-prev experts-slider-button-prev"><i class="icon icon-left1"></i></div>
-                        <div class="swiper-arrow swiper-arrow-next experts-slider-button-next"><i class="icon icon-right1"></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section gray">
+        <!-- footer -->
+        <div class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col w-50">
-                        <p class="h2">Наши достижения</p>
-                        <div class="progresses">
-                            <div class="row">
-                                <div class="col w-50 w-50-mobile">
-                                    <div class="progress-card shadow-block">
-                                        <div class="img" style="background: url(img/progresses/banki.svg)"></div>
-                                        <div class="text">Компания года 2018 по версии Banki.ru</div>
-                                    </div>
-                                </div>
-                                <div class="col w-50 w-50-mobile">
-                                    <div class="progress-card shadow-block">
-                                        <div class="img" style="background: url(img/progresses/bo.svg)"></div>
-                                        <div class="text">Лауреат премии “Банковская сфера”</div>
-                                    </div>
-                                </div>
-                                <div class="clr"></div>
-                                <div class="col w-50 w-50-mobile">
-                                    <div class="progress-card shadow-block">
-                                        <div class="img" style="background: url(img/progresses/akra.svg)"></div>
-                                        <div class="text">Рейтинг АКРА</div>
-                                    </div>
-                                </div>
-                                <div class="col w-50 w-50-mobile">
-                                    <div class="progress-card shadow-block">
-                                        <div class="img" style="background: url(img/progresses/cb.svg)"></div>
-                                        <div class="text">Организация занесена в Гос. реестр МФО ЦБ РФ</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col w-25">
+                        <span class="logo hide-mobile"></span>
                     </div>
-                    <div class="col w-50 mobile-m-t-30">
-                        <p class="h2">Наши партнеры</p>
-                        <div class="partners">
-                            <div class="row">
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-mir.svg)"></div>
-                                </div>
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-contact.svg)"></div>
-                                </div>
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-banki.svg)"></div>
-                                </div>
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-cyberplat.svg)"></div>
-                                </div>
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-qiwi.svg)"></div>
-                                </div>
-                                <div class="col w-33 w-50-mobile">
-                                    <div class="partner shadow-block" style="background: url(img/logos/logo-eleksnet.svg)"></div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col w-25">
+                        <a href="tel:8 800 7000 908" class="tel">8 800 7000 908</a>
+                        <p class="small-text">Действующим клиентам</p>
+                    </div>
+                    <div class="col w-25">
+                        <a href="tel:8 800 100 06 09" class="tel">8 800 100 06 09</a>
+                        <p class="small-text">По вопросам оформления заявки</p>
+                    </div>
+                    <div class="col w-25">
+                        <a href="tel:+7 (495) 785 72 63" class="tel">+7 (495) 785 72 63</a>
+                        <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="section p-b-0">
-            <div class="container">
-                <div class="seo-content">
-                    <h2 class="bottom-border">МигКредит – онлайн займы для всех</h2>
-                    <div class="row">
-                        <div class="col w-50">
-                            <p>Минимум требований для получения денег. В МигКредит вам не придется собирать пакет документов и долго ждать решения. Займ может получить гражданин РФ, которому уже исполнился 21 год. Также потребуется постоянная регистрация, регулярные доходы и паспорт. Кроме того, для удостоверения личности может понадобиться второй документ на ваш выбор – СНИЛС, ИНН, пенсионное удостоверение, свидетельство о регистрации автомобиля, водительское удостоверение, военный билет или загранпаспорт.</p>
-                            <p class="more-mobile-content">Наши условия – для вашего удобства. Вы самостоятельно выбираете сумму и
-                                длительность кредитования: от 3 000 до 14 000 рублей на срок от 3 до 29 дней для займов с погашением единовременно и от 15 000 до 55 000 рублей на срок от 10 до 48 недель для займов с постепенным погашением. Постоянные клиенты получают займы на специальных условиях – от 15 000 до 98 000 рублей на срок от 10 до 48 недель.</p>
-                            <p class="more-mobile-content">Получайте онлайн займы на карту круглосуточно, из дома или офиса. Все условия
-                                кредитования прозрачны – нет никаких дополнительных платежей, а ставки составляют от 0,2685% в день. Также важно, что взять кредит можно даже с испорченной кредитной историей.</p>
-                        </div   >
-                        <div class="col w-50 more-mobile-content">
-                            <p>Моментальные онлайн займы на карту. Получить онлайн займ легко – просто заполните заявку на сайте или в мобильном приложении и дождитесь решения. Если вы – уже клиент МигКредит и берете займ не впервые, создайте заявку в личном кабинете. Затем получите СМС с кодом, подпишите заявку и выберите, как хотите получить деньги – безналичным переводом на карту или наличными с помощью систем Золотая корона, Contact.</p>
-                            <p>После получения договора в электронном виде подпишите его – на указанный номер телефона придет код подтверждения. Деньги будут доступны к использованию уже в это же день.</p>
-                            <p>Погашать платежи так же удобно, как и получать – прямо на сайте с банковской карты, со счета мобильного телефона, через терминалы Московского кредитного банка, CyberPlat, а также Qiwi и Элекснет, салоны Связной, Золотая Корона и Contact.</p>
-                        </div>
-                    </div>
-                    <h2 class="bottom-border more-mobile-content">Онлайн займы</h2>
-                    <div class="row more-mobile-content">
-                        <div class="col w-50">
-                            <p>Комфорт. МигКредит – крупнейшая в стране микрофинансовая организация, которая помогает сотням тысяч клиентов. Получите онлайн займ на карту или наличными всего за 15 минут. Если нет возможности завести заявку через интернет, вы всегда можете обратиться в наше представительство в вашем городе. Офисы компании расположены более чем 50 российских городах во всех федеральных округах – не только в Москве и Санкт-Петербурге, но и в Поволжье, на Урале, в Сибири и других. Полный перечень городов присутствия офисов МигКредит представлен в разделе «Регионы».</p>
-                            <p>Гарантия. Мы не требуем документального подтверждения платежеспособности. Займ могут получить студенты, домохозяйки, а также пенсионеры.</p>
-                        </div>
-                        <div class="col w-50">
-                            <p>Безопасность. Получите онлайн займ без рисков. Компания МигКредит оказывает услуги, полностью соответствующие законодательству РФ. Мы состоим в государственном реестре микрофинансовых организаций, гарантируя безопасность получения всех займов и исполнение обязательств по договору независимо от условий кредитования.</p>
-                            <p>Если у вас остались вопросы, мы с удовольствием на них ответим – вы можете обратиться к специалистам МигКредит. Пишите нам через форму обратной связи, приходите на консультацию в офис в своем городе или звоните по номеру 8 800 100 06 09 – звонок бесплатный.</p>
-                        </div>
-                    </div>
-                    <span class="show-more hide-desktop">Читать полностью<i class="icon icon-down1"></i></span>
-                    <div class="asterisk">*Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди МФО по обьему портфеля.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-margin"></div>
-    </div>
-
-    <!-- footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col w-25">
-                    <span class="logo hide-mobile"></span>
-                </div>
-                <div class="col w-25">
-                    <a href="tel:8 800 7000 908" class="tel">8 800 7000 908</a>
-                    <p class="small-text">Действующим клиентам</p>
-                </div>
-                <div class="col w-25">
-                    <a href="tel:8 800 100 06 09" class="tel">8 800 100 06 09</a>
-                    <p class="small-text">По вопросам оформления заявки</p>
-                </div>
-                <div class="col w-25">
-                    <a href="tel:+7 (495) 785 72 63" class="tel">+7 (495) 785 72 63</a>
-                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col w-25 hide-mobile">
-                    <ul>
-                        <li><a class="link" href="#">Микрокредиты</a></li>
-                        <li><a class="link" href="#">Микрозаймы</a></li>
-                        <li><a class="link" href="#">Деньги онлайн</a></li>
-                        <li><a class="link" href="#">Автокредитование</a></li>
-                        <li><a class="link" href="#">Карта Лукойл</a></li>
-                    </ul>
-                </div>
-                <div class="col w-25 hide-mobile">
-                    <ul>
-                        <li><a class="link" href="#">Продукты</a></li>
-                        <li><a class="link" href="#">Погашение займа</a></li>
-                        <li><a class="link" href="#">Услуги</a></li>
-                        <li><a class="link" href="#">Акции</a></li>
-                        <li><a class="link" href="#">Инвестиции</a></li>
-                    </ul>
-                </div>
-                <div class="col w-25 hide-mobile">
-                    <ul>
-                        <li><a class="link" href="#">Партнерская программа</a></li>
-                        <li><a class="link" href="#">Карьера</a></li>
-                        <li><a class="link" href="#">Статьи</a></li>
-                        <li><a class="link" href="#">Карта сайта</a></li>
-                        <li><a class="link" href="#">Контакты</a></li>
-                    </ul>
-                </div>
-                <div class="col w-25">
-                    <div class="apps">
-                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
-                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
-                    </div>
-                    <div class="social">
-                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
-                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
-                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
-                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
-                    </div>
-                </div>
-            </div>
-            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
-        </div>
-        <div class="copyright">
-            <div class="container">
                 <div class="row">
-                    <div class="col w-33 w-50-mobile">
-                        <p>© 2019, МигКредит</p>
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Микрокредиты</a></li>
+                            <li><a class="link" href="#">Микрозаймы</a></li>
+                            <li><a class="link" href="#">Деньги онлайн</a></li>
+                            <li><a class="link" href="#">Автокредитование</a></li>
+                            <li><a class="link" href="#">Карта Лукойл</a></li>
+                        </ul>
                     </div>
-                    <div class="col w-33 hide-mobile">
-                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Продукты</a></li>
+                            <li><a class="link" href="#">Погашение займа</a></li>
+                            <li><a class="link" href="#">Услуги</a></li>
+                            <li><a class="link" href="#">Акции</a></li>
+                            <li><a class="link" href="#">Инвестиции</a></li>
+                        </ul>
                     </div>
-                    <div class="col w-33 w-50-mobile">
-                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Партнерская программа</a></li>
+                            <li><a class="link" href="#">Карьера</a></li>
+                            <li><a class="link" href="#">Статьи</a></li>
+                            <li><a class="link" href="#">Карта сайта</a></li>
+                            <li><a class="link" href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col w-25">
+                        <div class="apps">
+                            <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                            <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                        </div>
+                        <div class="social">
+                            <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                        </div>
+                    </div>
+                </div>
+                <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col w-33 w-50-mobile">
+                            <p>© 2019, МигКредит</p>
+                        </div>
+                        <div class="col w-33 hide-mobile">
+                            <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                        </div>
+                        <div class="col w-33 w-50-mobile">
+                            <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-
-    <script src="./js/script.js"></script>
-</body>
+        <script src="./js/script.js"></script>
+    </body>
 </html>

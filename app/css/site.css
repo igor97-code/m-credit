@@ -1000,6 +1000,13 @@ body {
     @media (min-width: 1000px) {
       .button-gray:hover {
         background: #e5e5e5; } }
+  .button-white-border-gray {
+    background: #ffffff;
+    color: #333333; }
+    @media (min-width: 1000px) {
+      .button-white-border-gray:hover {
+        background: #ffffff;
+        border-color: #C2C2C2; } }
   .button-text {
     background: transparent;
     color: #333333; }
@@ -1071,6 +1078,9 @@ body {
 button.button,
 input.button {
   line-height: 1.2em !important; }
+
+.button-wrapper-150 {
+  width: 150px; }
 
 .color-main {
   color: #7dc041 !important; }
@@ -2898,6 +2908,7 @@ input.button {
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08); }
   .press .press-item .item-info .date {
     font-size: 14px;
@@ -2914,6 +2925,8 @@ input.button {
     outline: none;
     text-decoration: none;
     cursor: pointer; }
+    .press .press-item .item-info .read:hover {
+      color: #0067BA; }
 
 @media (min-width: 1000px) {
   .experts .experts-slider {
@@ -2954,8 +2967,7 @@ input.button {
 
 .experts .expert-card {
   display: block;
-  position: relative;
-  padding: 20px;
+  padding: 17px 20px 20px;
   outline: none;
   text-decoration: none;
   color: #333333;
@@ -2970,74 +2982,73 @@ input.button {
   @media (min-width: 1000px) {
     .experts .expert-card {
       margin: 10px 0; } }
-  .experts .expert-card .img {
-    position: absolute;
-    display: block;
-    top: 24px;
-    left: 26px;
-    width: 90px;
-    height: 90px;
-    border-radius: 100%;
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-    margin: 0; }
+  .experts .expert-card .head {
+    position: relative;
+    height: 114px; }
+    .experts .expert-card .head .expert-img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -45px;
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
   .experts .expert-card .name {
-    margin: 20px 0;
+    padding-top: 20px;
+    padding-left: 110px;
+    margin-bottom: 10px;
+    max-height: 60px;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
-    line-height: 179.19%;
-    padding-left: 110px;
-    margin-bottom: 10px; }
-    @media (max-width: 1000px) {
-      .experts .expert-card .name {
-        height: auto; } }
-    @media (min-width: 760px) {
-      .experts .expert-card .name {
-        height: 30px; } }
+    line-height: 120%;
+    overflow: hidden; }
   .experts .expert-card .post {
+    padding-bottom: 20px;
+    padding-left: 110px;
+    margin-top: 10px;
+    max-height: 45px;
     font-size: 12px;
     color: #7e7e7e;
-    padding-left: 110px;
-    margin: 10px 0 40px 0; }
-    @media (max-width: 1000px) {
-      .experts .expert-card .post {
-        height: auto; } }
-    @media (min-width: 760px) {
-      .experts .expert-card .post {
-        height: 30px; } }
+    line-height: 180%;
+    overflow: hidden; }
   .experts .expert-card .desc {
-    padding-bottom: 40px;
+    height: 140px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 179.19%; }
+    line-height: 179.19%;
+    overflow: hidden; }
     @media (max-width: 1000px) {
       .experts .expert-card .desc {
         height: auto; } }
     @media (min-width: 760px) {
       .experts .expert-card .desc {
-        height: 181px; } }
+        height: 140px; } }
+  .experts .expert-card .desc-small {
+    height: 70px;
+    overflow: hidden; }
+    @media (max-width: 1000px) {
+      .experts .expert-card .desc-small {
+        height: auto; } }
+    @media (min-width: 760px) {
+      .experts .expert-card .desc-small {
+        height: 70px; } }
   .experts .expert-card .link {
-    position: absolute;
-    display: block;
-    bottom: 20px;
-    left: 20px;
+    position: relative;
+    margin-top: 20px;
     font-size: 16px;
     color: #7dc041; }
     .experts .expert-card .link .icon {
       position: absolute;
       display: block;
-      right: -20px;
-      bottom: 2px; }
-
-.experts .expert-card-mini {
-  height: 265px;
-  box-shadow: none; }
-  .experts .expert-card-mini .img {
-    top: 29px;
-    left: 19px; }
+      left: 123px;
+      bottom: 1px; }
+    .experts .expert-card .link:hover {
+      color: #82C943; }
 
 .progresses .progress-card {
   margin: 10px 0;
@@ -3350,6 +3361,47 @@ input.button {
         color: #7dc041;
         font-size: 16px;
         font-weight: bold; }
+
+.articles .articles-item {
+  text-align: left;
+  border-bottom: 1px solid #efefef; }
+  .articles .articles-item .row:nth-child(even) .item-info {
+    display: block;
+    position: relative;
+    float: right; }
+  .articles .articles-item .image-wrapper {
+    width: 100%;
+    height: 329px;
+    margin: 0; }
+  .articles .articles-item .item-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 30px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #efefef; }
+    .articles .articles-item .item-image::before {
+      content: '';
+      display: block;
+      padding-bottom: 68.5%; }
+  .articles .articles-item .item-info {
+    margin: 30px 0; }
+  .articles .articles-item .title {
+    text-align: left;
+    color: #333333;
+    font-size: 24px;
+    margin: 0 0 30px 0; }
+  .articles .articles-item .article-link {
+    display: block;
+    margin: 15px 0;
+    outline: none;
+    text-decoration: none;
+    color: #7e7e7e;
+    font-size: 16px; }
+    .articles .articles-item .article-link:hover {
+      color: #333333; }
 
 .question-list {
   display: block;
