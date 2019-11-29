@@ -190,28 +190,3 @@
 .overflow-hidden {
     overflow: hidden;
 }
-
-.toggle-block {
-    .toggle-content {
-        display: none;
-    }
-
-    .open-text {
-        display: block;
-    }
-    .close-text {
-        display: none;
-    }
-
-    &.open {
-        .toggle-content {
-            display: block;
-        }
-        .open-text {
-            display: none;
-        }
-        .close-text {
-            display: block;
-        }
-    }
-}

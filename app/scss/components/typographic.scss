@@ -501,13 +501,24 @@
         margin: 0;
         padding: 0;
     }
-
+    .open-text {
+        display: block;
+    }
+    .close-text {
+        display: none;
+    }
     &.open {
         .arrow {
             transform: rotate(-180deg);
         }
 
         .toggle-content {
+            display: block;
+        }
+        .open-text {
+            display: none;
+        }
+        .close-text {
             display: block;
         }
     }

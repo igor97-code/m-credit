@@ -1,23 +1,8 @@
 .articles {
     .articles-item {
         text-align: left;        
-        border-bottom: 1px solid $colorBorder;
-        .row {
-            &:nth-child(even) {
-                .item-info {
-                    display: block;
-                    position: relative;
-                    float: right;
-                }
-            }
-        }
-
-        .image-wrapper {
-            width: 100%;
-            height: 329px;
-
-            margin: 0;
-        }
+        border-bottom: 1px solid $colorBorder;       
+       
         .item-image {
             display: block;
             width: 100%;
@@ -33,7 +18,7 @@
             &::before {
                 content: '';
                 display: block;
-                padding-bottom: 68.5%;
+                padding-bottom: 65.5%;
             }
         }
 

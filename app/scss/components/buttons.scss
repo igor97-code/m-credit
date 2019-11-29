@@ -125,18 +125,7 @@
                 background: $colorGrayHover;
             }
         }
-    }
-
-    &-white-border-gray {
-        background: $colorWhite;
-        color: $colorText;
-        @include desktop {
-            &:hover {
-                background: $colorWhite;
-                border-color: $colorGrayBorderButton;
-            }
-        }
-    }
+    }   
 
     &-text {
         background: transparent;

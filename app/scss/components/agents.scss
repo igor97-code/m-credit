@@ -1,0 +1,126 @@
+.agents-head {
+    height: 500px;
+    margin: 0;
+
+    background-image: url(/img/agents/bg1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60% 50%;
+    @include mobile {
+        height: auto;
+        background-size: cover;
+    }
+
+    .head-text-wrapper {
+        height: 500px;
+        @include mobile {
+            padding: 20px 0;
+
+            height: auto;
+        }
+    }
+
+    h1 {
+        line-height: 40px;
+        @include mobile {
+            font-size: 22px;
+        }
+    }
+    p {
+        line-height: 179.19%;
+        color: $colorGray;
+    }
+}
+
+.lk {
+    border-bottom: 1px solid $colorBorder;
+
+    a {
+        text-decoration: none;
+        outline: none;
+    }
+
+    .block-buttons {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        a {
+            width: 230px;
+            &.link {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+
+                cursor: pointer;
+
+                .icon {
+                    margin-left: 10px;
+                    bottom: 1px;
+                }
+
+                &:hover {
+                    color: $colorMainHover;
+                }
+            }
+        }
+    }
+}
+
+.agent-card {
+    padding: 0;
+    @include mobile {
+        padding: 10px 0 20px 0;
+    }
+    .desc-wrapper {
+        height: 448px;
+        @include mobile {
+            height: auto;
+        }
+
+        h1 {
+            margin-bottom: 22px;
+        }
+
+        p {
+            line-height: 1.8em;
+        }
+        .icon {
+            margin-right: 28px;
+
+            color: $colorMain;
+        }
+    }
+
+    .image-wrapper {
+        height: 448px;
+        margin: 0 auto;
+        
+        @include mobile {
+            height: 300px;
+        }
+        .image {
+            
+            
+            @include mobile {
+                background-size: 55%;
+            }
+            @include tablet {
+                background-size: contain;
+            }
+            @include desktop {
+                height: 100%;
+
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center;
+            }
+
+            &.bg-size103 {
+                background-size: 103%;
+                @include mobile {
+                    background-size: 60%;
+                }
+            }
+        }
+    }
+}
