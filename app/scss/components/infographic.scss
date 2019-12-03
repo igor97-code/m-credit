@@ -86,8 +86,7 @@
 
             &.label {
                 font-size: 14px;
-                font-weight: 700;
-                color: $colorMain;
+                color: $colorGray;
                 @include only-mobile {
                     font-size: 11px;
                     line-height: 13px;

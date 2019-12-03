@@ -2137,11 +2137,32 @@ input.button {
     top: 0;
     bottom: 0;
     background: url("../img/load.gif") center center no-repeat; }
-  .calculator.load * {
+  .calculator.load .calculator-row > *, .calculator.load .calculator-slider > * {
     visibility: hidden; }
-  .calculator.load:before {
-    display: block;
-    visibility: visible; }
+  .calculator.load .calculator-row, .calculator.load .calculator-slider, .calculator.load .button {
+    background-color: #efefef; }
+  .calculator.load .calculator-row {
+    height: 25px; }
+  .calculator.load .calculator-row:last-child {
+    height: 9px;
+    width: 20%;
+    margin-top: 10px !important; }
+  .calculator.load .calculator-slider {
+    width: 50%;
+    height: 15px; }
+  .calculator.load .button {
+    color: #efefef; }
+  .calculator.load .result {
+    background-color: #ffffff; }
+    .calculator.load .result .calculator-row {
+      height: 15px;
+      width: 100%; }
+  .calculator.load.inner .calculator-item.result {
+    margin: 0; }
+    .calculator.load.inner .calculator-item.result > * {
+      visibility: hidden; }
+    .calculator.load.inner .calculator-item.result.shadow-block {
+      display: none; }
   .calculator-item {
     display: block;
     margin: 35px 0;
@@ -2273,8 +2294,7 @@ input.button {
         line-height: 21px; } }
     .infographic .item .text.label {
       font-size: 14px;
-      font-weight: 700;
-      color: #7dc041; }
+      color: #7e7e7e; }
       @media (max-width: 760px) {
         .infographic .item .text.label {
           font-size: 11px;
@@ -2346,8 +2366,7 @@ input.button {
         height: 160px;
         padding: 15px; } }
     .product-card .head .text {
-      opacity: 0.5;
-      font-weight: 700; }
+      opacity: 0.5; }
       @media (max-width: 1000px) {
         .product-card .head .text {
           font-weight: 400; } }
@@ -2944,8 +2963,11 @@ input.button {
     background-color: #ffffff;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08); }
+    background-size: 80%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); }
+    @media (max-width: 1000px) {
+      .press .press-item .item-icon {
+        margin-bottom: 20px; } }
   .press .press-item .item-info .date {
     font-size: 14px;
     line-height: 180%;
