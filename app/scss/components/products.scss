@@ -435,6 +435,11 @@
         }
 
     }
+    &.bg-11 {
+        background-image: url('../img/agents/bg11.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 
 }
 // END фоны продуктов
@@ -442,6 +447,15 @@
 //Блок текст центрируется картинки - слева, справа
     .info-wrapper{
         height: 560px;
+
+        &.small{
+            height: 480px;
+            @include mobile{
+                height: auto;
+                margin: 40px auto;
+                text-align: center;
+            }
+        }
         @include mobile{
             height: auto;
         }
@@ -450,6 +464,35 @@
     .image-wrapper{
         height: 500px;
         margin: 25px auto;
+        &.small{
+            height: 480px;
+            margin: 0;
+
+            @include mobile{
+                height: 300px;
+                margin: 25px auto;
+            }
+
+            .image{
+                background-size: 80%;
+                @include mobile{
+                    background-size: contain;
+                }
+            }
+        }
+
+        &.bottom-image{
+            .image{
+                background-size: cover;
+                background-position: center bottom;
+
+                @include mobile{
+                    background-size: contain;
+                    background-position: center center;
+                }
+            }
+        }
+
         @include mobile{
             height: 300px;
         }

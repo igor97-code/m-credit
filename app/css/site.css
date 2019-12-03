@@ -291,6 +291,8 @@ body {
     z-index: 2; }
   .container.fullscreen {
     max-width: 100%; }
+  .container.small {
+    max-width: 490px; }
 
 .clr {
   display: block;
@@ -1098,6 +1100,8 @@ input.button {
     .section {
       padding-top: 30px;
       padding-bottom: 30px; } }
+  .section.b-t {
+    border-top: 1px solid #efefef; }
   .section.shadow {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -2625,9 +2629,20 @@ input.button {
     background-image: url("../img/products/avtokreditovanie/bg11.png"); }
     .product-bg.bg-10:before {
       background-image: url("../img/products/avtokreditovanie/driver.png"); }
+  .product-bg.bg-11 {
+    background-image: url("../img/agents/bg11.png");
+    background-position: center center;
+    background-repeat: no-repeat; }
 
 .info-wrapper {
   height: 560px; }
+  .info-wrapper.small {
+    height: 480px; }
+    @media (max-width: 1000px) {
+      .info-wrapper.small {
+        height: auto;
+        margin: 40px auto;
+        text-align: center; } }
   @media (max-width: 1000px) {
     .info-wrapper {
       height: auto; } }
@@ -2635,6 +2650,25 @@ input.button {
 .image-wrapper {
   height: 500px;
   margin: 25px auto; }
+  .image-wrapper.small {
+    height: 480px;
+    margin: 0; }
+    @media (max-width: 1000px) {
+      .image-wrapper.small {
+        height: 300px;
+        margin: 25px auto; } }
+    .image-wrapper.small .image {
+      background-size: 80%; }
+      @media (max-width: 1000px) {
+        .image-wrapper.small .image {
+          background-size: contain; } }
+  .image-wrapper.bottom-image .image {
+    background-size: cover;
+    background-position: center bottom; }
+    @media (max-width: 1000px) {
+      .image-wrapper.bottom-image .image {
+        background-size: contain;
+        background-position: center center; } }
   @media (max-width: 1000px) {
     .image-wrapper {
       height: 300px; } }
@@ -3396,95 +3430,6 @@ input.button {
     font-size: 16px; }
     .articles .articles-item .article-link:hover {
       color: #333333; }
-
-.agents-head {
-  height: 500px;
-  margin: 0;
-  background-image: url(/img/agents/bg1.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 60% 50%; }
-  @media (max-width: 1000px) {
-    .agents-head {
-      height: auto;
-      background-size: cover; } }
-  .agents-head .head-text-wrapper {
-    height: 500px; }
-    @media (max-width: 1000px) {
-      .agents-head .head-text-wrapper {
-        padding: 20px 0;
-        height: auto; } }
-  .agents-head h1 {
-    line-height: 40px; }
-    @media (max-width: 1000px) {
-      .agents-head h1 {
-        font-size: 22px; } }
-  .agents-head p {
-    line-height: 179.19%;
-    color: #7e7e7e; }
-
-.lk {
-  border-bottom: 1px solid #efefef; }
-  .lk a {
-    text-decoration: none;
-    outline: none; }
-  .lk .block-buttons {
-    max-width: 480px;
-    margin-left: auto;
-    margin-right: auto; }
-    .lk .block-buttons a {
-      width: 230px; }
-      .lk .block-buttons a.link {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        cursor: pointer; }
-        .lk .block-buttons a.link .icon {
-          margin-left: 10px;
-          bottom: 1px; }
-        .lk .block-buttons a.link:hover {
-          color: #82C943; }
-
-.agent-card {
-  padding: 0; }
-  @media (max-width: 1000px) {
-    .agent-card {
-      padding: 10px 0 20px 0; } }
-  .agent-card .desc-wrapper {
-    height: 448px; }
-    @media (max-width: 1000px) {
-      .agent-card .desc-wrapper {
-        height: auto; } }
-    .agent-card .desc-wrapper h1 {
-      margin-bottom: 22px; }
-    .agent-card .desc-wrapper p {
-      line-height: 1.8em; }
-    .agent-card .desc-wrapper .icon {
-      margin-right: 28px;
-      color: #7dc041; }
-  .agent-card .image-wrapper {
-    height: 448px;
-    margin: 0 auto; }
-    @media (max-width: 1000px) {
-      .agent-card .image-wrapper {
-        height: 300px; } }
-    @media (max-width: 1000px) {
-      .agent-card .image-wrapper .image {
-        background-size: 55%; } }
-    @media (min-width: 760px) {
-      .agent-card .image-wrapper .image {
-        background-size: contain; } }
-    @media (min-width: 1000px) {
-      .agent-card .image-wrapper .image {
-        height: 100%;
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center; } }
-    .agent-card .image-wrapper .image.bg-size103 {
-      background-size: 103%; }
-      @media (max-width: 1000px) {
-        .agent-card .image-wrapper .image.bg-size103 {
-          background-size: 60%; } }
 
 .question-list {
   display: block;
