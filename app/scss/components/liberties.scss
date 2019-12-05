@@ -1,0 +1,457 @@
+//Наши привелегии
+.our-liberties {
+    .main-item { 
+        min-height: 270px;
+        margin-bottom: 26px;
+        padding: 70px 0;
+        text-align: right;
+        padding-right: 15px;
+        background-position-x: 60%;
+        .new {
+            border-radius: 6px;
+            padding: 5px 9px;
+            background-color: $colorMain;
+            display: inline;
+            letter-spacing: 0.225em;
+        }
+        .h1 {
+            margin: 18px 0 10px;
+        }
+        .h2 {
+            margin: 0;
+        }
+    }
+    .item  { 
+        margin-bottom: 26px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 6px;
+        .h2 {
+            padding: 55px 15px 10px;
+            background-repeat: no-repeat;
+            height: 153px;
+            overflow: hidden;
+            border-radius: 6px 6px 0px 0px;
+        } 
+        p {
+            margin: 0;
+        }
+        .text {
+            border: 1px solid $colorBorder;
+            border-radius: 0 0 6px 6px;
+            border-top: none;
+            height: 153px;
+            padding: 15px;
+            background-color: $colorWhite;
+            overflow: hidden;
+            line-height: 22px;
+        } 
+    }
+}
+
+//модификатор блока картинка текст
+.service-cards-only-header { 
+    .item { 
+        margin: 25px 0px 20px;
+        float: left;
+        height: 82px;
+        padding: 0px 20px;
+        width: 100%;
+        overflow: hidden;
+        .image {
+            left: 20px;
+        }
+        .info {
+            margin-left: 80px;
+            
+        } 
+    }
+}
+
+//Управляйте займами в личном кабинете
+.manage-loan {
+    .manage-text-left {
+        width: 50%;
+        float: left;
+        text-align: right;
+        padding-right: 72px;
+        position: relative;
+    }
+    .manage-text-right {
+        width: 50%;
+        float: left;
+        padding-left: 72px;
+        margin: 0;
+        position: relative;
+    }
+    .manage-loan-top {
+        width: 100%;
+        float: left; 
+        .manage-text-left {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                right: 35px;
+                top: 35px;
+                transform: rotate(45deg);
+            }
+        }
+        .manage-text-right {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                left: 35px;
+                top: 35px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    .manage-loan-bottom {
+        .manage-text-left {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                right: 35px;
+                bottom: 35px;
+                transform: rotate(-45deg);
+            }
+        }
+        .manage-text-right {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                bottom: 35px;
+                left: 35px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .manage-loan-middle {
+        display: block;
+        width: 100%;
+        height: 145px;
+        .icon {
+            color: #fff;
+            display: block;
+            font-size: 56px;
+            background: #7dc041;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            border-radius: 50%;
+            margin: 0 auto;
+            top: 45px;
+        i {
+            position: relative;
+            top: -32px;
+        }
+        }
+    }
+    .h1 {
+        &:first-child {
+            margin-top: 50px;
+
+        }
+    }
+    .button {
+        margin: 62px 0 58px;
+    }
+}
+
+//5 причин снова выбрать нас 
+.five-reason {
+    .diagram {
+        height: 200px;
+        width: 200px;
+        background-image: url(../img/rating2.svg);
+        float: left;
+        margin-right: 50px;
+        background-color: $colorWhite;
+        .value {
+            margin-top: -75.5px;
+            margin-left: -75.5px;
+            width: 150px;
+            height: 150px;
+            background: $colorBorder;
+        }
+    }
+    .semi-block {
+        .h1 {
+            margin-bottom: 25px;
+        }
+        i {
+            display: inline-block;
+            vertical-align: text-bottom;
+            color: $colorMain;
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@include mobile {
+    .service-cards-only-header { 
+        .item {
+            width: calc(100% - 20px);
+            margin: 0px 10px 16px;  
+            .info {
+                margin-left: 60px;
+                .h3 {
+                    line-height: 22px;
+                    padding: 9px 0;
+                    font-size: 14px;
+                }
+            } 
+        } 
+    }
+    .our-liberties {
+        .item {
+            .text {
+                height: auto;
+            }
+        }
+    }
+    .manage-loan {
+        .manage-text-left, .manage-text-right {
+            width: 100%;
+            padding: 0px;
+            text-align: center;
+        }
+        .manage-loan-top {
+            margin-bottom: 150px;
+            p {
+                margin-bottom: 5px;
+            }
+            .manage-text-right {
+                &:after {
+                    transform: rotate(90deg);
+                    left: calc(50% - 15px);
+                    top: 40px;
+                }
+            }
+            .manage-text-left {
+                &:after {
+                    display: none !important; 
+                    
+                }
+                
+            }
+        }
+        .manage-loan-bottom {
+            p {
+                margin-bottom: 5px;
+            }
+            .manage-text-right {
+                &:before {
+                    display: none !important; 
+                }
+            }
+            .manage-text-left {
+                &:before {
+                    transform: rotate(90deg);
+                    right: calc(50% - 15px);
+                    bottom: 41px;
+                }
+                
+            }
+        }
+        .manage-loan-middle {
+            .icon {
+                margin-top: 90px;
+            }
+        } 
+        .button {
+            margin: 30px 0 30px;
+        }
+    }
+    .five-reason {
+        .semi-block {
+            min-width: 290px;
+            float: left;
+        }
+    }
+    .liberties-buttons-block {
+        .h2 {
+            margin-bottom: 5px;
+        }
+        .button {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@include xs-mobile {
+    .five-reason {
+        .diagram {
+            float: none;
+            margin: 0 auto;
+        }
+        .semi-block  {
+            text-align: center;
+        }
+    }
+}
+@include only-tablet {
+    
+}
+//Скидки на заем 
+.loan-discounts {
+    text-align: center;
+    font-size: 0;
+    .item {
+        width: calc(20% - 20px); 
+        margin-right: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    .item {
+        &:nth-last-child(1) {
+            margin-right: 0;
+        }
+    }
+    .first-height {
+        height: 32px;
+        &:after{
+            content: "1 заем";
+            top: calc(50% - 11px);
+            position: relative; 
+        }
+    }
+    .second-height {
+        height: 64px;
+        &:after{
+            content: "2 заем";
+            top: calc(50% - 11px);
+            position: relative;
+        }
+        &:before{
+            content: "-5%";
+            display: block;
+            top: -45px;
+            position: absolute;
+            width: 100%;
+            font-size: 34px;
+            line-height: 40px;
+            color: #7DC041;
+        }
+    }
+    .third-height {
+        height: 96px;
+        &:after{
+            content: "3 заем";
+            top: calc(50% - 11px);
+            position: relative;
+        }
+        &:before{
+            content: "-10%";
+            display: block;
+            top: -45px;
+            position: absolute;
+            width: 100%;
+            font-size: 34px;
+            line-height: 40px;
+            color: #7DC041;
+        }
+    }
+    .fourth-height {
+        height: 128px;
+        &:after{
+            content: "4 заем";
+            top: calc(50% - 11px);
+            position: relative;
+        }
+        &:before{
+            content: "-15%";
+            display: block;
+            top: -45px;
+            position: absolute;
+            width: 100%;
+            font-size: 34px;
+            line-height: 40px;
+            color: #7DC041;
+        }
+    }
+    .fifth-height {
+        height: 160px; 
+        &:after{
+            content: "5 заем";
+            top: calc(50% - 11px);
+            position: relative;
+        }
+        &:before{
+            content: "-20%";
+            display: block;
+            top: -45px;
+            position: absolute;
+            width: 100%;
+            max-width: 174px;
+            font-size: 34px;
+            line-height: 40px;
+            color: #7DC041;
+        }
+    } 
+    .loan-block {
+        color: $colorGray;
+        background: $colorBorder; 
+        position: relative;
+    } 
+    
+} 
+@include mobile {
+    .loan-discounts {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-top: 40px;
+        .item {
+            width: calc(190px - 20px);
+        }
+    } 
+}
+
+//Акции и конкурсы от компании «МигКредит»
+.stocks {
+    .item {
+        border-top: 1px solid #efefef;
+        padding: 22px 0;
+        display: block;
+        text-decoration:none;
+        text-decoration-color: $colorMain;
+
+        .h2 {  
+            margin-bottom: 10px;
+        }
+        .medium-text {
+            color: #333;
+            margin-top: 15px;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &:last-child {
+            border-bottom: 1px solid #efefef;
+        }
+        .img {
+            margin: 0;
+        }
+    }
+}

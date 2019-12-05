@@ -435,6 +435,66 @@
         }
 
     }
+    &.bg-1 {
+        background: linear-gradient(54.96deg, #D0E2C1 0%, #EFFFE9 100%);
+        &:before {
+            background-image: url('../img/products/1.png');
+        }
+
+        &.small {
+            &:before {
+                background-image: url('../img/products/1-small.png');
+            }
+        }
+    }
+    &.bg-11 {
+        background: linear-gradient(54.96deg, #D7E1E7 0%, #88939A 100%);
+        &:before {
+            background-image: url('../img/products/13.png');
+        }
+
+        &.small {
+            &:before {
+                background-image: url('../img/products/13-small.png');
+            }
+        }
+    }
+    &.bg-12 {
+        background: linear-gradient(54.96deg, #FFD6DA 0%, #F0A3A8 100%);
+        &:before {
+            background-image: url('../img/products/14.png');
+        }
+
+        &.small {
+            &:before {
+                background-image: url('../img/products/14-small.png');
+            }
+        }
+    }
+    &.bg-13 {
+        background: linear-gradient(54.96deg, #FFD977 0%, #FCBB15 100%);
+        &:before {
+            background-image: url('../img/products/15.png');
+        }
+
+        &.small {
+            &:before {
+                background-image: url('../img/products/15-small.png');
+            }
+        }
+    }
+    &.bg-14 {
+        background: linear-gradient(54.96deg, #ECECEC 0%, #FFFFFF 100%);
+        &:before {
+            background-image: url('../img/products/16.png');
+        }
+
+        &.small {
+            &:before {
+                background-image: url('../img/products/16-small.png');
+            }
+        }
+    }
 
 }
 // END фоны продуктов

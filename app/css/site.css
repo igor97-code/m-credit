@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "migcredit";
   src: url("../fonts/migcredit.eot");
@@ -480,7 +481,8 @@ body {
           float: right; } }
     @media (min-width: 760px) and (max-width: 1000px) {
       .row .col.w-25-tablet {
-        width: 25%; }
+        width: 25% !important;
+        float: left; }
       .row .col.w-33-tablet {
         float: left;
         width: 33.33333333% !important; }
@@ -1067,6 +1069,10 @@ body {
   .button:disabled, .button.disabled {
     opacity: .5 !important;
     cursor: default; }
+  .button-auto-height {
+    height: auto;
+    line-height: 170%;
+    padding: 10px; }
 
 button.button,
 input.button {
@@ -1107,6 +1113,8 @@ input.button {
     z-index: 2; }
   .section.gray {
     background-color: #efefef; }
+  .section .text-align-center {
+    text-align: center; }
   .section h1, .section .h1 {
     margin: 50px 0;
     font-size: 34px;
@@ -1763,7 +1771,6 @@ input.button {
     background: #efefef;
     font-size: 14px;
     line-height: 25px;
-    font-weight: 500;
     color: #333;
     cursor: pointer;
     text-align: center;
@@ -2257,8 +2264,8 @@ input.button {
     display: block;
     margin: 10px 0;
     font-size: 24px;
-    line-height: 1.2em;
-    font-weight: 300;
+    line-height: 140%;
+    font-weight: 400;
     color: #333333;
     text-align: center; }
     @media (max-width: 760px) {
@@ -2269,8 +2276,7 @@ input.button {
         line-height: 21px; } }
     .infographic .item .text.label {
       font-size: 14px;
-      font-weight: 700;
-      color: #7dc041; }
+      color: #7e7e7e; }
       @media (max-width: 760px) {
         .infographic .item .text.label {
           font-size: 11px;
@@ -2279,6 +2285,11 @@ input.button {
         color: #7e7e7e;
         font-weight: inherit;
         line-height: 1.4em; }
+    .infographic .item .text a {
+      color: #7dc041;
+      text-decoration: none; }
+      .infographic .item .text a:hover {
+        text-decoration: underline; }
 
 .infographic.with-arrows .item {
   position: relative; }
@@ -2625,6 +2636,36 @@ input.button {
     background-image: url("../img/products/avtokreditovanie/bg11.png"); }
     .product-bg.bg-10:before {
       background-image: url("../img/products/avtokreditovanie/driver.png"); }
+  .product-bg.bg-1 {
+    background: linear-gradient(54.96deg, #D0E2C1 0%, #EFFFE9 100%); }
+    .product-bg.bg-1:before {
+      background-image: url("../img/products/1.png"); }
+    .product-bg.bg-1.small:before {
+      background-image: url("../img/products/1-small.png"); }
+  .product-bg.bg-11 {
+    background: linear-gradient(54.96deg, #D7E1E7 0%, #88939A 100%); }
+    .product-bg.bg-11:before {
+      background-image: url("../img/products/13.png"); }
+    .product-bg.bg-11.small:before {
+      background-image: url("../img/products/13-small.png"); }
+  .product-bg.bg-12 {
+    background: linear-gradient(54.96deg, #FFD6DA 0%, #F0A3A8 100%); }
+    .product-bg.bg-12:before {
+      background-image: url("../img/products/14.png"); }
+    .product-bg.bg-12.small:before {
+      background-image: url("../img/products/14-small.png"); }
+  .product-bg.bg-13 {
+    background: linear-gradient(54.96deg, #FFD977 0%, #FCBB15 100%); }
+    .product-bg.bg-13:before {
+      background-image: url("../img/products/15.png"); }
+    .product-bg.bg-13.small:before {
+      background-image: url("../img/products/15-small.png"); }
+  .product-bg.bg-14 {
+    background: linear-gradient(54.96deg, #ECECEC 0%, #FFFFFF 100%); }
+    .product-bg.bg-14:before {
+      background-image: url("../img/products/16.png"); }
+    .product-bg.bg-14.small:before {
+      background-image: url("../img/products/16-small.png"); }
 
 .info-wrapper {
   height: 560px; }
@@ -3485,6 +3526,334 @@ input.button {
       @media (max-width: 1000px) {
         .agent-card .image-wrapper .image.bg-size103 {
           background-size: 60%; } }
+
+.our-liberties .main-item {
+  min-height: 270px;
+  margin-bottom: 26px;
+  padding: 70px 0;
+  text-align: right;
+  padding-right: 15px;
+  background-position-x: 60%; }
+  .our-liberties .main-item .new {
+    border-radius: 6px;
+    padding: 5px 9px;
+    background-color: #7dc041;
+    display: inline;
+    letter-spacing: 0.225em; }
+  .our-liberties .main-item .h1 {
+    margin: 18px 0 10px; }
+  .our-liberties .main-item .h2 {
+    margin: 0; }
+
+.our-liberties .item {
+  margin-bottom: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 6px; }
+  .our-liberties .item .h2 {
+    padding: 55px 15px 10px;
+    background-repeat: no-repeat;
+    height: 153px;
+    overflow: hidden;
+    border-radius: 6px 6px 0px 0px; }
+  .our-liberties .item p {
+    margin: 0; }
+  .our-liberties .item .text {
+    border: 1px solid #efefef;
+    border-radius: 0 0 6px 6px;
+    border-top: none;
+    height: 153px;
+    padding: 15px;
+    background-color: #ffffff;
+    overflow: hidden;
+    line-height: 22px; }
+
+.service-cards-only-header .item {
+  margin: 25px 0px 20px;
+  float: left;
+  height: 82px;
+  padding: 0px 20px;
+  width: 100%;
+  overflow: hidden; }
+  .service-cards-only-header .item .image {
+    left: 20px; }
+  .service-cards-only-header .item .info {
+    margin-left: 80px; }
+
+.manage-loan .manage-text-left {
+  width: 50%;
+  float: left;
+  text-align: right;
+  padding-right: 72px;
+  position: relative; }
+
+.manage-loan .manage-text-right {
+  width: 50%;
+  float: left;
+  padding-left: 72px;
+  margin: 0;
+  position: relative; }
+
+.manage-loan .manage-loan-top {
+  width: 100%;
+  float: left; }
+  .manage-loan .manage-loan-top .manage-text-left:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    right: 35px;
+    top: 35px;
+    transform: rotate(45deg); }
+  .manage-loan .manage-loan-top .manage-text-right:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background-color: #fff;
+    left: 35px;
+    top: 35px;
+    transform: rotate(-45deg); }
+
+.manage-loan .manage-loan-bottom .manage-text-left:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  right: 35px;
+  bottom: 35px;
+  transform: rotate(-45deg); }
+
+.manage-loan .manage-loan-bottom .manage-text-right:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  bottom: 35px;
+  left: 35px;
+  transform: rotate(45deg); }
+
+.manage-loan .manage-loan-middle {
+  display: block;
+  width: 100%;
+  height: 145px; }
+  .manage-loan .manage-loan-middle .icon {
+    color: #fff;
+    display: block;
+    font-size: 56px;
+    background: #7dc041;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto;
+    top: 45px; }
+    .manage-loan .manage-loan-middle .icon i {
+      position: relative;
+      top: -32px; }
+
+.manage-loan .h1:first-child {
+  margin-top: 50px; }
+
+.manage-loan .button {
+  margin: 62px 0 58px; }
+
+.five-reason .diagram {
+  height: 200px;
+  width: 200px;
+  background-image: url(../img/rating2.svg);
+  float: left;
+  margin-right: 50px;
+  background-color: #ffffff; }
+  .five-reason .diagram .value {
+    margin-top: -75.5px;
+    margin-left: -75.5px;
+    width: 150px;
+    height: 150px;
+    background: #efefef; }
+
+.five-reason .semi-block .h1 {
+  margin-bottom: 25px; }
+
+.five-reason .semi-block i {
+  display: inline-block;
+  vertical-align: text-bottom;
+  color: #7dc041;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  margin-right: 20px; }
+
+@media (max-width: 1000px) {
+  .service-cards-only-header .item {
+    width: calc(100% - 20px);
+    margin: 0px 10px 16px; }
+    .service-cards-only-header .item .info {
+      margin-left: 60px; }
+      .service-cards-only-header .item .info .h3 {
+        line-height: 22px;
+        padding: 9px 0;
+        font-size: 14px; }
+  .our-liberties .item .text {
+    height: auto; }
+  .manage-loan .manage-text-left, .manage-loan .manage-text-right {
+    width: 100%;
+    padding: 0px;
+    text-align: center; }
+  .manage-loan .manage-loan-top {
+    margin-bottom: 150px; }
+    .manage-loan .manage-loan-top p {
+      margin-bottom: 5px; }
+    .manage-loan .manage-loan-top .manage-text-right:after {
+      transform: rotate(90deg);
+      left: calc(50% - 15px);
+      top: 40px; }
+    .manage-loan .manage-loan-top .manage-text-left:after {
+      display: none !important; }
+  .manage-loan .manage-loan-bottom p {
+    margin-bottom: 5px; }
+  .manage-loan .manage-loan-bottom .manage-text-right:before {
+    display: none !important; }
+  .manage-loan .manage-loan-bottom .manage-text-left:before {
+    transform: rotate(90deg);
+    right: calc(50% - 15px);
+    bottom: 41px; }
+  .manage-loan .manage-loan-middle .icon {
+    margin-top: 90px; }
+  .manage-loan .button {
+    margin: 30px 0 30px; }
+  .five-reason .semi-block {
+    min-width: 290px;
+    float: left; }
+  .liberties-buttons-block .h2 {
+    margin-bottom: 5px; }
+  .liberties-buttons-block .button {
+    margin-top: 10px;
+    margin-bottom: 20px; } }
+
+@media (max-width: 374px) {
+  .five-reason .diagram {
+    float: none;
+    margin: 0 auto; }
+  .five-reason .semi-block {
+    text-align: center; } }
+
+.loan-discounts {
+  text-align: center;
+  font-size: 0; }
+  .loan-discounts .item {
+    width: calc(20% - 20px);
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: bottom; }
+  .loan-discounts .item:nth-last-child(1) {
+    margin-right: 0; }
+  .loan-discounts .first-height {
+    height: 32px; }
+    .loan-discounts .first-height:after {
+      content: "1 заем";
+      top: calc(50% - 11px);
+      position: relative; }
+  .loan-discounts .second-height {
+    height: 64px; }
+    .loan-discounts .second-height:after {
+      content: "2 заем";
+      top: calc(50% - 11px);
+      position: relative; }
+    .loan-discounts .second-height:before {
+      content: "-5%";
+      display: block;
+      top: -45px;
+      position: absolute;
+      width: 100%;
+      font-size: 34px;
+      line-height: 40px;
+      color: #7DC041; }
+  .loan-discounts .third-height {
+    height: 96px; }
+    .loan-discounts .third-height:after {
+      content: "3 заем";
+      top: calc(50% - 11px);
+      position: relative; }
+    .loan-discounts .third-height:before {
+      content: "-10%";
+      display: block;
+      top: -45px;
+      position: absolute;
+      width: 100%;
+      font-size: 34px;
+      line-height: 40px;
+      color: #7DC041; }
+  .loan-discounts .fourth-height {
+    height: 128px; }
+    .loan-discounts .fourth-height:after {
+      content: "4 заем";
+      top: calc(50% - 11px);
+      position: relative; }
+    .loan-discounts .fourth-height:before {
+      content: "-15%";
+      display: block;
+      top: -45px;
+      position: absolute;
+      width: 100%;
+      font-size: 34px;
+      line-height: 40px;
+      color: #7DC041; }
+  .loan-discounts .fifth-height {
+    height: 160px; }
+    .loan-discounts .fifth-height:after {
+      content: "5 заем";
+      top: calc(50% - 11px);
+      position: relative; }
+    .loan-discounts .fifth-height:before {
+      content: "-20%";
+      display: block;
+      top: -45px;
+      position: absolute;
+      width: 100%;
+      max-width: 174px;
+      font-size: 34px;
+      line-height: 40px;
+      color: #7DC041; }
+  .loan-discounts .loan-block {
+    color: #7e7e7e;
+    background: #efefef;
+    position: relative; }
+
+@media (max-width: 1000px) {
+  .loan-discounts {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 40px; }
+    .loan-discounts .item {
+      width: calc(190px - 20px); } }
+
+.stocks .item {
+  border-top: 1px solid #efefef;
+  padding: 22px 0;
+  display: block;
+  text-decoration: none;
+  text-decoration-color: #7dc041; }
+  .stocks .item .h2 {
+    margin-bottom: 10px; }
+  .stocks .item .medium-text {
+    color: #333;
+    margin-top: 15px; }
+  .stocks .item:hover {
+    text-decoration: underline; }
+  .stocks .item:last-child {
+    border-bottom: 1px solid #efefef; }
+  .stocks .item .img {
+    margin: 0; }
 
 .question-list {
   display: block;

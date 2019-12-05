@@ -74,7 +74,8 @@
 
         @include only-tablet {
             &.w-25-tablet {
-                width: 25%;
+                width: 25% !important;
+                float: left;
             }
 
             &.w-33-tablet {

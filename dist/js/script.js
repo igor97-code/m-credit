@@ -17664,7 +17664,7 @@ $(function () {
             return false
         })
     }
-
+  
     // инициализация калькуляторов
     initCalculators();
 
@@ -18203,4 +18203,5 @@ function initSeoMacbookSlider() {
         prevSlideMessage: '',
     });
 }
+
 //# sourceMappingURL=script.js.map
