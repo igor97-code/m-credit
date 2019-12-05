@@ -25,12 +25,9 @@
 
         .text {
             opacity: 0.5;
-            font-weight: 700;
-            @include mobile {
+              @include mobile {
                 font-weight: 400;
             }
-
-
             &.caption {
                 line-height: 18px;
                 opacity: 1;
@@ -435,19 +432,12 @@
         }
 
     }
-    &.bg-1 {
-        background: linear-gradient(54.96deg, #D0E2C1 0%, #EFFFE9 100%);
-        &:before {
-            background-image: url('../img/products/1.png');
-        }
-
-        &.small {
-            &:before {
-                background-image: url('../img/products/1-small.png');
-            }
-        }
-    }
     &.bg-11 {
+        background-image: url('../img/agents/bg11.png');
+        background-position: center center;
+        background-repeat: no-repeat; 
+    }
+    &.bg-12 {
         background: linear-gradient(54.96deg, #D7E1E7 0%, #88939A 100%);
         &:before {
             background-image: url('../img/products/13.png');
@@ -459,7 +449,7 @@
             }
         }
     }
-    &.bg-12 {
+    &.bg-13 {
         background: linear-gradient(54.96deg, #FFD6DA 0%, #F0A3A8 100%);
         &:before {
             background-image: url('../img/products/14.png');
@@ -471,7 +461,7 @@
             }
         }
     }
-    &.bg-13 {
+    &.bg-14 {
         background: linear-gradient(54.96deg, #FFD977 0%, #FCBB15 100%);
         &:before {
             background-image: url('../img/products/15.png');
@@ -483,7 +473,7 @@
             }
         }
     }
-    &.bg-14 {
+    &.bg-15 {
         background: linear-gradient(54.96deg, #ECECEC 0%, #FFFFFF 100%);
         &:before {
             background-image: url('../img/products/16.png');
@@ -493,15 +483,23 @@
             &:before {
                 background-image: url('../img/products/16-small.png');
             }
-        }
+        } 
     }
-
 }
 // END фоны продуктов
 
 //Блок текст центрируется картинки - слева, справа
     .info-wrapper{
         height: 560px;
+
+        &.small{
+            height: 480px;
+            @include mobile{
+                height: auto;
+                margin: 40px auto;
+                text-align: center;
+            }
+        }
         @include mobile{
             height: auto;
         }
@@ -510,6 +508,35 @@
     .image-wrapper{
         height: 500px;
         margin: 25px auto;
+        &.small{
+            height: 480px;
+            margin: 0;
+
+            @include mobile{
+                height: 300px;
+                margin: 25px auto;
+            }
+
+            .image{
+                background-size: 80%;
+                @include mobile{
+                    background-size: contain;
+                }
+            }
+        }
+
+        &.bottom-image{
+            .image{
+                background-size: cover;
+                background-position: center bottom;
+
+                @include mobile{
+                    background-size: contain;
+                    background-position: center center;
+                }
+            }
+        }
+
         @include mobile{
             height: 300px;
         }
@@ -545,4 +572,4 @@
         }
     }
 }
-//END Блок текст центрируется картинки - слева, справа
+//END Блок текст центрируется картинки - слева, справa

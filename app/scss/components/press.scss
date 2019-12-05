@@ -22,9 +22,12 @@
             background-color: $colorWhite;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain;
+            background-size: 80%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+            @include mobile{
+                margin-bottom: 20px;
+            }
         }
 
         .item-info {

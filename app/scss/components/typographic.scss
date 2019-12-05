@@ -27,6 +27,11 @@
         padding-top: 30px;
         padding-bottom: 30px;
     }
+
+    &.b-t{
+        border-top: 1px solid $colorBorder;
+    }
+
     &.shadow{
         box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08);
         position: relative;
