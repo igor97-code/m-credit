@@ -12968,3 +12968,34 @@ var calculatorTestData = {
         }
     }
 };
+
+var investorData = {
+    'setting': {
+        'sum_min': '1500000',
+        'sum_max': '200000000',
+        'sum_cur': 5000000,
+        'month_cur': 2
+    },
+    'item':{
+        '0': {
+            'month': 6,
+            'term_name':'месяцев',
+            'percent': 12
+        },
+        '1': {
+            'month': 9,
+            'term_name':'месяцев',
+            'percent': 13
+        },
+        '2': {
+            'month': 12,
+            'term_name':'месяцев',
+            'percent': 13
+        },
+        '3': {
+            'month': 24,
+            'term_name':'месяца',
+            'percent': 12
+        }
+    }
+};

@@ -194,6 +194,20 @@
         }
     }
 
+    &.giant-head{
+        margin: 0;
+        position: relative;
+
+        .head{
+            min-height: 620px;
+            z-index: 2;
+
+            & *{
+                color: $colorWhite;
+            }
+        }
+    }
+
     &.big-head {
         margin: 0;
         position: relative;
@@ -488,6 +502,10 @@
                 background-image: url('../img/products/16-small.png');
             }
         } 
+    }
+
+    &.bg-invest {
+        background-image: url('../img/investors/bg-invest.png');
     }
 }
 // END фоны продуктов

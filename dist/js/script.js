@@ -17581,6 +17581,37 @@ var calculatorTestData = {
         }
     }
 };
+
+var investorData = {
+    'setting': {
+        'sum_min': '1500000',
+        'sum_max': '200000000',
+        'sum_cur': 5000000,
+        'month_cur': 2
+    },
+    'item':{
+        '0': {
+            'month': 6,
+            'term_name':'месяцев',
+            'percent': 12
+        },
+        '1': {
+            'month': 9,
+            'term_name':'месяцев',
+            'percent': 13
+        },
+        '2': {
+            'month': 12,
+            'term_name':'месяцев',
+            'percent': 13
+        },
+        '3': {
+            'month': 24,
+            'term_name':'месяца',
+            'percent': 12
+        }
+    }
+};
 $(function () {
     console.log(0);
     // обновление класса HTML в зависимости от высота вьюпорта
@@ -17650,6 +17681,10 @@ $(function () {
 
     if($('#macbook_slider').length){
         initSeoMacbookSlider();
+    }
+
+    if ($('.how-invest-mini-calc')) {
+        initInvestors();
     }
 
     // читать полностью
@@ -18203,6 +18238,7 @@ function initSeoMacbookSlider() {
         prevSlideMessage: '',
     });
 }
+<<<<<<< HEAD
 $(function () {
     if ($('[data-tabs-block]').length) {
         $('[data-tabs-block]').each(function() {
@@ -18235,4 +18271,191 @@ function initTabs($tabs) {
         $tabs.find('[data-tab="' + tab + '"]').addClass('active');
     }
 }
+=======
+
+//Инвестиции
+
+function initInvestors() {
+    $('.circles').on('click','.item', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var month = +$(this).attr('data-month');
+        $('[data-circle-percent]').text(investorData['item'][month]['percent']);
+
+        return false;
+    });
+
+    initInvestorCalculator();
+
+    initInvestorForm();
+
+    $('.circles .item[data-active]').trigger('click');
+}
+
+//Калькулятор инвестиций
+function initInvestorCalculator() {
+    var $calculators = $('[data-invest-calculator]');
+    if (!$calculators.length) return;
+
+    // данные калькулятора для расчетов
+    var calculatorData = investorData;
+
+    setTimeout(function() {
+        $calculators.each(function() {
+            init($(this));
+        });
+    },  1500);
+
+
+    function init($calculator) {
+        // основные HTML элементы
+        var $term = $calculator.find('[data-term]'),
+            $termLabel = $calculator.find('[data-term_label]'),
+            $termMin = $calculator.find('[data-term_min]'),
+            $termMinLabel = $calculator.find('[data-term_min_label]'),
+            $termMax = $calculator.find('[data-term_max_label]'),
+            $termMaxLabel = $calculator.find('[data-term_max_label]'),
+            $sum = $calculator.find('[data-sum]'),
+            $sumMin = $calculator.find('[data-sum_min]'),
+            $sumMax = $calculator.find('[data-sum_max]'),
+            $resultSum = $calculator.find('[data-result_sum]'),
+            $resultPercent = $calculator.find('[data-result_percent]');
+
+        var defaultSumMin = +calculatorData.setting.sum_min,
+            defaultSumMax = +calculatorData.setting.sum_max,
+            defaultSumCur = +calculatorData.setting.sum_cur,
+            defaultMonth = +calculatorData.setting.month_cur;
+
+        $sumMin.html(numberFormat(defaultSumMin));
+        $sumMax.html(numberFormat((defaultSumMax)));
+        $sum.html(numberFormat(defaultSumCur));
+        $term.html(calculatorData['item'][defaultMonth]['month']);
+        $termLabel.html(calculatorData['item'][defaultMonth]['term_name']);
+        $resultPercent.html(calculatorData['item'][defaultMonth]['percent']);
+
+        var $sumSlider = $calculator.find('[data-sum_slider]').slider({
+            range: 'min',
+            value: defaultSumCur,
+            min: defaultSumMin,
+            max: defaultSumMax,
+            step: 10000,
+            slide: function (event, ui) {
+                $sum.html(numberFormat(ui.value));
+                calculate();
+              }
+        });
+
+        var $termSlider = $calculator.find('[data-term_slider]').slider({
+            range: 'min',
+            value: defaultMonth,
+            min: 0,
+            max: 3,
+            step: 1,
+            slide: function (event, ui) {
+                $term.html(calculatorData['item'][ui.value]['month']);
+                $termLabel.html(calculatorData['item'][ui.value]['term_name']);
+                $resultPercent.html(calculatorData['item'][ui.value]['percent']);
+                calculate();
+            }
+        });
+
+        calculate();
+
+        $calculator.removeClass('load');
+
+        function calculate() {
+            var sum = getClearVal($sum.text()),
+                term = getClearVal($term.text()),
+                percent = getClearVal($resultPercent.text());
+
+            var calculated = (sum / 100 * percent) / (12 / term);
+
+            $resultSum.html(numberFormat(calculated));
+            console.log(calculated);
+        }
+
+    }
+
+}
+
+//Форма инвестиций
+
+function initInvestorForm() {
+        var $form = $('#invest_callme');
+
+    $form.on('change', 'input', function () {
+        validateField($(this));
+    });
+
+        $form.on('click', '.button-form', function () {
+            if (!$(this).hasClass('disabled')) {
+                if (validateForm($form)) {
+                    $(this).addClass('disabled');
+                    var name = $('.input-invest[name="name"]').val();
+                    var email = $('.input-invest[name="email"]').val();
+                    var phone = $('.input-invest[name="phone"]').val();
+
+                    var invest_utm_source = $('#invest_utm_source').val();
+                    var invest_utm_medium = $('#invest_utm_medium').val();
+                    var invest_utm_campaign = $('#invest_utm_campaign').val();
+                    var invest_lid = $('#invest_lid').val();
+                    var invest_aid = $('#invest_aid').val();
+                    var invest_wmid = $('#invest_wmid').val();
+                    var invest_tid = $('#invest_tid').val();
+
+                    phone = phone.replace(/[()\_-\s]/g, '');
+                    var data = {
+                        'name': name,
+                        'email': email,
+                        'phone': phone,
+                        'invest_utm_source': invest_utm_source,
+                        'invest_utm_medium': invest_utm_medium,
+                        'invest_utm_campaign': invest_utm_campaign,
+                        'invest_lid': invest_lid,
+                        'invest_aid': invest_aid,
+                        'invest_wmid': invest_wmid,
+                        'invest_tid': invest_tid
+                    };
+                    $.ajax({
+                        url: '/dlya-investora/ajax.php',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: data,
+                        success: function (data) {
+                            yaCounter16671268.reachGoal('button_invest');
+                            successForm();
+                        },
+                        error: function (data) {
+                            errorForm();
+                        },
+                        timeout: 60000
+                    });
+                }
+            }
+            return false;
+        });
+
+
+        function successForm() {
+            $('.success-text').html('Сообщение успешно отправлено!');
+            $('.success-form').fadeIn('fast');
+            setTimeout(function () {
+                clearForm($form);
+                $('.success-form').fadeOut('fast');
+                $('#invest_callme .btn-submit').removeClass('disabled');
+            }, 2000);
+        }
+
+        function errorForm() {
+            $('.success-text').html('Ошибка!');
+            $('.success-form').fadeIn('fast');
+            setTimeout(function () {
+                clearForm($form);
+                $('.success-form').fadeOut('fast');
+                $('#invest_callme .btn-submit').removeClass('disabled');
+            }, 2000);
+        }
+    }
+>>>>>>> 80b6c9708b3b8b4e0f23f8aa315c00e4d46bbb29
+
 //# sourceMappingURL=script.js.map

@@ -743,7 +743,7 @@ body {
   .field.error .input-text,
   .field.error .textarea,
   .field.error .selectwrap,
-  .field.error .jq-file {
+  .field.error .jq-file, .field.error .checkbox-icon {
     border-color: #e94551; }
   .field.success .input-text,
   .field.success .textarea,
@@ -804,6 +804,61 @@ body {
     @media (max-width: 1000px) {
       .radio-button .label {
         font-size: 16px; } }
+
+.radio-wrapper {
+  display: block;
+  margin: 20px 0 40px 0;
+  padding: 0;
+  font-size: 0; }
+
+.checkbox-button {
+  display: block;
+  position: relative;
+  margin: 20px 0;
+  padding: 0 0 0 40px; }
+  .checkbox-button input[type="checkbox"] {
+    display: none; }
+  .checkbox-button .checkbox-icon {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin: -12.5px 0 0 0;
+    width: 25px;
+    height: 25px;
+    background: #efefef;
+    border: 1px solid #efefef;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: transparent;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease; }
+    .checkbox-button .checkbox-icon:before {
+      line-height: 25px; }
+    .checkbox-button .checkbox-icon:hover {
+      background: #ffffff;
+      border-color: #efefef; }
+  .checkbox-button input[type="checkbox"]:checked + .checkbox-icon {
+    background: #ffffff;
+    border-color: #efefef;
+    color: #7dc041; }
+  .checkbox-button:before {
+    line-height: 23px; }
+  .checkbox-button .checkbox-label {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333333; }
+    .checkbox-button .checkbox-label .icon {
+      display: inline-block;
+      vertical-align: top;
+      color: #7e7e7e; }
 
 .ui-slider {
   display: block;
@@ -2294,7 +2349,7 @@ input.button {
     margin: 10px 0;
     font-size: 24px;
     line-height: 140%;
-    font-weight: 400;
+    font-weight: 100;
     color: #333333;
     text-align: center; }
     @media (max-width: 760px) {
@@ -2515,6 +2570,14 @@ input.button {
         .product-card.inner .head .button {
           left: 15px;
           bottom: 15px; } }
+  .product-card.giant-head {
+    margin: 0;
+    position: relative; }
+    .product-card.giant-head .head {
+      min-height: 620px;
+      z-index: 2; }
+      .product-card.giant-head .head * {
+        color: #ffffff; }
   .product-card.big-head {
     margin: 0;
     position: relative; }
@@ -2695,6 +2758,8 @@ input.button {
       background-image: url("../img/products/16.png"); }
     .product-bg.bg-15.small:before {
       background-image: url("../img/products/16-small.png"); }
+  .product-bg.bg-invest {
+    background-image: url("../img/investors/bg-invest.png"); }
 
 .info-wrapper {
   height: 560px; }
@@ -3495,6 +3560,141 @@ input.button {
     font-size: 16px; }
     .articles .articles-item .article-link:hover {
       color: #333333; }
+
+.investor-head {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/investors/bg-invest.png); }
+  @media (max-width: 1000px) {
+    .investor-head {
+      padding-bottom: 0; } }
+  .investor-head .investor-text * {
+    color: #ffffff; }
+  .investor-head .large-text {
+    font-size: 48px;
+    line-height: 1.4em;
+    font-weight: 100; }
+    @media (max-width: 1000px) {
+      .investor-head .large-text {
+        font-size: 30px; } }
+  .investor-head .extra-large-text {
+    font-size: 100px;
+    line-height: 1.4em; }
+    @media (max-width: 1000px) {
+      .investor-head .extra-large-text {
+        font-size: 40px; } }
+  .investor-head ul li i {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .investor-head ul li:before {
+    display: none; }
+
+.investor-info .ndfl {
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 22px;
+  padding-left: 20px; }
+  .investor-info .ndfl:before {
+    content: '* ';
+    color: #e94551; }
+
+.investor-form {
+  padding-bottom: 180px;
+  background-image: url(../img/investors/form-bg.png);
+  background-position: bottom center;
+  background-repeat: no-repeat; }
+  @media (max-width: 1000px) {
+    .investor-form {
+      padding-bottom: 20px; } }
+  .investor-form .form-investor {
+    max-width: 397px;
+    margin: 20px auto; }
+
+.how-invest-head {
+  position: relative; }
+  .how-invest-head .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 400;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #7dc041;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px; }
+  .how-invest-head .name {
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0;
+    padding-left: 70px;
+    line-height: 1.2; }
+    @media (max-width: 1000px) {
+      .how-invest-head .name {
+        font-size: 25px; } }
+
+.circles {
+  display: block;
+  font-size: 0;
+  text-align: left;
+  margin: 25px 0; }
+  .circles .item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    margin-right: 5px;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    .circles .item.active {
+      background-color: #7dc041;
+      color: #ffffff; }
+
+.how-invest-mini-calc .percents {
+  margin-bottom: 0; }
+
+.how-invest-mini-calc .ndfl {
+  display: block;
+  text-align: right;
+  margin: 0;
+  font-size: 12px;
+  color: #7e7e7e; }
+  .how-invest-mini-calc .ndfl:before {
+    content: '*';
+    color: #7dc041; }
+
+.round-image-block {
+  text-align: center;
+  margin: 80px 0; }
+  @media (max-width: 1000px) {
+    .round-image-block {
+      margin: 30px 0; } }
+  .round-image-block .image {
+    margin: 20px 0; }
+  .round-image-block .name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 29px; }
+  .round-image-block .description {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 25px; }
 
 .our-liberties .main-item {
   min-height: 270px;
