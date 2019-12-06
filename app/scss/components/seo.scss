@@ -1,0 +1,147 @@
+.related-links{
+    text-align: left;
+    font-size: 0;
+    .item{
+        color: $colorMain2;
+        display: inline-block;
+        margin-right: 35px;
+        text-decoration: none;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 16px;
+        &:hover{
+            color: $colorMain2Hover;
+        }
+    }
+}
+
+.seo-cards{
+    .card-item{
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+        margin: 30px 0;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        background-color: $colorWhite;
+        .item-head{
+            background-color: $colorMain;
+            padding: 20px;
+            .price{
+                font-weight: bold;
+                font-size: 34px;
+                color: $colorWhite;
+                line-height: 40px;
+            }
+        }
+
+        .item-info{
+            padding: 0 20px;
+            .item{
+                border-bottom: 1px solid $colorBorder;
+                .name{
+                    font-size: 16px;
+                    margin: 15px 0;
+                }
+                .description{
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $colorMain;
+                    font-weight: bold;
+                    margin: 15px 0;
+                }
+            }
+        }
+        .item-button{
+            padding: 0 20px 20px 20px;
+        }
+    }
+}
+
+.seo-phone{
+    text-align: center;
+    margin: 30px 0;
+    .phone-number{
+        display: block;
+        font-size: 27px;
+        text-decoration: none;
+        color: #000;
+    }
+    .info{
+        display: block;
+        font-size: 12px;
+        color: $colorGray;
+    }
+}
+
+.square-cities {
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+    overflow-x:auto;
+    .item {
+        display: inline-block;
+        position: relative;
+        width: calc(20% - 10px);
+        margin-right: 10px;
+        z-index: 3;
+        overflow: hidden;
+
+        &:hover{
+            .text{
+                text-decoration: underline;
+            }
+        }
+
+        &:before{
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @include mobile{
+            width: 40%;
+        }
+
+
+        .text{
+            position: absolute;
+            padding: 10px;
+            right: 0;
+            white-space: normal;
+            text-align: left;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            font-size: 18px;
+            line-height: 20px;
+            color: $colorWhite;
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
