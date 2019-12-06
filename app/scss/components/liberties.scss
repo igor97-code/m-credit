@@ -7,6 +7,9 @@
         text-align: right;
         padding-right: 15px;
         background-position-x: 60%;
+        border-radius: 6px;
+        overflow: hidden;
+        text-align: left;
         .new {
             border-radius: 6px;
             padding: 5px 9px;
@@ -77,6 +80,9 @@
         text-align: right;
         padding-right: 72px;
         position: relative;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 400;
     }
     .manage-text-right {
         width: 50%;
@@ -84,6 +90,9 @@
         padding-left: 72px;
         margin: 0;
         position: relative;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 400;
     }
     .manage-loan-top {
         width: 100%;
@@ -210,9 +219,8 @@
 
 @include mobile {
     .service-cards-only-header { 
-        .item {
-            width: calc(100% - 20px);
-            margin: 0px 10px 16px;  
+        .item { 
+            margin: 0 0 16px;
             .info {
                 margin-left: 60px;
                 .h3 {
@@ -223,7 +231,10 @@
             } 
         } 
     }
-    .our-liberties {
+    .our-liberties { 
+        .main-item {
+            text-align: right;
+        }
         .item {
             .text {
                 height: auto;
@@ -276,7 +287,10 @@
         }
         .manage-loan-middle {
             .icon {
-                margin-top: 90px;
+                top: 90px;
+                i {
+                    top: -196px;
+                }
             }
         } 
         .button {
@@ -287,6 +301,7 @@
         .semi-block {
             min-width: 290px;
             float: left;
+            margin: 20px 0;
         }
     }
     .liberties-buttons-block {

@@ -1771,6 +1771,10 @@ input.button {
     margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
     font-family: "Roboto", sans-serif;
     background: #efefef;
     font-size: 14px;
@@ -2525,6 +2529,9 @@ input.button {
       @media (min-width: 1280px) and (max-width: 1600px) {
         .product-card.big-head .head {
           min-height: 400px; } }
+      @media (max-width: 1000px) {
+        .product-card.big-head .head {
+          padding: 20px 0 260px; } }
       .product-card.big-head .head .text {
         font-size: 14px;
         line-height: 179.19%;
@@ -3495,7 +3502,10 @@ input.button {
   padding: 70px 0;
   text-align: right;
   padding-right: 15px;
-  background-position-x: 60%; }
+  background-position-x: 60%;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left; }
   .our-liberties .main-item .new {
     border-radius: 6px;
     padding: 5px 9px;
@@ -3548,14 +3558,20 @@ input.button {
   float: left;
   text-align: right;
   padding-right: 72px;
-  position: relative; }
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400; }
 
 .manage-loan .manage-text-right {
   width: 50%;
   float: left;
   padding-left: 72px;
   margin: 0;
-  position: relative; }
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 400; }
 
 .manage-loan .manage-loan-top {
   width: 100%;
@@ -3656,14 +3672,15 @@ input.button {
 
 @media (max-width: 1000px) {
   .service-cards-only-header .item {
-    width: calc(100% - 20px);
-    margin: 0px 10px 16px; }
+    margin: 0 0 16px; }
     .service-cards-only-header .item .info {
       margin-left: 60px; }
       .service-cards-only-header .item .info .h3 {
         line-height: 22px;
         padding: 9px 0;
         font-size: 14px; }
+  .our-liberties .main-item {
+    text-align: right; }
   .our-liberties .item .text {
     height: auto; }
   .manage-loan .manage-text-left, .manage-loan .manage-text-right {
@@ -3689,12 +3706,15 @@ input.button {
     right: calc(50% - 15px);
     bottom: 41px; }
   .manage-loan .manage-loan-middle .icon {
-    margin-top: 90px; }
+    top: 90px; }
+    .manage-loan .manage-loan-middle .icon i {
+      top: -196px; }
   .manage-loan .button {
     margin: 30px 0 30px; }
   .five-reason .semi-block {
     min-width: 290px;
-    float: left; }
+    float: left;
+    margin: 20px 0; }
   .liberties-buttons-block .h2 {
     margin-bottom: 5px; }
   .liberties-buttons-block .button {
@@ -3816,6 +3836,17 @@ input.button {
     border-bottom: 1px solid #efefef; }
   .stocks .item .img {
     margin: 0; }
+
+.history-company {
+  color: #111; }
+  .history-company-content {
+    margin: 0 auto;
+    position: relative;
+    width: 660px;
+    height: 430px;
+    background: #ffffff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 6px; }
 
 .question-list {
   display: block;

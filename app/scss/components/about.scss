@@ -1,0 +1,13 @@
+//О компании
+.history-company {
+    color: #111;
+    &-content {
+        margin: 0 auto;
+        position: relative;
+        width: 660px;
+        height: 430px;
+        background: $colorWhite;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+    }
+}

@@ -216,6 +216,10 @@
             @include sm-desktop{
                 min-height: 400px;
             }
+            @include mobile {
+                padding: 20px 0 260px;
+            }
+
 
             .text {
                 font-size: 14px;
