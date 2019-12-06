@@ -1,0 +1,181 @@
+.investor-head {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/investors/bg-invest.png);
+
+    @include mobile{
+        padding-bottom: 0;
+    }
+
+    .investor-text * {
+        color: $colorWhite;
+    }
+
+    .large-text {
+        font-size: 48px;
+        line-height: 1.4em;
+        font-weight: 100;
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+
+    .extra-large-text {
+        font-size: 100px;
+        line-height: 1.4em;
+
+        @include mobile{
+            font-size: 40px;
+        }
+    }
+
+    ul {
+        li {
+            i{
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            &:before {
+                display: none;
+            }
+
+        }
+    }
+}
+
+.investor-info{
+    .ndfl{
+       color: $colorWhite;
+        font-size: 12px;
+        line-height: 22px;
+        padding-left: 20px;
+
+        &:before{
+            content: '* ';
+            color: $colorError;
+        }
+    }
+}
+
+.investor-form{
+    padding-bottom: 180px;
+    background-image: url(../img/investors/form-bg.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    @include mobile{
+        padding-bottom: 20px;
+    }
+    .form-investor{
+        max-width: 397px;
+        margin: 20px auto;
+    }
+}
+
+.how-invest-head{
+    position: relative;
+
+    .number{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $colorWhite;
+        font-size: 24px;
+        font-weight: 400;
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-color: $colorMain;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .name{
+        font-size: 32px;
+        font-weight: 300;
+        margin: 0;
+        padding-left: 70px;
+        line-height: 1.2;
+
+        @include mobile{
+            font-size: 25px;
+        }
+    }
+}
+
+.circles {
+    display: block;
+    font-size: 0;
+    text-align: left;
+    margin: 25px 0;
+
+    .item {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-color: $colorWhite;
+        border: 2px solid $colorGrayHover;
+        border-radius: 50%;
+        margin-right: 5px;
+        color: $colorText;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 30px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        &.active{
+            background-color: $colorMain;
+            color: $colorWhite;
+        }
+    }
+}
+
+.how-invest-mini-calc{
+    .percents{
+        margin-bottom: 0;
+    }
+    .ndfl{
+        display: block;
+        text-align: right;
+        margin: 0;
+        font-size: 12px;
+        color: $colorGray;
+
+        &:before{
+            content: '*';
+            color: $colorMain;
+        }
+    }
+}
+
+.round-image-block{
+    text-align: center;
+    margin: 80px 0;
+
+    @include mobile{
+        margin: 30px 0;
+    }
+    .image{
+        margin: 20px 0;
+    }
+    .name{
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 29px;
+    }
+    .description{
+        font-size: 14px;
+        margin: 10px 0;
+        line-height: 25px;
+    }
+}
+

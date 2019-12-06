@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
+    <link rel="manifest" href="./img/icons/site.webmanifest">
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041">
+    <meta name="msapplication-TileColor" content="#7dc041">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="page_preloader"
+     style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;"></div>
+
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="header-col for-logo no-border">
+                <div class="table-block">
+                    <div class="cell">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-col header-info no-border">
+                <div class="table-block">
+                    <div class="cell">
+                        <p class="title">Лидер рынка</p>
+                        <p class="remark">микрофинансовых организаций</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-right hide-mobile">
+            <div class="header-col">
+                <div class="table-block">
+                    <div class="cell">
+                        <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                            кабинет</a>
+                        <a target="_blank"
+                           href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                           class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                src="./img/icon-appstore.svg"></a>
+                        <a target="_blank"
+                           href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                           class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                src="./img/icon-googleplay.svg"></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- главное меню -->
+<div id="main_menu" class="main-menu">
+    <div class="container">
+        <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+        <ul class="main-menu-content">
+            <li>
+                <a href="#" class="menu-link">Займы</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                        <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/#products" class="menu-link ">Продукты</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                        <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                        <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/get/" class="menu-link ">Как получить</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                        <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                        <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                        <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                        <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская карта</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                        <li><a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a></li>
+                        <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                        <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                        <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                        <li><a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a></li>
+                        <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                        <li><a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный телефон</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в банке</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+            </li>
+
+            <li>
+                <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+            </li>
+
+            <li>
+                <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                <div class="submenu right">
+                    <ul>
+                        <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                        <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                        <li><a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное страхование</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+
+            <li class="burger">
+                <i class="icon icon-menu-button"></i>
+                <div class="submenu fullwidth">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                    <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                    <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                    <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                    <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                    <li><a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a></li>
+                                    <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                    <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                    <li><a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                        информации</a></li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                    <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                    <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                    <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                    <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/privilegii-klientam/privilegii-klientam/" class="submenu-link big">Акции</a>
+                                    </li>
+                                    <li><a href="#/privilegii-klientam/privilegii-klientam/" class="submenu-link">Привилегии
+                                        клиентам</a></li>
+                                    <li><a href="#/privilegii-klientam/aktsii-i-konkursy/" class="submenu-link">Акции и
+                                        конкурсы</a></li>
+                                    <li><a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                        друга</a></li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                    <li><a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                        программа</a></li>
+                                    <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- основной контент -->
+<div class="body">
+    <div class="header-margin"></div>
+    <div class="main-menu-margin"></div>
+
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+            <a href="#" class="item active">Инвестиции в МФО МигКредит</a>
+        </div>
+    </div>
+
+    <div class="section investor-head">
+        <div class="container">
+            <div class="row">
+                <div class="col w-66">
+
+                    <div class="investor-text">
+                        <div class="h1 m-b-30">Инвестиции в МигКредит</div>
+                        <p>Мы предлагаем выгодные инвестиции:</p>
+                        <ul>
+                            <li><i class="icon icon-checked"></i> вложения в лидирующую технологичную компанию на рынке
+                                МФО;
+                            </li>
+                            <li><i class="icon icon-checked"></i> высокую процентную ставку, которая превышает
+                                банковскую в
+                                несколько раз;
+                            </li>
+                            <li><i class="icon icon-checked"></i> гарантированный ежемесячный доход и растущую прибыль,
+                                индивидуальные условия при
+                                инвестировании больших сумм.
+                            </li>
+                        </ul>
+                        <p class="large-text">до <span class="extra-large-text">13%</span> годовых</p></div>
+                </div>
+                <div class="col w-33">
+                    <div class="investor-info">
+                        <div class="calculator load" data-invest-calculator>
+                            <div class="calculator-item">
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="big-label">Инвестировать</p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="big">
+                                            <nobr><span data-sum></span> ₽</nobr>
+                                        </p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="calculator-slider">
+                                    <div data-sum_slider></div>
+                                </div>
+                                <div class="calculator-row m-t-0">
+                                    <div class="left">
+                                        <p class="small color-gray">
+                                            <nobr><span data-sum_min></span> ₽</nobr>
+                                        </p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="small color-gray">
+                                            <nobr><span data-sum_max></span> ₽</nobr>
+                                        </p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                            </div>
+
+                            <div class="calculator-item">
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="big-label">На срок</p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="big">
+                                            <nobr><span data-term></span> <span data-term_label>месяцев</span></nobr>
+                                        </p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="calculator-slider">
+                                    <div data-term_slider></div>
+                                </div>
+                                <div class="calculator-row m-t-0">
+                                    <div class="left">
+                                        <p class="small color-gray">
+                                            <nobr><span data-term_min>6</span> <span data-term_min_label>месяцев</span>
+                                            </nobr>
+                                        </p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="small color-gray">
+                                            <nobr><span data-term_max>24</span> <span data-term_max_label>месяца</span>
+                                            </nobr>
+                                        </p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                            </div>
+
+                            <a type="submit" href="#invest_callme"
+                               class="button button-medium button-form uppercase">Свяжитесь со
+                                мной</a>
+
+                            <div class="calculator-item result">
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="medium-label color-gray"><span>Процентная ставка:</span>
+                                        </p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="medium">
+                                            <nobr><span data-result_percent>13</span> %*</nobr>
+                                        </p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="medium-label color-gray">Ваш доход</p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="medium font-weight-bold"><span data-result_sum>650 000</span> ₽</p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ndfl">- % до уплаты НДФЛ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section p-all-0">
+        <div class="container">
+            <div class="img">
+                <img src="./img/investors/banner.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="section gray">
+        <div class="container">
+            <p class="h1 text-align-center">Преимущества</p>
+            <div class="infographic">
+                <div class="row">
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-diagram"></i></div>
+                            <div class="text">Доходность</div>
+                            <div class="text label default">Ставки от 12% годовых, в 2,5 раза превышающие банковские
+                                ставки по депозитам
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-document"></i></div>
+                            <div class="text">Низкие риски</div>
+                            <div class="text label default">МФО на рынке 7 лет, 5 лет прибыльная компания.</div>
+                        </div>
+                    </div>
+                    <div class="clr hide-desktop"></div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-search"></i></div>
+                            <div class="text">Прозрачность</div>
+                            <div class="text label default">Ежегодный аудит МСФО. Успешные аудиторские проверки ЦБ РФ.
+                                Действующий участник СРО Мир
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-settings"></i></div>
+                            <div class="text">Удобство</div>
+                            <div class="text label default">Персональный менеджер. Быстрое оформление сделки.
+                                Возможность дистанционного обслуживания. Работа по всей России
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section investor-form">
+        <div class="container">
+            <div class="h1 text-align-center">Свяжитесь со мной</div>
+            <form action="" class="form-investor" id="invest_callme">
+                <label class="field">
+                    <input class="input-text placeholder validate" data-validate="rusfield" type="text"
+                           data-placeholder="Имя">
+                </label>
+                <label class="field">
+                    <input class="input-text placeholder validate" data-validate="email" type="text"
+                           data-placeholder="Электронная почта">
+                </label>
+                <label class="field">
+                    <input class="input-text placeholder validate input-mask" data-mask_tpl="phone_plus7"
+                           data-validate="mobile_phone"
+                           type="text"
+                           data-placeholder="Номер телефона">
+                </label>
+                <label class="field">
+                    <div class="radio-wrapper">
+                        <label class="checkbox-button">
+                            <input type="checkbox" class="validate" data-validate="checkbox">
+                            <span class="checkbox-icon icon-checked"></span>
+                            <span class="checkbox-label">Я согласен на обработку персональных данных</span>
+                        </label>
+                    </div>
+                </label>
+
+
+                <button class="button button-form button-big">Свяжитесь со мной</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="section gray">
+        <div class="container">
+            <h2 class="h1 text-align-center">Как инвестировать в МигКредит</h2>
+
+            <div class="invest-wrap">
+                <div class="row">
+                    <div class="col w-50">
+                        <div class="how-invest-head">
+                            <div class="number">1</div>
+                            <div class="name m-b-50">Выберите инвестиционный план</div>
+                        </div>
+                    </div>
+                    <div class="col w-50">
+                        <p class="medium-text">Рассчитайте свой доход с помощью калькулятора на сайте. Вы можете
+                            инвестировать деньги на
+                            срок от 6 месяцев до 2 лет. Минимальная сумма инвестиций – 1,5 млн рублей. При
+                            инвестировании более 10 млн рублей вы получите специальные предложения по доходу.</p>
+                        <div class="how-invest-mini-calc m-b-50">
+                            <div class="row">
+                                <div class="col w-50 w-50-tablet w-50-mobile">
+                                    <p class="text small-text">Инвестиционный период, месяцы</p>
+                                    <div class="circles">
+                                        <div class="item" data-month="0">6</div>
+                                        <div class="item" data-month="1">9</div>
+                                        <div class="item" data-month="2" data-active>12</div>
+                                        <div class="item" data-month="3">24</div>
+                                    </div>
+                                </div>
+                                <div class="col w-50 w-50-tablet w-50-mobile">
+                                    <p class="text small-text text-align-right">Годовая процентная ставка</p>
+                                    <p class="font-weight-bold big-text text-align-right percents"><span
+                                            data-circle-percent>13</span>%</p>
+                                    <div class="ndfl"> - % до уплаты НДФЛ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="invest-wrap">
+                <div class="row">
+                    <div class="col w-50">
+                        <div class="how-invest-head p-b-30 m-b-50">
+                            <div class="number">2</div>
+                            <div class="name">Свяжитесь с нами</div>
+                        </div>
+                    </div>
+                    <div class="col w-50">
+                        <p class="medium-text m-b-50">Достаточно просто заполнить онлайн-заявку на инвестиции, и наш
+                            финансовый
+                            консультант
+                            перезвонит вам.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="invest-wrap">
+                <div class="row">
+                    <div class="col w-50">
+                        <div class="how-invest-head">
+                            <div class="number">3</div>
+                            <div class="name m-b-50">Заключите договор и получайте доход.</div>
+                        </div>
+                    </div>
+                    <div class="col w-50">
+                        <p class="medium-text">После заключения договора и перевода инвестиционной суммы на счет
+                            МигКредит на Ваш
+                            счет будут
+                            ежемесячно начисляться проценты, а в конце инвестиционного периода первоначальная сумма
+                            вложений будет возвращена на Ваш банковский счет.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button button-shadow button-w-35">Скачать договор</div>
+
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <h2 class="h1 text-align-center">Часто задаваемые вопросы</h2>
+            <div class="question-list">
+
+                <div class="group" data-theme="1">
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Как и где можно оформить?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Договор займа можно подписать в Московском офисе МигКредит либо в любом другом удобном
+                                для клиента месте.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Какие документы необходимы для оформления?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <ul>
+                                <li>Паспорт;</li>
+                                <li>Реквизиты рублевого счета, на который мы Вам будем перечислять проценты.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                НДФЛ
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Займодавцы должны уплачивать НДФЛ на всю сумму получаемых процентов. Мы являемся
+                                налоговым агентом, поэтому уплачиваем этот налог за наших займодавцев самостоятельно. По
+                                запросу Компания предоставит справку по форме 2-НДФЛ.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Как выплачиваются проценты по займу?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Проценты по займу перечисляются безналичным расчетом на счет, указанный в договоре,
+                                ежемесячно или в конце срока займа, согласно согласованным условиям договора.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Есть ли скрытые комиссии?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Скрытых комиссий нет. Клиент уплачивает только комиссию своего банка за перечисление
+                                средств на счет Компании. При перечислении клиенту процентов и возврате займа комиссию
+                                за перевод уплачивает Компания.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Как можно ознакомиться с условиями договора займа?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Договор займа размещен на сайте компании <a href="/">www.migcredit.ru</a> Условия также
+                                можно обсудить в индивидуальном порядке c Руководителем отдела привлечения инвестиций
+                                или генеральным директором компании.</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle-block question">
+                        <div href="#" class="toggle-button">
+                            <div class="question-title">
+                                Почему минимальный размер инвестиций ограничен 1.5 млн. рублей?
+                                <div class="arrow"><i class="icon icon-down2"></i></div>
+                            </div>
+                        </div>
+                        <div class="toggle-content">
+                            <p>Это законодательный порог, который установлен Центральным банком- регулятором рынка для
+                                микрофинансовых компаний.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section gray">
+        <div class="container">
+            <p class="h1 text-align-center">МигКредит — микрофинансовая компания №1 в России</p>
+            <div class="infographic">
+                <div class="row">
+                    <div class="col w-33 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-trophy"></i></div>
+                            <div class="text">Лидер рынка МФО России</div>
+                            <div class="text label default">По оценкам РА «Эксперт»</div>
+                        </div>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-money"></i></div>
+                            <div class="text">Выдаем займы</div>
+                            <div class="text label default">МигКредит специализируется на выдаче займов физическим лицам</div>
+                        </div>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <div class="item">
+                            <div class="icon"><i class="icon-mobile"></i></div>
+                            <div class="text">Гибридная модель бизнеса</div>
+                            <div class="text label default">Онлайн и Оффлайн финансирование займов </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section p-b-0">
+        <div class="container">
+            <div class="row">
+                <div class="col w-50">
+                    <ul>
+                        <li>Компания руководствуется международными стандартами клиентского сервиса и придерживается принципов ответственного кредитования.</li>
+                        <li>Особое внимание уделяется качеству услуг.</li>
+                    </ul>
+                </div>
+                <div class="col w-50">
+                    <ul>
+                        <li>Компания включена в государственный реестр МФО 8 июля 2011г. Регистрационный номер: 2110177000037.</li>
+                        <li>Компания является одним из учредителей и постоянным членом СРО НП «МиР».</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="button button-shadow button-w-35">Посмотреть презентацию</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section p-t-0">
+        <div class="container">
+            <div class="row">
+                <div class="col w-50 w-50-tablet">
+                    <div class="round-image-block">
+                        <div class="image">
+                            <img src="./img/investors/gr.png" alt="">
+                        </div>
+                        <div class="name">Олег Гришин</div>
+                        <div class="description">Генеральный директор</div>
+                    </div>
+                </div>
+                <div class="col w-50 w-50-tablet">
+                    <div class="round-image-block">
+                        <div class="image">
+                            <img src="./img/investors/af.png" alt="">
+                        </div>
+                        <div class="name">Александр Афанасьев</div>
+                        <div class="description">Директор по работе со стратегическими партнерами</div>
+                    </div>
+                </div>
+            </div>
+            <div class="button button-shadow button-w-35">Правила привлечения денежных средств</div>
+        </div>
+    </div>
+
+    <div class="section gray">
+        <div class="container">
+            <div class="row">
+                <div class="col w-50">
+                    <p class="h2">Наши достижения</p>
+                    <div class="progresses">
+                        <div class="row">
+                            <div class="col w-50 w-50-mobile">
+                                <div class="progress-card shadow-block">
+                                    <div class="img" style="background: url(img/progresses/banki.svg)"></div>
+                                    <div class="text">Компания года 2018 по версии Banki.ru</div>
+                                </div>
+                            </div>
+                            <div class="col w-50 w-50-mobile">
+                                <div class="progress-card shadow-block">
+                                    <div class="img" style="background: url(img/progresses/bo.svg)"></div>
+                                    <div class="text">Лауреат премии “Банковская сфера”</div>
+                                </div>
+                            </div>
+                            <div class="clr"></div>
+                            <div class="col w-50 w-50-mobile">
+                                <div class="progress-card shadow-block">
+                                    <div class="img" style="background: url(img/progresses/akra.svg)"></div>
+                                    <div class="text">Рейтинг АКРА</div>
+                                </div>
+                            </div>
+                            <div class="col w-50 w-50-mobile">
+                                <div class="progress-card shadow-block">
+                                    <div class="img" style="background: url(img/progresses/cb.svg)"></div>
+                                    <div class="text">Организация занесена в Гос. реестр МФО ЦБ РФ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col w-50 mobile-m-t-30">
+                    <p class="h2">Наши партнеры</p>
+                    <div class="partners">
+                        <div class="row">
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-mir.svg)"></div>
+                            </div>
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-contact.svg)"></div>
+                            </div>
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-banki.svg)"></div>
+                            </div>
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-cyberplat.svg)"></div>
+                            </div>
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-qiwi.svg)"></div>
+                            </div>
+                            <div class="col w-33 w-50-mobile">
+                                <div class="partner shadow-block" style="background: url(img/logos/logo-eleksnet.svg)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-margin"></div>
+</div>
+
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col w-25">
+                <span class="logo hide-mobile"></span>
+            </div>
+            <div class="col w-25">
+                <a href="tel:8 800 7000 908" class="tel">8 800 7000 908</a>
+                <p class="small-text">Действующим клиентам</p>
+            </div>
+            <div class="col w-25">
+                <a href="tel:8 800 100 06 09" class="tel">8 800 100 06 09</a>
+                <p class="small-text">По вопросам оформления заявки</p>
+            </div>
+            <div class="col w-25">
+                <a href="tel:+7 (495) 785 72 63" class="tel">+7 (495) 785 72 63</a>
+                <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col w-25 hide-mobile">
+                <ul>
+                    <li><a class="link" href="#">Микрокредиты</a></li>
+                    <li><a class="link" href="#">Микрозаймы</a></li>
+                    <li><a class="link" href="#">Деньги онлайн</a></li>
+                    <li><a class="link" href="#">Автокредитование</a></li>
+                    <li><a class="link" href="#">Карта Лукойл</a></li>
+                </ul>
+            </div>
+            <div class="col w-25 hide-mobile">
+                <ul>
+                    <li><a class="link" href="#">Продукты</a></li>
+                    <li><a class="link" href="#">Погашение займа</a></li>
+                    <li><a class="link" href="#">Услуги</a></li>
+                    <li><a class="link" href="#">Акции</a></li>
+                    <li><a class="link" href="#">Инвестиции</a></li>
+                </ul>
+            </div>
+            <div class="col w-25 hide-mobile">
+                <ul>
+                    <li><a class="link" href="#">Партнерская программа</a></li>
+                    <li><a class="link" href="#">Карьера</a></li>
+                    <li><a class="link" href="#">Статьи</a></li>
+                    <li><a class="link" href="#">Карта сайта</a></li>
+                    <li><a class="link" href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="col w-25">
+                <div class="apps">
+                    <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                    <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                </div>
+                <div class="social">
+                    <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                    <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                    <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                    <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                </div>
+            </div>
+        </div>
+        <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col w-33 w-50-mobile">
+                    <p>© 2019, МигКредит</p>
+                </div>
+                <div class="col w-33 hide-mobile">
+                    <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                </div>
+                <div class="col w-33 w-50-mobile">
+                    <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/script.js"></script>
+</body>
+</html>
