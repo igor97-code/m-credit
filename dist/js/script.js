@@ -18238,7 +18238,6 @@ function initSeoMacbookSlider() {
         prevSlideMessage: '',
     });
 }
-<<<<<<< HEAD
 $(function () {
     if ($('[data-tabs-block]').length) {
         $('[data-tabs-block]').each(function() {
@@ -18271,7 +18270,6 @@ function initTabs($tabs) {
         $tabs.find('[data-tab="' + tab + '"]').addClass('active');
     }
 }
-=======
 
 //Инвестиции
 
@@ -18456,6 +18454,5 @@ function initInvestorForm() {
             }, 2000);
         }
     }
->>>>>>> 80b6c9708b3b8b4e0f23f8aa315c00e4d46bbb29
 
 //# sourceMappingURL=script.js.map
