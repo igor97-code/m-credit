@@ -12999,3 +12999,125 @@ var investorData = {
         }
     }
 };
+
+
+var ptsData = {
+    'setting': {
+        'sum_min': '75000',
+        'sum_max': '590000',
+        'sum_cur': 400000,
+        'month_cur': 24
+    },
+    'item':{
+        'k3':{
+            'dayPercent': 0.163,
+            'days':91,
+            'term_name':'месяца'
+        },
+        'k4':{
+            'dayPercent': 0.154,
+            'days':119,
+            'term_name':'месяца'
+        },
+        'k5':{
+            'dayPercent': 0.150,
+            'days':147,
+            'term_name':'месяцев'
+        },
+        'k6':{
+            'dayPercent': 0.147,
+            'days':182,
+            'term_name':'месяцев'
+        },
+        'k7':{
+            'dayPercent': 0.146,
+            'days':210,
+            'term_name':'месяцев'
+        },
+        'k8':{
+            'dayPercent': 0.145,
+            'days':238,
+            'term_name':'месяцев'
+        },
+        'k9':{
+            'dayPercent': 0.145,
+            'days':273,
+            'term_name':'месяцев'
+        },
+        'k10':{
+            'dayPercent': 0.145,
+            'days':301,
+            'term_name':'месяцев'
+        },
+        'k11':{
+            'dayPercent': 0.145,
+            'days':329,
+            'term_name':'месяцев'
+        },
+        'k12':{
+            'dayPercent': 0.146,
+            'days':364,
+            'term_name':'месяцев'
+        },
+        'k13':{
+            'dayPercent': 0.087,
+            'days':392,
+            'term_name':'месяцев'
+        },
+        'k14':{
+            'dayPercent': 0.087,
+            'days':420,
+            'term_name':'месяцев'
+        },
+        'k15':{
+            'dayPercent': 0.087,
+            'days':455,
+            'term_name':'месяцев'
+        },
+        'k16':{
+            'dayPercent': 0.087,
+            'days':483,
+            'term_name':'месяцев'
+        },
+        'k17':{
+            'dayPercent': 0.088,
+            'days':511,
+            'term_name':'месяцев'
+        },
+        'k18':{
+            'dayPercent': 0.088,
+            'days':546,
+            'term_name':'месяцев'
+        },
+        'k19':{
+            'dayPercent': 0.088,
+            'days':574,
+            'term_name':'месяцев'
+        },
+        'k20':{
+            'dayPercent': 0.089,
+            'days':602,
+            'term_name':'месяцев'
+        },
+        'k21':{
+            'dayPercent': 0.089,
+            'days':637,
+            'term_name':'месяц'
+        },
+        'k22':{
+            'dayPercent': 0.089,
+            'days':672,
+            'term_name':'месяца'
+        },
+        'k23':{
+            'dayPercent': 0.090,
+            'days':700,
+            'term_name':'месяца'
+        },
+        'k24':{
+            'dayPercent': 0.090,
+            'days':728,
+            'term_name':'месяца'
+        }
+    }
+};
