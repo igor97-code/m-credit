@@ -17616,9 +17616,9 @@ var investorData = {
     }
 };
 $(function () {
+    //Открыть и закрыть контент на странице, быстрый приятный скрипт 
 
-    //Открыть и закрыть контент на странице, быстрый приятный скрипт
-    $('.button-hidden-content a').on('click', function () {
+    $('.button-hidden-content').click(function() {
         $('.hidden-content').slideToggle('active');
         $('.button-hidden-content a').toggle();
     });
@@ -19358,7 +19358,6 @@ function initAuthPage() {
             $links.removeClass('hide');
         }
     }
-<<<<<<< HEAD
     // очистка данных о пользователе
     function clearUserData() {
         // очищаем номер телефона и показываем его
@@ -19465,7 +19464,5 @@ function initAuthPage() {
 
 
 
-=======
->>>>>>> e0a6a35a16e19c74fae44cf7e85f9a5201668d82
 
 //# sourceMappingURL=script.js.map

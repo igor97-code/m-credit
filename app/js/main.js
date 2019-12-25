@@ -1,7 +1,7 @@
 $(function () {
+    //Открыть и закрыть контент на странице, быстрый приятный скрипт 
 
-    //Открыть и закрыть контент на странице, быстрый приятный скрипт
-    $('.button-hidden-content a').on('click', function () {
+    $('.button-hidden-content').click(function() {
         $('.hidden-content').slideToggle('active');
         $('.button-hidden-content a').toggle();
     });
