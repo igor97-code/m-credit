@@ -80,6 +80,10 @@ $(function () {
         initInvestors();
     }
 
+    if ($('[data-pts-calculator]')) {
+        initPts();
+    }
+
     // читать полностью
     if ($('.show-more').length) {
         $('.show-more').on('click', function () {
@@ -760,9 +764,9 @@ function initInvestorCalculator() {
         $calculator.removeClass('load');
 
         function calculate() {
-            var sum = getClearVal($sum.text()),
-                term = getClearVal($term.text()),
-                percent = getClearVal($resultPercent.text());
+            var sum = +getClearVal($sum.text()),
+                term = +getClearVal($term.text()),
+                percent = +getClearVal($resultPercent.text());
 
             var calculated = (sum / 100 * percent) / (12 / term);
 
@@ -851,6 +855,95 @@ function initInvestorForm() {
             $('#invest_callme .btn-submit').removeClass('disabled');
         }, 2000);
     }
+}
+
+
+//ПТС
+
+function initPts() {
+    iniPtsCalculator();
+}
+
+function iniPtsCalculator() {
+    var $calculators = $('[data-pts-calculator]');
+    if (!$calculators.length) return;
+
+    // данные калькулятора для расчетов
+    var calculatorData = ptsData;
+
+    setTimeout(function () {
+        $calculators.each(function () {
+            init($(this));
+        });
+    }, 1500);
+
+
+    function init($calculator) {
+        // основные HTML элементы
+        var $term = $calculator.find('[data-term]'),
+            $termLabel = $calculator.find('[data-term_label]'),
+            $sum = $calculator.find('[data-sum]'),
+            $sumMin = $calculator.find('[data-sum_min]'),
+            $sumMax = $calculator.find('[data-sum_max]'),
+            $resultSum = $calculator.find('[data-result_sum]');
+
+        var defaultSumMin = +calculatorData.setting.sum_min,
+            defaultSumMax = +calculatorData.setting.sum_max,
+            defaultSumCur = +calculatorData.setting.sum_cur,
+            defaultMonth = +calculatorData.setting.month_cur;
+
+        $sumMin.html(numberFormat(defaultSumMin));
+        $sumMax.html(numberFormat((defaultSumMax)));
+        $sum.html(numberFormat(defaultSumCur));
+        $term.html(defaultMonth);
+        $termLabel.html(calculatorData['item']['k' + defaultMonth]['term_name']);
+
+        var $sumSlider = $calculator.find('[data-sum_slider]').slider({
+            range: 'min',
+            value: defaultSumCur,
+            min: defaultSumMin,
+            max: defaultSumMax,
+            step: 1000,
+            slide: function (event, ui) {
+                $sum.html(numberFormat(ui.value));
+                calculate();
+            }
+        });
+
+        var $termSlider = $calculator.find('[data-term_slider]').slider({
+            range: 'min',
+            value: defaultMonth,
+            min: 3,
+            max: 24,
+            step: 1,
+            slide: function (event, ui) {
+                $term.html(ui.value);
+                $termLabel.html(calculatorData['item']['k' + ui.value]['term_name']);
+                calculate();
+            }
+        });
+
+        calculate();
+
+        $calculator.removeClass('load');
+
+        function calculate() {
+            var sum = +getClearVal($sum.text()),
+                term = +getClearVal($term.text());
+
+            var month = calculatorData['item']['k'+term];
+
+            var days = month.days,
+                dayPercent = month.dayPercent;
+
+            var calculated = Math.round( ((sum * days * (dayPercent/100)) + sum) / term );
+
+            $resultSum.html(numberFormat(calculated));
+            console.log(calculated);
+        }
+
+    }
+
 }
 
 if ($('[data-contacts-map]').length) {
