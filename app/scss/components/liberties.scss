@@ -56,12 +56,9 @@
 //модификатор блока картинка текст
 .service-cards-only-header { 
     .item { 
-        margin: 25px 0px 20px;
-        float: left;
+        margin: 25px 0px 20px; 
         height: 82px;
-        padding: 0px 20px;
-        width: 100%;
-        overflow: hidden;
+        padding: 0px 20px; 
         .image {
             left: 20px;
         }
@@ -216,16 +213,24 @@
         }
     }
 }
-
+@include xs-mobile {
+    .service-cards-only-header { 
+        .item {
+            height: auto; 
+            min-height: 62px;
+         }
+    }
+}
 @include mobile {
     .service-cards-only-header { 
         .item { 
             margin: 0 0 16px;
+            padding: 10px 20px;
             .info {
                 margin-left: 60px;
                 .h3 {
                     line-height: 22px;
-                    padding: 9px 0;
+                    padding: 0;
                     font-size: 14px;
                 }
             } 

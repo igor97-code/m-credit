@@ -3,7 +3,7 @@
     display: block;
     position: relative;
     z-index: 3;
-    margin: 20px 0;
+    margin: 0 0 20px !important;
 
     &.for-select {
         z-index: 5;
@@ -27,7 +27,7 @@
         font-size: 12px;
         line-height: 1em;
         font-weight: 400;
-        color: $colorBorder;
+        color: $colorText;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -228,6 +228,9 @@
                 &:hover {
                     color: $colorMain;
                 }
+                &:before {
+                    display: none;
+                }
 
                 &.selected {
                     color: $colorMain;
@@ -251,7 +254,11 @@
             width: 10px;
             font-family: 'serif';
             font-size: 10px;
+            transition: linear 0.225s;
             color: $colorText;
+            &:after {
+                content: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMCAyLjA4MzY2TDguODMzMzMgMC45MTY5OTNMNSA0Ljc1MDMyTDEuMTY2NjcgMC45MTY5OTJMLTYuNDkwOWUtMDggMi4wODM2Nkw1IDcuMDgzNjZMMTAgMi4wODM2NloiIGZpbGw9IiMzMzMzMzMiLz4KPC9zdmc+Cg==);
+            }
         }
 
         &.opened {
@@ -316,7 +323,7 @@
         .textarea,
         .selectwrap,
         .jq-file {
-            border-color: $colorGray;
+            border-color: $colorMain;
         }
     }
 
@@ -327,7 +334,7 @@
         right: 15px; top: 50%;
         margin: -13px 0 0 0;
         font-size: 26px;
-        color: $colorBorder;
+        color: $colorMain;
     }
 }
 

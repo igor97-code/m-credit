@@ -3890,6 +3890,8 @@ if(az.arrowScrollOnHover){ay.bind("mouseover.jsp",aE(-1,0,ay));x.bind("mouseover
 }else{h.css("left",aJ);ae(aJ)}}function ae(aJ){if(aJ===c){aJ=h.position().left}am.scrollTop(0);aa=aJ;var aM=aa===0,aL=aa==j,aK=aJ/j,s=-aK*(T-ak);if(P!=aM||k!=aL){P=aM;k=aL;D.trigger("jsp-arrow-change",[aj,aH,P,k])}r(aM,aL);Y.css("left",s);D.trigger("jsp-scroll-x",[-s,aM,aL]).trigger("scroll")}function u(aJ,s){if(az.showArrows){ar[aJ?"addClass":"removeClass"]("jspDisabled");af[s?"addClass":"removeClass"]("jspDisabled")}}function r(aJ,s){if(az.showArrows){ay[aJ?"addClass":"removeClass"]("jspDisabled");x[s?"addClass":"removeClass"]("jspDisabled")}}function M(s,aJ){var aK=s/(Z-v);V(aK*i,aJ)}function N(aJ,s){var aK=aJ/(T-ak);W(aK*j,s)}function ab(aW,aR,aK){var aO,aL,aM,s=0,aV=0,aJ,aQ,aP,aT,aS,aU;try{aO=b(aW)}catch(aN){return}aL=aO.outerHeight();aM=aO.outerWidth();am.scrollTop(0);am.scrollLeft(0);while(!aO.is(".jspPane")){s+=aO.position().top;aV+=aO.position().left;aO=aO.offsetParent();if(/^body|html$/i.test(aO[0].nodeName)){return}}aJ=aB();aP=aJ+v;if(s<aJ||aR){aS=s-az.verticalGutter}else{if(s+aL>aP){aS=s-v+aL+az.verticalGutter}}if(aS){M(aS,aK)}aQ=aD();aT=aQ+ak;if(aV<aQ||aR){aU=aV-az.horizontalGutter}else{if(aV+aM>aT){aU=aV-ak+aM+az.horizontalGutter}}if(aU){N(aU,aK)}}function aD(){return -Y.position().left}function aB(){return -Y.position().top}function K(){var s=Z-v;return(s>20)&&(s-aB()<10)}function B(){var s=T-ak;return(s>20)&&(s-aD()<10)}function ag(){am.unbind(ac).bind(ac,function(aM,aN,aL,aJ){var aK=aa,s=I;Q.scrollBy(aL*az.mouseWheelSpeed,-aJ*az.mouseWheelSpeed,false);return aK==aa&&s==I})}function n(){am.unbind(ac)}function aC(){return false}function J(){Y.find(":input,a").unbind("focus.jsp").bind("focus.jsp",function(s){ab(s.target,false)})}function E(){Y.find(":input,a").unbind("focus.jsp")}function S(){var s,aJ,aL=[];aF&&aL.push(an[0]);aA&&aL.push(U[0]);Y.focus(function(){D.focus()});D.attr("tabindex",0).unbind("keydown.jsp keypress.jsp").bind("keydown.jsp",function(aO){if(aO.target!==this&&!(aL.length&&b(aO.target).closest(aL).length)){return}var aN=aa,aM=I;switch(aO.keyCode){case 40:case 38:case 34:case 32:case 33:case 39:case 37:s=aO.keyCode;aK();break;case 35:M(Z-v);s=null;break;case 36:M(0);s=null;break}aJ=aO.keyCode==s&&aN!=aa||aM!=I;return !aJ}).bind("keypress.jsp",function(aM){if(aM.keyCode==s){aK()}return !aJ});if(az.hideFocus){D.css("outline","none");if("hideFocus" in am[0]){D.attr("hideFocus",true)}}else{D.css("outline","");if("hideFocus" in am[0]){D.attr("hideFocus",false)}}function aK(){var aN=aa,aM=I;switch(s){case 40:Q.scrollByY(az.keyboardSpeed,false);break;case 38:Q.scrollByY(-az.keyboardSpeed,false);break;case 34:case 32:Q.scrollByY(v*az.scrollPagePercent,false);break;case 33:Q.scrollByY(-v*az.scrollPagePercent,false);break;case 39:Q.scrollByX(az.keyboardSpeed,false);break;case 37:Q.scrollByX(-az.keyboardSpeed,false);break}aJ=aN!=aa||aM!=I;return aJ}}function R(){D.attr("tabindex","-1").removeAttr("tabindex").unbind("keydown.jsp keypress.jsp")}function C(){if(location.hash&&location.hash.length>1){var aL,aJ,aK=escape(location.hash);try{aL=b(aK)}catch(s){return}if(aL.length&&Y.find(aK)){if(am.scrollTop()===0){aJ=setInterval(function(){if(am.scrollTop()>0){ab(aK,true);b(document).scrollTop(am.position().top);clearInterval(aJ)}},50)}else{ab(aK,true);b(document).scrollTop(am.position().top)}}}}function ai(){b("a.jspHijack").unbind("click.jsp-hijack").removeClass("jspHijack")}function m(){ai();b("a[href^=#]").addClass("jspHijack").bind("click.jsp-hijack",function(){var s=this.href.split("#"),aJ;if(s.length>1){aJ=s[1];if(aJ.length>0&&Y.find("#"+aJ).length>0){ab("#"+aJ,true);return false}}})}function ao(){var aK,aJ,aM,aL,aN,s=false;am.unbind("touchstart.jsp touchmove.jsp touchend.jsp click.jsp-touchclick").bind("touchstart.jsp",function(aO){var aP=aO.originalEvent.touches[0];aK=aD();aJ=aB();aM=aP.pageX;aL=aP.pageY;aN=false;s=true}).bind("touchmove.jsp",function(aR){if(!s){return}var aQ=aR.originalEvent.touches[0],aP=aa,aO=I;Q.scrollTo(aK+aM-aQ.pageX,aJ+aL-aQ.pageY);aN=aN||Math.abs(aM-aQ.pageX)>5||Math.abs(aL-aQ.pageY)>5;
 return aP==aa&&aO==I}).bind("touchend.jsp",function(aO){s=false}).bind("click.jsp-touchclick",function(aO){if(aN){aN=false;return false}})}function g(){var s=aB(),aJ=aD();D.removeClass("jspScrollable").unbind(".jsp");D.replaceWith(ap.append(Y.children()));ap.scrollTop(s);ap.scrollLeft(aJ)}b.extend(Q,{reinitialise:function(aJ){aJ=b.extend({},az,aJ);at(aJ)},scrollToElement:function(aK,aJ,s){ab(aK,aJ,s)},scrollTo:function(aK,s,aJ){N(aK,aJ);M(s,aJ)},scrollToX:function(aJ,s){N(aJ,s)},scrollToY:function(s,aJ){M(s,aJ)},scrollToPercentX:function(aJ,s){N(aJ*(T-ak),s)},scrollToPercentY:function(aJ,s){M(aJ*(Z-v),s)},scrollBy:function(aJ,s,aK){Q.scrollByX(aJ,aK);Q.scrollByY(s,aK)},scrollByX:function(s,aK){var aJ=aD()+Math[s<0?"floor":"ceil"](s),aL=aJ/(T-ak);W(aL*j,aK)},scrollByY:function(s,aK){var aJ=aB()+Math[s<0?"floor":"ceil"](s),aL=aJ/(Z-v);V(aL*i,aK)},positionDragX:function(s,aJ){W(s,aJ)},positionDragY:function(aJ,s){V(aJ,s)},animate:function(aJ,aM,s,aL){var aK={};aK[aM]=s;aJ.animate(aK,{duration:az.animateDuration,ease:az.animateEase,queue:false,step:aL})},getContentPositionX:function(){return aD()},getContentPositionY:function(){return aB()},getContentWidth:function(){return T},getContentHeight:function(){return Z},getPercentScrolledX:function(){return aD()/(T-ak)},getPercentScrolledY:function(){return aB()/(Z-v)},getIsScrollableH:function(){return aF},getIsScrollableV:function(){return aA},getContentPane:function(){return Y},scrollToBottom:function(s){V(i,s)},hijackInternalLinks:function(){m()},destroy:function(){g()}});at(O)}e=b.extend({},b.fn.jScrollPane.defaults,e);b.each(["mouseWheelSpeed","arrowButtonSpeed","trackClickSpeed","keyboardSpeed"],function(){e[this]=e[this]||e.speed});return this.each(function(){var f=b(this),g=f.data("jsp");if(g){g.reinitialise(e)}else{g=new d(f,e);f.data("jsp",g)}})};b.fn.jScrollPane.defaults={showArrows:false,maintainPosition:true,stickToBottom:false,stickToRight:false,clickOnTrack:true,autoReinitialise:false,autoReinitialiseDelay:500,verticalDragMinHeight:0,verticalDragMaxHeight:99999,horizontalDragMinWidth:0,horizontalDragMaxWidth:99999,contentWidth:c,animateScroll:false,animateDuration:300,animateEase:"linear",hijackInternalLinks:false,verticalGutter:4,horizontalGutter:4,mouseWheelSpeed:0,arrowButtonSpeed:0,arrowRepeatFreq:50,arrowScrollOnHover:false,trackClickSpeed:0,trackClickRepeatFreq:70,verticalArrowPositions:"split",horizontalArrowPositions:"split",enableKeyboardNavigation:true,hideFocus:false,keyboardSpeed:0,initialDelay:300,speed:30,scrollPagePercent:0.8}})(jQuery,this);
 !function(t,e){"use strict";function r(r,a,i,u,l){function f(){L=t.devicePixelRatio>1,i=c(i),a.delay>=0&&setTimeout(function(){s(!0)},a.delay),(a.delay<0||a.combined)&&(u.e=v(a.throttle,function(t){"resize"===t.type&&(w=B=-1),s(t.all)}),u.a=function(t){t=c(t),i.push.apply(i,t)},u.g=function(){return i=n(i).filter(function(){return!n(this).data(a.loadedName)})},u.f=function(t){for(var e=0;e<t.length;e++){var r=i.filter(function(){return this===t[e]});r.length&&s(!1,r)}},s(),n(a.appendScroll).on("scroll."+l+" resize."+l,u.e))}function c(t){var i=a.defaultImage,o=a.placeholder,u=a.imageBase,l=a.srcsetAttribute,f=a.loaderAttribute,c=a._f||{};t=n(t).filter(function(){var t=n(this),r=m(this);return!t.data(a.handledName)&&(t.attr(a.attribute)||t.attr(l)||t.attr(f)||c[r]!==e)}).data("plugin_"+a.name,r);for(var s=0,d=t.length;s<d;s++){var A=n(t[s]),g=m(t[s]),h=A.attr(a.imageBaseAttribute)||u;g===N&&h&&A.attr(l)&&A.attr(l,b(A.attr(l),h)),c[g]===e||A.attr(f)||A.attr(f,c[g]),g===N&&i&&!A.attr(E)?A.attr(E,i):g===N||!o||A.css(O)&&"none"!==A.css(O)||A.css(O,"url('"+o+"')")}return t}function s(t,e){if(!i.length)return void(a.autoDestroy&&r.destroy());for(var o=e||i,u=!1,l=a.imageBase||"",f=a.srcsetAttribute,c=a.handledName,s=0;s<o.length;s++)if(t||e||A(o[s])){var g=n(o[s]),h=m(o[s]),b=g.attr(a.attribute),v=g.attr(a.imageBaseAttribute)||l,p=g.attr(a.loaderAttribute);g.data(c)||a.visibleOnly&&!g.is(":visible")||!((b||g.attr(f))&&(h===N&&(v+b!==g.attr(E)||g.attr(f)!==g.attr(F))||h!==N&&v+b!==g.css(O))||p)||(u=!0,g.data(c,!0),d(g,h,v,p))}u&&(i=n(i).filter(function(){return!n(this).data(c)}))}function d(t,e,r,i){++z;var o=function(){y("onError",t),p(),o=n.noop};y("beforeLoad",t);var u=a.attribute,l=a.srcsetAttribute,f=a.sizesAttribute,c=a.retinaAttribute,s=a.removeAttribute,d=a.loadedName,A=t.attr(c);if(i){var g=function(){s&&t.removeAttr(a.loaderAttribute),t.data(d,!0),y(T,t),setTimeout(p,1),g=n.noop};t.off(I).one(I,o).one(D,g),y(i,t,function(e){e?(t.off(D),g()):(t.off(I),o())})||t.trigger(I)}else{var h=n(new Image);h.one(I,o).one(D,function(){t.hide(),e===N?t.attr(C,h.attr(C)).attr(F,h.attr(F)).attr(E,h.attr(E)):t.css(O,"url('"+h.attr(E)+"')"),t[a.effect](a.effectTime),s&&(t.removeAttr(u+" "+l+" "+c+" "+a.imageBaseAttribute),f!==C&&t.removeAttr(f)),t.data(d,!0),y(T,t),h.remove(),p()});var m=(L&&A?A:t.attr(u))||"";h.attr(C,t.attr(f)).attr(F,t.attr(l)).attr(E,m?r+m:null),h.complete&&h.trigger(D)}}function A(t){var e=t.getBoundingClientRect(),r=a.scrollDirection,n=a.threshold,i=h()+n>e.top&&-n<e.bottom,o=g()+n>e.left&&-n<e.right;return"vertical"===r?i:"horizontal"===r?o:i&&o}function g(){return w>=0?w:w=n(t).width()}function h(){return B>=0?B:B=n(t).height()}function m(t){return t.tagName.toLowerCase()}function b(t,e){if(e){var r=t.split(",");t="";for(var a=0,n=r.length;a<n;a++)t+=e+r[a].trim()+(a!==n-1?",":"")}return t}function v(t,e){var n,i=0;return function(o,u){function l(){i=+new Date,e.call(r,o)}var f=+new Date-i;n&&clearTimeout(n),f>t||!a.enableThrottle||u?l():n=setTimeout(l,t-f)}}function p(){--z,i.length||z||y("onFinishedAll")}function y(t,e,n){return!!(t=a[t])&&(t.apply(r,[].slice.call(arguments,1)),!0)}var z=0,w=-1,B=-1,L=!1,T="afterLoad",D="load",I="error",N="img",E="src",F="srcset",C="sizes",O="background-image";"event"===a.bind||o?f():n(t).on(D+"."+l,f)}function a(a,o){var u=this,l=n.extend({},u.config,o),f={},c=l.name+"-"+ ++i;return u.config=function(t,r){return r===e?l[t]:(l[t]=r,u)},u.addItems=function(t){return f.a&&f.a("string"===n.type(t)?n(t):t),u},u.getItems=function(){return f.g?f.g():{}},u.update=function(t){return f.e&&f.e({},!t),u},u.force=function(t){return f.f&&f.f("string"===n.type(t)?n(t):t),u},u.loadAll=function(){return f.e&&f.e({all:!0},!0),u},u.destroy=function(){return n(l.appendScroll).off("."+c,f.e),n(t).off("."+c),f={},e},r(u,l,a,f,c),l.chainable?a:u}var n=t.jQuery||t.Zepto,i=0,o=!1;n.fn.Lazy=n.fn.lazy=function(t){return new a(this,t)},n.Lazy=n.lazy=function(t,r,i){if(n.isFunction(r)&&(i=r,r=[]),n.isFunction(i)){t=n.isArray(t)?t:[t],r=n.isArray(r)?r:[r];for(var o=a.prototype.config,u=o._f||(o._f={}),l=0,f=t.length;l<f;l++)(o[t[l]]===e||n.isFunction(o[t[l]]))&&(o[t[l]]=i);for(var c=0,s=r.length;c<s;c++)u[r[c]]=t[0]}},a.prototype.config={name:"lazy",chainable:!0,autoDestroy:!0,bind:"load",threshold:500,visibleOnly:!1,appendScroll:t,scrollDirection:"both",imageBase:null,defaultImage:"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",placeholder:null,delay:-1,combined:!1,attribute:"data-src",srcsetAttribute:"data-srcset",sizesAttribute:"data-sizes",retinaAttribute:"data-retina",loaderAttribute:"data-loader",imageBaseAttribute:"data-imagebase",removeAttribute:!0,handledName:"handled",loadedName:"loaded",effect:"show",effectTime:0,enableThrottle:!0,throttle:250,beforeLoad:e,afterLoad:e,onError:e,onFinishedAll:e},n(t).on("load",function(){o=!0})}(window);
+/*! maphilight 28-02-2018 */
+!function(a,b){"function"==typeof define&&define.amd?define(["jquery"],b):b(a.jQuery)}(this,function(a){var b,c,d,e,f,g,h,j,k,l,m;if(c=!!document.createElement("canvas").getContext,b=function(){var a=document.createElement("div");a.innerHTML='<v:shape id="vml_flag1" adj="1" />';var b=a.firstChild;return b.style.behavior="url(#default#VML)",b?"object"==typeof b.adj:!0}(),!c&&!b)return void(a.fn.maphilight=function(){return this});if(c){j=function(a){return Math.max(0,Math.min(parseInt(a,16),255))},k=function(a,b){return"rgba("+j(a.substr(0,2))+","+j(a.substr(2,2))+","+j(a.substr(4,2))+","+b+")"},d=function(b){var c=a('<canvas style="width:'+a(b).width()+"px;height:"+a(b).height()+'px;"></canvas>').get(0);return c.getContext("2d").clearRect(0,0,a(b).width(),a(b).height()),c};var n=function(a,b,c,d,e){if(d=d||0,e=e||0,a.beginPath(),"rect"==b)a.rect(c[0]+d,c[1]+e,c[2]-c[0],c[3]-c[1]);else if("poly"==b)for(a.moveTo(c[0]+d,c[1]+e),i=2;i<c.length;i+=2)a.lineTo(c[i]+d,c[i+1]+e);else"circ"==b&&a.arc(c[0]+d,c[1]+e,c[2],0,2*Math.PI,!1);a.closePath()};e=function(b,c,d,e,f){var g=b.getContext("2d");if(e.shadow){g.save(),"inside"==e.shadowPosition&&(n(g,c,d),g.clip());var h=100*b.width,i=100*b.height;n(g,c,d,h,i),g.shadowOffsetX=e.shadowX-h,g.shadowOffsetY=e.shadowY-i,g.shadowBlur=e.shadowRadius,g.shadowColor=k(e.shadowColor,e.shadowOpacity);var j=e.shadowFrom;j||(j="outside"==e.shadowPosition?"fill":"stroke"),"stroke"==j?(g.strokeStyle="rgba(0,0,0,1)",g.stroke()):"fill"==j&&(g.fillStyle="rgba(0,0,0,1)",g.fill()),g.restore(),"outside"==e.shadowPosition&&(g.save(),n(g,c,d),g.globalCompositeOperation="destination-out",g.fillStyle="rgba(0,0,0,1);",g.fill(),g.restore())}g.save(),n(g,c,d),e.fill&&(g.fillStyle=k(e.fillColor,e.fillOpacity),g.fill()),e.stroke&&(g.strokeStyle=k(e.strokeColor,e.strokeOpacity),g.lineWidth=e.strokeWidth,g.stroke()),g.restore(),e.fade&&a(b).css("opacity",0).animate({opacity:1},100)},f=function(a){a.getContext("2d").clearRect(0,0,a.width,a.height)}}else d=function(b){return a('<var style="zoom:1;overflow:hidden;display:block;width:'+b.width+"px;height:"+b.height+'px;"></var>').get(0)},e=function(b,c,d,e,f){var g,h,i,j;for(var k in d)d[k]=parseInt(d[k],10);g='<v:fill color="#'+e.fillColor+'" opacity="'+(e.fill?e.fillOpacity:0)+'" />',h=e.stroke?'strokeweight="'+e.strokeWidth+'" stroked="t" strokecolor="#'+e.strokeColor+'"':'stroked="f"',i='<v:stroke opacity="'+e.strokeOpacity+'"/>',"rect"==c?j=a('<v:rect name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+d[0]+"px;top:"+d[1]+"px;width:"+(d[2]-d[0])+"px;height:"+(d[3]-d[1])+'px;"></v:rect>'):"poly"==c?j=a('<v:shape name="'+f+'" filled="t" '+h+' coordorigin="0,0" coordsize="'+b.width+","+b.height+'" path="m '+d[0]+","+d[1]+" l "+d.join(",")+' x e" style="zoom:1;margin:0;padding:0;display:block;position:absolute;top:0px;left:0px;width:'+b.width+"px;height:"+b.height+'px;"></v:shape>'):"circ"==c&&(j=a('<v:oval name="'+f+'" filled="t" '+h+' style="zoom:1;margin:0;padding:0;display:block;position:absolute;left:'+(d[0]-d[2])+"px;top:"+(d[1]-d[2])+"px;width:"+2*d[2]+"px;height:"+2*d[2]+'px;"></v:oval>')),j.get(0).innerHTML=g+i,a(b).append(j)},f=function(b){var c=a("<div>"+b.innerHTML+"</div>");c.children("[name=highlighted]").remove(),b.innerHTML=c.html()};g=function(a){var b,c=a.getAttribute("coords").split(",");for(b=0;b<c.length;b++)c[b]=parseFloat(c[b]);return[a.getAttribute("shape").toLowerCase().substr(0,4),c]},m=function(b,c){var d=a(b);return a.extend({},c,a.metadata?d.metadata():!1,d.data("maphilight"))},l=function(a){return a.complete?"undefined"!=typeof a.naturalWidth&&0===a.naturalWidth?!1:!0:!1},h={position:"absolute",left:0,top:0,padding:0,border:0};var o=!1;a.fn.maphilight=function(i){return i=a.extend({},a.fn.maphilight.defaults,i),c||o||(a(window).ready(function(){document.namespaces.add("v","urn:schemas-microsoft-com:vml");var b=document.createStyleSheet(),c=["shape","rect","oval","circ","fill","stroke","imagedata","group","textbox"];a.each(c,function(){b.addRule("v\\:"+this,"behavior: url(#default#VML); antialias:true")})}),o=!0),this.each(function(){var j,k,n,o,p,q,r;if(j=a(this),!l(this))return window.setTimeout(function(){j.maphilight(i)},200);if(n=a.extend({},i,a.metadata?j.metadata():!1,j.data("maphilight")),r=j.get(0).getAttribute("usemap"),r&&(o=a('map[name="'+r.substr(1)+'"]'),j.is('img,input[type="image"]')&&r&&o.length>0)){if(j.hasClass("maphilighted")){var s=j.parent();j.insertBefore(s),s.remove(),a(o).unbind(".maphilight")}k=a("<div></div>").css({display:"block",backgroundImage:'url("'+this.src+'")',backgroundSize:"contain",position:"relative",padding:0,width:this.width,height:this.height}),n.wrapClass&&(n.wrapClass===!0?k.addClass(a(this).attr("class")):k.addClass(n.wrapClass)),j.before(k).css("opacity",1e-10).css(h).remove(),b&&j.css("filter","Alpha(opacity=0)"),k.append(j),p=d(this),a(p).css(h),p.height=this.height,p.width=this.width,a(o).bind("alwaysOn.maphilight",function(){q&&f(q),c||a(p).empty(),a(o).find("area[coords]").each(function(){var b,f;f=m(this,n),f.alwaysOn&&(!q&&c&&(q=d(j[0]),a(q).css(h),q.width=j[0].width,q.height=j[0].height,j.before(q)),f.fade=f.alwaysOnFade,b=g(this),c?e(q,b[0],b[1],f,""):e(p,b[0],b[1],f,""))})}).trigger("alwaysOn.maphilight").bind("mouseover.maphilight focusin.maphilight",function(b){var d,f,h=b.target;if(f=m(h,n),!f.neverOn&&!f.alwaysOn){if(d=g(h),e(p,d[0],d[1],f,"highlighted"),f.groupBy){var i;i=/^[a-zA-Z][\-a-zA-Z]+$/.test(f.groupBy)?o.find("area["+f.groupBy+'="'+a(h).attr(f.groupBy)+'"]'):o.find(f.groupBy);var j=h;i.each(function(){if(this!=j){var a=m(this,n);if(!a.neverOn&&!a.alwaysOn){var b=g(this);e(p,b[0],b[1],a,"highlighted")}}})}c||a(p).append("<v:rect></v:rect>")}}).bind("mouseout.maphilight focusout.maphilight",function(a){f(p)}),j.before(p),j.addClass("maphilighted")}})},a.fn.maphilight.defaults={fill:!0,fillColor:"000000",fillOpacity:.2,stroke:!0,strokeColor:"ff0000",strokeOpacity:1,strokeWidth:1,fade:!0,alwaysOn:!1,neverOn:!1,groupBy:!1,wrapClass:!0,shadow:!1,shadowX:0,shadowY:0,shadowRadius:6,shadowColor:"000000",shadowOpacity:.8,shadowPosition:"outside",shadowFrom:!1}});
 /*! Copyright (c) 2013 Brandon Aaron (http://brandon.aaron.sh)
  * Licensed under the MIT License (LICENSE.txt).
  *
@@ -4523,7 +4525,7 @@ function initPlaceholders() {
             $field.removeClass('empty');
         }
 
-        $field.find('.selectwrap').prepend('<span class="label">' + plh + '</span>');
+        $field.find('.selectwrap').prepend('<span class="label">' +  plh + '</span>');
 
         $this.addClass('ready');
 
@@ -4611,6 +4613,7 @@ function getClearVal(val) {
     result = result.replace(/[()\_-\s]/g, '');
     return result;
 }
+
 // данные калькулятора для расчетов
 var calculatorTestData = {
     'setting': {
@@ -17613,7 +17616,14 @@ var investorData = {
     }
 };
 $(function () {
-    console.log(0);
+
+    //Открыть и закрыть контент на странице, быстрый приятный скрипт
+    $('.button-hidden-content a').on('click', function () {
+        $('.hidden-content').slideToggle('active');
+        $('.button-hidden-content a').toggle();
+    });
+
+    // console.log(0);
     // обновление класса HTML в зависимости от высота вьюпорта
     refreshHeightClass();
 
@@ -17679,7 +17689,7 @@ $(function () {
 
     //Сео слайдер макбук
 
-    if($('#macbook_slider').length){
+    if ($('#macbook_slider').length) {
         initSeoMacbookSlider();
     }
 
@@ -17689,7 +17699,7 @@ $(function () {
 
     // читать полностью
     if ($('.show-more').length) {
-        $('.show-more').on('click', function() {
+        $('.show-more').on('click', function () {
             var $this = $(this);
 
             $this.fadeOut('fast');
@@ -17699,7 +17709,7 @@ $(function () {
             return false
         })
     }
-  
+
     // инициализация калькуляторов
     initCalculators();
 
@@ -17730,6 +17740,10 @@ $(function () {
         return false;
     });
 
+    //login 
+    if ($('#authpage')) {
+        initAuthPage();
+    }
 
     // скрываем прелоадер страницы
     $('#page_preloader').hide('fade', 400);
@@ -17870,17 +17884,17 @@ function initCalculators() {
 
     // данные калькулятора для расчетов
     var calculatorData = calculatorTestData;
-    setTimeout(function() {
-        $calculators.each(function() {
+    setTimeout(function () {
+        $calculators.each(function () {
             init($(this));
         });
-    },  1500);
+    }, 1500);
 
     $.ajax({
         url: 'https://migcredit.ru/ajax/calc2.php',
         success: function (data) {
             calculatorData = data;
-            $calculators.each(function() {
+            $calculators.each(function () {
                 init($(this));
             });
         }
@@ -18069,6 +18083,7 @@ function openTab(tab) {
     $('[data-tab]').removeClass('active');
     $('[data-tab="' + tab + '"]').addClass('active');
 }
+
 function closeTab(tab) {
     $('[data-tab="' + tab + '"]').removeClass('active');
 }
@@ -18125,7 +18140,7 @@ function initProductsSlider() {
 }
 
 // слайдер инфографики
-function initInfographicSliderInMain()  {
+function initInfographicSliderInMain() {
     var slider = new Swiper('#infographic_slider', {
         effect: 'slide',
         loop: false,
@@ -18187,7 +18202,7 @@ function initCommentsSlider() {
 }
 
 // слайдер экспертов
-function initExpertsSliderInMain()  {
+function initExpertsSliderInMain() {
     var slider = new Swiper('#experts_slider', {
         effect: 'slide',
         loop: false,
@@ -18238,10 +18253,9 @@ function initSeoMacbookSlider() {
         prevSlideMessage: '',
     });
 }
-<<<<<<< HEAD
 $(function () {
     if ($('[data-tabs-block]').length) {
-        $('[data-tabs-block]').each(function() {
+        $('[data-tabs-block]').each(function () {
             initTabs($(this));
         })
     }
@@ -18255,14 +18269,14 @@ function initTabs($tabs) {
     if (!defaultTab) {
         defaultTab = $tabs.find('[data-tab]').first().attr('data-tab');
     }
-    
+
     changeTab(defaultTab);
 
-    $tabs.on('click', '.switch', function() {
+    $tabs.on('click', '.switch', function () {
         if ($(this).hasClass('active')) return false;
 
         changeTab($(this).attr('data-tab'));
-        
+
         return false;
     });
 
@@ -18271,12 +18285,11 @@ function initTabs($tabs) {
         $tabs.find('[data-tab="' + tab + '"]').addClass('active');
     }
 }
-=======
 
 //Инвестиции
 
 function initInvestors() {
-    $('.circles').on('click','.item', function () {
+    $('.circles').on('click', '.item', function () {
         $(this).addClass('active').siblings().removeClass('active');
 
         var month = +$(this).attr('data-month');
@@ -18300,11 +18313,11 @@ function initInvestorCalculator() {
     // данные калькулятора для расчетов
     var calculatorData = investorData;
 
-    setTimeout(function() {
-        $calculators.each(function() {
+    setTimeout(function () {
+        $calculators.each(function () {
             init($(this));
         });
-    },  1500);
+    }, 1500);
 
 
     function init($calculator) {
@@ -18342,7 +18355,7 @@ function initInvestorCalculator() {
             slide: function (event, ui) {
                 $sum.html(numberFormat(ui.value));
                 calculate();
-              }
+            }
         });
 
         var $termSlider = $calculator.find('[data-term_slider]').slider({
@@ -18381,81 +18394,1075 @@ function initInvestorCalculator() {
 //Форма инвестиций
 
 function initInvestorForm() {
-        var $form = $('#invest_callme');
+    var $form = $('#invest_callme');
 
     $form.on('change', 'input', function () {
         validateField($(this));
     });
 
-        $form.on('click', '.button-form', function () {
-            if (!$(this).hasClass('disabled')) {
-                if (validateForm($form)) {
-                    $(this).addClass('disabled');
-                    var name = $('.input-invest[name="name"]').val();
-                    var email = $('.input-invest[name="email"]').val();
-                    var phone = $('.input-invest[name="phone"]').val();
+    $form.on('click', '.button-form', function () {
+        if (!$(this).hasClass('disabled')) {
+            if (validateForm($form)) {
+                $(this).addClass('disabled');
+                var name = $('.input-invest[name="name"]').val();
+                var email = $('.input-invest[name="email"]').val();
+                var phone = $('.input-invest[name="phone"]').val();
 
-                    var invest_utm_source = $('#invest_utm_source').val();
-                    var invest_utm_medium = $('#invest_utm_medium').val();
-                    var invest_utm_campaign = $('#invest_utm_campaign').val();
-                    var invest_lid = $('#invest_lid').val();
-                    var invest_aid = $('#invest_aid').val();
-                    var invest_wmid = $('#invest_wmid').val();
-                    var invest_tid = $('#invest_tid').val();
+                var invest_utm_source = $('#invest_utm_source').val();
+                var invest_utm_medium = $('#invest_utm_medium').val();
+                var invest_utm_campaign = $('#invest_utm_campaign').val();
+                var invest_lid = $('#invest_lid').val();
+                var invest_aid = $('#invest_aid').val();
+                var invest_wmid = $('#invest_wmid').val();
+                var invest_tid = $('#invest_tid').val();
 
-                    phone = phone.replace(/[()\_-\s]/g, '');
-                    var data = {
-                        'name': name,
-                        'email': email,
-                        'phone': phone,
-                        'invest_utm_source': invest_utm_source,
-                        'invest_utm_medium': invest_utm_medium,
-                        'invest_utm_campaign': invest_utm_campaign,
-                        'invest_lid': invest_lid,
-                        'invest_aid': invest_aid,
-                        'invest_wmid': invest_wmid,
-                        'invest_tid': invest_tid
-                    };
-                    $.ajax({
-                        url: '/dlya-investora/ajax.php',
-                        type: 'POST',
-                        dataType: 'json',
-                        data: data,
-                        success: function (data) {
-                            yaCounter16671268.reachGoal('button_invest');
-                            successForm();
-                        },
-                        error: function (data) {
-                            errorForm();
-                        },
-                        timeout: 60000
-                    });
-                }
+                phone = phone.replace(/[()\_-\s]/g, '');
+                var data = {
+                    'name': name,
+                    'email': email,
+                    'phone': phone,
+                    'invest_utm_source': invest_utm_source,
+                    'invest_utm_medium': invest_utm_medium,
+                    'invest_utm_campaign': invest_utm_campaign,
+                    'invest_lid': invest_lid,
+                    'invest_aid': invest_aid,
+                    'invest_wmid': invest_wmid,
+                    'invest_tid': invest_tid
+                };
+                $.ajax({
+                    url: '/dlya-investora/ajax.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: data,
+                    success: function (data) {
+                        yaCounter16671268.reachGoal('button_invest');
+                        successForm();
+                    },
+                    error: function (data) {
+                        errorForm();
+                    },
+                    timeout: 60000
+                });
             }
+        }
+        return false;
+    });
+
+
+    function successForm() {
+        $('.success-text').html('Сообщение успешно отправлено!');
+        $('.success-form').fadeIn('fast');
+        setTimeout(function () {
+            clearForm($form);
+            $('.success-form').fadeOut('fast');
+            $('#invest_callme .btn-submit').removeClass('disabled');
+        }, 2000);
+    }
+
+    function errorForm() {
+        $('.success-text').html('Ошибка!');
+        $('.success-form').fadeIn('fast');
+        setTimeout(function () {
+            clearForm($form);
+            $('.success-form').fadeOut('fast');
+            $('#invest_callme .btn-submit').removeClass('disabled');
+        }, 2000);
+    }
+}
+
+if ($('[data-contacts-map]').length) {
+    $('[data-contacts-map]').each(function (i) {
+        initContactsMap($(this));
+    })
+}
+
+
+function initContactsMap($map) {
+    if (!$map) return;
+    ymaps.ready(init);
+
+
+    var $balloons = $map.find('.item');
+
+
+
+    function init() {
+        var id = $map.attr('id');
+
+        var map = new ymaps.Map(id, {
+            center: [53.197518, 50.129022],
+            zoom: 12,
+            controls: ['zoomControl']
+        });
+
+        $balloons.each(function () {
+            var longitude = +$(this).attr('data-longitude'),
+                latitude = +$(this).attr('data-latitude');
+
+            var officePlacemark = new ymaps.Placemark([longitude, latitude], {});
+            map.geoObjects.add(officePlacemark);
+        });
+
+        map.setBounds(map.geoObjects.getBounds(), {
+            checkZoomRange: true
+        });
+    }
+}
+$(function () {
+    if ($('#contacts_form').length) {
+
+
+        initFeedbackForm();
+        initMask();
+
+        $('select').styler({
+            selectSmartPositioning: false,
+            selectSearch: false,
+            onSelectOpened: function () {
+                $(this).find('.jq-selectbox__dropdown ul').jScrollPane();
+            }
+        });
+
+        $('.input-file').styler({
+            filePlaceholder: 'Прикрепить файл'
+        });
+    }
+});
+
+
+function initFeedbackForm() {
+
+    var $form = $('#contact_form'),
+        $feedbackType = $form.find('#feedback_type'),
+        $feedbackQuestionType = $('#feedback_question_type'),
+        $feedbackThemeField = $form.find('#feedback_theme_field'),
+        $feedbackFileList = $form.find('#feedback_file_list'),
+        $supportSuccess = $('#contacts_success'),
+        $remarkText = $('.mig-text-ico');
+
+    $feedbackType.on('change', function () {
+        if ($(this).val() === '5') {
+            $feedbackThemeField.removeClass('hide');
+
+        } else {
+            $feedbackThemeField.addClass('hide');
+            $feedbackThemeField.find('.field').removeClass('error');
+
+        }
+    });
+
+    $('[data-type="close-message"]').on('click', function () {
+        // clearForm($form);
+        $form.removeClass('hide');
+        $supportSuccess.addClass('hide');
+        $remarkText.removeClass('hide');
+        return false;
+    });
+
+    // добавление файлов
+    var fileCount = 1,
+        fileCountMax = 3;
+
+    $form.on('change', '.feedback-file', function () {
+        if (!$(this).val()) return false;
+
+        if (fileCount >= fileCountMax) return false;
+
+        var fileHTML = '<div class="col w-50"><div class="field for-file"><input type="file" name="feedback_file[]" class="input-file feedback-file" accept=".txt,.rftm,.doc,.docx,.jpg,.png"></div></div>';
+        if (fileCount === 2) fileHTML += '<div class="clr"></div>';
+
+        $feedbackFileList.append(fileHTML);
+        $feedbackFileList.find('.feedback-file').last().styler({
+            filePlaceholder: 'Прикрепить файл'
+        });
+
+        fileCount++;
+    });
+
+    $('#contact_form').on('change', '.feedback_file', function () {
+        if ($(this).val() != '') {
+            // проверка на кол-во
+            if ($('input.feedback_file').length < 3) {
+                var br = $('<br>');
+                var file = $('<input type="file" name="feedback_file[]" id="feedback_file" class="feedback_file">');
+                $('#contacts_form .form-wrapper .fields-wrapper .field.file').append(br).append(file);
+                file.styler({
+                    filePlaceholder: 'Прикрепить файл'
+                });
+            };
+        };
+    });
+
+    // отслеживаем изменения в валидируемых полях
+    $form.on('change', 'input, select, textarea', function () {
+        validateField($(this));
+    });
+
+
+    // отправка формы
+    $form.on('submit', function () {
+
+        if (validateForm($form)) {
+
+            var form = document.forms.contacts_form;
+            var formData = new FormData(form);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/contacts/ajax.php');
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        data = xhr.responseText;
+                    }
+                }
+            };
+
+            xhr.send(formData);
+
+            $form.addClass('hide');
+            $supportSuccess.removeClass('hide');
+            $remarkText.addClass('hide');
+        }
+        return false;
+    });
+}
+
+$(document).ready(function () {
+    $('.faq a').on('click', function () {
+        var $faq = $(this).parent().parent();
+        if ($faq.hasClass('active')) {
+            $faq.removeClass('active');
+        } else {
+            $faq.addClass('active').siblings('.active').removeClass('active');
+        }
+        return false;
+    });
+
+
+    $('#vacancies_list .vacancy-title a').on('click', function () {
+        var $vacancy = $(this).parent().parent();
+        if ($vacancy.hasClass('active')) {
+            $vacancy.removeClass('active');
+        } else {
+            $vacancy.addClass('active').siblings('.active').removeClass('active');
+        }
+        return false;
+    });
+
+    $('#vacancies_city').on('change', function () {
+        var city = $(this).val();
+        $('#body').addClass('noscroll');
+        if (city == 'all') {
+            $('#vacancies_list .vacancy').removeClass('hide-visibility active');
+        } else {
+            $('#vacancies_list .vacancy').addClass('hide-visibility').removeClass('active');
+            $('#vacancies_list .vacancy[data-city=' + city + ']').removeClass('hide-visibility');
+        }
+        setTimeout(function () {
+            $('#body').removeClass('noscroll');
+        }, 500);
+    });
+    // Вакансии
+
+
+
+
+});
+
+/*  ==================
+	ОФИСЫ
+	================== */
+if ($('#office_list_yandex').length) {
+
+    function initOfficeListYandex() {
+        var map, objectManager;
+
+        var $switches = $('#office_view a'),
+            $list = $('#office_list_yandex'),
+            $map = $('#office_map_yandex'),
+            $officeFilter = $('#office_filter_yandex'),
+            $officeRegion = $('#office_region'),
+            $officeCityField = $('#office_city_field'),
+            $officeCity = $('#office_city');
+
+        $officeRegion.on('change', function () {
+            var region = $(this).val();
+
+            if (!region) {
+                $officeCityField.addClass('hide');
+                $officeCity.val('');
+
+            } else {
+                //формируем массив городов для региона
+                var classTR = 'r' + region;
+                var cityArray = {};
+                var cityList = '';
+
+                $('#office_list_yandex table tr.' + classTR).each(function () {
+                    if (!$(this).hasClass('reg')) {
+
+                        cityArray[$(this).data('cityname')] = $(this).data('city');
+                    }
+
+                });
+
+                var cityArrayLength = 0;
+                for (var key in cityArray) {
+                    cityList += '<option value="' + cityArray[key] + '">' + key + '</option>';
+                    cityArrayLength++;
+                }
+
+                if (cityArrayLength > 1) {
+                    cityList = '<option value="">Все города</option>' + cityList;
+                }
+
+                $officeCity.html(cityList).trigger('refresh');
+
+                $officeCityField.removeClass('hide');
+            }
+            applyFilter();
+        });
+
+        $officeCity.on('change', function () {
+            applyFilter();
+        });
+
+        ymaps.ready(function () {
+            initMap();
+        });
+
+
+        $switches.on('click', function () {
+            if ($(this).hasClass('active')) return false;
+
+            $(this).addClass('active').siblings().removeClass('active');
+
+            var type = $(this).attr('href');
+            if (type === '#map') {
+                $list.addClass('hide');
+                $map.removeClass('hide');
+
+            } else {
+                $map.addClass('hide');
+                $list.removeClass('hide');
+            }
+
+            applyFilter();
+
             return false;
         });
 
 
-        function successForm() {
-            $('.success-text').html('Сообщение успешно отправлено!');
-            $('.success-form').fadeIn('fast');
-            setTimeout(function () {
-                clearForm($form);
-                $('.success-form').fadeOut('fast');
-                $('#invest_callme .btn-submit').removeClass('disabled');
-            }, 2000);
+        // инициализация яндекс-карты
+        function initMap() {
+            map = new ymaps.Map('offices_map', {
+                center: [53.195428, 50.101821],
+                zoom: 5,
+                controls: ['geolocationControl', 'zoomControl']
+            }, {
+                suppressMapOpenBlock: true
+            });
+
+
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 100,
+                clusterOpenBalloonOnClick: true,
+                clusterDisableClickZoom: false
+            });
+
+            addObjectsOnMap();
         }
 
-        function errorForm() {
-            $('.success-text').html('Ошибка!');
-            $('.success-form').fadeIn('fast');
-            setTimeout(function () {
-                clearForm($form);
-                $('.success-form').fadeOut('fast');
-                $('#invest_callme .btn-submit').removeClass('disabled');
-            }, 2000);
+        //формируем JSON балунов для ObjectManager
+        function addObjectsOnMap() {
+            var features = [];
+            $('#office_list_yandex tr:not(:first-child,.reg)').each(function () {
+                var $this = $(this),
+                    id = $this.attr('data-id'),
+                    coords = $(this).attr('data-coords'),
+                    city = $this.attr('data-city'),
+                    region = $(this).attr('class').replace('c' + city + ' r', '');
+
+                if (!coords) return false;
+
+                coords = coords.split(',');
+
+                // HTML информации об офисе
+                var officeHTML = '';
+                officeHTML += '<div class="city">' + $this.find('.col1 p').html() + '</div>';
+                officeHTML += '<div class="address">' + $this.find('.b-adr').html() + '</div>';
+                officeHTML += '<div class="phone">' + $this.find('.b-phone').html() + '</div>';
+
+                // html с графиком работы
+                var workTimeHTML = '';
+                $this.find('.w-time').each(function () {
+                    workTimeHTML += '<tr><td><div class="weekday">' + $(this).find('.day').html() + '</div></td><td><div class="time">' + $(this).find('.time').html() + '</div></td></tr>';
+                });
+
+                if (workTimeHTML) workTimeHTML = '<table>' + workTimeHTML + '</table>';
+
+                // итоговая HTML с контентом балуна
+                var balloonContent = '<div class="yamap-balloon-info">' + officeHTML + workTimeHTML + '</div>';
+
+                features.push({
+                    type: 'Feature',
+                    id: id,
+                    geometry: {
+                        type: 'Point',
+                        coordinates: [$.trim(coords[0]), $.trim(coords[1])],
+                    },
+                    properties: {
+                        balloonContent: balloonContent,
+                        id: id,
+                        city: city,
+                        region: region
+                    },
+                    options: {
+                        preset: 'islands#greenIcon',
+                        // preset: 'islands#darkGreenIcon',
+                        hideIconOnBalloonOpen: false
+                    }
+                });
+            });
+
+            objectManager.add({
+                type: 'FeatureCollection',
+                features: features
+            });
+
+            map.geoObjects.add(objectManager);
+
+            objectManager.clusters.options.set({
+                preset: 'islands#greenClusterIcons'
+                // preset: 'islands#darkGreenClusterIcons'
+            });
+        }
+
+        function mapRefreshBounds() {
+            map.container.fitToViewport();
+
+            var bounds = objectManager.getBounds();
+            if (bounds[0][0] === bounds[1][0] && bounds[0][1] === bounds[1][1]) {
+                setTimeout(function () {
+                    map.setZoom(13);
+                }, 200);
+                map.setCenter(bounds[0]);
+
+            } else {
+                map.setBounds(objectManager.getBounds());
+            }
+        }
+
+        // позиционирование фильтров 
+
+        // применение фильтров офисов
+        function applyFilter() {
+            // получаем значение офиса
+            var region = $officeRegion.val(),
+                city = $officeCity.val();
+
+            // фильтры для карты	
+            var filterQueryStr = '';
+            // класс для таблицы
+            var trClass = '';
+
+            if (region && region !== 'all') {
+                filterQueryStr += 'properties.region == ' + region;
+                trClass += '.r' + region;
+            }
+            if (city && city !== 'all') {
+                filterQueryStr += '&properties.city == ' + city;
+                trClass += '.c' + city;
+            }
+
+            //применяем фильтры для карты
+            if (!filterQueryStr) 'properties.id > 0'
+
+            objectManager.setFilter(filterQueryStr);
+
+            mapRefreshBounds();
+
+            // применяем фильтры для таблицы
+            $list.find('tr:not(:first-child)').removeClass('hide');
+            if (trClass) {
+                $list.find('tr:not(' + trClass + ',:first-child, .reg.r' + region + ')').addClass('hide');
+            }
+
+            // скролл к первой не disable строке!
+            var top = $list.find('tr:not(.hide, :first-child)').first().offset().top;
+
+            $('html').addClass('disable-scroll');
+            $.scrollTo(top, 200, {
+                axis: 'y',
+                onAfter: function () {
+                    setTimeout(function () {
+                        $('#header_wrapper').removeClass('show');
+                        $('html').removeClass('disable-scroll');
+                    }, 50);
+                }
+            });
         }
     }
->>>>>>> 80b6c9708b3b8b4e0f23f8aa315c00e4d46bbb29
+    initOfficeListYandex();
+}
+
+// var data = $(this).data('maphilight') || {};
+//коля
+if ($('#inner_regions_map').length) {
+    $('.maphilight').maphilight({
+        fillColor: '7dc041',
+        fillOpacity: 0.3,
+        stroke: false,
+        alwaysOn: true,
+        wrapClass: true
+    });
+
+    $('#map_rf').on('mouseenter', 'area', function (e) {
+        $('.region-tooltip').text($(this).attr('data-region'))
+        var data = $(this).data('maphilight') || {};
+        data.alwaysOn = data.alwaysOn;
+        data.fillOpacity = 1;
+        $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
+
+        tooltipPosition()
+    });
+    $('#map_rf').on('mouseout', 'area', function (e) {  
+        var data = $(this).data('maphilight') || {};
+        data.alwaysOn = data.alwaysOn; 
+        data.fillOpacity = 0.3;
+        $(this).data('maphilight', data).trigger('alwaysOn.maphilight');
+
+        handlerMouseleave()
+    });
+
+}
+
+// обработчик наведения на объект
+// обработчик потери фокуса объекта
+function handlerMouseleave(item) {
+    //скрываем тултип
+    $('.region-tooltip').removeClass('show');
+    document.onmousemove = null;
+}
+//коля
+
+//функция позиционирования тултипа
+function tooltipPosition(e) {
+
+    document.onmousemove = function (e) {
+        mousePos(e)
+    };
+    var mouseX = 0;
+    var mouseY = 0;
+
+    function mousePos(e) {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+
+        mouseX = event.clientX + $(window).scrollLeft();
+        mouseY = event.clientY + $(window).scrollTop();
+
+        var top = mouseY - 35 + 'px',
+            left = mouseX + 15 + 'px',
+            tooltipHeight = $('.region-tooltip').height() + 30, //дополнительный отступ 30
+            tooltipWidth = $('.region-tooltip').width() + 15; //дополнительный отступ 15
+        //показ тултипа
+        $('.region-tooltip').addClass('show');
+        //условия, чтобы тултип не ушел за вьюпорт
+        $('.region-tooltip').css({
+            top: top,
+            left: left
+        });
+        return true;
+    }
+
+}
+
+// авторизация
+function initAuthPage() {
+    // основные HTML объекты
+    var $authPage = $('#authpage'),
+        $form = $authPage.find('.form'),
+        $caption = $('#caption'),
+        $fieldPhone = $('#field_phone'),
+        $phone = $('#phone'),
+        $fieldPassword = $('#field_password'),
+        $password = $('#password'),
+        $errorMessage = $('#error_message'),
+        $buttonSubmit = $('#button_submit'),
+        $links = $('#links'),
+        $linkReg = $('#link_reg'),
+        $linkUserName = $('#link_username'),
+        $linkAccess = $('#link_access'),
+        $restoreTimer = $('#restore_timer'),
+        $restoreSeconds = $('#restore_seconds'),
+        $reCaptcha = $('#field_recaptcha');
+
+    // флаг блокировки восстановления доступа
+    var blockedRestore = false;
+
+    // таймер для повторной отправки восстановления доступа
+    var timerRestore;
+
+    // значения с именем и номером телефона из куки!
+    var userName = $('#user_name').val(),
+        userPhone = $('#user_phone').val();
+
+    if (userName && userPhone) {
+        setUserData();
+    } else {
+        clearUserData();
+    }
+
+    // fullscreen();
+    initPlaceholders();
+
+    hidePreloader();
+
+    // маска ввода для номера телефона
+    $phone
+        .on('change', function () {
+            if (!validateField($phone)) {
+                $fieldPhone.addClass('error');
+
+            } else {
+                $fieldPhone.removeClass('error');
+            }
+        });
+
+    $password.on('change', function () {
+        if (!validateField($password)) {
+            $fieldPassword.addClass('error');
+
+        } else {
+            $fieldPassword.removeClass('error');
+        }
+    });
+
+    // отправка формы заявки
+    $form.on('submit', function () {
+        var error = 0;
+
+        if (!validateForm($form)) {
+            error++;
+        }
+
+
+        if ($('.g-recaptcha:visible').length) {
+            var v = grecaptcha.getResponse();
+            if (v.length == 0) {
+                error++;
+                $reCaptcha.addClass('error');
+            } else {
+                $reCaptcha.removeClass('error');
+            }
+        }
+
+        if (error === 0) {
+            loginSubmit();
+        }
+
+
+
+        return false;
+    });
+
+    // переход к полной форме авторизации без приветствия
+    $linkUserName.on('click', function () {
+        clearUserData();
+        return false;
+    });
+
+    // отправка запроса  на восстановление доступа
+    $linkAccess.on('click', function () {
+        var error = 0;
+        if (!validateField($phone)) {
+            $fieldPhone.addClass('error');
+            error++;
+
+        } else {
+            $fieldPhone.removeClass('error');
+        }
+
+        if (error === 0) {
+            restore();
+            $password.val('').trigger('blur');
+        }
+
+        return false;
+    });
+
+    $authPage.on('click', '.restore-send-button', function () {
+        var error = 0;
+        if (!validateField($phone)) {
+            $fieldPhone.addClass('error');
+            error++;
+
+        } else {
+            $fieldPhone.removeClass('error');
+        }
+
+        if (error === 0) {
+            restore();
+        }
+
+        return false;
+    });
+
+    // запрос на восстановление доступа
+    function restore() {
+        showPreloader();
+
+        var login = $phone.inputmask('unmaskedvalue');
+
+        $.ajax({
+            url: '/login/restore.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                'login': login
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    var loginHidden = '+7 (' + login.slice(0, 3) + ') ** *' + login.slice(-2);
+                    $caption.html('МигКредит отправил временный пароль на номер телефона <nobr>' + loginHidden + '</nobr>').removeClass('hide');
+                    $fieldPhone.addClass('hide');
+
+                    $linkReg.removeClass('hide');
+                    $linkAccess.addClass('hide');
+                    $linkUserName.addClass('hide');
+                    $links.removeClass('hide');
+
+                    // запускаем таймер до повторной отправки
+                    startRestoreTimer(300);
+
+                    hidePreloader();
+
+                } else {
+                    var messageHTML = '';
+                    if (data.Fault_ID == 'PAD0001') {
+                        // Превышено допустимое кол-во попыток смены пароля
+                        messageHTML = '<p class="title">Превышено допустимое кол-во попыток смены пароля.</p><p>Попробуйте выполнить запрос похже или обратитесь по телефону <nobr>8-800-707-2115</nobr>.</a></p>';
+
+                        // блокируем ссылку восстановления доступа
+                        if (!blockedRestore) {
+                            blockedRestoreLink();
+                        }
+
+                    } else if (data.Fault_ID == 'PAD0002') {
+                        // Сервис смены пароля недоступен
+                        messageHTML = '<p class="title">Сервис смены пароля недоступен, мы работаем над устранением причины.</p><p>Скорректируйте данные для входа.</p>';
+
+                    } else if (data.Fault_ID == 'PAD0003') {
+                        // Нет действующей учетной записи
+                        messageHTML = '<p class="title">Нет действующей учетной записи.</p><p>Для регистрации личного кабинета воспользуйтесь <a href="/lk_access/">ссылкой</a> или обратитесь по телефону <nobr>8-800-707-2115</nobr>.</p>';
+
+                    } else if (data.Fault_ID == 'PAD0004') {
+                        // максимум 3 раза в сутки восстановление доступа
+                        messageHTML = '<p class="title">Превышено допустимое количество попыток смены пароля.</p><p>Введите пароль, полученный в СМС, или повторите попытку через 24 часа.</p>';
+
+                        // блокируем ссылку восстановления доступа на сутки!
+                        if (!blockedRestore) {
+                            blockedRestoreLink(86400000);
+                        }
+
+                    } else if (data.Fault_ID == 'PAD0005') {
+                        // запускаем таймер до повторной отправки
+                        var seconds = +data.Fault_Description;
+                        startRestoreTimer(seconds);
+
+                    } else {
+                        messageHTML = '<p class="title">Что-то пошло не так...</p><p>Попробуйте еще раз или обратитесь к нам через <a href="/feedback/">форму обратной связи</a>, описав ситуацию и приложив скриншот ошибки.</p>';
+                    }
+
+                    showError(messageHTML);
+                    hidePreloader();
+                }
+            },
+            error: function (data) {
+                showError('<p class="title">Что то пошло не так...</p><p>Попробуйте еще раз или обратитесь к нам через <a href="/feedback/">форму обратной связи</a>, описав ситуацию и приложив скриншот ошибки.</p>');
+                hidePreloader();
+            },
+            timeout: 130000
+        });
+    }
+
+    // блокировка кнопки восстановления доступа
+    function blockedRestoreLink() {
+        blockedRestore = true;
+        $linkAccess.addClass('hide');
+
+        setTimeout(function () {
+            blockedRestore = false;
+            $linkAccess.removeClass('hide');
+        }, 60000);
+    }
+
+    // запуск таймера повторной отправки восстановления доступа
+    function startRestoreTimer(seconds) {
+        stopRestoreTimer();
+
+        refreshRestoreTimer(seconds);
+
+        $linkAccess.addClass('hide');
+        $restoreTimer.removeClass('hide');
+    }
+
+    // остановка таймера повторной отправки восстановления доступа
+    function stopRestoreTimer() {
+        if (timerRestore) clearTimeout(timerRestore);
+
+        $restoreTimer.addClass('hide');
+        // если восстановление доступа не заблокировано
+        if (!blockedRestore) $linkAccess.removeClass('hide');
+    }
+
+    function refreshRestoreTimer(time) {
+        //если время еще есть запускаем фукнцию заново
+        //иначе даем возможность повторной отправки СМС кода и изменения номера
+        if (time > 1) {
+            time--;
+
+            var seconds = time;
+            var minutes = Math.floor(seconds / 60);
+            seconds -= minutes * 60;
+
+            //доп.проверки - если колво секунд/минут 60
+            if (seconds == 60) {
+                minutes--;
+                seconds = 59;
+            }
+
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            $restoreTimer.html('Повторная отправка через ' + minutes + ':' + seconds);
+            timerRestore = setTimeout(function () {
+                refreshRestoreTimer(time);
+            }, 1000);
+
+        } else {
+            stopRestoreTimer();
+        }
+    }
+
+    // запрос на авторизацию
+    function loginSubmit() {
+        showPreloader();
+
+        var login = $phone.inputmask('unmaskedvalue'),
+            password = $.trim($password.val()),
+            recaptcha = grecaptcha.getResponse();
+
+        password = $.sha1(password);
+
+        $.ajax({
+            url: '/login/save.php',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                'login': login,
+                'password': password,
+                'gResponse': recaptcha
+            },
+            success: function (data) {
+                if (data.status == 1) {
+                    window.location.href = data.url;
+                    resetCaptcha();
+
+                } else {
+                    var messageHTML = '';
+                    if (data.Fault_ID == 'UCDB0102') {
+                        // сообщение 108
+                        messageHTML = '<p class="title">Нет действующей учетной записи.</p><p><a href="/lk_access/">Зарегистрироваться</a></p>';
+
+                    } else if (data.Fault_ID == 'UCDB0103') {
+                        if (+data.loginFault103Count >= 5) {
+                            $reCaptcha.show();
+                            messageHTML = '<p class="title">Защита от автоматического заполнения.<br>Подтвердите, что Вы не робот</p>';
+
+                            if (+data.loginFault103Count > 5) {
+                                resetCaptcha();
+                                messageHTML = '<p class="title">Неверно введен пароль. <br>Подтвердите, что Вы не робот</p>';
+                                $password.val('').trigger('blur');
+                            }
+
+                        } else {
+                            // сообщение 109
+                            messageHTML = '<p class="title">Неверно введен телефон/пароль.</p><p><a href="/lk_access/">Зарегистрироваться</a></p>';
+                            if (!timerRestore) {
+                                messageHTML += '<p><a href="#" class="restore-send-button">Восстановить доступ</a></p>';
+                            }
+
+                            resetCaptcha();
+                        }
+
+                    } else {
+                        messageHTML = '<p class="title">Что-то пошло не так...</p><p>Попробуйте еще раз или обратитесь к нам через <a href="/feedback/">форму обратной связи</a>, описав ситуацию и приложив скриншот ошибки.</p>';
+                    }
+
+                    showError(messageHTML);
+                    hidePreloader();
+                }
+            },
+            error: function (data) {
+                showError('<p class="title">Что-то пошло не так...</p><p>Попробуйте еще раз или обратитесь к нам через <a href="/feedback/">форму обратной связи</a>, описав ситуацию и приложив скриншот ошибки.</p>');
+                hidePreloader();
+            },
+            timeout: 130000
+        });
+    }
+
+    // сообщение об ошибке, на вход HTML ошибки
+    function showError(message) {
+        $errorMessage.html(message).removeClass('hide');
+    }
+
+    // скрытие ошибки
+    function hideError() {
+        $errorMessage.addClass('hide');
+    }
+
+    // добавление данных о пользователи в UI из куки
+    function setUserData() {
+        // добавляем номер телефона из куки и скрываем поле ввода
+        $phone.val(userPhone);
+        $fieldPhone.addClass('hide');
+
+        // проверяем возможность восстановления доступа
+        // если указано кол-во секунд до повторной отправки!
+        var seconds = +$restoreSeconds.val();
+        if (seconds > 0) {
+            // формируем экран с сообщением о временном пароле
+            var loginHidden = '+7 (' + userPhone.slice(0, 3) + ') ** *' + userPhone.slice(-2);
+            $caption.html('МигКредит отправил временный пароль на номер телефона <nobr>' + loginHidden + '</nobr>').removeClass('hide');
+            $fieldPhone.addClass('hide');
+
+            $linkReg.removeClass('hide');
+            $linkAccess.addClass('hide');
+            $linkUserName.addClass('hide');
+            $links.removeClass('hide');
+
+            // запускаем таймер до повторной отправки
+            startRestoreTimer(seconds);
+
+        } else {
+            // формируем заголовок
+            $caption.html('Здравствуйте, ' + userName + '!').removeClass('hide');
+
+            // показываем ссылку я не надежда и скрываем ссылку Зарегистрироваться
+            $linkUserName.html('Я не ' + userName).removeClass('hide');
+            $linkReg.addClass('hide');
+            $links.removeClass('hide');
+        }
+    }
+    // очистка данных о пользователе
+    function clearUserData() {
+        // очищаем номер телефона и показываем его
+        $phone.val('');
+        $fieldPhone.removeClass('hide');
+
+        // очищаем заголовок и скываем его
+        $caption.addClass('hide').html('');
+
+        // скрываем ссылку я не надежда и показываем ссылка Зарегистрироваться
+        $linkUserName.addClass('hide').html('');
+        $linkReg.removeClass('hide');
+        $links.removeClass('hide');
+    }
+
+    // фулскрин блоки
+    // function fullscreen() {
+    //     setHeight();
+
+    //     $(window).on('resize scroll', function () {
+    //         setHeight();
+    //     });
+
+    //     function setHeight() {
+    //         var windowWidth = +$(window).width(),
+    //             windowHeight = +$(window).height(),
+    //             headerHeight = +$('.header').height(),
+    //             breadcrumsHeight = 0;
+    //         if ($('.breadcrumbs').length) breadcrumsHeight = +$('.breadcrumbs').outerHeight(true);
+
+    //         var height = windowHeight - headerHeight - breadcrumsHeight;
+    //         if (height < 470 || windowWidth < 1000) height = 470;
+
+    //         $authPage.css('minHeight', height + 'px');
+
+    //         // доп.классы в зависимости от высоты
+    //         if (windowHeight < 800) {
+    //             $('html').addClass('height-small');
+    //         } else {
+    //             $('html').removeClass('height-small');
+    //         }
+    //     }
+    // }
+
+    //placeholders
+    function initPlaceholders() {
+        $('.custom-placeholder').each(function () {
+            if (!$(this).hasClass('ready')) {
+                var $this = $(this);
+                var $field = $this.parent();
+                var plh = $this.data('placeholder');
+                var val = $.trim($this.val());
+                if ((val == '' || val == plh) && plh != '' && plh != undefined) {
+                    $field.addClass('empty');
+                } else {
+                    $field.removeClass('empty');
+                }
+
+                $field.prepend('<span class="label">' + plh + '</span>');
+
+                $(this).addClass('ready');
+
+                $(this).on('focus', function () {
+                    var $this = $(this);
+                    var $field = $this.parent();
+                    var plh = $this.data('placeholder');
+                    var val = $.trim($this.val());
+                    if (!$this.prop('readonly')) {
+                        if (val == '' || val == plh) {
+                            $field.removeClass('empty');
+                            $this.val('');
+                        }
+                    }
+                }).on('blur', function () {
+                    var $this = $(this);
+                    var $field = $this.parent();
+                    var val = $.trim($this.val());
+                    var plh = $this.data('placeholder');
+
+                    if (val == '' || val == plh) {
+                        $field.removeClass('error success').addClass('empty');
+                    } else {
+                        $field.removeClass('empty');
+                    }
+                });
+
+            }
+
+        })
+    }
+    // капча
+    function resetCaptcha() {
+        grecaptcha.reset()
+    }
+    // показать/скрыть прелоадер
+    function showPreloader() {
+        $authPage.addClass('load');
+    }
+
+    function hidePreloader() {
+        $authPage.removeClass('load');
+    }
+}
+
+
+
 
 //# sourceMappingURL=script.js.map

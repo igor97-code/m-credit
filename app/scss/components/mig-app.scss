@@ -1,0 +1,328 @@
+.section {
+    .site-map {
+        margin-bottom: 40px;
+        float: left;
+
+        &.site-map-regions {
+            ul {
+                li {
+                    width: 33%;
+                    float: left;
+                    padding-right: 10px;
+
+                    &:nth-child(3n+1) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+
+        a {
+            font-size: 16px;
+            line-height: 179.19%;
+            color: #333333;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            +ul {
+                padding: 0;
+                margin: 10px 0;
+
+                &:before {
+                    display: none;
+                }
+
+                li {
+                    padding: 0;
+                    margin: 10px 0;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    a {
+                        color: #7E7E7E;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.site-map-regions li:nth-child(3n+1) {
+    clear: both !important;
+}
+
+//Миг апп
+.section {
+    .partner-programm {
+        .h2 {
+            text-align: center;
+        }
+
+        &-text {
+            width: 50%;
+            margin-left: 25%;
+
+            li {
+                color: $colorWhite;
+
+                &:before {
+                    color: $colorWhite;
+
+                }
+            }
+        }
+
+        .hands {
+            color: #fff;
+            font-size: 0;
+
+            .icon {
+                font-size: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 20px;
+            }
+
+            &:before,
+            &:after {
+                content: "";
+                display: inline-block;
+                height: 1px;
+                width: calc(50% - 40px);
+                background-color: #fff;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.big-head {
+    .button-block {
+        .app-link {
+            display: block;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden;
+
+            &.appstore {
+                background-image: url(../img/button-appstore-white.svg);
+            }
+
+            &.googleplay {
+                background-position: left;
+                background-image: url(../img/button-googleplay-white.svg);
+            }
+
+            &:before {
+                content: "";
+                display: block;
+                float: left;
+                padding-top: 52px;
+            }
+        }
+    }
+}
+
+.mig-form {
+    &-image {
+        width: 146px;
+        height: 142px;
+    }
+
+    &-text {
+        margin-top: 7px;
+    }
+
+    .phone,
+    .form {
+        height: 142px;
+    }
+}
+
+.mig-app {
+    padding: 42.5px 0;
+
+    &-image {
+        display: block;
+        width: 313px;
+        height: 313px;
+        background: url(../img/logo.svg) center center/75% no-repeat;
+        background-color: #fff;
+        border-radius: 88px;
+    }
+
+    &-text {
+        p {
+            color: $colorWhite;
+        }
+
+        .custom-text {
+            font-size: 70px;
+            line-height: 145%;
+        }
+
+    }
+
+    &.infographic {
+        padding: 0;
+
+        .col {
+            border-right: 1px solid $colorWhite;
+
+            &:nth-last-child(1) {
+                border: none;
+            }
+
+            .item {
+                margin: 0;
+
+                .h1 {
+                    color: $colorWhite;
+                    margin: 0;
+                }
+
+                .h2 {
+                    margin: 0;
+                }
+
+
+            }
+        }
+
+        .button-block {
+            .col {
+                border: none;
+            }
+
+            .app-link {
+                display: block;
+                margin: 70px 0 15px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                overflow: hidden;
+
+                &.appstore {
+                    background-position: right;
+                    background-image: url(../img/button-appstore-white.svg);
+                }
+
+                &.googleplay {
+                    background-position: left;
+                    background-image: url(../img/button-googleplay-white.svg);
+                }
+
+                &:before {
+                    content: "";
+                    display: block;
+                    float: left;
+                    padding-top: 45px;
+                }
+            }
+        }
+    }
+}
+
+@include only-tablet {
+    .mig-app {
+        &-image {
+            width: 270px;
+            height: 270px;
+            border-radius: 70px;
+        }
+    }
+}
+
+@include only-mobile {
+    .section {
+        .partner-programm {
+            .h2 {
+                text-align: left;
+            }
+
+            &-text {
+                width: 100%;
+                margin-left: 0%;
+            }
+        }
+
+        .site-map {
+
+            &.site-map-regions {
+                ul {
+                    li {
+                        width: 100%;
+                        float: left;
+                        padding-right: 10px;
+
+                        &:nth-child(3n+1) {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .big-head {
+        .button-block {
+            .app-link {
+                &.appstore {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .mig-form {
+        .form {
+            margin-bottom: 40px;
+            height: auto;
+        }
+    }
+
+    .mig-app {
+        padding: 0;
+
+        &-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50px;
+            margin: 0 auto;
+        }
+
+        &-text {
+            text-align: center;
+
+            .custom-text {
+                font-size: 45px;
+            }
+        }
+
+        &.infographic {
+            .col {
+                border: none;
+
+                .item {
+                    margin: 20px 0;
+                }
+            }
+
+            .button-block {
+                .app-link {
+                    margin: 30px 0 15px;
+                }
+            }
+        }
+    }
+}

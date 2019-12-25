@@ -290,7 +290,7 @@ function initPlaceholders() {
             $field.removeClass('empty');
         }
 
-        $field.find('.selectwrap').prepend('<span class="label">' + plh + '</span>');
+        $field.find('.selectwrap').prepend('<span class="label">' +  plh + '</span>');
 
         $this.addClass('ready');
 

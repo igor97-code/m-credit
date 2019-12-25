@@ -1,0 +1,2625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee53ceff-c9ad-40a9-af1b-7ea9516ad6c1&lang=ru_RU"
+        type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="page_preloader"
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-col for-logo no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="logo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-col header-info no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <p class="title">Лидер рынка</p>
+                            <p class="remark">микрофинансовых организаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right hide-mobile">
+                <div class="header-col">
+                    <div class="table-block">
+                        <div class="cell">
+                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                                кабинет</a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                    src="./img/icon-appstore.svg" /></a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                    src="./img/icon-googleplay.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- главное меню -->
+    <div id="main_menu" class="main-menu">
+        <div class="container">
+            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+            <ul class="main-menu-content">
+                <li>
+                    <a href="#" class="menu-link">Займы</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/#products" class="menu-link ">Продукты</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/get/" class="menu-link ">Как получить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                    карта</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                    телефон</a>
+                            </li>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                    банке</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                </li>
+
+                <li>
+                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                </li>
+
+                <li>
+                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                    <div class="submenu right">
+                        <ul>
+                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                            <li>
+                                <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                    страхование</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="burger">
+                    <i class="icon icon-menu-button"></i>
+                    <div class="submenu fullwidth">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                        <li>
+                                            <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                        </li>
+                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                        <li>
+                                            <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                                информации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link big">Акции</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link">Привилегии клиентам</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                                class="submenu-link">Акции и конкурсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                                друга</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                        <li>
+                                            <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                                программа</a>
+                                        </li>
+                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- основной контент -->
+    <div class="body">
+        <div class="header-margin"></div>
+        <div class="main-menu-margin"></div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+                <a href="#" class="item active">Офисы</a>
+            </div>
+        </div>
+
+        <div class="section p-all-0 shadow">
+            <div class="container">
+                <div class="secondary-menu">
+                    <a href="#" class="menu-item ">О компании</a>
+                    <a href="#" class="menu-item ">Контакты</a>
+                    <a href="#" class="menu-item ">Документы</a>
+                    <a href="#" class="menu-item ">Команда</a>
+                    <a href="#" class="menu-item ">Карьера</a>
+                    <a href="#" class="menu-item ">Отзывы</a>
+                    <a href="#" class="menu-item ">Регионы</a>
+                    <a href="#" class="menu-item menu-item-active">Офисы</a>
+                    <a href="#" class="menu-item ">Раскрытие информации</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-50">
+                        <p class="h1 custom-header">Отделения МигКредит
+
+                        </p>
+                    </div>
+                    <div class="col w-50">
+                        <span id="office_view" class="office-view">
+                            <span class="tabs-switchers">
+                                <a class="active switcher" href="#office_list "><span>Список</span></a>
+                                <a href="#map" class="switcher"><span>Карта</span></a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <!--<div class="office-work">
+            <p class="title">График работы офисов в новогодние праздники:</p>
+            <div class="time">
+                <ul>
+                    <li>31 декабря – 9:00-15:00 по местному времени</li>
+                    <li>1-3 января – выходной</li>
+                    <li>4-6 января – 10:00-17:00 по местному времени</li>
+                    <li>7 января – выходной</li>
+                    <li>8-10 января -  10:00-17:00 по местному времени</li>
+                    <li>с 11 января – работа в обычном режиме</li>
+                </ul>
+            </div>
+        </div>-->
+                <div class="office">
+                    <div id="office_filter_yandex" class="office-filter-yandex">
+                        <div class="field required for-select empty">
+                            <div class="selectwrap">
+                                <select name="office_region" id="office_region">
+                                    <option value="all">Выберите свой регион</option>
+                                    <option value="1">Москва</option>
+                                    <option value="2">Московская область</option>
+                                    <option value="3">Санкт-Петербург</option>
+                                    <option value="4">Алтайский край</option>
+                                    <option value="5">Архангельская область</option>
+                                    <option value="6">Астраханская область</option>
+                                    <option value="7">Белгородская область</option>
+                                    <option value="8">Брянская область</option>
+                                    <option value="9">Владимирская область</option>
+                                    <option value="10">Волгоградская область</option>
+                                    <option value="11">Воронежская область</option>
+                                    <option value="12">Ивановская область</option>
+                                    <option value="13">Калужская область</option>
+                                    <option value="14">Кировская область</option>
+                                    <option value="15">Краснодарский край</option>
+                                    <option value="16">Красноярский край</option>
+                                    <option value="17">Курская область</option>
+                                    <option value="18">Ленинградская область</option>
+                                    <option value="19">Липецкая область</option>
+                                    <option value="20">Нижегородская область</option>
+                                    <option value="21">Новгородская область</option>
+                                    <option value="22">Новосибирская область</option>
+                                    <option value="23">Омская область</option>
+                                    <option value="24">Оренбургская область</option>
+                                    <option value="25">Пензенская область</option>
+                                    <option value="26">Пермский край</option>
+                                    <option value="27">Псковская область</option>
+                                    <option value="28">Республика Башкортостан</option>
+                                    <option value="29">Республика Марий Эл</option>
+                                    <option value="30">Республика Татарстан</option>
+                                    <option value="31">Ростовская область</option>
+                                    <option value="32">Рязанская область</option>
+                                    <option value="33">Самарская область</option>
+                                    <option value="34">Саратовская область</option>
+                                    <option value="35">Свердловская область</option>
+                                    <option value="36">Ставропольский край</option>
+                                    <option value="37">Тверская область</option>
+                                    <option value="38">Тульская область</option>
+                                    <option value="39">Тюменская область</option>
+                                    <option value="40">Удмуртская Республика</option>
+                                    <option value="41">Ульяновская область</option>
+                                    <option value="42">Ханты-Мансийского АО</option>
+                                    <option value="43">Челябинская область</option>
+                                    <option value="44">Чувашская Республика</option>
+                                    <option value="45">Ярославская область</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <div id="office_city_field" class="field hide">
+                                <div class="field required for-select empty">
+                                    <div class="selectwrap">
+                                        <select name="office_city" id="office_city">
+                                            <option value="all">Все города</option>
+                                            <option value="1">Москва</option>
+                                            <option value="2">Балашиха</option>
+                                            <option value="3">Дмитров</option>
+                                            <option value="4">Домодедово</option>
+                                            <option value="5">Зеленоград</option>
+                                            <option value="6">Коломна</option>
+                                            <option value="7">Королев</option>
+                                            <option value="8">Красногорск</option>
+                                            <option value="9">Люберцы</option>
+                                            <option value="10">Мытищи</option>
+                                            <option value="11">Наро-Фоминск</option>
+                                            <option value="12">Ногинск</option>
+                                            <option value="13">Одинцово</option>
+                                            <option value="14">Орехово-Зуево</option>
+                                            <option value="15">Подольск</option>
+                                            <option value="16">Раменское</option>
+                                            <option value="17">Сергиев Посад</option>
+                                            <option value="18">Серпухов</option>
+                                            <option value="19">Химки</option>
+                                            <option value="20">Санкт-Петербург</option>
+                                            <option value="21">Санкт-Петербург Пионерская</option>
+                                            <option value="22">Барнаул</option>
+                                            <option value="23">Архангельск</option>
+                                            <option value="24">Астрахань</option>
+                                            <option value="25">Белгород</option>
+                                            <option value="26">Старый Оскол</option>
+                                            <option value="27">Брянск</option>
+                                            <option value="28">Владимир</option>
+                                            <option value="29">Волгоград</option>
+                                            <option value="30">Воронеж</option>
+                                            <option value="31">Иваново</option>
+                                            <option value="32">Калуга</option>
+                                            <option value="33">Киров</option>
+                                            <option value="34">Краснодар</option>
+                                            <option value="35">Новороссийск</option>
+                                            <option value="36">Сочи</option>
+                                            <option value="37">Красноярск</option>
+                                            <option value="38">Курск</option>
+                                            <option value="39">Колпино</option>
+                                            <option value="40">Липецк</option>
+                                            <option value="41">Нижний Новгород</option>
+                                            <option value="42">Великий Новгород</option>
+                                            <option value="43">Новосибирск</option>
+                                            <option value="44">Омск</option>
+                                            <option value="45">Оренбург</option>
+                                            <option value="46">Орск</option>
+                                            <option value="47">Пенза</option>
+                                            <option value="48">Березники</option>
+                                            <option value="49">Пермь</option>
+                                            <option value="50">Псков</option>
+                                            <option value="51">Уфа</option>
+                                            <option value="52">Йошкар-Ола</option>
+                                            <option value="53">Казань</option>
+                                            <option value="54">Набережные Челны</option>
+                                            <option value="55">Ростов-на-Дону</option>
+                                            <option value="56">Рязань</option>
+                                            <option value="57">Самара</option>
+                                            <option value="58">Сызрань</option>
+                                            <option value="59">Тольятти</option>
+                                            <option value="60">Саратов</option>
+                                            <option value="61">Энгельс</option>
+                                            <option value="62">Екатеринбург</option>
+                                            <option value="63">Каменск-Уральский</option>
+                                            <option value="64">Нижний Тагил</option>
+                                            <option value="65">Первоуральск</option>
+                                            <option value="66">Пятигорск</option>
+                                            <option value="67">Ставрополь</option>
+                                            <option value="68">Тверь</option>
+                                            <option value="69">Новомосковск</option>
+                                            <option value="70">Тула</option>
+                                            <option value="71">Тюмень</option>
+                                            <option value="72">Ижевск</option>
+                                            <option value="73">Ульяновск</option>
+                                            <option value="74">Сургут</option>
+                                            <option value="75">Челябинск</option>
+                                            <option value="76">Чебоксары</option>
+                                            <option value="77">Ярославль</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div> -->
+                    </div>
+
+                    <div class="office-content">
+                        <div id="office_list_yandex" class="office-list table">
+                            <table>
+                                <tbody>
+                                    <tr></tr>
+                                    <tr class="reg r1">
+                                        <td class="col-region" colspan="3" class="r1">
+                                            <p>Москва</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Москва" data-city="1" class="c1 r1" data-id="office1736"
+                                        data-coords="55.658859, 37.620188">
+                                        <td class="col1">
+                                            <p>Москва-Варшавское</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Варшавское шоссе, д. 75, корпус 1</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time"> 09:00-20:00,</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time"> 10:00-19:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Москва" data-city="1" class="c1 r1" data-id="office4359"
+                                        data-coords="55.788991, 37.784637">
+                                        <td class="col1">
+                                            <p>Москва-Измайловское</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. 3-я Парковая д.4</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 2901, 2902)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Москва" data-city="1" class="c1 r1" data-id="office16"
+                                        data-coords="55.7940516, 37.5918297,17">
+                                        <td class="col1">
+                                            <p>Москва-Сущевское</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Сущевский Вал, 5, стр. 3</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time"> 10:00-19:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r2">
+                                        <td class="col-region" colspan="3" class="r2">
+                                            <p>Московская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Балашиха" data-city="2" class="c2 r2" data-id="office1737"
+                                        data-coords="55.795418, 37.934723">
+                                        <td class="col1">
+                                            <p>Балашиха</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Советская д. 2/9</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 2735, 1327)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Дмитров" data-city="3" class="c3 r2" data-id="office1746"
+                                        data-coords="56.341754, 37.521755">
+                                        <td class="col1">
+                                            <p>Дмитров</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Загорская, д. 36, помещение 63</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел:8 (499) 750 00 18 (доб. 1337, 1335)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">10:00-19:00</span></span>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Домодедово" data-city="4" class="c4 r2" data-id="office1745"
+                                        data-coords="55.435871, 37.7703713,17">
+                                        <td class="col1">
+                                            <p>Домодедово</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Корнеева д. 8, 2 эт</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 1230, 1209)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Зеленоград" data-city="5" class="c5 r2" data-id="office1738"
+                                        data-coords="56.002807, 37.205885">
+                                        <td class="col1">
+                                            <p>Зеленоград</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Центральный пр-т, корп.234А</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1332, 1328)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Коломна" data-city="6" class="c6 r2" data-id="office1739"
+                                        data-coords="55.084080, 38.800142">
+                                        <td class="col1">
+                                            <p>Коломна</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Октябрьский Революции, д. 370, офис 3</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 2911, 2912)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">вт-сб</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y">вс,
+                                                            пн</span></span> <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Королев" data-city="7" class="c7 r2" data-id="office6838"
+                                        data-coords="55.923237, 37.822001">
+                                        <td class="col1">
+                                            <p>Королев</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Карла Маркса, д. 1А, 2 этаж, комната
+                                                    15</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (1348, 1352)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Красногорск" data-city="8" class="c8 r2" data-id="office1799"
+                                        data-coords="55.815510, 37.340070">
+                                        <td class="col1">
+                                            <p>Красногорск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пер. Железнодорожный, д. 7, комната 28</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1333, 1334)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Люберцы" data-city="9" class="c9 r2" data-id="office19"
+                                        data-coords="55.6796418, 37.8903371,17">
+                                        <td class="col1">
+                                            <p>Люберцы</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Октябрьский пр-т, д.151/9</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1226, 1227)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time"> 10:00-19:00<br>
+                                                        без выходных</span></span><br>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Мытищи" data-city="10" class="c10 r2" data-id="office1740"
+                                        data-coords="55.915877, 37.7591103,17">
+                                        <td class="col1">
+                                            <p>Мытищи</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Шараповский проезд, д.1Б<br>
+                                                    (рынок привокзальной площади)</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1324, 1325)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Наро-Фоминск" data-city="11" class="c11 r2" data-id="office7083"
+                                        data-coords="55.382720, 36.752131">
+                                        <td class="col1">
+                                            <p>Наро-Фоминск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Московская, д. 11Б, павильон 8</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 57 73 (доб. 1241, 1242)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y"></span></span>
+                                                    <span class="time">без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ногинск" data-city="12" class="c12 r2" data-id="office1741"
+                                        data-coords="55.854902, 38.4373083,17">
+                                        <td class="col1">
+                                            <p>Ногинск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. 3-го интернационала, д. 69, ЦУМ 3-й
+                                                    этаж</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1326, 1353)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Одинцово" data-city="13" class="c13 r2" data-id="office1742"
+                                        data-coords="55.674478, 37.2754773,17">
+                                        <td class="col1">
+                                            <p>Одинцово</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Можайское шоссе, д. 20-А, 2-й этаж</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 1225, 1224)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Орехово-Зуево" data-city="14" class="c14 r2" data-id="office7082"
+                                        data-coords="55.795107, 38.974333">
+                                        <td class="col1">
+                                            <p>Орехово-Зуево</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Вокзальная, д. 19, 2 этаж</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 1243, 1244)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y"></span></span>
+                                                    <span class="time">без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Подольск" data-city="15" class="c15 r2" data-id="office1743"
+                                        data-coords="55.427569, 37.5522113,17">
+                                        <td class="col1">
+                                            <p>Подольск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Комсомольская, д. 1, 1-эт. офис №9</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 1228, 1229)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span><br>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Раменское" data-city="16" class="c16 r2" data-id="office1748"
+                                        data-coords="55.566868, 38.229163">
+                                        <td class="col1">
+                                            <p>Раменское</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr"> ул. Советская, д.1б в ТК "Агат"</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 2907, 2909)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Сергиев Посад" data-city="17" class="c17 r2" data-id="office1747"
+                                        data-coords="56.302246, 38.130152">
+                                        <td class="col1">
+                                            <p>Сергиев Посад</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-т Красной Армии, д. 84/22, этаж 2, офис №
+                                                    20</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 750 00 18 (доб. 1336, 1351)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y"></span></span>
+                                                    <span class="time">без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Серпухов" data-city="18" class="c18 r2" data-id="office1744"
+                                        data-coords="54.9352842, 37.4503328,17">
+                                        <td class="col1">
+                                            <p>Серпухов</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул Ворошилова дом 214. 1 этаж</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 1231, 1232)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time"> 10:00-19:00<br>
+                                                        без выходных</span></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Химки" data-city="19" class="c19 r2" data-id="office1749"
+                                        data-coords="55.8941234, 37.4496481,16.5">
+                                        <td class="col1">
+                                            <p>Химки</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Московская 14а, 2 этаж</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (499) 290 51 73 (доб. 2015, 2037)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-вс</span></span>
+                                                    <span class="time">10:00-19:00<br>
+                                                        без выходных</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r3">
+                                        <td class="col-region" colspan="3" class="r3">
+                                            <p>Санкт-Петербург</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Санкт-Петербург" data-city="20" class="c20 r3"
+                                        data-id="office1750" data-coords="59.9336012, 30.3151449,13">
+                                        <td class="col1">
+                                            <p>Санкт-Петербург</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">наб. канала Грибоедова,<br>
+                                                    д. 68, пом. 15Н, лит. А</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2533)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span>
+                                                <br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Санкт-Петербург Пионерская" data-city="21" class="c21 r3"
+                                        data-id="office7144" data-coords="60.001109, 30.299734">
+                                        <td class="col1">
+                                            <p>Санкт-Петербург Пионерская</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Коломяжский пр-т.15 к.2</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2537, 2540,
+                                                    2863)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r4">
+                                        <td class="col-region" colspan="3" class="r4">
+                                            <p>Алтайский край</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Барнаул" data-city="22" class="c22 r4" data-id="office7978"
+                                        data-coords="53.374348, 83.747610">
+                                        <td class="col1">
+                                            <p>Барнаул</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-т Ленина, д.161, пом. Н9</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (385) 222 36 03</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r5">
+                                        <td class="col-region" colspan="3" class="r5">
+                                            <p>Архангельская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Архангельск" data-city="23" class="c23 r5" data-id="office17"
+                                        data-coords="64.5345571, 40.5221761,17">
+                                        <td class="col1">
+                                            <p>Архангельск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Поморская д. 5</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 1080, 1125)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r6">
+                                        <td class="col-region" colspan="3" class="r6">
+                                            <p>Астраханская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Астрахань" data-city="24" class="c24 r6" data-id="office12011"
+                                        data-coords="46.370272, 48.049626">
+                                        <td class="col1">
+                                            <p>Астрахань</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Савушкина 19, корп.1.</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (844) 278 04 83 (доб. 2046, 2040,
+                                                    2044)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">10:00 – 19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">10:00-17:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r7">
+                                        <td class="col-region" colspan="3" class="r7">
+                                            <p>Белгородская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Белгород" data-city="25" class="c25 r7" data-id="office1777"
+                                        data-coords="50.601438, 36.590851">
+                                        <td class="col1">
+                                            <p>Белгород</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr"> ул. Попова, д. 48</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (473) 200 64 59 (доб. 2002, 2003)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                                <br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Старый Оскол" data-city="26" class="c26 r7" data-id="office1776"
+                                        data-coords="51.286753, 37.809653">
+                                        <td class="col1">
+                                            <p>Старый Оскол</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">мкр «Интернациональный», д. 12 пом. 5</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (473) 200 64 59 (доб. 2000, 2001)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r8">
+                                        <td class="col-region" colspan="3" class="r8">
+                                            <p>Брянская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Брянск" data-city="27" class="c27 r8" data-id="office1755"
+                                        data-coords="53.246618, 34.335451">
+                                        <td class="col1">
+                                            <p>Брянск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Красноармейская д. 101А</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (487) 263 67 70 (доб. 2640, 2642)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r9">
+                                        <td class="col-region" colspan="3" class="r9">
+                                            <p>Владимирская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Владимир" data-city="28" class="c28 r9" data-id="office1760"
+                                        data-coords="56.1296708, 40.3601985,17">
+                                        <td class="col1">
+                                            <p>Владимир</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Чайковского, д. 46</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (492) 247 94 41 (доб. 2103, 2107)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r10">
+                                        <td class="col-region" colspan="3" class="r10">
+                                            <p>Волгоградская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Волгоград" data-city="29" class="c29 r10" data-id="office1774"
+                                        data-coords="48.7190362, 44.5329384,17">
+                                        <td class="col1">
+                                            <p>Волгоград</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Пражская, д. 8</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (844) 278 04 83 (доб. 2036, 2039,
+                                                    2050)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">10:00-17:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r11">
+                                        <td class="col-region" colspan="3" class="r11">
+                                            <p>Воронежская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Воронеж" data-city="30" class="c30 r11" data-id="office1775"
+                                        data-coords="51.6819523, 39.1834044,17">
+                                        <td class="col1">
+                                            <p>Воронеж</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Московский проспект, д. 7Е</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (473) 200 64 59</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r12">
+                                        <td class="col-region" colspan="3" class="r12">
+                                            <p>Ивановская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Иваново" data-city="31" class="c31 r12" data-id="office1761"
+                                        data-coords="56.986585, 40.967318">
+                                        <td class="col1">
+                                            <p>Иваново</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Богдана Хмельницкого, д.30</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (491) 229 40 90 (доб. 2475)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r13">
+                                        <td class="col-region" colspan="3" class="r13">
+                                            <p>Калужская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Калуга" data-city="32" class="c32 r13" data-id="office1756"
+                                        data-coords="54.513223, 36.271725">
+                                        <td class="col1">
+                                            <p>Калуга</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Площадь Победы, д. 1</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (487) 263 67 70 (доб. 2645, 2646)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r14">
+                                        <td class="col-region" colspan="3" class="r14">
+                                            <p>Кировская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Киров" data-city="33" class="c33 r14" data-id="office7130"
+                                        data-coords="58.587862, 49.678192">
+                                        <td class="col1">
+                                            <p>Киров</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Свободы, д. 134 пом. 1011</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2806, 2800)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r15">
+                                        <td class="col-region" colspan="3" class="r15">
+                                            <p>Краснодарский край</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Краснодар" data-city="34" class="c34 r15" data-id="office1780"
+                                        data-coords="45.0289741, 38.9743731,17">
+                                        <td class="col1">
+                                            <p>Краснодар</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Красноармейская, д.64/2</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (861) 204 27 61</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Новороссийск" data-city="35" class="c35 r15" data-id="office1779"
+                                        data-coords="44.719441, 37.768364">
+                                        <td class="col1">
+                                            <p>Новороссийск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Видова, д.1</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (861) 204 27 61 (доб. 2243, 2244)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span class="t-g">вт, ср,
+                                                            чт</span></span> <span
+                                                        class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y">пн,
+                                                            пт</span></span> <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Сочи" data-city="36" class="c36 r15" data-id="office1781"
+                                        data-coords="43.593190, 39.723893">
+                                        <td class="col1">
+                                            <p>Сочи</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Лесной пер., д. 27</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (861) 204 27 61 (доб. 2241, 2242)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span class="t-g">вт, ср,
+                                                            чт</span></span> <span
+                                                        class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span class="t-y">пн,
+                                                            пт</span></span> <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r16">
+                                        <td class="col-region" colspan="3" class="r16">
+                                            <p>Красноярский край</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Красноярск" data-city="37" class="c37 r16" data-id="office9925"
+                                        data-coords="56.011270, 92.836412,18.5">
+                                        <td class="col1">
+                                            <p>Красноярск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Профсоюзов дом 27, о.н.р. 3</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2903, 2905,
+                                                    2904)<br></span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-17:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r17">
+                                        <td class="col-region" colspan="3" class="r17">
+                                            <p>Курская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Курск" data-city="38" class="c38 r17" data-id="office12009"
+                                        data-coords="51.749923, 36.189867">
+                                        <td class="col1">
+                                            <p>Курск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Радищева, д. 106</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (473) 200 64 59 (доб. 2562, 2565)</p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r18">
+                                        <td class="col-region" colspan="3" class="r18">
+                                            <p>Ленинградская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Колпино" data-city="39" class="c39 r18" data-id="office1751"
+                                        data-coords="59.739772, 30.612063">
+                                        <td class="col1">
+                                            <p>Колпино</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Тверская, д. 38</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2555, 2554)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">09:00-18:00</span></span> <br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r19">
+                                        <td class="col-region" colspan="3" class="r19">
+                                            <p>Липецкая область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Липецк" data-city="40" class="c40 r19" data-id="office5368"
+                                        data-coords="52.593965, 39.562209">
+                                        <td class="col1">
+                                            <p>Липецк</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr"> пр-т Победы д. 74</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (473) 200 64 59 (доб. 2351, 2407)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r20">
+                                        <td class="col-region" colspan="3" class="r20">
+                                            <p>Нижегородская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Нижний Новгород" data-city="41" class="c41 r20"
+                                        data-id="office1762" data-coords="56.3109198, 43.9871362,17">
+                                        <td class="col1">
+                                            <p>Нижний Новгород</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Б.Покровская д.93</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (831) 219 98 68</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r21">
+                                        <td class="col-region" colspan="3" class="r21">
+                                            <p>Новгородская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Великий Новгород" data-city="42" class="c42 r21"
+                                        data-id="office1753" data-coords="58.524346, 31.271221">
+                                        <td class="col1">
+                                            <p>Великий Новгород</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Газон, дом 3 корп. 1</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2600, 2610)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r22">
+                                        <td class="col-region" colspan="3" class="r22">
+                                            <p>Новосибирская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Новосибирск" data-city="43" class="c43 r22" data-id="office1789"
+                                        data-coords="55.0392208, 82.9542242,17">
+                                        <td class="col1">
+                                            <p>Новосибирск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Фрунзе, д. 228, пом. 5</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (383) 209 93 75</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r23">
+                                        <td class="col-region" colspan="3" class="r23">
+                                            <p>Омская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Омск" data-city="44" class="c44 r23" data-id="office12008"
+                                        data-coords="54.9506532, 73.3883510">
+                                        <td class="col1">
+                                            <p>Омск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-т К.Маркса, д. 59</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (353) 237 68 63 (2643, 1015, 2341)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r24">
+                                        <td class="col-region" colspan="3" class="r24">
+                                            <p>Оренбургская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Оренбург" data-city="45" class="c45 r24" data-id="office1768"
+                                        data-coords="51.7679766, 55.1003844,17.75">
+                                        <td class="col1">
+                                            <p>Оренбург</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Володарского , д. 39</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (353) 237 68 63</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Орск" data-city="46" class="c46 r24" data-id="office1769"
+                                        data-coords="51.243359, 58.465853">
+                                        <td class="col1">
+                                            <p>Орск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-т Ленина, д. 73</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: (353) 237 68 63 (доб.2336, 2335)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r25">
+                                        <td class="col-region" colspan="3" class="r25">
+                                            <p>Пензенская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Пенза" data-city="47" class="c47 r25" data-id="office12774"
+                                        data-coords="53.197279, 45.017050">
+                                        <td class="col1">
+                                            <p>Пенза</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Московская, д. 86, пом. 14</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (841) 250 03 16</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">вс</span></span>
+                                                    <span class="time">выходной</span></span><br>
+
+
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r26">
+                                        <td class="col-region" colspan="3" class="r26">
+                                            <p>Пермский край</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Березники" data-city="48" class="c48 r26" data-id="office1784"
+                                        data-coords="59.4041608, 56.8019989,17">
+                                        <td class="col1">
+                                            <p>Березники</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Карла Маркса, д.48, офис 223</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (342) 299 42 02, (доб. 2412)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">09:00-18:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Пермь" data-city="49" class="c49 r26" data-id="office1783"
+                                        data-coords="58.005846, 56.206240">
+                                        <td class="col1">
+                                            <p>Пермь</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Дзержинский район, ул. Ленина, д 69</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (342) 299 42 02</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r27">
+                                        <td class="col-region" colspan="3" class="r27">
+                                            <p>Псковская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Псков" data-city="50" class="c50 r27" data-id="office1752"
+                                        data-coords="57.8107813, 28.3577164,17">
+                                        <td class="col1">
+                                            <p>Псков</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Октябрьский пр-т д. 50А пом. 207</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2556, 2557)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r28">
+                                        <td class="col-region" colspan="3" class="r28">
+                                            <p>Республика Башкортостан</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Уфа" data-city="51" class="c51 r28" data-id="office5343"
+                                        data-coords="54.757674, 56.008272">
+                                        <td class="col1">
+                                            <p>Уфа</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Октябрьский р-н, проспект Октября, д. 62</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (353) 237 68 63 (доб. 2348, 2349, 2347,
+                                                    2346)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r29">
+                                        <td class="col-region" colspan="3" class="r29">
+                                            <p>Республика Марий Эл</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Йошкар-Ола" data-city="52" class="c52 r29" data-id="office1764"
+                                        data-coords="56.641852, 47.890984">
+                                        <td class="col1">
+                                            <p>Йошкар-Ола</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Красноармейская, д.48, вход с торца</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2213, 2214)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r30">
+                                        <td class="col-region" colspan="3" class="r30">
+                                            <p>Республика Татарстан</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Казань" data-city="53" class="c53 r30" data-id="office1766"
+                                        data-coords="55.7873928, 49.1130275,18.5">
+                                        <td class="col1">
+                                            <p>Казань</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Лево-Булачная, 46/2</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2207, 2206, 2208,
+                                                    2209,
+                                                    2211)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p><span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br><span
+                                                    class="w-time"><span class="day"><span class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br><span
+                                                    class="w-time"><span class="day"><span class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span></p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Набережные Челны" data-city="54" class="c54 r30"
+                                        data-id="office1767" data-coords="55.745659, 52.436330">
+                                        <td class="col1">
+                                            <p>Набережные Челны</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-кт Московский, д. 130 Корпус Б</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2215, 2216)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r31">
+                                        <td class="col-region" colspan="3" class="r31">
+                                            <p>Ростовская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ростов-на-Дону" data-city="55" class="c55 r31"
+                                        data-id="office1778" data-coords="47.2267239, 39.7401461,17">
+                                        <td class="col1">
+                                            <p>Ростов-на-Дону</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Большая Садовая, д.180</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (863) 308 47 11 (доб. 2444, 2442,
+                                                    2443)</span><br></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r32">
+                                        <td class="col-region" colspan="3" class="r32">
+                                            <p>Рязанская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Рязань" data-city="56" class="c56 r32" data-id="office1759"
+                                        data-coords="54.6232122, 39.7542395,17">
+                                        <td class="col1">
+                                            <p>Рязань</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Ленина, д.10, (Вход на первый этаж торгового
+                                                    центра
+                                                    со стороны
+                                                    улицы Ленина)</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (491) 229 40 90</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r33">
+                                        <td class="col-region" colspan="3" class="r33">
+                                            <p>Самарская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Самара" data-city="57" class="c57 r33" data-id="office5"
+                                        data-coords="53.20539307122918,50.19271049999995">
+                                        <td class="col1">
+                                            <p>Самара</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Дыбенко, д.27а</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (846) 226 58 22 (доб. 2507, 2511, 2504,
+                                                    2506,
+                                                    2505)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Сызрань" data-city="58" class="c58 r33" data-id="office1771"
+                                        data-coords="53.148395, 48.458491">
+                                        <td class="col1">
+                                            <p>Сызрань</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Советская, д. 12</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (846) 226 58 22 (доб. 2514)</span></p>
+
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Тольятти" data-city="59" class="c59 r33" data-id="office1770"
+                                        data-coords="53.532647, 49.334922">
+                                        <td class="col1">
+                                            <p>Тольятти</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Мира, д. 86</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (846) 226 58 22 (доб. 2512, 2515)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">09:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r34">
+                                        <td class="col-region" colspan="3" class="r34">
+                                            <p>Саратовская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Саратов" data-city="60" class="c60 r34" data-id="office1772"
+                                        data-coords="51.5361682, 46.0255562,17">
+                                        <td class="col1">
+                                            <p>Саратов</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Чапаева, д. 79,</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (845) 242 63 04 (доб. 2561, 2575, 2570,
+                                                    2568)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Энгельс" data-city="61" class="c61 r34" data-id="office1773"
+                                        data-coords="51.481705, 46.132417">
+                                        <td class="col1">
+                                            <p>Энгельс</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Тельмана, д.29</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (845) 242 63 04, (доб. 2567)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r35">
+                                        <td class="col-region" colspan="3" class="r35">
+                                            <p>Свердловская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Екатеринбург" data-city="62" class="c62 r35" data-id="office1785"
+                                        data-coords="56.811929, 60.609131,17">
+                                        <td class="col1">
+                                            <p>Екатеринбург</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. 8 Марта, д. 121</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (343) 339 41 16</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Каменск-Уральский" data-city="63" class="c63 r35"
+                                        data-id="office1786" data-coords="56.387412, 61.932324">
+                                        <td class="col1">
+                                            <p>Каменск-Уральский</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Каменская, д. 78</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (343) 339 49 48 (доб. 2148, 2149)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Нижний Тагил" data-city="64" class="c64 r35" data-id="office3091"
+                                        data-coords="57.906691, 59.963082">
+                                        <td class="col1">
+                                            <p>Нижний Тагил</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Первомайская д. 25</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (343) 521 20 02 (доб. 2147, 2140)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Первоуральск" data-city="65" class="c65 r35" data-id="office1787"
+                                        data-coords="56.901098, 59.950093">
+                                        <td class="col1">
+                                            <p>Первоуральск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Герцена, дом 7б</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (343) 357 99 70 (доб. 2150)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r36">
+                                        <td class="col-region" colspan="3" class="r36">
+                                            <p>Ставропольский край</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Пятигорск" data-city="66" class="c66 r36" data-id="office4235"
+                                        data-coords="44.040836, 43.062187">
+                                        <td class="col1">
+                                            <p>Пятигорск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Мира, 32</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (863) 308 47 11 (доб. 2438,2439)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">10:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">10:00-17:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ставрополь" data-city="67" class="c67 r36" data-id="office1782"
+                                        data-coords="45.035209, 41.946484,15">
+                                        <td class="col1">
+                                            <p>Ставрополь</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Мира, д. 367/20</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (863) 308 47 11 (доб. 2868, 2611,
+                                                    2607)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r37">
+                                        <td class="col-region" colspan="3" class="r37">
+                                            <p>Тверская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Тверь" data-city="68" class="c68 r37" data-id="office1754"
+                                        data-coords="56.856897, 35.908051, 17">
+                                        <td class="col1">
+                                            <p>Тверь</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">Тверской проспект д. 8</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (812) 200 87 65 (доб. 2558, 2559)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r38">
+                                        <td class="col-region" colspan="3" class="r38">
+                                            <p>Тульская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Новомосковск" data-city="69" class="c69 r38" data-id="office1758"
+                                        data-coords="54.014727, 38.284662">
+                                        <td class="col1">
+                                            <p>Новомосковск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Березовая, д.23, комната 1</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (487) 263 67 70 (доб. 2636)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">сб-вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Тула" data-city="70" class="c70 r38" data-id="office1757"
+                                        data-coords="54.1957771, 37.6024259,17">
+                                        <td class="col1">
+                                            <p>Тула</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Красноармейский проспект, 3</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (487) 263 67 70</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r39">
+                                        <td class="col-region" colspan="3" class="r39">
+                                            <p>Тюменская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Тюмень" data-city="71" class="c71 r39" data-id="office1788"
+                                        data-coords="57.1421266, 65.5497063,17">
+                                        <td class="col1">
+                                            <p>Тюмень</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Малыгина, д.14/3</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone"> Тел: 8 (345) 265 94 93</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r40">
+                                        <td class="col-region" colspan="3" class="r40">
+                                            <p>Удмуртская Республика</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ижевск" data-city="72" class="c72 r40" data-id="office5325"
+                                        data-coords="56.843398, 53.220033">
+                                        <td class="col1">
+                                            <p>Ижевск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Коммунаров, д. 197</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2709, 2710)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r41">
+                                        <td class="col-region" colspan="3" class="r41">
+                                            <p>Ульяновская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ульяновск" data-city="73" class="c73 r41" data-id="office7339"
+                                        data-coords="54.271379, 48.285911">
+                                        <td class="col1">
+                                            <p>Ульяновск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Рябикова , д. 100, пом. 75,76</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (846) 226 58 22 (доб. 2517, 2518)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-19:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r42">
+                                        <td class="col-region" colspan="3" class="r42">
+                                            <p>Ханты-Мансийского АО</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Сургут" data-city="74" class="c74 r42" data-id="office12705"
+                                        data-coords="61.2576649, 73.3815015">
+                                        <td class="col1">
+                                            <p>Сургут</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Ленина, 54</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (346) 276 94 29 (доб. 2151, 2144)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">9:00-16:00</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r43">
+                                        <td class="col-region" colspan="3" class="r43">
+                                            <p>Челябинская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Челябинск" data-city="75" class="c75 r43" data-id="office5411"
+                                        data-coords="55.181772, 61.398660">
+                                        <td class="col1">
+                                            <p>Челябинск</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул.Кирова, д. 4</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (351) 200 97 87</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-20:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r44">
+                                        <td class="col-region" colspan="3" class="r44">
+                                            <p>Чувашская Республика</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Чебоксары" data-city="76" class="c76 r44" data-id="office1763"
+                                        data-coords="56.121953, 47.253764">
+                                        <td class="col1">
+                                            <p>Чебоксары</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">пр-т Ленина, д. 34, неж. пом. №4</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (843) 216 88 22 (доб. 2217, 2218)</span>
+                                            </p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">9:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">9:00-16:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr class="reg r45">
+                                        <td class="col-region" colspan="3" class="r45">
+                                            <p>Ярославская область</p>
+                                        </td>
+                                    </tr>
+                                    <tr data-cityname="Ярославль" data-city="77" class="c77 r45" data-id="office6735"
+                                        data-coords="57.625248, 39.881911">
+                                        <td class="col1">
+                                            <p>Ярославль</p>
+                                        </td>
+                                        <td class="col2">
+                                            <p><span class="b-adr">ул. Свободы д.11/37, офис 203</span><br>
+                                                <span class="b-phone b-phone-bold">Тел: 8 (800) 100 34 96</span><br>
+                                                <span class="b-phone">Тел: 8 (491) 229 40 90 (доб. 2477)</span></p>
+                                        </td>
+                                        <td class="col3">
+                                            <p>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">пн-пт</span></span>
+                                                    <span class="time">09:00-18:00</span></span><br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-g">сб</span></span>
+                                                    <span class="time">09:00-18:00</span></span>
+                                                <br>
+                                                <span class="w-time"><span class="day"><span
+                                                            class="t-y">вс</span></span>
+                                                    <span class="time">выходной</span></span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="office_map_yandex" class="office-map hide">
+                            <div id="offices_map" class="map"></div>
+                            <div style="display:none;">
+                                <img src="./img/about/balloon-office.png">
+                                <img src="./img/about/balloon-office_active.png">
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="section p-all-0">
+            <div class="container text-align-center seo-content">
+                <div class="asterisk">
+                    *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
+                    МФО по обьему портфеля.
+                </div>
+            </div>
+        </div>
+        <div class="footer-margin"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <span class="logo hide-mobile"></span>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                    <p class="small-text">Действующим клиентам</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                    <p class="small-text">По вопросам оформления заявки</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Микрокредиты</a></li>
+                        <li><a class="link" href="#">Микрозаймы</a></li>
+                        <li><a class="link" href="#">Деньги онлайн</a></li>
+                        <li><a class="link" href="#">Автокредитование</a></li>
+                        <li><a class="link" href="#">Карта Лукойл</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Продукты</a></li>
+                        <li><a class="link" href="#">Погашение займа</a></li>
+                        <li><a class="link" href="#">Услуги</a></li>
+                        <li><a class="link" href="#">Акции</a></li>
+                        <li><a class="link" href="#">Инвестиции</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Партнерская программа</a></li>
+                        <li><a class="link" href="#">Карьера</a></li>
+                        <li><a class="link" href="#">Статьи</a></li>
+                        <li><a class="link" href="#">Карта сайта</a></li>
+                        <li><a class="link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25">
+                    <div class="apps">
+                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                    </div>
+                </div>
+            </div>
+            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-33 w-50-mobile">
+                        <p>© 2019, МигКредит</p>
+                    </div>
+                    <div class="col w-33 hide-mobile">
+                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="page_preloader"
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-col for-logo no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="logo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-col header-info no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <p class="title">Лидер рынка</p>
+                            <p class="remark">микрофинансовых организаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right hide-mobile">
+                <div class="header-col">
+                    <div class="table-block">
+                        <div class="cell">
+                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                                кабинет</a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                    src="./img/icon-appstore.svg" /></a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                    src="./img/icon-googleplay.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- главное меню -->
+    <div id="main_menu" class="main-menu">
+        <div class="container">
+            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+            <ul class="main-menu-content">
+                <li>
+                    <a href="#" class="menu-link">Займы</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/#products" class="menu-link ">Продукты</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/get/" class="menu-link ">Как получить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                    карта</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                    телефон</a>
+                            </li>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                    банке</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                </li>
+
+                <li>
+                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                </li>
+
+                <li>
+                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                    <div class="submenu right">
+                        <ul>
+                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                            <li>
+                                <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                    страхование</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="burger">
+                    <i class="icon icon-menu-button"></i>
+                    <div class="submenu fullwidth">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                        <li>
+                                            <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                        </li>
+                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                        <li>
+                                            <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                                информации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link big">Акции</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link">Привилегии клиентам</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                                class="submenu-link">Акции и конкурсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                                друга</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                        <li>
+                                            <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                                программа</a>
+                                        </li>
+                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- основной контент -->
+    <div class="body">
+        <div class="header-margin"></div>
+        <div class="main-menu-margin"></div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+                <a href="#" class="item active">Мобильное приложение</a>
+            </div>
+        </div>
+
+        <div class="section p-t-0 p-b-0 m-b-10">
+            <div class="product-card big-head">
+                <div class="container">
+                    <div class="head">
+                        <div class="table-block">
+                            <div class="cell">
+                                <div class="row">
+                                    <div class="col w-60 w-50-tablet">
+                                        <h1 class="m-t-50 font-weight-bold color-white">Все функции <br>
+                                            по одной кнопке</h1>
+                                        <span class="text color-white">
+                                            Мобильное приложение МигКредит — получение <br>
+                                            и погашение в 1 клик
+                                        </span>
+                                        <div class="button-block">
+                                            <div class="row">
+                                                <div class="col w-33 w-50-tablet">
+                                                    <a target="_blank"
+                                                        href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=IOS&amp;utm_source=type_in&amp;wmid=type_in"
+                                                        class="app-link appstore"></a>
+                                                </div>
+                                                <div class="col w-33 w-50-tablet">
+                                                    <a href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=Android&amp;utm_source=type_in&amp;wmid=type_in"
+                                                        class="app-link googleplay" target="_blank"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="product-bg bg-16"></span>
+            </div>
+        </div>
+        <div class="section p-t-0 p-b-0">
+            <div class="container">
+                <div class="row">
+                    <div class="mig-form">
+                        <div class="col w-50">
+                            <div class="phone">
+                                <div class="table-block">
+                                    <div class="cell">
+                                        <div class="row">
+                                            <div class="col w-33">
+                                                <div class="mig-form-image hide-mobile"
+                                                    style="background-image: url(./img/about/smallphone.png)">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col w-66">
+                                                <p class="h1 mig-form-text">Отправить ссылку <br>
+                                                    на телефон?</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-50">
+                            <div class="form">
+                                <div class="table-block">
+                                    <div class="cell">
+                                        <form action="/dengi3/" method="POST">
+                                            <div class="row">
+                                                <div class="col w-60">
+                                                    <label class="field required empty"><span class="label">Номер
+                                                            телефона</span>
+                                                        <input type="text"
+                                                            class="input-text placeholder phnew validate input-mask ready"
+                                                            data-validate="mobile_phone"
+                                                            data-placeholder="Контактный телефон"
+                                                            data-mask_tpl="phone_plus7" data-masktpl="phone" value=""
+                                                            name="feedback_phone" id="feedback_phone" im-insert="true">
+                                                    </label>
+                                                </div>
+                                                <div class="col w-40">
+                                                    <input data-term_type="" name="calc_period_type" type="hidden"
+                                                        value="week">
+                                                    <button class="button button-big button-form m-t-0"
+                                                        type="submit">Отправить</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section green m-b-40">
+            <div class="container">
+                <div class="mig-app">
+                    <div class="row">
+                        <div class="col w-40 w-40-tablet">
+                            <div class="mig-app-image">
+
+                            </div>
+                        </div>
+                        <div class="col w-60 w-60-tablet">
+                            <div class="mig-app-text">
+                                <p class="h1 font-weight-bold m-t-40 m-b-10">Только в мобильном приложении</p>
+                                <p class="custom-text m-t-10">До 100 000 ₽</p>
+                                <p class="h1 m-t-20">Получение займа в 1 клик</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section p-all-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-50">
+                        <div class="info-wrapper">
+                            <div class="table-block">
+                                <div class="cell">
+                                    <h2 class="h1">Основные функции</h2>
+                                    <ul class="check">
+                                        <li>Получение займа в 1 клик</li>
+                                        <li>Заполнение всего за 3 минуты</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-50">
+                        <div class="image-wrapper">
+                            <div class="image" style="background-image: url(./img/about/phone2.png)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="background-image: url(./img/about/migapp_bg1.png)">
+            <div class="container">
+                <p class="h1 color-white text-align-center">Самый удобный способ получения <br>денег на карту</p>
+                <div class="infographic mig-app text-align-center">
+                    <div class="row">
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <p class="h1 color-white font-weight-bold">30 000</p>
+                                <p class="h2 color-white">Активных пользователей</p>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <p class="h1 color-white font-weight-bold">25 000</p>
+                                <p class="h2 color-white">Заявок на заём</p>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <p class="h1 color-white font-weight-bold">До 100 000 ₽</p>
+                                <p class="h2 color-white">На вашу карту в 1 клик</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-block">
+                        <div class="row">
+                            <div class="col w-50 w-50-mobile">
+                                <a target="_blank"
+                                    href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=IOS&amp;utm_source=type_in&amp;wmid=type_in"
+                                    class="app-link appstore"></a>
+                            </div>
+                            <div class="col w-50 w-50-mobile">
+                                <a href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=Android&amp;utm_source=type_in&amp;wmid=type_in"
+                                    class="app-link googleplay" target="_blank"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <div class="container">
+                <p class="h1 text-align-center">В ближайшее время для пользователей приложения станут доступны</p>
+                <div class="infographic">
+                    <div class="row">
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-mobile"></i></div>
+                                <div class="text">Предодобренные лимиты</div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-wallet1"></i></div>
+                                <div class="text">Пополнение электронных кошельков</div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Просмотр истории последних операций</div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                        <div class="col w-33 w-33-tablet o-l-16">
+                            <div class="item">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Бонусная программа</div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Запросы о состоянии кредитной истории онлайн</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <p class="h1 m-b-50 text-align-center">Часто задаваемые вопросы</p>
+                <div class="faq">
+                    <div class="faq-list m-t-40">
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Как установить приложение?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Скачать его в <a
+                                        href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=IOS&amp;utm_source=type_in&amp;wmid=type_in"
+                                        rel="nofollow">App Store</a> или <a
+                                        href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&amp;position_type=bannertop&amp;device_type=Android&amp;utm_source=type_in&amp;wmid=type_in"
+                                        rel="nofollow">Google Play</a> на свое устройство.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Какова динамика рынка МФО за 2017
+                                    год?</a></p>
+                            <div class="faq-q-desc">
+                                <p>По оценкам RAEX (Эксперт РА), объем портфеля микрозаймов за 2017 год прибавил более
+                                    35% и составил 121 млрд рублей. Наибольший рост (+50%) продемонстрировали займы "до
+                                    зарплаты", портфель потребительских микрозаймов физическим лицам вырос на 40%.
+                                    Объемы выданных микрозаймов также существенно выросли: 230 млрд рублей против 195
+                                    млрд рублей за 2016 год.</p>
+                                <p>МФК "МигКредит" по состоянию на 1 января 2018 года занимает первое место в рэнкинге
+                                    "Эксперт РА" по размеру действующего кредитного портфеля - 3,8 млрд рублей (рост за
+                                    год на 46%).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section p-all-0">
+            <div class="container text-align-center seo-content">
+                <div class="asterisk">
+                    *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
+                    МФО по обьему портфеля.
+                </div>
+            </div>
+        </div>
+        <div class="footer-margin"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <span class="logo hide-mobile"></span>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                    <p class="small-text">Действующим клиентам</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                    <p class="small-text">По вопросам оформления заявки</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Микрокредиты</a></li>
+                        <li><a class="link" href="#">Микрозаймы</a></li>
+                        <li><a class="link" href="#">Деньги онлайн</a></li>
+                        <li><a class="link" href="#">Автокредитование</a></li>
+                        <li><a class="link" href="#">Карта Лукойл</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Продукты</a></li>
+                        <li><a class="link" href="#">Погашение займа</a></li>
+                        <li><a class="link" href="#">Услуги</a></li>
+                        <li><a class="link" href="#">Акции</a></li>
+                        <li><a class="link" href="#">Инвестиции</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Партнерская программа</a></li>
+                        <li><a class="link" href="#">Карьера</a></li>
+                        <li><a class="link" href="#">Статьи</a></li>
+                        <li><a class="link" href="#">Карта сайта</a></li>
+                        <li><a class="link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25">
+                    <div class="apps">
+                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                    </div>
+                </div>
+            </div>
+            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-33 w-50-mobile">
+                        <p>© 2019, МигКредит</p>
+                    </div>
+                    <div class="col w-33 hide-mobile">
+                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

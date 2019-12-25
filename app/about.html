@@ -1,701 +1,780 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
-        <link rel="manifest" href="./img/icons/site.webmanifest" />
-        <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
-        <meta name="msapplication-TileColor" content="#7dc041" />
-        <meta name="theme-color" content="#ffffff" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <title>МигКредит</title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/style.css" />
-    </head>
-    <body>
-        <div
-            id="page_preloader"
-            style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;"
-        ></div>
-        <!-- header -->
-        <div class="header">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="page_preloader"
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-col for-logo no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="logo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-col header-info no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <p class="title">Лидер рынка</p>
+                            <p class="remark">микрофинансовых организаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right hide-mobile">
+                <div class="header-col">
+                    <div class="table-block">
+                        <div class="cell">
+                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                                кабинет</a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                    src="./img/icon-appstore.svg" /></a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                    src="./img/icon-googleplay.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- главное меню -->
+    <div id="main_menu" class="main-menu">
+        <div class="container">
+            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+            <ul class="main-menu-content">
+                <li>
+                    <a href="#" class="menu-link">Займы</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/#products" class="menu-link ">Продукты</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/get/" class="menu-link ">Как получить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                    карта</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                    телефон</a>
+                            </li>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                    банке</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                </li>
+
+                <li>
+                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                </li>
+
+                <li>
+                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                    <div class="submenu right">
+                        <ul>
+                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                            <li>
+                                <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                    страхование</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="burger">
+                    <i class="icon icon-menu-button"></i>
+                    <div class="submenu fullwidth">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                        <li>
+                                            <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                        </li>
+                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                        <li>
+                                            <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                                информации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link big">Акции</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link">Привилегии клиентам</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                                class="submenu-link">Акции и конкурсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                                друга</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                        <li>
+                                            <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                                программа</a>
+                                        </li>
+                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- основной контент -->
+    <div class="body">
+        <div class="header-margin"></div>
+        <div class="main-menu-margin"></div>
+        <div class="breadcrumbs">
             <div class="container">
-                <div class="header-left">
-                    <div class="header-col for-logo no-border">
-                        <div class="table-block">
-                            <div class="cell">
+                <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+                <a href="#" class="item active">Компания</a>
+            </div>
+        </div>
+
+        <div class="section p-all-0 shadow">
+            <div class="container">
+                <div class="secondary-menu">
+                    <a href="#" class="menu-item menu-item-active">О компании</a>
+                    <a href="#" class="menu-item">Контакты</a>
+                    <a href="#" class="menu-item">Документы</a>
+                    <a href="#" class="menu-item ">Команда</a>
+                    <a href="#" class="menu-item ">Карьера</a>
+                    <a href="#" class="menu-item ">Отзывы</a>
+                    <a href="#" class="menu-item ">Регионы</a>
+                    <a href="#" class="menu-item ">Офисы</a>
+                    <a href="#" class="menu-item ">Раскрытие информации</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <h1 class="h1">МигКредит — лидер Рынка МФО России</h1>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <div class="container">
+                <div class="infographic">
+                    <div class="row">
+                        <div class="col w-25 w-25-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-trophy"></i></div>
+                                <div class="text">Лидер рынка МФО</div>
+                                <div class="text label">По данным РА «Эксперт», компания МФК МигКредит является самым
+                                    крупным игроком по отраслевым признакам.</div>
+                            </div>
+                        </div>
+                        <div class="col w-25 w-25-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-money"></i></div>
+                                <div class="text">Выдаем займы</div>
+                                <div class="text label">МигКредит специализируется на выдаче займов физическим лицам.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-25 w-25-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-russia"></i></div>
+                                <div class="text">По всей России</div>
+                                <div class="text label">Компания работает по всей России.</div>
+                            </div>
+                        </div>
+                        <div class="col w-25 w-25-tablet">
+                            <div class="item">
+                                <div class="icon"><i class="icon-review"></i></div>
+                                <div class="text">Высокий рейтинг</div>
+                                <div class="text label">Имеем высокий рейтинг кредитоспособности</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="seo-content">
+                    <div class="row">
+                        <div class="col w-50 w-50-tablet">
+                            <ul class="check">
+                                <li>Компания руководствуется международными стандартами клиентского сервиса и
+                                    придерживается принципов ответственного кредитования.</li>
+                                <li>Особое внимание уделяется качеству услуг.</li>
+                            </ul>
+                        </div>
+                        <div class="col w-50 w-50-tablet">
+                            <ul class="check">
+                                <li>Компания включена в государственный реестр МФО 8 июля 2011г. Регистрационный номер:
+                                    2110177000037.</li>
+                                <li>Компания является одним из учредителей и постоянным членом СРО НП «МиР».</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section gray">
+            <div class="container">
+                <div class="infographic">
+                    <div class="row">
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-mobile"></i></div>
+                                <div class="text">С нами просто!</div>
+                                <div class="text label">Мы предлагаем простые и понятные схемы погашения займов без залогов и поручительства.</div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-wallet1"></i></div>
+                                <div class="text">Мы прозрачны</div>
+                                <div class="text label">У нас нет скрытых комиссий и каких-либо дополнительных платежей, помимо регулярного платежа по займу.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item with-arrow">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Мы гибкие и быстрые</div>
+                                <div class="text label">Клиентам предлагается на выбор несколько вариантов получения и погашения займов. Мы быстро принимаем решение по заявкам на займы.</div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                        <div class="col w-33 w-33-tablet o-l-16">
+                            <div class="item">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Мы технологичны</div>
+                                <div class="text label">Для оценки кредитоспособности клиентов внедрен современный
+                                    онлайн-скоринг.</div>
+                            </div>
+                        </div>
+                        <div class="col w-33 w-33-tablet">
+                            <div class="item">
+                                <div class="icon"><i class="icon-user1"></i></div>
+                                <div class="text">Мы рядом с вами</div>
+                                <div class="text label">Вы можете стать нашим клиентом прямо сейчас. Мы принимаем
+                                    предварительное решение о выдаче займа за 1 минуту! Заполнить онлайн-анкету</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section p-t-0 p-b-0">
+            <div class="history-company lazy" data-src="./img/about/about-bg.jpg">
+                <div class="container">
+                    <p class="h2 text-align-center m-t-30">История компании</p>
+
+                    <div class="tabs-block" data-tabs-block data-default-tab="2019">
+                        <div class="history-company-content">
+                            <div class="head">
                                 <div class="logo"></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="header-col header-info no-border">
-                        <div class="table-block">
-                            <div class="cell">
-                                <p class="title">Лидер рынка</p>
-                                <p class="remark">микрофинансовых организаций</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-right hide-mobile">
-                    <div class="header-col">
-                        <div class="table-block">
-                            <div class="cell">
-                                <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0"
-                                    >Личный кабинет</a
-                                >
-                                <a
-                                    target="_blank"
-                                    href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
-                                    class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"
-                                    ><img src="./img/icon-appstore.svg"
-                                /></a>
-                                <a
-                                    target="_blank"
-                                    href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
-                                    class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"
-                                    ><img src="./img/icon-googleplay.svg"
-                                /></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- главное меню -->
-        <div id="main_menu" class="main-menu">
-            <div class="container">
-                <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
-                <ul class="main-menu-content">
-                    <li>
-                        <a href="#" class="menu-link">Займы</a>
-                        <div class="submenu">
-                            <ul>
-                                <li><a href="#" class="submenu-link">Займы онлайн</a></li>
-                                <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#/#products" class="menu-link ">Продукты</a>
-                        <div class="submenu">
-                            <ul>
-                                <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
-                                <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
-                                <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#/get/" class="menu-link ">Как получить</a>
-                        <div class="submenu">
-                            <ul>
-                                <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
-                                <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
-                                <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
-                                <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
-                                <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
-                        <div class="submenu">
-                            <ul>
-                                <li>
-                                    <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link"
-                                        >Банковская карта</a
-                                    >
-                                </li>
-                                <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
-                                <li>
-                                    <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
-                                </li>
-                                <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
-                                <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
-                                <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
-                                <li>
-                                    <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link"
-                                        >Золотая корона</a
-                                    >
-                                </li>
-                                <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
-                                <li>
-                                    <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link"
-                                        >Мобильный телефон</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link"
-                                        >Со счета в банке</a
-                                    >
-                                </li>
-                                <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li>
-                        <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
-                    </li>
-
-                    <li>
-                        <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
-                    </li>
-
-                    <li>
-                        <a href="#/uslugi/" class="menu-link ">Услуги</a>
-                        <div class="submenu right">
-                            <ul>
-                                <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
-                                <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
-                                <li>
-                                    <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link"
-                                        >Пенсионное страхование</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="burger">
-                        <i class="icon icon-menu-button"></i>
-                        <div class="submenu fullwidth">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col w-25">
-                                        <ul>
-                                            <li><a href="#/about/" class="submenu-link big">О компании</a></li>
-                                            <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
-                                            <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
-                                            <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
-                                            <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
-                                            <li>
-                                                <a href="#/about/otzyvy-klientov/" class="submenu-link"
-                                                    >Отзывы клиентов</a
-                                                >
-                                            </li>
-                                            <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
-                                            <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
-                                            <li>
-                                                <a href="#/about/raskrytie-informacii/" class="submenu-link"
-                                                    >Раскрытие информации</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col w-25">
-                                        <ul>
-                                            <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
-                                            <li><a href="#/news/" class="submenu-link">Новости</a></li>
-                                            <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
-                                            <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
-                                            <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col w-25">
-                                        <ul>
-                                            <li>
-                                                <a
-                                                    href="#/privilegii-klientam/privilegii-klientam/"
-                                                    class="submenu-link big"
-                                                    >Акции</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="#/privilegii-klientam/privilegii-klientam/"
-                                                    class="submenu-link"
-                                                    >Привилегии клиентам</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="#/privilegii-klientam/aktsii-i-konkursy/" class="submenu-link"
-                                                    >Акции и конкурсы</a
-                                                >
-                                            </li>
-                                            <li>
-                                                <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link"
-                                                    >Приведи друга</a
-                                                >
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col w-25">
-                                        <ul>
-                                            <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
-                                            <li>
-                                                <a href="#/partnerskaya-programma/" class="submenu-link big"
-                                                    >Партнерская программа</a
-                                                >
-                                            </li>
-                                            <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="clr"></div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- основной контент -->
-        <div class="body">
-            <div class="header-margin"></div>
-            <div class="main-menu-margin"></div>
-            <div class="breadcrumbs">
-                <div class="container">
-                    <a href="#" class="item">Главная <i class="icon icon-right1"></i></a> 
-                    <a href="#" class="item active">Компания</a>
-                </div>
-            </div>
-
-            <div class="section p-all-0 shadow">
-                <div class="container">
-                    <div class="secondary-menu">
-                        <a href="#" class="menu-item menu-item-active">О компании</a>
-                        <a href="#" class="menu-item">Контакты</a>
-                        <a href="#" class="menu-item">Документы</a>
-                        <a href="#" class="menu-item ">Команда</a>
-                        <a href="#" class="menu-item ">Карьера</a>
-                        <a href="#" class="menu-item ">Отзывы</a>
-                        <a href="#" class="menu-item ">Регионы</a>
-                        <a href="#" class="menu-item ">Офисы</a>
-                        <a href="#" class="menu-item ">Раскрытие информации</a> 
-                    </div>
-                </div>
-            </div> 
-            
-            <div class="section">
-                <div class="container">
-                        <h1 class="h1">МигКредит — лидер Рынка МФО России</h1>
-                </div>
-            </div>
-
-            <div class="section gray">
-                <div class="container"> 
-                    <div class="infographic">
-                        <div class="row">
-                            <div class="col w-25 w-25-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-mobile"></i></div>
-                                    <div class="text">Лидер рынка МФО</div>
-                                    <div class="text label">По данным РА «Эксперт», компания МФК МигКредит является самым крупным игроком по отраслевым признакам.</div> 
-                                </div>
-                            </div>
-                            <div class="col w-25 w-25-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-wallet1"></i></div>
-                                    <div class="text">Выдаем займы</div>
-                                    <div class="text label">МигКредит специализируется на выдаче займов физическим лицам.</div> 
-                                </div>
-                            </div>
-                            <div class="col w-25 w-25-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-calendar1"></i></div>
-                                    <div class="text">По всей России</div>
-                                    <div class="text label">Компания работает по всей России.</div> 
-                                </div>
-                            </div>
-                            <div class="col w-25 w-25-tablet">
-                                <div class="item">
-                                    <div class="icon"><i class="icon-user1"></i></div>
-                                    <div class="text">Высокий рейтинг</div>
-                                    <div class="text label">Имеем высокий рейтинг кредитоспособности</div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="section">
-                <div class="container">
-                    <div class="seo-content">
-                        <div class="row">
-                            <div class="col w-50 w-50-tablet">
-                                <ul>
-                                    <li>Компания руководствуется международными стандартами клиентского сервиса и придерживается принципов ответственного кредитования.</li>
-                                    <li>Особое внимание уделяется качеству услуг.</li>
-                                </ul>
-                            </div>
-                            <div class="col w-50 w-50-tablet">
-                                <ul>
-                                    <li>Компания включена в государственный реестр МФО 8 июля 2011г. Регистрационный номер: 2110177000037.</li>
-                                    <li>Компания является одним из учредителей и постоянным членом СРО НП «МиР».</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section gray">
-                <div class="container"> 
-                    <div class="infographic">
-                        <div class="row">
-                            <div class="col w-33 w-33-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-mobile"></i></div>
-                                    <div class="text">Лидер рынка МФО</div>
-                                    <div class="text label">По данным РА «Эксперт», компания МФК МигКредит является самым крупным игроком по отраслевым признакам.</div> 
-                                </div>
-                            </div>
-                            <div class="col w-33 w-33-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-wallet1"></i></div>
-                                    <div class="text">Выдаем займы</div>
-                                    <div class="text label">МигКредит специализируется на выдаче займов физическим лицам.</div> 
-                                </div>
-                            </div>
-                            <div class="col w-33 w-33-tablet">
-                                <div class="item with-arrow">
-                                    <div class="icon"><i class="icon-calendar1"></i></div>
-                                    <div class="text">По всей России</div>
-                                    <div class="text label">Компания работает по всей России.</div> 
-                                </div>
-                            </div>
-                            <div class="clr"></div>
-                            <div class="col w-33 w-33-tablet o-l-16">
-                                <div class="item">
-                                    <div class="icon"><i class="icon-user1"></i></div>
-                                    <div class="text">Мы технологичны</div>
-                                    <div class="text label">Для оценки кредитоспособности клиентов внедрен современный онлайн-скоринг.</div>
-                                </div>
-                            </div> 
-                            <div class="col w-33 w-33-tablet">
-                                <div class="item">
-                                    <div class="icon"><i class="icon-user1"></i></div>
-                                    <div class="text">Мы рядом с вами</div>
-                                    <div class="text label">Вы можете стать нашим клиентом прямо сейчас. Мы принимаем предварительное решение о выдаче займа за 1 минуту! Заполнить онлайн-анкету</div>
-                                </div>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section p-t-0">
-                <div class="history-company lazy" data-src="./img/about/about-bg.jpg">
-                    <div class="container">
-                        <p class="h2 text-align-center m-t-50">История компании</p>
-            
-                        <div class="tabs-block" data-tabs-block data-default-tab="2019">
-                            <div class="history-company-content">
-                                <div class="head">
-                                    <div class="logo"></div>
-                                </div>
-                                <div class="info">
-                                    <div class="table-block">
-                                        <div class="cell">
-                                            <div class="tab" data-tab="2011">
-                                                <div class="text-item">Начало деятельности. Включение в государственный реестр МФО.
-                                                    Мы присоединились к институту Финансового омбудсмена. 
-                                                    </div>
+                            <div class="info">
+                                <div class="table-block">
+                                    <div class="cell">
+                                        <div class="tab" data-tab="2011">
+                                            <div class="text-item">Начало деятельности. Включение в государственный
+                                                реестр МФО.
+                                                Мы присоединились к институту Финансового омбудсмена.
                                             </div>
-                                            <div class="tab" data-tab="2018">
-                                                <div class="text-item">Рост быстрее рынка: +55% по общему размеру портфеля</div>
-                                                <div class="text-item">Стремительное развитие и масштабирование онлайн-выдач, доля которых занимает до 65 %</div>
-                                                <div class="text-item">Устойчивые финансовые показатели прибыльности и рентабельности капитала</div>
-                                                <div class="text-item">Комиссионные продукты компании до 30% в прибыли компании</div>
-                                                <div class="text-item">Диверсификация портфеля фондирование и выход на рынок розничных инвестиций</div>
-                                                <div class="text-item">Запуск банковских карт MigCredit</div>
-                                                <div class="text-item">Реализация процессов идентификации клиента</div> 
+                                        </div>
+                                        <div class="tab" data-tab="2018">
+                                            <div class="text-item">Рост быстрее рынка: +55% по общему размеру портфеля
                                             </div>
-                                            <div class="tab" data-tab="2019">
-                                                <div class="text-item">Рост быстрее рынка: +65% по общему размеру портфеля</div>
-                                                <div class="text-item">Выход компании на IPO</div>
-                                                <div class="text-item">Стремительное развитие и масштабирование онлайн-выдач, доля которых занимает до 70%</div>
-                                                <div class="text-item">Устойчивые финансовые показатели прибыльности и рентабельности капитала</div>
-                                                <div class="text-item">Комиссионные продукты компании до 45% в прибыли компании</div>
+                                            <div class="text-item">Стремительное развитие и масштабирование
+                                                онлайн-выдач, доля которых занимает до 65 %</div>
+                                            <div class="text-item">Устойчивые финансовые показатели прибыльности и
+                                                рентабельности капитала</div>
+                                            <div class="text-item">Комиссионные продукты компании до 30% в прибыли
+                                                компании</div>
+                                            <div class="text-item">Диверсификация портфеля фондирование и выход на рынок
+                                                розничных инвестиций</div>
+                                            <div class="text-item">Запуск банковских карт MigCredit</div>
+                                            <div class="text-item">Реализация процессов идентификации клиента</div>
+                                        </div>
+                                        <div class="tab" data-tab="2019">
+                                            <div class="text-item">Рост быстрее рынка: +65% по общему размеру портфеля
                                             </div>
+                                            <div class="text-item">Выход компании на IPO</div>
+                                            <div class="text-item">Стремительное развитие и масштабирование
+                                                онлайн-выдач, доля которых занимает до 70%</div>
+                                            <div class="text-item">Устойчивые финансовые показатели прибыльности и
+                                                рентабельности капитала</div>
+                                            <div class="text-item">Комиссионные продукты компании до 45% в прибыли
+                                                компании</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-            
-                            <div class="history-company-graphic hide-mobile">
-
-                            </div>
-            
-                            <div class="history-company-numbers hide-desktop">
-                                <div class="tab" data-tab="2011">
-                                    320000
-                                </div>
-                                <div class="tab" data-tab="2018">
-                                    320000
-                                </div>
-                                <div class="tab" data-tab="2019">
-                                    320000
-                                </div>
-                            </div>
-            
-                            <div class="switches">
-                                <a href="#" class="switch" data-tab="2011">2011</a>
-                                <a href="#" class="switch" data-tab="2018">2018</a>
-                                <a href="#" class="switch" data-tab="2019">2019</a>
-                            </div>
-            
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="section">
-                <div class="container">
-                    <p class="h1 text-align-center">Реквезиты</p>
-                    
-                    <div class="row"> 
-                    <div class="table payment-table">
-                                <table>
-                                    <tbody>
-                                    <tr>
-                                        <th>
-                                            <p>Полное наименование на русском языке</p>
-                                        </th>
-                                        <th>
-                                            <p>Общество с ограниченной ответственностью микрофинансовая компания «МигКредит»</p>
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Сокращенное наименование на русском языке</p>
-                                        </td>
-                                        <td>
-                                            <p>ООО «МигКредит»</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Адрес местонахождения (Юридический адрес)</p>
-                                        </td>
-                                        <td>
-                                            <p>127018, г. Москва, ул. Сущевский Вал, д. 5, стр. 3</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Почтовый адрес (фактический адрес)</p>
-                                        </td>
-                                        <td>
-                                            <p>121552, г. Москва, ул. Островная, д.2, офис 316</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>ОГРН</p>
-                                        </td>
-                                        <td>
-                                            <p>1107746671207</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>ИНН</p>
-                                        </td>
-                                        <td>
-                                            <p>7715825027</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>КПП</p>
-                                        </td>
-                                        <td>
-                                            <p>771501001</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Рег. № записи в государственном реестре микрофинансовых организаций </p>
-                                        </td>
-                                        <td>
-                                            <p>2110177000037</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Расчетный счет</p>
-                                        </td>
-                                        <td>
-                                            <p>40701810000000000775</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Наименование банка</p>
-                                        </td>
-                                        <td>
-                                            <p>Филиал Центральный ПАО Банка «ФК Открытие»</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Корреспондентский счет</p>
-                                        </td>
-                                        <td>
-                                            <p>30101810945250000297</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>БИК</p>
-                                        </td>
-                                        <td>
-                                            <p>044525297</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>ОКПО</p>
-                                        </td>
-                                        <td>
-                                            <p>67968774</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>ОКВЭД (основной)</p>
-                                        </td>
-                                        <td>
-                                            <p>65.1</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Генеральный директор</p>
-                                        </td>
-                                        <td>
-                                            <p>Гришин Олег Александрович</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p>Главный бухгалтер</p>
-                                        </td>
-                                        <td>
-                                            <p>Михальченко Ольга Владимировна</p>
-                                        </td>
-                                    </tr>
-                                    <tr class="last">
-                                        <td>
-                                            <p>Саморегулируемая организация, в которой состоит ООО «МигКредит»</p>
-                                        </td>
-                                        <td>
-                                            <p>Саморегулируемая организация Союз микрофинансовых организаций "Микрофинансирование и Развитие"</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                     
+                        <div class="history-company-graphic hide-mobile lazy" data-src="./img/about/graphic.png">
+                            <div class="y11">
+                                <div class="indicator">14 549</div>
+                                <div class="text">займов выдано</div>
+                            </div>
+                            <div class="y18">
+                                <div class="indicator">320 000</div>
+                                <div class="text">планы на год</div>
+                            </div>
+                            <div class="y19">
+                                <div class="indicator">450 000</div>
+                                <div class="text">планы на год</div>
+                            </div>
                         </div>
+
+                        <div class="history-company-numbers hide-desktop">
+                            <div class="tab" data-tab="2011">
+                                <div class="indicator">14 549</div>
+                                <div class="text">займов выдано</div>
+                            </div>
+                            <div class="tab" data-tab="2018">
+                                <div class="indicator">320 000</div>
+                                <div class="text">планы на год</div>
+                            </div>
+                            <div class="tab" data-tab="2019">
+                                <div class="indicator">450 000</div>
+                                <div class="text">планы на год</div>
+                            </div>
+                        </div>
+
+                        <div class="switches">
+                            <a href="#" class="switch" data-tab="2011">2011</a>
+                            <a href="#" class="switch y18" data-tab="2018">2018</a>
+                            <a href="#" class="switch y19" data-tab="2019">2019</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="section p-all-0">
-                <div class="container text-align-center seo-content">
-                    <div class="asterisk">
-                        *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
-                        МФО по обьему портфеля.
-                    </div>
-                </div>
-            </div>
-            <div class="footer-margin"></div>
         </div>
 
-        <!-- footer -->
-        <div class="footer">
+        <div class="section gray p-t-0">
+            <div class="container">
+                <p class="h1 text-align-center m-t-50">Миссия и ценности</p>
+                <!-- <p class="h3 text-align-center">Наши ценности</p> -->
+                <div class="mission-values">
+                    <div class="tabs-block" data-tabs-block data-default-tab="1">
+                        <div class="switches">
+                            <a href="#" class="switch" data-tab="1">Восхищение клиента</a>
+                            <a href="#" class="switch" data-tab="2">Ответственное кредитование</a>
+                            <a href="#" class="switch" data-tab="3">Нет скрытых комиссий и залога</a>
+                            <a href="#" class="switch" data-tab="4">Прибыльная бизнес-модель</a>
+                            <a href="#" class="switch" data-tab="5">Команда талантливых людей</a>
+                            <a href="#" class="switch" data-tab="6">Атмосфера энтузиазма</a>
+                        </div>
+
+                        <div class="quote">
+                            <div class="top"><span></span></div> 
+                                <div class="table-block">
+                                        <div class="cell">   
+                                            <div class="tab" data-tab="1">
+                                                <div class="text">Мы не просто удовлетворяем потребности клиентов,<br>
+                                                    но и превосходим их ожидания.<br><br>
+
+                                                    Положительные эмоции наших клиентов — это то,<br>
+                                                    ради чего мы работаем.
+                                                </div>
+                                            </div>
+                                            <div class="tab" data-tab="2">
+                                                <div class="text">Наши продукты и процессы простые, открытые<br>
+                                                    и нацеленные на долгосрочные отношения<br>
+                                                    с клиентами
+                                                </div>
+                                            </div>
+                                            <div class="tab" data-tab="3">
+                                                <div class="text">У нас нет скрытых комиссий и залога.<br>
+                                                    У нас простая система погашения.
+                                                </div>
+                                            </div>
+                                            <div class="tab" data-tab="4">
+                                                <div class="text">Мы достигаем результатов за счет построения<br>
+                                                    прибыльных бизнес- процессов, грамотного планирования,<br>
+                                                    управления рисками и ресурсами.
+                                                </div>
+                                            </div>
+                                            <div class="tab" data-tab="5">
+                                                <div class="text">Наши сотрудники - команда ответственных, инициативных<br>
+                                                    и преданных своему делу людей,<br>
+                                                    являющихся основным капиталом компании.
+                                                </div>
+                                            </div>
+                                            <div class="tab" data-tab="6">
+                                                <div class="text">Энтузиазм и позитивная энергия<br>
+                                                    является залогом успеха.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <div class="bottom"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <p class="h1 text-align-center">Реквизиты</p>
+
+            <div class="row">
+                <div class="table payment-table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <p>Полное наименование на русском языке</p>
+                                </th>
+                                <th>
+                                    <p>Общество с ограниченной ответственностью микрофинансовая компания «МигКредит»
+                                    </p>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Сокращенное наименование на русском языке</p>
+                                </td>
+                                <td>
+                                    <p>ООО «МигКредит»</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Адрес местонахождения (Юридический адрес)</p>
+                                </td>
+                                <td>
+                                    <p>127018, г. Москва, ул. Сущевский Вал, д. 5, стр. 3</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Почтовый адрес (фактический адрес)</p>
+                                </td>
+                                <td>
+                                    <p>121552, г. Москва, ул. Островная, д.2, офис 316</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>ОГРН</p>
+                                </td>
+                                <td>
+                                    <p>1107746671207</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>ИНН</p>
+                                </td>
+                                <td>
+                                    <p>7715825027</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>КПП</p>
+                                </td>
+                                <td>
+                                    <p>771501001</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Рег. № записи в государственном реестре микрофинансовых организаций </p>
+                                </td>
+                                <td>
+                                    <p>2110177000037</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Расчетный счет</p>
+                                </td>
+                                <td>
+                                    <p>40701810000000000775</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Наименование банка</p>
+                                </td>
+                                <td>
+                                    <p>Филиал Центральный ПАО Банка «ФК Открытие»</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Корреспондентский счет</p>
+                                </td>
+                                <td>
+                                    <p>30101810945250000297</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>БИК</p>
+                                </td>
+                                <td>
+                                    <p>044525297</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>ОКПО</p>
+                                </td>
+                                <td>
+                                    <p>67968774</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>ОКВЭД (основной)</p>
+                                </td>
+                                <td>
+                                    <p>65.1</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Генеральный директор</p>
+                                </td>
+                                <td>
+                                    <p>Гришин Олег Александрович</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>Главный бухгалтер</p>
+                                </td>
+                                <td>
+                                    <p>Михальченко Ольга Владимировна</p>
+                                </td>
+                            </tr>
+                            <tr class="last">
+                                <td>
+                                    <p>Саморегулируемая организация, в которой состоит ООО «МигКредит»</p>
+                                </td>
+                                <td>
+                                    <p>Саморегулируемая организация Союз микрофинансовых организаций
+                                        "Микрофинансирование и Развитие"</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section p-all-0">
+        <div class="container text-align-center seo-content">
+            <div class="asterisk">
+                *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
+                МФО по обьему портфеля.
+            </div>
+        </div>
+    </div>
+    <div class="footer-margin"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <span class="logo hide-mobile"></span>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                    <p class="small-text">Действующим клиентам</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                    <p class="small-text">По вопросам оформления заявки</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Микрокредиты</a></li>
+                        <li><a class="link" href="#">Микрозаймы</a></li>
+                        <li><a class="link" href="#">Деньги онлайн</a></li>
+                        <li><a class="link" href="#">Автокредитование</a></li>
+                        <li><a class="link" href="#">Карта Лукойл</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Продукты</a></li>
+                        <li><a class="link" href="#">Погашение займа</a></li>
+                        <li><a class="link" href="#">Услуги</a></li>
+                        <li><a class="link" href="#">Акции</a></li>
+                        <li><a class="link" href="#">Инвестиции</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Партнерская программа</a></li>
+                        <li><a class="link" href="#">Карьера</a></li>
+                        <li><a class="link" href="#">Статьи</a></li>
+                        <li><a class="link" href="#">Карта сайта</a></li>
+                        <li><a class="link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25">
+                    <div class="apps">
+                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                    </div>
+                </div>
+            </div>
+            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+        </div>
+        <div class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col w-25">
-                        <span class="logo hide-mobile"></span>
+                    <div class="col w-33 w-50-mobile">
+                        <p>© 2019, МигКредит</p>
                     </div>
-                    <div class="col w-25">
-                        <a href="tel:88007000908" class="tel">8 800 7000 908</a>
-                        <p class="small-text">Действующим клиентам</p>
+                    <div class="col w-33 hide-mobile">
+                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
                     </div>
-                    <div class="col w-25">
-                        <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
-                        <p class="small-text">По вопросам оформления заявки</p>
-                    </div>
-                    <div class="col w-25">
-                        <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
-                        <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col w-25 hide-mobile">
-                        <ul>
-                            <li><a class="link" href="#">Микрокредиты</a></li>
-                            <li><a class="link" href="#">Микрозаймы</a></li>
-                            <li><a class="link" href="#">Деньги онлайн</a></li>
-                            <li><a class="link" href="#">Автокредитование</a></li>
-                            <li><a class="link" href="#">Карта Лукойл</a></li>
-                        </ul>
-                    </div>
-                    <div class="col w-25 hide-mobile">
-                        <ul>
-                            <li><a class="link" href="#">Продукты</a></li>
-                            <li><a class="link" href="#">Погашение займа</a></li>
-                            <li><a class="link" href="#">Услуги</a></li>
-                            <li><a class="link" href="#">Акции</a></li>
-                            <li><a class="link" href="#">Инвестиции</a></li>
-                        </ul>
-                    </div>
-                    <div class="col w-25 hide-mobile">
-                        <ul>
-                            <li><a class="link" href="#">Партнерская программа</a></li>
-                            <li><a class="link" href="#">Карьера</a></li>
-                            <li><a class="link" href="#">Статьи</a></li>
-                            <li><a class="link" href="#">Карта сайта</a></li>
-                            <li><a class="link" href="#">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="col w-25">
-                        <div class="apps">
-                            <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
-                            <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
-                        </div>
-                        <div class="social">
-                            <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
-                            <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
-                            <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
-                            <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
-                        </div>
-                    </div>
-                </div>
-                <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
-            </div>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col w-33 w-50-mobile">
-                            <p>© 2019, МигКредит</p>
-                        </div>
-                        <div class="col w-33 hide-mobile">
-                            <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
-                        </div>
-                        <div class="col w-33 w-50-mobile">
-                            <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
-                        </div>
+                    <div class="col w-33 w-50-mobile">
+                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="./js/script.js"></script>
-    </body>
+    <script src="./js/script.js"></script>
+</body>
+
 </html>

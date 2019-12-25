@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee53ceff-c9ad-40a9-af1b-7ea9516ad6c1&amp;lang=ru_RU"
+        type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="page_preloader"
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-col for-logo no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="logo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-col header-info no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <p class="title">Лидер рынка</p>
+                            <p class="remark">микрофинансовых организаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right hide-mobile">
+                <div class="header-col">
+                    <div class="table-block">
+                        <div class="cell">
+                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                                кабинет</a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                    src="./img/icon-appstore.svg" /></a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                    src="./img/icon-googleplay.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- главное меню -->
+    <div id="main_menu" class="main-menu">
+        <div class="container">
+            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+            <ul class="main-menu-content">
+                <li>
+                    <a href="#" class="menu-link">Займы</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/#products" class="menu-link ">Продукты</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/get/" class="menu-link ">Как получить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                    карта</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                    телефон</a>
+                            </li>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                    банке</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                </li>
+
+                <li>
+                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                </li>
+
+                <li>
+                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                    <div class="submenu right">
+                        <ul>
+                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                            <li>
+                                <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                    страхование</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="burger">
+                    <i class="icon icon-menu-button"></i>
+                    <div class="submenu fullwidth">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                        <li>
+                                            <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                        </li>
+                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                        <li>
+                                            <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                                информации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link big">Акции</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link">Привилегии клиентам</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                                class="submenu-link">Акции и конкурсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                                друга</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                        <li>
+                                            <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                                программа</a>
+                                        </li>
+                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- основной контент -->
+    <div class="body">
+        <div class="header-margin"></div>
+        <div class="main-menu-margin"></div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+                <a href="#" class="item active">Отзывы</a>
+            </div>
+        </div>
+
+        <div class="section p-all-0 shadow">
+            <div class="container">
+                <div class="secondary-menu">
+                    <a href="#" class="menu-item ">О компании</a>
+                    <a href="#" class="menu-item ">Контакты</a>
+                    <a href="#" class="menu-item ">Документы</a>
+                    <a href="#" class="menu-item ">Команда</a>
+                    <a href="#" class="menu-item ">Карьера</a>
+                    <a href="#" class="menu-item menu-item-active">Отзывы</a>
+                    <a href="#" class="menu-item ">Регионы</a>
+                    <a href="#" class="menu-item ">Офисы</a>
+                    <a href="#" class="menu-item ">Раскрытие информации</a>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="section">
+            <div class="container">
+                    <p class="h1 m-b-30">Приглашаем в Команду талантливых людей!</p>
+                    <div class="seo-content">
+                        <p class="medium-text"> Мы приглашаем в нашу команду энергичных профессионалов, нацеленных на достижение результата и
+                            профессиональное развитие. <br>
+                            Наша команда — это активные и амбициозные профессионалы, которые любят работать, не боятся
+                            трудностей, умеют ставить перед собой цели и достигать их.
+                        </p> 
+                    </div>
+                <div class="vacancies m-t-20">
+                    <div class="field required for-select empty">
+                        <div class="selectwrap">
+                            <select class="vacancies-city" name="vacancies_city" id="vacancies_city">
+                                <option value="all">Все города</option>
+                                <option value="2">Нижний Новгород</option>
+                                <option value="1">Орел</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="vacancies_list" class="vacancies-city-list">
+                        <div data-city="1" class="vacancy">
+                            <p class="vacancy-title h3 font-weight-bold "><a href="#">Оператор call-центра</a></p>
+                            <div class="vacancy-desc">
+                                <p><strong>от 17 000 руб. до вычета НДФЛ</strong></p>
+                                <p>ООО МигКредит — одна из крупнейших компаний России по оказанию финансовых услуг
+                                    населению, многократный обладатель статуса «Привлекательный работодатель года»,
+                                    с дружелюбной корпоративной культурой и официальным трудоустройством</p>
+                                <p class="caption">Требования</p>
+                                <ul>
+                                    <li>Грамотная устная и письменная речь</li>
+                                    <li>Образование не ниже среднего</li>
+                                    <li>Опыт работы в call-центре приветствуется</li>
+                                    <li>Знание ПК на уровне пользователя</li>
+                                    <li>Клиент ориентированность и ориентация на результат</li>
+                                    <li>Доброжелательность и позитивный настрой - залог Вашего карьерного роста в
+                                        нашей Компании</li>
+                                </ul>
+                                <p class="caption">Мы предлагаем</p>
+                                <ul>
+                                    <li>Стабильная и официальная оплата труда на карту 2 раза в месяц</li>
+                                    <li>Индивидуальный подход к графику работы</li>
+                                    <li>Оформление в соответствии с законодательством</li>
+                                    <li>Реальный карьерный рост</li>
+                                    <li>Работа в уютном офисе в центре города</li>
+                                    <li>Корпоративы, мероприятия, насыщенные будни</li>
+                                    <li>Работа в команде талантливых, целеустремленных людей, где каждый легко
+                                        найдет свое достойное место</li>
+                                </ul>
+                                <p class="caption">Чем вы будете заниматься:</p>
+                                <ul>
+                                    <li>Консультировать клиентов по телефону</li>
+                                    <li>Помогать клиентам в оформлении заявок по телефону</li>
+                                    <li>Общаться с клиентами в он-лайн чате</li>
+                                    <li>Отвечать клиентам через электронную почту</li>
+                                </ul>
+                                <p class="caption">Начни свою карьеру с нами и ты поймешь, что работать здорово!</p>
+                                <p>Если Вы активны и стремитесь заработать больше, звоните:<br><strong>8 800 707 77
+                                        84</strong></p>
+                                <!--<a href="#" class="respond">Откликнуться</a>-->
+
+                            </div>
+                        </div>
+                        <div data-city="2" class="vacancy">
+                            <p class="vacancy-title h3 font-weight-bold"><a href="#">Специалист группы взыскания</a></p>
+                            <div class="vacancy-desc">
+                                <p>ООО МигКредит — одна из крупнейших компаний России по оказанию финансовых услуг
+                                    населению, многократный обладатель статуса «Привлекательный работодатель года»,
+                                    с дружелюбной корпоративной культурой и официальным трудоустройством.</p>
+                                <p class="caption">Кого мы ищем?</p>
+                                <p>МЫ ищем трудолюбивых, готовых работать на результат и зарабатывать,
+                                    ответственных, грамотных, способных поддерживать международные стандарты
+                                    обслуживания клиентов и аналитически мыслить в любых ситуациях.</p>
+                                <p class="caption">Что мы предлагаем?</p>
+                                <ul>
+                                    <li>Высокий и стабильный доход (средний доход (оклад + бонус) от 50 000 руб.
+                                        ежемесячно);</li>
+                                    <li>Офис рядом с транспортной развязкой;</li>
+                                    <li>Сменный график;</li>
+                                    <li>Обучение и тренинги;</li>
+                                    <li>Карьерный рост;</li>
+                                    <li>Соблюдение ТК РФ.</li>
+                                </ul>
+                                <p class="caption">Чем предстоит заниматься?</p>
+                                <ul>
+                                    <li>Выполнение установленных планов сбора просроченной задолженности;</li>
+                                    <li>Осуществление исходящих / прием входящих звонков;</li>
+                                    <li>Информирование клиента о порядке погашения задолженности;</li>
+                                    <li>Мотивация клиента на своевременное погашение задолженности;</li>
+                                    <li>Работа в специализированной программе по учету истории звонков.</li>
+                                </ul>
+                                <p class="caption">Чего мы ждем от кандидата?</p>
+                                <ul>
+                                    <li>Имеет финансовые цели в жизни;</li>
+                                    <li>Законченное среднее или высшее образование;</li>
+                                    <li>Пользователь ПК (MS Office, другие программы);</li>
+                                    <li>Самостоятельно планирует работу и расставляет приоритеты;</li>
+                                    <li>Убедительная и грамотная речь;</li>
+                                    <li>Владеет собой.</li>
+                                </ul>
+                                <p class="caption">ПРИХОДИТЕ к нам в МИГ КРЕДИТ!</p>
+                                <p>Ключевые навыки</p>
+                                <p>Работа с большим объемом информации Работа с возражениями Грамотная речь Ведение
+                                    переговоров Телефонные переговоры</p>
+
+                                <p>Адрес: г. Нижний Новгород, пер. Мотальный, д. 10А.<br>Моб.тел.: 903-848-68-40</p>
+                            </div>
+                        </div>
+                        <div data-city="4" class="vacancy">
+                            <p class="vacancy-title h3 font-weight-bold"><a href="#">Финансовый консультант</a></p>
+                            <div class="vacancy-desc">
+                                <p class="caption">Обязанности</p>
+                                <ul>
+                                    <li>Активный поиск и привлечение клиентов;</li>
+                                    <li>Сопровождение клиента до и после выдачи займа<br>(каждый наш специалист
+                                        гордится тем, что является<br>персональным менеджером для клиента);</li>
+                                    <li>Выезд к клиенту для общения с ним.</li>
+                                </ul>
+                                <p class="caption">Требования</p>
+                                <ul>
+                                    <li>Доброжелательность и интерес к людям;</li>
+                                    <li>Хорошие навыки общения;</li>
+                                    <li>Любит дорогу и свободу передвижения;</li>
+                                    <li>Желание развиваться и добиваться высоких результатов;</li>
+                                    <li>Честность, ответственность и внимательность;</li>
+                                    <li>Ограничений по возрасту нет!</li>
+                                </ul>
+                                <p class="caption">Что мы предлагаем</p>
+                                <ul>
+                                    <li>Достойный неограниченный доход: оклад + бонусы<br>(% от каждого оформленного
+                                        займа);</li>
+                                    <li>Компенсация мобильной связи и проезда;</li>
+                                    <li>Соблюдение ТК РФ, “белая” заработная плата;</li>
+                                    <li>Возможность самореализации;</li>
+                                    <li>Работа в районе Вашего места проживания;</li>
+                                    <li>Неограниченное количество благодарностей от клиентов.</li>
+                                </ul>
+                                <p>Если Вы активны и стремитесь заработать больше, звоните:<br><strong>+7 495 748 79
+                                        54, внут.: 10-65</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section p-all-0">
+                <div class="container text-align-center seo-content">
+                    <div class="asterisk">
+                        *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
+                        МФО по обьему портфеля.
+                    </div>
+                </div>
+            </div>
+            <div class="footer-margin"></div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-25">
+                        <span class="logo hide-mobile"></span>
+                    </div>
+                    <div class="col w-25">
+                        <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                        <p class="small-text">Действующим клиентам</p>
+                    </div>
+                    <div class="col w-25">
+                        <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                        <p class="small-text">По вопросам оформления заявки</p>
+                    </div>
+                    <div class="col w-25">
+                        <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                        <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Микрокредиты</a></li>
+                            <li><a class="link" href="#">Микрозаймы</a></li>
+                            <li><a class="link" href="#">Деньги онлайн</a></li>
+                            <li><a class="link" href="#">Автокредитование</a></li>
+                            <li><a class="link" href="#">Карта Лукойл</a></li>
+                        </ul>
+                    </div>
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Продукты</a></li>
+                            <li><a class="link" href="#">Погашение займа</a></li>
+                            <li><a class="link" href="#">Услуги</a></li>
+                            <li><a class="link" href="#">Акции</a></li>
+                            <li><a class="link" href="#">Инвестиции</a></li>
+                        </ul>
+                    </div>
+                    <div class="col w-25 hide-mobile">
+                        <ul>
+                            <li><a class="link" href="#">Партнерская программа</a></li>
+                            <li><a class="link" href="#">Карьера</a></li>
+                            <li><a class="link" href="#">Статьи</a></li>
+                            <li><a class="link" href="#">Карта сайта</a></li>
+                            <li><a class="link" href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col w-25">
+                        <div class="apps">
+                            <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                            <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                        </div>
+                        <div class="social">
+                            <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                            <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                        </div>
+                    </div>
+                </div>
+                <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col w-33 w-50-mobile">
+                            <p>© 2019, МигКредит</p>
+                        </div>
+                        <div class="col w-33 hide-mobile">
+                            <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                        </div>
+                        <div class="col w-33 w-50-mobile">
+                            <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+</body>
+
+</html>

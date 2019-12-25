@@ -47,6 +47,17 @@
         display: inline-block;
         vertical-align: middle;
     } 
+    
+    &-right {
+        float: right;
+        @include only-mobile {
+            .button-right {
+                float: left;
+                width: 100%;
+            }
+        }
+    }
+    
     &-inline {
         display: inline-block;
         vertical-align: top;

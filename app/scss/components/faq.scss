@@ -1,0 +1,70 @@
+//Вопросы ответы 
+.faq { 
+
+    &-list {
+        .faq-q {
+            border-bottom: 1px solid $colorBorder;
+            position: relative;
+
+            &:after {
+                content: "";
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MSA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMy41NzY5IDI2LjkyMzFWNTBIMjcuNDIzMVYyNi45MjMxSDUwLjVWMjMuMDc2OUgyNy40MjMxVjBIMjMuNTc2OVYyMy4wNzY5SDAuNVYyNi45MjMxSDIzLjU3NjlaIiBmaWxsPSIjMzMzMzMzIi8+Cjwvc3ZnPgo=) no-repeat center;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 15px;
+                width: 20px;
+                height: 20px;
+                overflow: hidden;
+                transition: linear .225s;
+            }
+
+            &-desc {
+                overflow: hidden;
+                max-height: 0; 
+
+                ul {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.active {
+                &:after {
+                    transform: rotate(180deg);
+                    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNCIgdmlld0JveD0iMCAwIDUxIDQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjUgMC4wNzcxNDg0SDUwLjVWMy45MjMzSDAuNVYwLjA3NzE0ODRaIiBmaWxsPSIjN0RDMDQxIi8+Cjwvc3ZnPgo=) no-repeat center;
+                }
+
+                .faq-q-desc {
+                    max-height: 1500px;
+                    overflow: visible;
+                    margin-bottom: 15px; 
+
+                    .caption {
+                        font-weight: bold;
+                    }
+                }
+
+                .faq-q-title {
+                    a {
+                        color: $colorMain;
+                    }
+                }
+            }
+
+            &-title {
+                margin: 0;
+
+                a {
+                    display: block;
+                    padding: 15px 20px 15px 0;
+                    color: $colorText;
+                    text-decoration: none;
+                    transition: color .2s;
+                }
+
+            }
+        }
+    }
+
+}
+

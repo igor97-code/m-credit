@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee53ceff-c9ad-40a9-af1b-7ea9516ad6c1&amp;lang=ru_RU"
+        type="text/javascript"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="page_preloader"
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+    </div>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-col for-logo no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="logo"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-col header-info no-border">
+                    <div class="table-block">
+                        <div class="cell">
+                            <p class="title">Лидер рынка</p>
+                            <p class="remark">микрофинансовых организаций</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right hide-mobile">
+                <div class="header-col">
+                    <div class="table-block">
+                        <div class="cell">
+                            <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                                кабинет</a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                    src="./img/icon-appstore.svg" /></a>
+                            <a target="_blank"
+                                href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                                class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                    src="./img/icon-googleplay.svg" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- главное меню -->
+    <div id="main_menu" class="main-menu">
+        <div class="container">
+            <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+            <ul class="main-menu-content">
+                <li>
+                    <a href="#" class="menu-link">Займы</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                            <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/#products" class="menu-link ">Продукты</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                            <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                            <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/get/" class="menu-link ">Как получить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                            <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                            <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                            <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                            <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                    <div class="submenu">
+                        <ul>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                    карта</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                            <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                            <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                            <li>
+                                <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                    телефон</a>
+                            </li>
+                            <li>
+                                <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                    банке</a>
+                            </li>
+                            <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+                </li>
+
+                <li>
+                    <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+                </li>
+
+                <li>
+                    <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                    <div class="submenu right">
+                        <ul>
+                            <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                            <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                            <li>
+                                <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                    страхование</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="burger">
+                    <i class="icon icon-menu-button"></i>
+                    <div class="submenu fullwidth">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                        <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                        <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                        <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                        <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                        <li>
+                                            <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                        </li>
+                                        <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                        <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                        <li>
+                                            <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                                информации</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                        <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                        <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                        <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                        <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link big">Акции</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privilegii-klientam/"
+                                                class="submenu-link">Привилегии клиентам</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                                class="submenu-link">Акции и конкурсы</a>
+                                        </li>
+                                        <li>
+                                            <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                                друга</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col w-25">
+                                    <ul>
+                                        <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                        <li>
+                                            <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                                программа</a>
+                                        </li>
+                                        <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- основной контент -->
+    <div class="body">
+        <div class="header-margin"></div>
+        <div class="main-menu-margin"></div>
+        <div class="breadcrumbs">
+            <div class="container">
+                <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+                <a href="#" class="item active">Отзывы</a>
+            </div>
+        </div>
+
+        <div class="section p-all-0 shadow">
+            <div class="container">
+                <div class="secondary-menu">
+                    <a href="#" class="menu-item ">О компании</a>
+                    <a href="#" class="menu-item ">Контакты</a>
+                    <a href="#" class="menu-item ">Документы</a>
+                    <a href="#" class="menu-item ">Команда</a>
+                    <a href="#" class="menu-item ">Карьера</a>
+                    <a href="#" class="menu-item menu-item-active">Отзывы</a>
+                    <a href="#" class="menu-item ">Регионы</a>
+                    <a href="#" class="menu-item ">Офисы</a>
+                    <a href="#" class="menu-item ">Раскрытие информации</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <p class="h1 m-b-50">Ответы на популярные вопросы получения и погашения микрозаймов</p>
+                <div class="faq">
+                    <div class="faq-list m-t-40">
+                        <p class="h2">О компании</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Что такое микрофинансовая компания
+                                    (МФО)?</a></p>
+                            <div class="faq-q-desc">
+                                <p>В соответствии с Федеральным законом от 02.07.2010г. № 151-ФЗ «О микрофинансовой
+                                    деятельности и микрофинансовых организациях» микрофинансовой организацией (МФО)
+                                    является юридическое лицо, осуществляющее деятельность по предоставлению займов в
+                                    сумме до 1 миллиона рублей и внесенное в государственный реестр микрофинансовых
+                                    организаций.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Какова динамика рынка МФО за 2017
+                                    год?</a></p>
+                            <div class="faq-q-desc">
+                                <p>По оценкам RAEX (Эксперт РА), объем портфеля микрозаймов за 2017 год прибавил более
+                                    35% и составил 121 млрд рублей. Наибольший рост (+50%) продемонстрировали займы "до
+                                    зарплаты", портфель потребительских микрозаймов физическим лицам вырос на 40%.
+                                    Объемы выданных микрозаймов также существенно выросли: 230 млрд рублей против 195
+                                    млрд рублей за 2016 год.</p>
+                                <p>МФК "МигКредит" по состоянию на 1 января 2018 года занимает первое место в рэнкинге
+                                    "Эксперт РА" по размеру действующего кредитного портфеля - 3,8 млрд рублей (рост за
+                                    год на 46%).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Как регулируется деятельность
+                                    МФО?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Надзорные функции возложены на Банк России. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Имеет ли МигКредит рейтинг
+                                    какого-либо рейтингового агентства?</a></p>
+                            <div class="faq-q-desc">
+                                <p>МигКредит имеет рейтинг кредитоспособности на уровне «АА», присвоенный Национальным
+                                    рейтинговым агентством. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Чем МигКредит отличается от
+                                    банка?</a></p>
+                            <div class="faq-q-desc">
+                                <p> – одна из крупнейших микрофинансовых компаний России, специализируется на выдаче
+                                    краткосрочных займов физическим лицам, тогда как банки не только выдают кредиты
+                                    гражданам, но и привлекают вклады, а также кредитуют крупные предприятия и субъекты
+                                    малого и среднего бизнеса. </p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Почему МигКредит выгоднее?</a></p>
+                            <div class="faq-q-desc">
+                                <p>В МигКредит Вы получите заем быстрее, чем в банке. </p>
+                                <p>Вам не потребуется сбор большого пакета документов – справки о трудоустройстве,
+                                    документального подтверждения доходов и т.д. Для получения займа в МигКредит нужен
+                                    только паспорт и любой второй документ, указанный в Правилах предоставления
+                                    микрозаймов. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">К кому обратиться в случае
+                                    возникновения вопросов?</a></p>
+                            <div class="faq-q-desc">
+                                <p>В случае возникновения вопросов необходимо связаться с Вашим финансовым консультантом
+                                    или позвонить по телефону 8(800)7000-908 (звонок бесплатный). </p>
+                                <p>Также Вы можете написать нам, отправив письмо со страницы <a
+                                        href="/kontakty/#form">Формы обратной связи</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Где можно получить документ,
+                                    определяющий политику ООО «МигКредит» в отношении обработки персональных данных, и
+                                    сведения о реализуемых требованиях к защите персональных данных?</a></p>
+                            <div class="faq-q-desc">
+                                <p>В соответствии с требованиями ч. 2 ст. 18.1. Федерального закона от 27.07.2006 N
+                                    152-ФЗ "О персональных данных" ООО "МигКредит" доводит до сведения неопределенного
+                                    круга лиц <a target="_blank"
+                                        href="/documents/polojenie_ob_obrabotke_i_zajite_pnd.pdf">Положение об обработке
+                                        и защите персональных данных , определяющее политику в отношении обработки
+                                        персональных данных, и сведения о реализуемых требованиях к защите персональных
+                                        данных.</a> </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Почему я могу не получить ответ на
+                                    свой запрос?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Микрофинансовая организация обязана гарантировать соблюдение тайны об операциях своих
+                                    заемщиков.
+                                    Нам необходимо убедиться в том, что к нам обращается заемщик или его уполномоченный
+                                    представитель.
+                                    Для этого мы просим в запросе указывать следующую информацию и прикладывать
+                                    сканированные копии следующих документов:</p>
+                                <p>При обращении физического лица: </p>
+                                <ul>
+                                    <li>фамилию, имя, отчество (при наличии);</li>
+                                    <li>адрес электронной почты (при наличии);</li>
+                                    <li>дата рождения;</li>
+                                    <li>номер договора займа;</li>
+                                    <li>нотариально заверенная доверенность на представителя (если обращается
+                                        представитель).</li>
+                                </ul>
+                                <p>При обращении юридического лица:</p>
+                                <ul>
+                                    <li>полное наименование организации;</li>
+                                    <li>адрес (почтовый);</li>
+                                    <li>фамилию, имя, отчество (при наличии) заемщика;</li>
+                                    <li>дата рождения заемщика;</li>
+                                    <li>номер договора займа;</li>
+                                    <li>нотариально заверенная доверенность на представителя.</li>
+                                </ul>
+                                <p>ООО "МигКредит" вправе отказать в рассмотрении обращения, если:</p>
+                                <ul>
+                                    <li>в обращении содержатся нецензурные либо оскорбительные выражения, угрозы
+                                        имуществу микрофинансовой организации, имуществу, жизни и (или) здоровью
+                                        работников микрофинансовой организации, а также членам их семей;</li>
+                                    <li>текст обращения не поддается прочтению;</li>
+                                    <li>в обращении содержится вопрос, на который заявителю ранее предоставлялся ответ
+                                        по существу в связи с направляемым обращением, и при этом во вновь полученном
+                                        обращении не приводятся новые доводы или обстоятельства, о чем уведомляется
+                                        лицо, направившее обращение;</li>
+                                    <li>обращение создано не по форме, если определенная форма установлена в ООО
+                                        "МигКредит";</li>
+                                    <li>на обращении отсутствует подпись заявителя.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Как обеспечивается безопасность
+                                    данных на сайте компании?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Все данные, которые клиент заполняет на сайте защищены SSL-сертификатом безопасности
+                                    компании Comodo. Используя SSL сертификат Comodo Вы гарантируете самый высокий
+                                    уровень шифровки для сетевых переводов. Каждый сертификат подписан рекомендуемой
+                                    2048-битной сигнатурой NIST (национальный институт стандартов и технологий) и
+                                    предоставляет для данных клиентов шифровку до 256 бит.</p>
+                                <p>Comodo является одним из ведущих брендов в сфере интернет-безопасности и одним из
+                                    крупнейших в мире поставщиком SSL - сертификатов. Благодаря данным сертификатам
+                                    компания осуществляет защиту коммуникаций через Интернет, включая зону РФ. Более 25
+                                    000 000 человек доверяют качеству высококвалифицированных SSL-сертификатов Comodo,
+                                    которые удовлетворяют потребности каждого бизнеса.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-list m-t-40">
+                        <p class="h2">Как получить?</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Что нужно сделать для получения
+                                    займа в МигКредит?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Вам необходимо просто позвонить по телефону 8(800)100-06-09 или оформить&nbsp;<a
+                                        target="_blank" href="/dengi3/">заявку на сайте</a>. Также Вы можете обратиться
+                                    в ближайший к Вам офис компании. </p>
+                                <p>С порядком заключения договора займа Вы можете ознакомиться в&nbsp;<a target="_blank"
+                                        href="/documents/pravila_01.03.2019.pdf">Правилах предоставления микрозаймов
+                                        физическим лицам.</a></p>
+                                <p>С информацией об условиях предоставления, использования и возврата займа Вы можете
+                                    ознакомиться <a target="_blank" href="/documents/info_01.03.2019.pdf">здесь</a>.
+                                </p>
+                                <p>С Общими условиями договора займа Вы можете ознакомиться <a target="_blank"
+                                        href="/documents/Obshie_usloviya_01.11.2018v2.pdf ">здесь</a>.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Кто может получить заем в
+                                    МигКредит?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Мы выдаем займы дееспособным гражданам РФ старше 21 года, имеющим постоянную
+                                    регистрацию в одном из субъектов РФ. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">На какую сумму займа я могу
+                                    рассчитывать?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Клиентам доступны займы на сумму до 99 500 рублей.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Можно ли получить заем при наличии
+                                    «плохой» кредитной истории?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Ряд клиентов обращаются в компанию с целью исправления кредитной истории. Главное для
+                                    заемщика - соответствие требованиям компании и своевременное погашение займа. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Должен ли я декларировать цель
+                                    получения займа? </a></p>
+                            <div class="faq-q-desc">
+                                <p>Займы в МигКредит выдаются на любые нужды. Вы можете потратить сумму займа по своему
+                                    усмотрению. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Должен ли я предоставить какой-либо
+                                    залог при получении займа? </a></p>
+                            <div class="faq-q-desc">
+                                <p>Займы в МигКредит предоставляются без залога. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Я могу получить сумму займа только в
+                                    рублях РФ или в любой другой валюте?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Мы выдаем займы в рублях РФ. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-list m-t-40">
+                        <p class="h2">Как оформить?</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Сколько времени потребуется, чтобы
+                                    оформить заем?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Вы можете оформить заем в течение 30 минут в офисе компании. Воспользовавшись формой
+                                    на <a target="_blank" href="/dengi3/">сайте</a>, Вы можете подать заявку в режиме
+                                    онлайн и буквально в течение 1 минуты получить предварительное решение о возможности
+                                    получения займа.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Какова процедура оформления
+                                    займа?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Для оформления займа Вам необходимо:</p>
+                                <ul>
+                                    <li>на <a href="/dengi3/">сайте</a>;</li>
+                                    <li>обратиться в <a href="/ofisy/">офис</a> компании;</li>
+                                    <li>позвонить по телефону 8 800 100 06 09. Звонок бесплатный.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Есть ли какие-либо скрытые комиссии
+                                    при получении займа? </a></p>
+                            <div class="faq-q-desc">
+                                <p>Никаких дополнительных комиссий не предусмотрено. Заемщик получает сумму займа,
+                                    одобренного ему компанией, в полном объеме. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Какие документы нужны для получения
+                                    займа?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Для получения займа необходим только паспорт. </p>
+                                <p>Компания вправе запросить второй документ из следующего списка:</p>
+                                <ul>
+                                    <li>Страховое свидетельство государственного пенсионного страхования;</li>
+                                    <li>Пенсионное удостоверение;</li>
+                                    <li>Водительское удостоверение;</li>
+                                    <li>Свидетельство о регистрации транспортного средства;</li>
+                                    <li>Свидетельство о постановке на учет физического лица в налоговом органе;</li>
+                                    <li>Заграничный паспорт;</li>
+                                    <li>Военный билет.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-list m-t-40">
+                        <p class="h2">Требования к фото/сканам документов</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Что такое верификация? Для чего она
+                                    нужна? Как пройти верификацию? </a></p>
+                            <div class="faq-q-desc">
+                                <p>Для получения займа без визита в офис на карту клиента или через ПС Золотая Корона,
+                                    ПС Юнистрим, необходимо пройти верификацию. Верификация – это процесс проверки
+                                    принадлежности паспорта клиенту, а также соответствия данных в заявке клиента с
+                                    данными в паспорте.</p>
+                                <p>Для того чтобы пройти верификацию, Вам необходимо прикрепить к заявке следующие фото
+                                    или сканы документов:</p>
+                                <ol>
+                                    <li> Паспорт: 2-3 страница – разворот с фотографией</li>
+                                    <li> Паспорт-регистрация: страница с последней записью о регистрации
+                                    </li>
+                                    <li> Селфи с паспортом – фотография лица с разворотом паспорта</li>
+                                </ol>
+                                <p>Убедитесь в том, что все внесенные Вами в заявку данные строго соответствуют
+                                    паспорту.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Требования к качеству фото/сканов
+                                    документов </a></p>
+                            <div class="faq-q-desc">
+                                <p>Фото/сканы сделаны верно, если:</p>
+                                <ol>
+                                    <li> Данные на фото читаемы</li>
+                                    <li> Нет бликов и пятен</li>
+                                    <li> Не закрыты пальцами фото и другая информация</li>
+                                    <li> Видны серия и номер паспорта</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Как должны выглядеть документы,
+                                    чтобы верификация прошла успешно?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Паспорт: 2-3 страница – разворот с фотографией</p>
+                                <p><img src="img/passport23.jpg"></p>
+
+                                <p>Паспорт- регистрация: страница с последней записью о регистрации</p>
+                                <p><img src="img/passport3.jpg"></p>
+
+                                <p>Селфи с паспортом – фотография лица с разворотом паспорта</p>
+                                <p><img src="img/passport4.jpg"></p>
+
+                                <p>Фото/сканы сделаны верно, если:</p>
+                                <ol>
+                                    <li> Данные на фото читаемы</li>
+                                    <li> Нет бликов и пятен</li>
+                                    <li> Не закрыты пальцами фото и другая информация</li>
+                                    <li> Видны серия и номер паспорта</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Почему верификация может быть не
+                                    пройдена?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Верификация не будет пройдена, если:</p>
+                                <ol>
+                                    <li> Если фото/сканы документов не будут соответствовать требованиям</li>
+                                    <li> В заявке будут найдены ошибки и/или расхождения с паспортными данными</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-list m-t-40">
+                        <p class="h2">Процедура выдачи</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Как скоро я смогу получить деньги
+                                    после одобрения заявки на заем? </a></p>
+                            <div class="faq-q-desc">
+                                <p>В течение 24 часов после одобрения заявки о предоставлении займа. </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Где и каким способом я могу получить
+                                    деньги?</a></p>
+                            <div class="faq-q-desc">
+
+                                <p>Мы предлагаем несколько способов получения денег:</p>
+                                <ul>
+                                    <li>Наличные через&nbsp;<a target="_blank" href="/get/zolotaya-korona/">систему
+                                            денежных переводов Золотая Корона</a></li>
+                                    <li>Наличные через&nbsp;<a target="_blank" href="/get/unistrim/">систему денежных
+                                            переводов Юнистрим</a></li>
+                                    <li>Наличные через&nbsp;<a target="_blank" href="/get/contact/">систему денежных
+                                            переводов «CONTACT»</a></li>
+                                    <!--  <li>Наличные через&nbsp;<a target="_blank" href="/get/lider/">систему денежных переводов ЛИДЕР</a></li> -->
+                                    <!-- <li>Безналичный перевод на текущий&nbsp;<a target="_blank" href="/get/na-licevoi-chet/">банковский счет</a></li> -->
+                                    <li>Безналичный перевод на <a target="_blank"
+                                            href="/get/na-bankovskyu-karty/">банковскую карту</a></li>
+                                    <li>Безналичный перевод на <a target="_blank" href="/get/karta-migcredit/">карту
+                                            МигКредит (доставка курьером)</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Можно ли будет изменить способ
+                                    получения денег?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Способ получения денег Вы определяете в момент подачи&nbsp;<a target="_blank"
+                                        href="/dengi3/">заявки</a>. Вы можете изменить его до момента подписания
+                                    договора.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-list m-t-40">
+                        <p class="h2">Как погасить?</p>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Могу ли я погасить заем досрочно и
+                                    на каких условиях?</a></p>
+                            <div class="faq-q-desc">
+                                <p>В договоре займа с ООО «МигКредит» предусмотрена возможность досрочного погашения
+                                    задолженности. Мы работаем в соответствии с законодательством РФ. Условия для
+                                    досрочного погашения займа указаны в индивидуальных (п.7) и общих (п. 3.5 – 3.6)
+                                    условиях договора. C Общими условиями договора займа можно ознакомиться <a
+                                        href="/get/">здесь</a></p>
+                                <p>Оформить запрос на досрочное погашение Вы можете через личный кабинет в
+                                    соответствующем разделе</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Почему я должен ждать 28 дней для
+                                    досрочного погашения? </a></p>
+                            <div class="faq-q-desc">
+                                <p>Частью 4 статьи 11 Федерального закона от 21.12.2013 N 353-ФЗ "О потребительском
+                                    кредите (займе)" предусмотрено, что заемщик имеет право вернуть досрочно кредитору
+                                    всю сумму полученного потребительского кредита (займа) или ее часть, уведомив об
+                                    этом кредитора способом, установленным договором потребительского кредита (займа),
+                                    не менее чем за тридцать календарных дней до дня возврата потребительского кредита
+                                    (займа), если более короткий срок не установлен договором потребительского кредита
+                                    (займа). Договором займа с ООО «МигКредит», установлено, что заемщик обязан
+                                    письменно уведомить кредитора за 28 календарных дней до даты досрочного погашения.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Что будет, если я не смогу вовремя
+                                    погасить заем? </a></p>
+                            <div class="faq-q-desc">
+                                <p>В случае невозможности внесения платежа по займу в срок, пожалуйста, свяжитесь со
+                                    своим финансовым консультантом по вопросу урегулирования задолженности.</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Где и каким способом я могу погасить
+                                    заем?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Погасить&nbsp;заем&nbsp;Вы можете через:</p>
+                                <ul>
+                                    <li>Наличные через&nbsp;<a target="_blank" href="/pogashenie-zayma/contact/">систему
+                                            денежных переводов «CONTACT»</a></li>
+                                    <!-- <li>Наличные через&nbsp;<a target="_blank" href="/pogashenie-zayma/lider/">систему денежных переводов ЛИДЕР</a></li> -->
+                                    <li>Платежные терминалы&nbsp;<a target="_blank"
+                                            href="/pogashenie-zayma/qiwi/">QIWI</a>, наличные в салонах <a
+                                            target="_blank" href="/pogashenie-zayma/svyaznoy/">«Связной»</a> и <a
+                                            target="_blank" href="/pogashenie-zayma/eleksnet/">Элекснет</a></li>
+                                    <li>Безналичный перевод на текущий&nbsp;<a target="_blank"
+                                            href="/pogashenie-zayma/bankovskiy-perevod/">банковский счет</a>, или с
+                                        помощью <a target="_blank"
+                                            href="/pogashenie-zayma/bankovskaya-karta/">банковской карты</a></li>
+                                    <li>Погасить через терминал&nbsp;<a target="_blank"
+                                            href="/pogashenie-zayma/cyberplat/">Cyberplat</a></li>
+                                    <li>Погасить через платежную систему <a target="_blank"
+                                            href="/pogashenie-zayma/zolotaya-korona/"> Золотая Корона</a></li>
+                                    <li>Погасить через <a target="_blank" href="/pogashenie-zayma/mkb/">Московский
+                                            Кредитный Банк</a></li>
+                                    <li>Погасить через <a target="_blank" href="/pogashenie-zayma/mts/">МТС</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Какова периодичность погашения
+                                    займа?</a></p>
+                            <div class="faq-q-desc">
+                                <p>Периодичность погашения займа зависит от вида выбранного Вами продукта:</p>
+                                <p>Погашение займа с единовременным погашением осуществляется одним платежом по
+                                    истечении срока займа (от 3 до 29 дней).</p>
+                                <p>Погашение займа с постепенным погашением осуществляется равными платежами каждые 2
+                                    недели (в течение 10, 12, 16, 20, 24, 28, 32, 36, 40, 44 или 48 недель).</p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold "><a href="#">Реструктуризация</a></p>
+                            <div class="faq-q-desc">
+                                <p><a href="/documents/restruct_n2.pdf" target="_blank">Памятка по подаче заявки для
+                                        предварительного анализа возможности реструктуризации</a></p>
+                                <p><a href="/documents/restrukt_27.03.2018.pdf" target="_blank">Заявка для
+                                        предварительного анализа возможности реструктуризации займа</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <form action="/dengi3/" class="calculator inner m-t--60" data-calculator="" method="POST">
+                    <div class="shadow-block">
+                        <div class="row">
+                            <div class="col w-33">
+                                <div class="calculator-item">
+                                    <div class="calculator-row">
+                                        <div class="left">
+                                            <p class="big-label">Требуемая сумма</p>
+                                        </div>
+                                        <div class="right">
+                                            <p class="big">
+                                                <nobr><span data-sum="">30 000</span> ₽</nobr>
+                                            </p>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="calculator-slider">
+                                        <div data-sum_slider=""
+                                            class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"
+                                                style="width: 28.4211%;"></div><span
+                                                class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"
+                                                style="left: 28.4211%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col w-33">
+                                <div class="calculator-item center">
+                                    <div class="calculator-row">
+                                        <div class="left">
+                                            <p class="big-label">На срок</p>
+                                        </div>
+                                        <div class="right">
+                                            <p class="big">
+                                                <nobr><span data-term="">24</span> <span
+                                                        data-term_label="">недели</span>
+                                                </nobr>
+                                            </p>
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                    <div class="calculator-slider">
+                                        <div data-term_slider=""
+                                            class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"
+                                                style="width: 60%;"></div><span
+                                                class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"
+                                                style="left: 60%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col w-33">
+                                <input data-term_type="" name="calc_period_type" type="hidden" value="week">
+                                <button class="button button-medium button-form uppercase" type="submit">Получить
+                                    деньги
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator-item result shadow-block">
+                        <div class="row">
+                            <div class="col w-50 after-divider">
+                                <div class="calculator-row min-margin">
+                                    <div class="row">
+                                        <div class="col w-50 w-50-mobile">
+                                            <div class="right">
+                                                <p class="medium-label color-gray"><span data-result_sum_label="">Платеж
+                                                        раз в 2 недели</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col w-50 w-50-mobile">
+                                            <div class="left">
+                                                <p class="medium">
+                                                    <nobr><span data-result_sum="">3 252</span> ₽</nobr>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col w-50">
+                                <div class="calculator-row min-margin">
+                                    <div class="row">
+                                        <div class="col w-50 w-50-mobile">
+                                            <div class="right">
+                                                <p class="medium-label color-gray">До (включительно)</p>
+                                            </div>
+                                        </div>
+                                        <div class="col w-50 w-50-mobile">
+                                            <div class="left">
+                                                <p class="medium"><span data-result_deadline="">10 декабря
+                                                        2019</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="section p-all-0">
+        <div class="container text-align-center seo-content">
+            <div class="asterisk">
+                *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
+                МФО по обьему портфеля.
+            </div>
+        </div>
+    </div>
+    <div class="footer-margin"></div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <span class="logo hide-mobile"></span>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                    <p class="small-text">Действующим клиентам</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                    <p class="small-text">По вопросам оформления заявки</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Микрокредиты</a></li>
+                        <li><a class="link" href="#">Микрозаймы</a></li>
+                        <li><a class="link" href="#">Деньги онлайн</a></li>
+                        <li><a class="link" href="#">Автокредитование</a></li>
+                        <li><a class="link" href="#">Карта Лукойл</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Продукты</a></li>
+                        <li><a class="link" href="#">Погашение займа</a></li>
+                        <li><a class="link" href="#">Услуги</a></li>
+                        <li><a class="link" href="#">Акции</a></li>
+                        <li><a class="link" href="#">Инвестиции</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Партнерская программа</a></li>
+                        <li><a class="link" href="#">Карьера</a></li>
+                        <li><a class="link" href="#">Статьи</a></li>
+                        <li><a class="link" href="#">Карта сайта</a></li>
+                        <li><a class="link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25">
+                    <div class="apps">
+                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                    </div>
+                </div>
+            </div>
+            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-33 w-50-mobile">
+                        <p>© 2019, МигКредит</p>
+                    </div>
+                    <div class="col w-33 hide-mobile">
+                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

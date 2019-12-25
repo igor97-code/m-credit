@@ -3,7 +3,8 @@
         margin-top: 85px;
         display: block;        
         outline: none;
-        text-decoration: none;        
+        text-decoration: none;   
+        color: $colorText;     
         &:hover {
             color: $colorGray;
             cursor: pointer;

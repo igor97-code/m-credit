@@ -503,6 +503,14 @@
             }
         } 
     }
+    &.bg-16 {
+        background-image: url('../img/products/avtokreditovanie/bg17.jpg');
+        background-position: center;
+        &:before {
+            // background-image: url('../img/products/avtokreditovanie/driver.png');
+        }
+
+    }
 
     &.bg-invest {
         background-image: url('../img/investors/bg-invest.png');
