@@ -19358,6 +19358,7 @@ function initAuthPage() {
             $links.removeClass('hide');
         }
     }
+<<<<<<< HEAD
     // очистка данных о пользователе
     function clearUserData() {
         // очищаем номер телефона и показываем его
@@ -19464,5 +19465,7 @@ function initAuthPage() {
 
 
 
+=======
+>>>>>>> e0a6a35a16e19c74fae44cf7e85f9a5201668d82
 
 //# sourceMappingURL=script.js.map
