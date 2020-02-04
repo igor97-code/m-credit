@@ -19153,7 +19153,7 @@ if ($('#inner_regions_map').length) {
 
         handlerMouseleave()
     });
-    $('#map_rf').on('click', 'area', function (e) {
+    /*$('#map_rf').on('click', 'area', function (e) {
         window.addEventListener('scroll', blockscrollto)
         function blockscrollto (){
             window.scrollBy(0,-scrolto);
@@ -19164,6 +19164,23 @@ if ($('#inner_regions_map').length) {
         var menu= window.getComputedStyle($('#main_menu')[0]).height;
         menu = parseInt(menu.replace("px",""));
         var scrolto = header + menu;
+    });*/
+    $('#map_rf').on('click', 'area', function (e) {
+        var href = $(this).attr('href');
+
+        // находишь элемент на странице к которому проскроллить
+        var $item = $(href);
+        var offsetY = $item.offset().top;
+
+        // получаешь высоту хедера и меню
+        var headerHeight = $('.header').height();
+        var menuHeight = $('#main_menu').height();
+        // формируешь значение куда скроллить
+        var scrollTop = offsetY - headerHeight - menuHeight;
+        // скролишь
+        $(window).scrollTop(scrollTop);
+
+        return false;
     });
 
 
