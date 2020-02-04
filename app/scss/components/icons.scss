@@ -9,6 +9,7 @@
     font-style: normal;
 }
 
+
 [class^='icon-']:before,
 [class*=' icon-']:before,
 .jq-selectbox__trigger:before,
@@ -254,4 +255,13 @@
 }
 .icon-two:before {
     content: "\2d";
+}
+.icon-square:before {
+    content: "\5f";
+}
+.icon-menu-close:before {
+    content: "\60";
+}
+.icon-menu-button:before {
+    content: "\7b";
 }

@@ -251,6 +251,15 @@
 .icon-two:before {
   content: "\2d"; }
 
+.icon-square:before {
+  content: "\5f"; }
+
+.icon-menu-close:before {
+  content: "\60"; }
+
+.icon-menu-button:before {
+  content: "\7b"; }
+
 html {
   margin: 0;
   padding: 0;

@@ -1412,6 +1412,19 @@ if ($('#inner_regions_map').length) {
 
         handlerMouseleave()
     });
+    $('#map_rf').on('click', 'area', function (e) {
+        window.addEventListener('scroll', blockscrollto)
+        function blockscrollto (){
+            window.scrollBy(0,-scrolto);
+            window.removeEventListener('scroll',blockscrollto, false);
+        }
+       var header = window.getComputedStyle($('.header')[0]).height;
+       header = parseInt(header.replace("px",""));
+        var menu= window.getComputedStyle($('#main_menu')[0]).height;
+        menu = parseInt(menu.replace("px",""));
+        var scrolto = header + menu;
+    });
+
 
 }
 

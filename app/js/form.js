@@ -249,6 +249,7 @@ function initPlaceholders() {
 
         $(this)
             .on('focus', function () {
+
                 var $this = $(this),
                     $field = $this.parents('.field'),
                     plh = $this.attr('data-placeholder'),
