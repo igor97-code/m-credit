@@ -238,6 +238,7 @@
         line-height: 170%;
         padding: 10px;
     }
+
 }
 
 button.button,
@@ -247,4 +248,9 @@ input.button {
 
 .button-w-150 {    
     width: 150px;
+    color:  $colorText;
+    &.yellow{
+        background-color: $colorMain3 !important;
+    }
+
 }

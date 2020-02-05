@@ -222,6 +222,7 @@
             }
         }
 
+
         .head {
             //height: auto;
             min-height: 500px;
@@ -508,6 +509,14 @@
         background-position: center;
         &:before {
             // background-image: url('../img/products/avtokreditovanie/driver.png');
+        }
+
+    }
+    &.bg-19 {
+        background-image: linear-gradient(28.29deg, #F0F2FC 0%, #D7D8DD 100%);
+        background-position: center;
+        &:before {
+                background-image: url('../img/products/bg-19.png');
         }
 
     }
