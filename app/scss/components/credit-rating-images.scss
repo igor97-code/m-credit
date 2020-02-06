@@ -1,0 +1,97 @@
+.graphic {
+    position: relative;
+    display: block;
+    width: 313px;
+    margin:0 auto;
+    background: url(../img/ellipse.png) no-repeat center / cover;
+
+    overflow: hidden;
+    &:before{
+        content:" ";
+        display: block;
+        float: left;
+        margin: 0;
+        padding-top: 100%;
+    }
+    @include mobile {
+        margin-top: 30px;
+    }
+
+}
+.rating-phone {
+    position: relative;
+    display: block;
+    width: 333px;
+    margin:0 auto;
+    background: url(../img/credit-rating.png) no-repeat center / cover;
+
+    overflow: hidden;
+    &:before{
+        content:" ";
+        display: block;
+        float: left;
+        margin: 0;
+        padding-top: 186%;
+    }
+    @include mobile {
+        margin-top: 30px;
+    }
+
+
+}
+.item-100size {
+    background-color: $colorWhite !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    padding-bottom: 35%;
+    margin: 10px 0;
+    cursor: pointer;
+
+    @include mobile {
+        margin: 5px 0;
+        background-size: 100% !important;
+    }
+}
+
+.rating{
+
+    ul {
+        li {
+            padding: 0 0 0 30px !important;
+            color: $colorText;
+
+            &:before {
+                top: 0 !important;
+                width: 0px !important;
+                height: 0px !important;
+                background:none !important;
+                color:$colorMain;
+            }
+        }
+    }
+    .num1{
+        &:before {
+            content: "1." !important;
+        }
+    }
+    .num2{
+        &:before {
+            content: "2." !important;
+        }
+    }
+    .num3{
+        &:before {
+            content: "3." !important;
+        }
+    }
+    .check{
+        &:before {
+            content: url(../img/cradit-check.png) !important;
+        }
+    }
+}
+.section{
+    .p-smoll{
+        font-size:23px !important;
+    }
+}
