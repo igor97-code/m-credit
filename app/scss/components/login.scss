@@ -1,0 +1,143 @@
+.login-page {
+    display: block;
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    padding: 50px 0;
+    background: url('../img/lk-auth-bg.jpg') center center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    &.load {
+        * {
+            transition: none;
+        }
+        .form {
+            visibility: hidden;
+        }
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            margin: -20px 0 0 -20px;
+            width: 40px;
+            height: 40px;
+            background: #333333 url('../img/preloaders/spinner-on-gray.gif') center center no-repeat;
+            background-size: cover;
+            z-index: 1;
+            border-radius: 10px;
+        }
+    }
+
+    .form {
+        max-width: 480px;
+        margin: 50px auto;
+        padding: 0;
+    }
+
+    .auth-icon {
+        display: block;
+        margin: 0 auto 20px auto;
+        width: 65px; height: 65px;
+        font-size: 65px;
+    }
+
+    .caption {
+        margin: 20px 0 30px 0;
+        font-size: 26px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+    }
+
+    .error-message {
+        display: block;
+        margin: 20px 0;
+        padding: 10px 15px;
+        background: #fff;
+        border-radius: 5px;
+
+        p {
+            margin: 5px 0;
+            padding: 0;
+            font-size: 14px;
+            line-height: 1.2em;
+            font-weight: 400;
+            color: #51636d;
+            text-align: center;
+
+            &.title {
+                font-size: 16px;
+                line-height: 1.2em;
+                color: $colorError;
+            }
+
+            a {
+                color: #51636d;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .links {
+        margin: 20px 0;
+        padding: 0;
+        overflow: hidden;
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .item {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1em;
+            font-weight: 400;
+            color: rgba(255, 255, 255, .8);
+            text-decoration: none;
+            -webkit-transition: color .2s ease;
+            transition: color .2s ease;
+
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    .g-recaptcha>div {
+        margin: 0 auto;
+    }
+
+    iframe{
+        border: 2px solid transparent;
+        border-radius: 5px;
+        transition: border .2s ease;
+    }
+
+    .error {
+        iframe {
+            border-color: #e35760;
+        }
+    }
+
+    .g-recaptcha {
+        margin: 0 auto;
+        div {
+            margin:0 auto;
+        }
+    }
+
+}

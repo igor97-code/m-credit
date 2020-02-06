@@ -23,7 +23,8 @@
 
 <body>
     <div id="page_preloader"
-        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+        style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff
+         url('./img/preloaders/spinner-on-white.gif') center center no-repeat; background-size: 40px 40px;">
     </div>
     <!-- header -->
     <div class="header">
@@ -237,54 +238,51 @@
 
         <input type="hidden" id="notzaglushka" value="0">
 
-        <div class="section login-page" style="background-image: url(./img/lk-auth-bg1.png);">
+        <div id="login_page" class="section login-page">
             <div class="container">
-                <div id="authpage" class="authpage load">
-                    <form action="#" class="form" method="POST">
-                        <div class="auth-icon color-white">
-                            <div class="icon-user1"></div>
-                        </div>
-                        <p id="caption" class="caption"></p>
-                        <label id="field_phone" class="field">
-                            <input type="tel" id="phone" name="phone" data-validate="mobile_phone"
-                                data-placeholder="Контактный телефон" data-mask_tpl="phone_plus7" data-masktpl="phone"
-                                value="" class="input input-text placeholder  validate input-mask">
-                        </label>
-                        <label id="field_password" class="field">
-                            <input type="password" id="password" name="password" data-validate="password"
-                                data-placeholder="Введите пароль" data-mask_tpl="password" data-masktpl="password"
-                                value="" class="input input-text placeholder validate">
-                        </label>
-                        <label id="field_recaptcha" class="field" style="display: none">
-                            <div class="g-recaptcha" data-callback="recaptchaValidate"
-                                data-sitekey="6Lc6Ep0UAAAAABqEvpKM1i88vFlsSUTHB_Dk0y_Q"></div>
-                        </label>
-                        <div id="error_message" class="error-message hide">
-                        </div>
-                        <button type="submit" id="button_submit" class="button button-big">Войти</button>
-                        <div id="links" class="links">
-                            <div class="row">
-                                <div class="col w-50 w-50-tablet">
-                                    <div class="left">
-                                        <p><a href="/lk_access/" class="item" id="link_reg">Зарегистрироваться</a></p>
-                                        <a href="#" class="item hide" id="link_username"></a>
-                                    </div>
+                <form action="#" class="form" method="POST">
+                    <div class="auth-icon color-white">
+                        <i class="icon-user1"></i>
+                    </div>
+                    <p id="caption" class="caption"></p>
+                    <label id="field_phone" class="field">
+                        <input type="tel" id="phone" name="phone" data-validate="mobile_phone"
+                               data-placeholder="Контактный телефон" data-mask_tpl="phone_plus7" data-masktpl="phone"
+                               value="" class="input input-text placeholder  validate input-mask">
+                    </label>
+                    <label id="field_password" class="field">
+                        <input type="password" id="password" name="password" data-validate="required"
+                               data-placeholder="Введите пароль"
+                               value="" class="input input-text placeholder validate">
+                    </label>
+                    <label id="field_recaptcha" class="field" style="display: none">
+                        <div class="g-recaptcha" data-callback="recaptchaValidate"
+                             data-sitekey="6Lc6Ep0UAAAAABqEvpKM1i88vFlsSUTHB_Dk0y_Q"></div>
+                    </label>
+                    <div id="error_message" class="error-message hide"></div>
+                    <button type="submit" id="button_submit" class="button button-big">Войти</button>
+                    <div id="links" class="links">
+                        <div class="row">
+                            <div class="col w-50 w-50-tablet">
+                                <div class="left">
+                                    <p><a href="/lk_access/" class="item" id="link_reg">Зарегистрироваться</a></p>
+                                    <a href="#" class="item hide" id="link_username"></a>
                                 </div>
-                                <div class="col w-50 w-50-tablet">
-                                    <div class="right">
-                                        <p><a href="#" class="item" id="link_access">Восстановить доступ</a></p>
-                                        <div class="item" id="restore_timer"></div>
-                                    </div>
+                            </div>
+                            <div class="col w-50 w-50-tablet">
+                                <div class="right">
+                                    <p><a href="#" class="item" id="link_access">Восстановить доступ</a></p>
+                                    <div class="item" id="restore_timer"></div>
                                 </div>
-                            </div> 
+                            </div>
                         </div>
-                        <div class="hide">
-                            <input type="hidden" id="user_phone" value="">
-                            <input type="hidden" id="user_name" value="">
-                            <input type="hidden" id="restore_seconds" value="">
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="hide">
+                        <input type="hidden" id="user_phone" value="">
+                        <input type="hidden" id="user_name" value="">
+                        <input type="hidden" id="restore_seconds" value="">
+                    </div>
+                </form>
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </div>
         </div>

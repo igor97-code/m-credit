@@ -17869,8 +17869,8 @@ $(function () {
     });
 
     //login 
-    if ($('#authpage')) {
-        initAuthPage();
+    if ($('#login_page')) {
+        initLoginPage();
     }
 
     // скрываем прелоадер страницы
@@ -18544,7 +18544,7 @@ function initInvestorForm() {
                 var invest_wmid = $('#invest_wmid').val();
                 var invest_tid = $('#invest_tid').val();
 
-                phone = phone.replace(/[()\_-\s]/g, '');
+                phone = phone.replace(/[()\_\-\s]/g, '');
                 var data = {
                     'name': name,
                     'email': email,
@@ -19160,9 +19160,9 @@ if ($('#inner_regions_map').length) {
             window.removeEventListener('scroll',blockscrollto, false);
         }
        var header = window.getComputedStyle($('.header')[0]).height;
-       header = parseInt(header.replace("px",""));
+       header = parseInt(header.replace('px',''));
         var menu= window.getComputedStyle($('#main_menu')[0]).height;
-        menu = parseInt(menu.replace("px",""));
+        menu = parseInt(menu.replace('px',''));
         var scrolto = header + menu;
     });
 
@@ -19211,9 +19211,9 @@ function tooltipPosition(e) {
 }
 
 // авторизация
-function initAuthPage() {
+function initLoginPage() {
     // основные HTML объекты
-    var $authPage = $('#authpage'),
+    var $authPage = $('#login_page'),
         $form = $authPage.find('.form'),
         $caption = $('#caption'),
         $fieldPhone = $('#field_phone'),
@@ -19251,26 +19251,6 @@ function initAuthPage() {
 
     hidePreloader();
 
-    // маска ввода для номера телефона
-    $phone
-        .on('change', function () {
-            if (!validateField($phone)) {
-                $fieldPhone.addClass('error');
-
-            } else {
-                $fieldPhone.removeClass('error');
-            }
-        });
-
-    $password.on('change', function () {
-        if (!validateField($password)) {
-            $fieldPassword.addClass('error');
-
-        } else {
-            $fieldPassword.removeClass('error');
-        }
-    });
-
     // отправка формы заявки
     $form.on('submit', function () {
         var error = 0;
@@ -19278,7 +19258,6 @@ function initAuthPage() {
         if (!validateForm($form)) {
             error++;
         }
-
 
         if ($('.g-recaptcha:visible').length) {
             var v = grecaptcha.getResponse();
@@ -19293,8 +19272,6 @@ function initAuthPage() {
         if (error === 0) {
             loginSubmit();
         }
-
-
 
         return false;
     });
@@ -19341,6 +19318,8 @@ function initAuthPage() {
         return false;
     });
 
+    fullscreen();
+
     // запрос на восстановление доступа
     function restore() {
         showPreloader();
@@ -19348,7 +19327,7 @@ function initAuthPage() {
         var login = $phone.inputmask('unmaskedvalue');
 
         $.ajax({
-            url: '/login/restore.php',
+            url: 'https://test3.migcredit.ru/login/restore.php',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -19407,7 +19386,7 @@ function initAuthPage() {
                         messageHTML = '<p class="title">Что-то пошло не так...</p><p>Попробуйте еще раз или обратитесь к нам через <a href="/feedback/">форму обратной связи</a>, описав ситуацию и приложив скриншот ошибки.</p>';
                     }
 
-                    showError(messageHTML);
+                    if (messageHTML) showError(messageHTML);
                     hidePreloader();
                 }
             },
@@ -19489,7 +19468,7 @@ function initAuthPage() {
         password = $.sha1(password);
 
         $.ajax({
-            url: '/login/save.php',
+            url: 'https://test3.migcredit.ru/login/save.php',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -19604,80 +19583,26 @@ function initAuthPage() {
     }
 
     // фулскрин блоки
-    // function fullscreen() {
-    //     setHeight();
+    function fullscreen() {
+        setHeight();
 
-    //     $(window).on('resize scroll', function () {
-    //         setHeight();
-    //     });
+        $(window).on('resize scroll', function () {
+            setHeight();
+        });
 
-    //     function setHeight() {
-    //         var windowWidth = +$(window).width(),
-    //             windowHeight = +$(window).height(),
-    //             headerHeight = +$('.header').height(),
-    //             breadcrumsHeight = 0;
-    //         if ($('.breadcrumbs').length) breadcrumsHeight = +$('.breadcrumbs').outerHeight(true);
+        function setHeight() {
+            var windowWidth = +$(window).width(),
+                windowHeight = +$(window).height(),
+                headerHeight = +$('.header').height(),
+                menuHeight = $('#main_menu').height();
 
-    //         var height = windowHeight - headerHeight - breadcrumsHeight;
-    //         if (height < 470 || windowWidth < 1000) height = 470;
+            var height = windowHeight - headerHeight - menuHeight;
+            if (height < 470 || windowWidth < 1000) height = 470;
 
-    //         $authPage.css('minHeight', height + 'px');
-
-    //         // доп.классы в зависимости от высоты
-    //         if (windowHeight < 800) {
-    //             $('html').addClass('height-small');
-    //         } else {
-    //             $('html').removeClass('height-small');
-    //         }
-    //     }
-    // }
-
-    //placeholders
-    function initPlaceholders() {
-        $('.custom-placeholder').each(function () {
-            if (!$(this).hasClass('ready')) {
-                var $this = $(this);
-                var $field = $this.parent();
-                var plh = $this.data('placeholder');
-                var val = $.trim($this.val());
-                if ((val == '' || val == plh) && plh != '' && plh != undefined) {
-                    $field.addClass('empty');
-                } else {
-                    $field.removeClass('empty');
-                }
-
-                $field.prepend('<span class="label">' + plh + '</span>');
-
-                $(this).addClass('ready');
-
-                $(this).on('focus', function () {
-                    var $this = $(this);
-                    var $field = $this.parent();
-                    var plh = $this.data('placeholder');
-                    var val = $.trim($this.val());
-                    if (!$this.prop('readonly')) {
-                        if (val == '' || val == plh) {
-                            $field.removeClass('empty');
-                            $this.val('');
-                        }
-                    }
-                }).on('blur', function () {
-                    var $this = $(this);
-                    var $field = $this.parent();
-                    var val = $.trim($this.val());
-                    var plh = $this.data('placeholder');
-
-                    if (val == '' || val == plh) {
-                        $field.removeClass('error success').addClass('empty');
-                    } else {
-                        $field.removeClass('empty');
-                    }
-                });
-
-            }
-
-        })
+            $authPage.css('minHeight', height + 'px');
+        }
     }
+
     // капча
     function resetCaptcha() {
         grecaptcha.reset()

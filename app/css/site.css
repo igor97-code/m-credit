@@ -4593,40 +4593,7 @@ input.button {
 .hide-visibility {
   display: none; }
 
-.login-page {
-  background-size: cover;
-  height: calc(100vh - 95px);
-  padding: calc(50vh - 260px) 0; }
-  .login-page .authpage {
-    max-width: 480px;
-    margin: 0 auto; }
-    .login-page .authpage .auth-icon {
-      font-size: 70px;
-      margin-bottom: 20px; }
-    .login-page .authpage .links a {
-      color: #ffffff;
-      text-decoration: none; }
-      .login-page .authpage .links a:hover {
-        text-decoration: underline; }
-    .login-page .authpage .links .right {
-      text-align: right; }
-    .login-page .authpage .g-recaptcha > div {
-      margin: 0 auto; }
-    .login-page .authpage .error-message {
-      background-color: #ffffff;
-      border-radius: 4px;
-      padding: 15px;
-      border: 1px solid #e94551; }
-      .login-page .authpage .error-message p {
-        font-size: 14px;
-        margin-bottom: 5px;
-        margin-top: 5px; }
-
 @media (max-width: 1000px) {
-  .login-page {
-    background-size: cover;
-    height: calc(100vh - 50px);
-    padding: calc(50vh - 260px) 0; }
   .history-company-content {
     width: 100%;
     height: auto; }
@@ -4898,6 +4865,55 @@ input.button {
       text-decoration: none;
       transition: color .2s; }
 
+.question-list {
+  display: block;
+  margin: 20px 0;
+  padding: 1px 0; }
+  .question-list .group {
+    display: block;
+    margin: 30px 0 0 0;
+    padding: 1px 0; }
+    .question-list .group:first-child {
+      margin-top: 0; }
+  .question-list .question {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 0 1px;
+    padding: 0;
+    border-top: 1px dotted #efefef; }
+    .question-list .question.active .arrow {
+      transform: rotate(-180deg); }
+    .question-list .question.active .answer {
+      display: block; }
+  .question-list .question-title {
+    position: relative;
+    margin: 0;
+    padding: 15px 90px 15px 0;
+    font-size: 20px;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #333333; }
+    .question-list .question-title:hover {
+      opacity: .8; }
+  .question-list .arrow {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 50%;
+    margin: -6px 0 0 0;
+    font-size: 12px;
+    color: #7e7e7e; }
+  .question-list p {
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #333333; }
+    .question-list p.theme {
+      color: #7dc041;
+      font-size: 20px;
+      line-height: 1.2em;
+      font-weight: 400; }
+
 .section .site-map {
   margin-bottom: 40px;
   float: left; }
@@ -5076,78 +5092,104 @@ input.button {
     .mig-app.infographic .button-block .app-link {
       margin: 30px 0 15px; } }
 
-.question-list {
+.login-page {
   display: block;
-  margin: 20px 0;
-  padding: 1px 0; }
-  .question-list .group {
-    display: block;
-    margin: 30px 0 0 0;
-    padding: 1px 0; }
-    .question-list .group:first-child {
-      margin-top: 0; }
-  .question-list .question {
-    position: relative;
-    z-index: 3;
-    margin: 0 0 0 1px;
-    padding: 0;
-    border-top: 1px dotted #efefef; }
-    .question-list .question.active .arrow {
-      transform: rotate(-180deg); }
-    .question-list .question.active .answer {
-      display: block; }
-  .question-list .question-title {
-    position: relative;
-    margin: 0;
-    padding: 15px 90px 15px 0;
-    font-size: 20px;
-    line-height: 1.2em;
-    font-weight: 400;
-    color: #333333; }
-    .question-list .question-title:hover {
-      opacity: .8; }
-  .question-list .arrow {
+  position: relative;
+  z-index: 10;
+  margin: 0;
+  padding: 50px 0;
+  background: url("../img/lk-auth-bg.jpg") center center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden; }
+  .login-page.load * {
+    transition: none; }
+  .login-page.load .form {
+    visibility: hidden; }
+  .login-page.load:before {
+    content: "";
     display: block;
     position: absolute;
+    left: 50%;
+    top: 40%;
+    margin: -20px 0 0 -20px;
+    width: 40px;
+    height: 40px;
+    background: #333333 url("../img/preloaders/spinner-on-gray.gif") center center no-repeat;
+    background-size: cover;
     z-index: 1;
-    right: 0;
-    top: 50%;
-    margin: -6px 0 0 0;
-    font-size: 12px;
-    color: #7e7e7e; }
-  .question-list p {
-    font-size: 16px;
-    line-height: 1.5em;
-    color: #333333; }
-    .question-list p.theme {
-      color: #7dc041;
-      font-size: 20px;
-      line-height: 1.2em;
-      font-weight: 400; }
-
-.promo-item {
-  display: block;
-  margin: 20px 0;
-  padding: 1px 0;
-  text-decoration: none;
-  transition: opacity .2s ease; }
-  .promo-item *:first-child {
-    margin-top: 0; }
-  .promo-item *:last-child {
-    margin-bottom: 0; }
-  .promo-item p {
-    margin: 10px 0;
-    font-size: 16px;
-    line-height: 1.5em;
-    font-weight: 300; }
-    .promo-item p.name {
-      font-size: 20px;
+    border-radius: 10px; }
+  .login-page .form {
+    max-width: 480px;
+    margin: 50px auto;
+    padding: 0; }
+  .login-page .auth-icon {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 65px;
+    height: 65px;
+    font-size: 65px; }
+  .login-page .caption {
+    margin: 20px 0 30px 0;
+    font-size: 26px;
+    line-height: 1.2em;
+    font-weight: 400;
+    color: #fff;
+    text-align: center; }
+  .login-page .error-message {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 15px;
+    background: #fff;
+    border-radius: 5px; }
+    .login-page .error-message p {
+      margin: 5px 0;
+      padding: 0;
+      font-size: 14px;
       line-height: 1.2em;
       font-weight: 400;
-      color: #7dc041;
-      text-transform: uppercase; }
-  .promo-item:hover {
-    opacity: .8; }
+      color: #51636d;
+      text-align: center; }
+      .login-page .error-message p.title {
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #e94551; }
+      .login-page .error-message p a {
+        color: #51636d;
+        text-decoration: underline; }
+        .login-page .error-message p a:hover {
+          text-decoration: none; }
+  .login-page .links {
+    margin: 20px 0;
+    padding: 0;
+    overflow: hidden; }
+    .login-page .links .left {
+      float: left; }
+    .login-page .links .right {
+      float: right; }
+    .login-page .links .item {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1em;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      -webkit-transition: color .2s ease;
+      transition: color .2s ease; }
+      .login-page .links .item:hover {
+        color: white; }
+  .login-page .g-recaptcha > div {
+    margin: 0 auto; }
+  .login-page iframe {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border .2s ease; }
+  .login-page .error iframe {
+    border-color: #e35760; }
+  .login-page .g-recaptcha {
+    margin: 0 auto; }
+    .login-page .g-recaptcha div {
+      margin: 0 auto; }
 
 .footer-margin {
   height: 380px; }

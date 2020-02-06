@@ -127,7 +127,8 @@ function watch() {
     browserSync.init({
         server: {
             baseDir: './dist/'
-        }
+        },
+        https: true
     });
 
     gulp.watch('./app/scss/**/*.scss', sassConvert);
