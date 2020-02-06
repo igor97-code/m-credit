@@ -1,0 +1,18 @@
+.iphone {
+    position: relative;
+    display: block;
+    width: 343px;
+    background: url(../img/zaim-iphone.png) no-repeat center;
+    overflow: hidden;
+    &:before{
+        content:" ";
+        display: block;
+        float: left;
+        margin: 0;
+        padding-top: 200%;
+    }
+    @include mobile {
+        margin-top: 30px;
+    }
+
+}

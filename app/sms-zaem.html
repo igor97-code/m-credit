@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
         rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="scss/components/iphone-reiting.scss">
 </head>
 
 <body>
@@ -240,7 +241,8 @@
         </div>
 
 
-        <div class="section">
+
+        <div class="section p-t-0 p-b-0">
             <div class="product-card big-head">
                 <div class="container">
                     <div class="head">
@@ -248,14 +250,19 @@
                             <div class="cell">
                                 <div class="row">
                                     <div class="col w-60 w-50-tablet">
-                                        <h1 class="m-t-50 font-weight-bold color-white">Деньги через смс
+                                        <h1 class="m-t-50 m-b-0 font-weight-bold color-white">Деньги через смс
 
                                         </h1>
-                                        <span class="text color-white">
+                                        <span class="text m-t-10 color-white">
                                             для повторных клиентов
 
-
                                         </span>
+                                        <div class="row">
+                                            <div class="button-w-150 ">
+                                                <a class="button button-small disabled" href = #> Скоро</a>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -265,10 +272,12 @@
                 <span class="product-bg bg-16"></span>
             </div>
         </div>
-        <div class="section">
+        <div class="section gray">
             <div class="container">
+                <h1 class="text-align-center ">Получайте деньги за несколько минут,<br> просто отправив SMS</h1>
                 <div class="infographic">
                     <div class="row">
+
                         <div class="col w-33 w-33-tablet">
                             <div class="item ">
                                 <div class="icon"><i class="icon-girl"></i></div>
@@ -297,17 +306,39 @@
             </div>
         </div>
 
-        <div class="section gray">
+        <div class="section">
             <div class="container">
-                <div class="seo-content">
-                    <p class="h1">Как получить деньги через смс</p>
-                    <p>Мы ценим долгосрочные отношения с нашими клиентами и стремимся к предоставлению максимально
-                        качественного сервиса. Для клиентов, своевременно погасивших задолженность по займу, мы
-                        предлагаем
-                        особые условия: заем обходится дешевле, а сумма займа больше.</p>
-                    <p>Наличие специальных предложений уточняйте в Вашем личном кабинете или у Вашего Финансового
-                        консультанта.</p>
-                </div>
+
+               <div class="row">
+                   <div class="col w-50">
+                       <div class="iphone">
+                       </div>
+                   </div>
+                   <div class="col w-50 m-t-10">
+                       <div class="h1 m-t-50">
+                           Как получить деньги <br>через СМС
+                       </div>
+                       <div class="h2 medium-text">
+                           Отправьте SMS на номер 5200:
+                           <p class="color-gray medium-text m-t-20">“Получить *сумма* *серия**номер паспорта*”.<br>
+                               Например: “Получить 98000
+                               4509123456” .</p>
+                       </div>
+                       <div class="h2 medium-text">
+                           Отправьте код подтверждения
+                           <p class="color-gray medium-text m-t-20">в ответ на поступившее вам сообщение</p>
+                       </div>
+                       <div class="h2 medium-text">
+                           Подпишите документы по займу
+                           <p class="color-gray medium-text m-t-20">отправив код подтверждения из
+                               ответного смс. Вам поступит информация о переводе, который можно
+                               получить в пунке выдачи CONTACT*.</p>
+                       </div>
+                       <p class="color-gray-opacity medium-text m-t-50">* В настоящее время получение средств
+                           доступно через платежную систему CONTACT</p>
+
+                   </div>
+               </div>
             </div>
         </div>
 
@@ -326,6 +357,62 @@
                         <div class="faq-q">
                             <p class="faq-q-title h3 font-weight-bold"><a href="#">Я новый клиент и пока ни разу не брал
                                     заем в МигКредит, могу ли я получить «СМС-заем»?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Сколько стоит отправка и получение
+                                СМС на номер 5200?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Почему мне не приходит смс с
+                                номера 5200?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Что делать, если у меня не
+                                отправляется смс на номер 5200?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Что делать, если я неправильно
+                                написал код в смс?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Что делать, если меня не устраивает
+                                одобренная сумма?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Я правда могу оформить заем,
+                                отправив только смс? Где ознакомиться с условиями договора?</a></p>
+                            <div class="faq-q-desc">
+                                <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
+                                    МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>
+                            </div>
+                        </div>
+                        <div class="faq-q">
+                            <p class="faq-q-title h3 font-weight-bold"><a href="#">Где я могу посмотреть подписанные
+                                документы?</a></p>
                             <div class="faq-q-desc">
                                 <p>К сожалению, нет. В настоящий момент услуга доступна только для повторных клиентов
                                     МигКредит. Но вы можете оставить <a href="/dengi3/">заявку на сайте</a></p>

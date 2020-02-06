@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./img/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./img/icons/safari-pinned-tab.svg" color="#7dc041" />
+    <meta name="msapplication-TileColor" content="#7dc041" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>МигКредит</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="scss/components/credit-rating.scss">
+</head>
+
+<body>
+<div id="page_preloader"
+     style="display:block; position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #fff url('./img/load.gif') center center no-repeat;">
+</div>
+<!-- header -->
+<div class="header">
+    <div class="container">
+        <div class="header-left">
+            <div class="header-col for-logo no-border">
+                <div class="table-block">
+                    <div class="cell">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-col header-info no-border">
+                <div class="table-block">
+                    <div class="cell">
+                        <p class="title">Лидер рынка</p>
+                        <p class="remark">микрофинансовых организаций</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-right hide-mobile">
+            <div class="header-col">
+                <div class="table-block">
+                    <div class="cell">
+                        <a href="#" class="button button-small button-inline button-shadow m-t-0 m-b-0">Личный
+                            кабинет</a>
+                        <a target="_blank"
+                           href="https://redirect.appmetrica.yandex.com/serve/97954365435880689?source=migcreditapp.ru&position_type=bannertop&device_type=IOS&utm_source=type_in&wmid=type_in"
+                           class="button button-small button-inline button-app m-t-0 m-b-0 m-r-0"><img
+                                src="./img/icon-appstore.svg" /></a>
+                        <a target="_blank"
+                           href="https://redirect.appmetrica.yandex.com/serve/962635509836908002?source=migcreditapp.ru&position_type=bannertop&device_type=Android&utm_source=type_in&wmid=type_in"
+                           class="button button-small button-inline button-app m-t-0 m-b-0 m-l-0 m-r-0"><img
+                                src="./img/icon-googleplay.svg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- главное меню -->
+<div id="main_menu" class="main-menu">
+    <div class="container">
+        <!-- ЗАЙМЫ Продукты Как получить Как погасить Кредитный рейтинг Инвестиции Услуги -->
+        <ul class="main-menu-content">
+            <li>
+                <a href="#" class="menu-link">Займы</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#" class="submenu-link">Займы онлайн</a></li>
+                        <li><a href="#" class="submenu-link">Бизнес кредит</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/#products" class="menu-link ">Продукты</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#/kredit-pod-pts/" class="submenu-link">Займы под ПТС</a></li>
+                        <li><a href="#/lukoil/" class="submenu-link">Виртуальный лимит на АЗС "Лукойл"</a></li>
+                        <li><a href="#/avtokreditovanie/" class="submenu-link">Автокредитование</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/get/" class="menu-link ">Как получить</a>
+                <div class="submenu">
+                    <ul>
+                        <li><a href="#/get/#type_credit" class="submenu-link">Виды займов</a></li>
+                        <li><a href="#/get/#require" class="submenu-link">Требования к заемщикам</a></li>
+                        <li><a href="#/get/#type_loan" class="submenu-link">Способы оформления займа</a></li>
+                        <li><a href="#/get/#type_get" class="submenu-link">Способы получения денег</a></li>
+                        <li><a href="#/get/#your_safety" class="submenu-link">Ваша безопасность</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a href="#/pogashenie-zayma/" class="menu-link ">Как погасить</a>
+                <div class="submenu">
+                    <ul>
+                        <li>
+                            <a href="#/pogashenie-zayma/bankovskaya-karta/" class="submenu-link">Банковская
+                                карта</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/svyaznoy/" class="submenu-link">Связной</a></li>
+                        <li>
+                            <a href="#/pogashenie-zayma/mkb/" class="submenu-link">Московский кредитный банк</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/cyberplat/" class="submenu-link">Cyberplat</a></li>
+                        <li><a href="#/pogashenie-zayma/eleksnet/" class="submenu-link">Элекснет</a></li>
+                        <li><a href="#/pogashenie-zayma/qiwi/" class="submenu-link">Qiwi</a></li>
+                        <li>
+                            <a href="#/pogashenie-zayma/zolotaya-korona/" class="submenu-link">Золотая корона</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/contact/" class="submenu-link">Contact</a></li>
+                        <li>
+                            <a href="#/pogashenie-zayma/mobilniy-telefon/" class="submenu-link">Мобильный
+                                телефон</a>
+                        </li>
+                        <li>
+                            <a href="#/pogashenie-zayma/bankovskiy-perevod/" class="submenu-link">Со счета в
+                                банке</a>
+                        </li>
+                        <li><a href="#/pogashenie-zayma/evroplat/" class="submenu-link">Европлат</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                <a href="#/migapp/" class="menu-link ">Мобильное приложение</a>
+            </li>
+
+            <li>
+                <a href="#/dlya-investora/" class="menu-link ">Инвестиции</a>
+            </li>
+
+            <li>
+                <a href="#/uslugi/" class="menu-link ">Услуги</a>
+                <div class="submenu right">
+                    <ul>
+                        <li><a href="#/uslugi/lichnyy-advokat/" class="submenu-link">Личный адвокат</a></li>
+                        <li><a href="#/uslugi/teledoctor/" class="submenu-link">Теледоктор</a></li>
+                        <li>
+                            <a href="#/uslugi/pensionnoe-strakhovanie/" class="submenu-link">Пенсионное
+                                страхование</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="burger">
+                <i class="icon icon-menu-button"></i>
+                <div class="submenu fullwidth">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/about/" class="submenu-link big">О компании</a></li>
+                                    <li><a href="#/about/litsenzii/" class="submenu-link">Документы</a></li>
+                                    <li><a href="#/contacts/" class="submenu-link">Контакты</a></li>
+                                    <li><a href="#/about/komanda/" class="submenu-link">Команда</a></li>
+                                    <li><a href="#/karera/" class="submenu-link">Карьера</a></li>
+                                    <li>
+                                        <a href="#/about/otzyvy-klientov/" class="submenu-link">Отзывы клиентов</a>
+                                    </li>
+                                    <li><a href="#/regiony/" class="submenu-link">Регионы</a></li>
+                                    <li><a href="#/ofisy/" class="submenu-link">Офисы</a></li>
+                                    <li>
+                                        <a href="#/about/raskrytie-informacii/" class="submenu-link">Раскрытие
+                                            информации</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/news/" class="submenu-link big">Пресс-центр</a></li>
+                                    <li><a href="#/news/" class="submenu-link">Новости</a></li>
+                                    <li><a href="#/press/" class="submenu-link">Пресса о нас</a></li>
+                                    <li><a href="#/expert/" class="submenu-link">Комментарии экспертов</a></li>
+                                    <li><a href="#/articles/" class="submenu-link">Статьи</a></li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li>
+                                        <a href="#/privilegii-klientam/privilegii-klientam/"
+                                           class="submenu-link big">Акции</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/privilegii-klientam/privilegii-klientam/"
+                                           class="submenu-link">Привилегии клиентам</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/privilegii-klientam/aktsii-i-konkursy/"
+                                           class="submenu-link">Акции и конкурсы</a>
+                                    </li>
+                                    <li>
+                                        <a href="#/privilegii-klientam/privedi-druga/" class="submenu-link">Приведи
+                                            друга</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col w-25">
+                                <ul>
+                                    <li><a href="#/migagent/" class="submenu-link big">МигАгент</a></li>
+                                    <li>
+                                        <a href="#/partnerskaya-programma/" class="submenu-link big">Партнерская
+                                            программа</a>
+                                    </li>
+                                    <li><a href="#/faq/" class="submenu-link big">Вопросы и ответы</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- основной контент -->
+<div class="body">
+    <div class="header-margin"></div>
+    <div class="main-menu-margin"></div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <a href="#" class="item">Главная <i class="icon icon-right1"></i></a>
+            <a href="#" class="item active">Смс заем</a>
+        </div>
+    </div>
+    <div class="section p-all-0">
+        <div class="product-card big-head">
+            <div class="container">
+                <div class="head">
+                    <div class="table-block">
+                        <div class="cell">
+                            <div class="row">
+                                <div class="col w-60">
+                                    <div class="slogan small mt10">
+                                        <h1><strong>Отказали в займе? <br>Проверьте свой рейтинг!</strong></h1>
+                                    </div>
+                                    <p class="center big m-t-30"><span class="green">Кредитный рейтинг</span> - данные
+                                        обо всех кредитах и
+                                        платежной<br> дисциплине клиента</p>
+
+                                        <a class="button button-w-150  yellow" href = "/rating/"> Узнать
+                                            рейтинг</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="product-bg bg-19">
+            </span>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="h1 text-align-center">
+                Узнайте ваш рейтинг <span class="color-main">бесплатно<span>!
+            </div>
+            <div class="infographic">
+                <div class="row">
+
+                    <div class="col w-33 w-33-tablet">
+                        <div class="item ">
+                            <div class="icon"><i class="icon-mobile"></i></div>
+                            <div class="text">Не требуется
+                                подключение к интернету</div>
+                        </div>
+                    </div>
+                    <div class="col w-33 w-33-tablet">
+                        <div class="item ">
+                            <div class="icon"><i class="icon-mail"></i></div>
+                            <div class="text">Не нужно
+                                заполнять анкету
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col w-33 w-33-tablet">
+                        <div class="item ">
+                            <div class="icon"><i class="icon-result"></i></div>
+                            <div class="text">В любом месте
+                                и в любое время</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col w-60">
+                    <h2>Хорошая кредитная история – залог того,<br> что вы получите кредит тогда,
+                        когда это <br> будет необходимо! Не стоит<br> недооценивать ее важность</h2>
+                    <p class="color-gray medium-text">По законам РФ каждый банк или микрофинансовая компания, в которую
+                        обращается клиент,
+                        передает
+                        информацию в бюро кредитных<br> историй (БКИ). БКИ занимаются тем, что накапливают и хранят
+                        всю<br>
+                        информацию о заемщиках.
+                        Кредитные организации обращаются в БКИ,<br> чтобы узнать информацию о потенциальном
+                        заемщике (если у них есть<br> письменное согласие).
+                    </p>
+                </div>
+                <div class="col w-40">
+                    <div class="graphic">
+                        <!--                        <div class="logo"></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section gray">
+        <div class="container">
+            <p class="h2 text-align-center"> Почти все кредитные истории хранятся в четырех крупнейших БКИ.</p>
+            <div class="press">
+                <div class="row">
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item-100size shadow-block" style="background: url(img/bki/bki1.png)"></div>
+                    </div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item-100size shadow-block" style="background: url(img/bki/bki2.png)"></div>
+                    </div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item-100size shadow-block" style="background: url(img/bki/bki3.png)"></div>
+                    </div>
+                    <div class="col w-25 w-50-mobile">
+                        <div class="item-100size shadow-block" style="background: url(img/bki/bki4.png)"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+
+            <div class="row">
+                <div class="col w-50">
+                    <div class="rating-phone">
+
+                    </div>
+                </div>
+                <div class="col w-50 m-t-10 rating">
+                    <p class="big-text m-t-30 p-smoll">
+                        <strong>МигКредит дает возможность проверить кредитный рейтинг бесплатно!</strong>
+                    </p>
+                    <p class="color-gray medium-text m-t-20">Большинство банков и МФО предлагают проверить
+                        кредитный рейтинг за деньги, а ответ иногда нужно ждать не менее суток. В МигКредите проверка
+                        проходит онлайн в течение пяти минут, и она абсолютно бесплатна. Мы не берем комиссию за
+                        спокойствие наших клиентов!
+                    </p>
+                    <p class="big-text m-t-30 small">
+                        Благодаря кредитному рейтингу МигКредита вы узнаете:
+                    </p>
+                    <ul>
+                        <li class="num1">Причины, влияющие на снижение Вашего личного Кредитного рейтинга</li>
+                        <li class="num2">Есть ли у вас действующие задолженности?</li>
+                        <li class="num3 ">Какова вероятность получить кредит в банке и МФО?</li>
+                    </ul>
+                    <a class="button button-w-150  yellow" href = "/rating/"> Узнать
+                        рейтинг</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="faq">
+                <div class="faq-list m-t-40">
+                    <div class="faq-q">
+                        <p class="faq-q-title h3 font-weight-bold"><a href="#">Через какие сотовые операторы можно
+                            получить смс-заем?</a></p>
+                        <div class="faq-q-desc">
+                            <p>МТС, Билайн, Теле2, Мегафон</p>
+                        </div>
+                    </div>
+                    <div class="faq-q">
+                        <p class="faq-q-title h3 font-weight-bold"><a href="#">Чем кредитная история отличается
+                            от кредитного рейтинга?</a></p>
+                        <div class="faq-q-desc">
+                            <p><span class="green">Кредитная история</span> - это часть кредитного рейтинга.
+                                Она включает в себя информацию о том, сколько кредитов вы оформляли и по скольким
+                                из них была просрочка.</p>
+                            <p>Кредитный рейтинг</span> также дает информацию о кредитной истории, но помимо этого он
+                            позволяет рассчитать, каковы ваши шансы получить кредит с такой историей. То есть, кредитная
+                            история - это информация, а кредитный рейтинг - это расширенная форма кредитной истории и ее
+                            практическая значимость для вас как клиента.</p>
+                        </div>
+                    </div>
+                    <div class="faq-q">
+                        <p class="faq-q-title h3 font-weight-bold"><a href="#">Как улучшить кредитную историю?</a></p>
+                        <div class="faq-q-desc">
+                            <p>Внести изменения, если данные некорректны</p>
+                            <p>Оформить заем и выплатить его без просрочек</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section gray m-t-30"">
+        <div class="container">
+            <h1 class="text-align-center  m-b-50">Если кредитная история отсутствует, начните <br>формировать ее прямо
+                сейчас</h1>
+        </div>
+    </div>
+    <div class="section p-t-0">
+        <div class="container">
+            <form class="calculator inner load m-t--60" data-calculator method="POST" action="/dengi3/">
+                <div class="shadow-block">
+                    <div class="row">
+                        <div class="col w-33">
+                            <div class="calculator-item">
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="big-label">Требуемая сумма</p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="big"><nobr><span data-sum>69 000</span> ₽</nobr></p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="calculator-slider">
+                                    <div data-sum_slider></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-33">
+                            <div class="calculator-item center">
+                                <div class="calculator-row">
+                                    <div class="left">
+                                        <p class="big-label">На срок</p>
+                                    </div>
+                                    <div class="right">
+                                        <p class="big"><nobr><span data-term>24</span> <span data-term_label>недели</span></nobr></p>
+                                    </div>
+                                    <div class="clr"></div>
+                                </div>
+                                <div class="calculator-slider">
+                                    <div data-term_slider></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-33">
+                            <input type="hidden" name="calc_period_type" data-term_type value="week">
+                            <button type="submit" class="button button-medium button-form uppercase">Получить
+                                деньги</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-item result shadow-block">
+                    <div class="row">
+                        <div class="col w-50 after-divider">
+                            <div class="calculator-row min-margin">
+                                <div class="row">
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="right">
+                                            <p class="medium-label color-gray"><span data-result_sum_label>Платеж раз в 2 недели</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="left">
+                                            <p class="medium"><nobr><span data-result_sum>44 000</span> ₽</nobr></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col w-50">
+                            <div class="calculator-row min-margin">
+                                <div class="row">
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="right">
+                                            <p class="medium-label color-gray">До (включительно)</p>
+                                        </div>
+                                    </div>
+                                    <div class="col w-50 w-50-mobile">
+                                        <div class="left">
+                                            <p class="medium"><span data-result_deadline>27 декабря 2019</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="section p-b-0">
+        <div class="container">
+            <p class="color-gray medium-text lh">  Возлагали большие надежды на займ, а вам отказали? Вы в панике и не
+                знаете, что
+                делать?
+                Первое, что нужно сделать – проверить персональный кредитный рейтинг. Речь идет о том,
+                как исправно вы гасили прошлые займы, имеются ли у вас задолженности и незакрытые кредиты.
+            </p>
+            <div class="col w-50 m-t-10 rating">
+                <h3>
+                    Также это действие необходимо выполнить, если:
+                </h3>
+                <ul>
+                    <li class="check">Причины, влияющие на снижение Вашего личного Кредитного рейтинга</li>
+                    <li class="check">Есть ли у вас действующие задолженности?</li>
+                    <li class="check">Какова вероятность получить кредит в банке и МФО?</li>
+                </ul>
+                <p class="medium-text color-gray">Узнайте прямо сейчас свой кредитный рейтинг бесплатно онлайн!</p>
+
+                <h2 class="m-t-50">
+                    Как получить кредитный рейтинг на сайте «МигКредит»?
+                </h2>
+                <ul>
+                    <li class="check">Оставьте заявку, заполнив специальную форму.</li>
+                    <li class="check">Подождите ответ не более пяти минут.</li>
+                    <li class="check">Ознакомьтесь со своим рейтингом бесплатно.</li>
+                </ul>
+                <p class="medium-text color-gray m-t-40 lh"> Брали займ в банке хотя бы раз? Значит, у вас есть
+                    персональная кредитная история. Все кредитные истории хранятся в специальных бюро (БКИ).
+                    Детальная информация к ним поступает из финансовых организаций, которые выдают населению
+                    деньги взаймы под проценты. Таким образом, в БКИ хранится кредитная история о каждом заемщике.
+                    Перед тем как выдать кредит, банк или МФО обращаются в бюро и узнают, насколько платежеспособен
+                    и ответственен тот или иной потенциальный заемщик.
+                </p>
+                <p class="medium-text color-gray m-t-30 lh">
+                    Как видим, иметь хорошую кредитную историю очень важно. В этом случае вы можете взять займ
+                    в любое нужное для вас время и в любой финансовой организации.
+                </p>
+                <h3 class="m-t-50">
+                    На данный момент в РФ работает четыре самых крупных бюро кредитных историй:
+                </h3>
+                <ul>
+                    <li class="check">ООО «Эквифакс Кредит Сервисиз».</li>
+                    <li class="check">ООО «Кредитное бюро Русский Стандарт».</li>
+                    <li class="check">АО «Национальное бюро кредитных историй».</li>
+                    <li class="check">ЗАО «Объединенное Кредитное Бюро».</li>
+
+                </ul>
+                <h2 class="m-t-50">
+                    Проверьте свой рейтинг бесплатно за пару минут на «МигКредит»
+                </h2>
+                <p class="medium-text color-gray m-t-30 lh">
+                    Многие банки и мелкие финансовые фирмы зачастую предлагают узнать свой рейтинг на платной
+                    основе, при этом ждать ответа приходится не менее суток. «МигКредит» предоставляет возможность
+                    изучить свой кредитный рейтинг онлайн и бесплатно.
+                </p>
+                <h3 class="m-t-50">
+                    Что именно вы узнаете из своей кредитной истории
+                </h3>
+                <ul>
+                    <li class="check">Оставьте заявку, заполнив специальную форму.</li>
+                    <li class="check">Подождите ответ не более пяти минут.</li>
+                    <li class="check">Ознакомьтесь со своим рейтингом бесплатно.</li>
+                </ul>
+                <h2 class="m-t-50">
+                    Есть ли разница между кредитной историей и кредитным рейтингом?
+                </h2>
+                <p class="medium-text color-gray m-t-20 lh">
+                    Кредитная история – это составляющая рейтинга. Именно из истории вы узнаете точное количество
+                    выданных вам займов, а также наличие или отсутствие просрочки. Кредитный рейтинг мигкредит
+                    предоставляет больше информации, чем история. Он позволяет рассчитать, каковы шансы получить
+                    необходимую вам сумму в банке или МФО на интересующий вас момент. Другими словами, рейтинг это
+                    максимально расширенная форма кредитной истории.
+                </p>
+                <p class="medium-text color-gray m-t-20 lh">
+                    На сайте «МигКредит» вы можете прямо сейчас
+                    посмотреть, как выглядит персональный рейтинг, после чего подать заявку на расчет своего. Он
+                    может быть отличный, хороший, удовлетворительный, плохой и очень плохой.
+                </p>
+                <h3 class="m-t-50">
+                    Негативные моменты, влияющие на рейтинг
+                </h3>
+                <p class="medium-text color-gray m-t-10 lh">
+                    Здесь стоит выделить несколько значимых моментов:
+                </p>
+                <ul>
+                    <li class="check">одна значимая просрочка платежа на 90 дней и больше;</li>
+                    <li class="check">имеется сразу несколько просрочек от 1 до 30 дней;</li>
+                    <li class="check">займ не погашен или закрыт по судебному решению.</li>
+                </ul>
+                <h3 class="m-t-50">
+                    Можно ли улучшить кредитную историю и как?
+                </h3>
+                <ul>
+                    <li class="check">Изменить данные, если они были внесены неправильно или некорректно.</li>
+                    <li class="check">Оформить кредит и погасить его вовремя.</li>
+                </ul>
+                <p class="medium-text color-gray m-t-10 lh">
+                    Если у вас еще нет кредитной истории, приступите к ее созданию прямо сейчас!
+                </p>
+
+                <p class="small-text color-gray m-t-50 text-align-center">*Согласно исследованию РА «Эксперт», компания
+                    МигКредит является
+                    лидером Российского рынка среди МФО по обьему портфеля.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-margin">
+    </div>
+</div>
+    <margin>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col w-25">
+                    <span class="logo hide-mobile"></span>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88007000908" class="tel">8 800 7000 908</a>
+                    <p class="small-text">Действующим клиентам</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:88001000609" class="tel">8 800 100 06 09</a>
+                    <p class="small-text">По вопросам оформления заявки</p>
+                </div>
+                <div class="col w-25">
+                    <a href="tel:+74957857263" class="tel">+7 (495) 785 72 63</a>
+                    <p class="small-text">Телефон в Москве. С 08:00 до 21:00 МСК</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Микрокредиты</a></li>
+                        <li><a class="link" href="#">Микрозаймы</a></li>
+                        <li><a class="link" href="#">Деньги онлайн</a></li>
+                        <li><a class="link" href="#">Автокредитование</a></li>
+                        <li><a class="link" href="#">Карта Лукойл</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Продукты</a></li>
+                        <li><a class="link" href="#">Погашение займа</a></li>
+                        <li><a class="link" href="#">Услуги</a></li>
+                        <li><a class="link" href="#">Акции</a></li>
+                        <li><a class="link" href="#">Инвестиции</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25 hide-mobile">
+                    <ul>
+                        <li><a class="link" href="#">Партнерская программа</a></li>
+                        <li><a class="link" href="#">Карьера</a></li>
+                        <li><a class="link" href="#">Статьи</a></li>
+                        <li><a class="link" href="#">Карта сайта</a></li>
+                        <li><a class="link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col w-25">
+                    <div class="apps">
+                        <a href="#" class="app-link" style="background: url(img/button-appstore-dark.svg)"></a>
+                        <a href="#" class="app-link" style="background: url(img/button-googleplay-dark.svg)"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="social-link" style="background: url(img/vk.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/facebook.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/ok.svg)"></a>
+                        <a href="#" class="social-link" style="background: url(img/instagram.svg)"></a>
+                    </div>
+                </div>
+            </div>
+            <span class="comodo hide-desktop" style="background: url(img/comodo-white.svg)"></span>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col w-33 w-50-mobile">
+                        <p>© 2019, МигКредит</p>
+                    </div>
+                    <div class="col w-33 hide-mobile">
+                        <span class="comodo" style="background: url(img/comodo-red.svg)"></span>
+                    </div>
+                    <div class="col w-33 w-50-mobile">
+                        <a href="#" class="intertenlab"><i class="icon icon-logolabb"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

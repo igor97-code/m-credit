@@ -1,17 +1,17 @@
 .press {
     .item {
-        background-color: $colorWhite !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        padding-bottom: 35%;
-        margin: 10px 0;
-        cursor: pointer;
+         background-color: $colorWhite !important;
+         background-repeat: no-repeat !important;
+         background-position: center !important;
+         padding-bottom: 35%;
+         margin: 10px 0;
+         cursor: pointer;
 
-        @include mobile {
-            margin: 5px 0;
-            background-size: 60% !important;
-        }
-    }
+         @include mobile {
+             margin: 5px 0;
+             background-size: 60% !important;
+         }
+     }
     .press-item {
         border-top: 1px solid $colorBorder;
         padding: 20px 0;

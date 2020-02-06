@@ -100,6 +100,125 @@
 
 // Авторизация
 @import './components/login';
+// iphone
+@import './components/iphone';
+// eclipse/kreditnyy-reiting
+@import './components/credit-rating-images';
+// Вопросы и ответы
+.question-list {
+    display: block;
+    margin: 20px 0;
+    padding: 1px 0;
+
+    .group {
+        display: block;
+        margin: 30px 0 0 0;
+        padding: 1px 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .question {
+        position: relative;
+        z-index: 3;
+        margin: 0 0 0 1px;
+        padding: 0;
+        border-top: 1px dotted $colorBorder;
+
+        &.active {
+            .arrow {
+                transform: rotate(-180deg);
+            }
+            .answer {
+                display: block;
+            }
+        }
+    }
+
+    .question-title {
+        position: relative;
+        margin: 0;
+        padding: 15px 90px 15px 0;
+        font-size: 20px;
+        line-height: 1.2em;
+        font-weight: 400;
+        color: $colorText;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    .arrow {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 50%;
+        margin: -6px 0 0 0;
+        font-size: 12px;
+        color: $colorGray;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5em;
+        color: $colorText;
+
+        &.theme {
+            color: $colorMain;
+            font-size: 20px;
+            line-height: 1.2em;
+            font-weight: 400;
+        }
+    }
+
+
+}
+// END Вопросы и ответы
+
+
+// Акции и конкурсы
+.promo-item {
+    display: block;
+    margin: 20px 0;
+    padding: 1px 0;
+    text-decoration: none;
+    transition: opacity .2s ease;
+
+    *:first-child {
+        margin-top: 0;
+    }
+    *:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin: 10px 0;
+        font-size: 16px;
+        line-height: 1.5em;
+        font-weight: 300;
+
+        &.name {
+            font-size: 20px;
+            line-height: 1.2em;
+            font-weight: 400;
+            color: $colorMain;
+            text-transform: uppercase;
+        }
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}
+// END Акции и конкурсы
+
+
+
+
 
 // Footer
 @import './components/footer';
