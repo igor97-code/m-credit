@@ -1,0 +1,44 @@
+.with-preloader-block {
+
+    &:before {
+        content: "";
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -20px 0 0 -20px;
+        width: 40px; height: 40px;
+        background: url('../img/preloaders/spinner-on-white.gif') center center no-repeat;
+        background-size: cover;
+    }
+
+    &.gray {
+        background-image: url('../img/preloaders/spinner-on-gray.gif');
+    }
+    &.gray-light {
+        background-image: url('../img/preloaders/spinner-on-lightgray.gif');
+    }
+    &.green {
+        background-image: url('./img/preloaders/spinner-on-green.gif');
+    }
+    &.yellow {
+        background-image: url('./img/preloaders/spinner-on-yellow.gif');
+    }
+
+    &.load {
+        position: relative;
+        min-height: 300px;
+        max-height: 400px;
+        overflow: hidden;
+
+        * {
+            visibility: hidden;
+            transition: none;
+        }
+
+        &:before {
+            display: block;
+            visibility: visible;
+        }
+    }
+}

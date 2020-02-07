@@ -116,12 +116,12 @@
             overflow: hidden;
 
             &.appstore {
-                background-image: url(../img/button-appstore-white.svg);
+                background-image: url(../../img/button-appstore-white.svg);
             }
 
             &.googleplay {
                 background-position: left;
-                background-image: url(../img/button-googleplay-white.svg);
+                background-image: url(../../img/button-googleplay-white.svg);
             }
 
             &:before {
@@ -157,7 +157,7 @@
         display: block;
         width: 313px;
         height: 313px;
-        background: url(../img/logo.svg) center center/75% no-repeat;
+        background: url(../../img/logo.svg) center center/75% no-repeat;
         background-color: #fff;
         border-radius: 88px;
     }
@@ -214,12 +214,12 @@
 
                 &.appstore {
                     background-position: right;
-                    background-image: url(../img/button-appstore-white.svg);
+                    background-image: url(../../img/button-appstore-white.svg);
                 }
 
                 &.googleplay {
                     background-position: left;
-                    background-image: url(../img/button-googleplay-white.svg);
+                    background-image: url(../../img/button-googleplay-white.svg);
                 }
 
                 &:before {

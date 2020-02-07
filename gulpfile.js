@@ -22,7 +22,6 @@ const JS_FILES = [
     './app/js/libs/*.js',
     './app/js/plugins/*.js',
     './app/js/form.js',
-    './app/js/calculator-test.js',
     './app/js/main.js'
 ];
 

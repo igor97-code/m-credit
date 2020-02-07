@@ -80,7 +80,7 @@
         display: block;
         width: 70px;
         height: 70px;
-        background: url('../img/logo.svg') center center no-repeat;
+        background: url('../../img/logo.svg') center center no-repeat;
         background-size: cover;
         @include mobile {
             width: 40px;

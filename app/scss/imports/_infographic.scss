@@ -152,7 +152,7 @@
                 margin: 0 0 0 -35px;
                 width: 70px;
                 height: 88px;
-                background: url('../img/arrow-infographic.svg') center center no-repeat;
+                background: url('../../img/arrow-infographic.svg') center center no-repeat;
                 background-size: contain;
                 @include only-mobile {
                     left: 0;
@@ -160,7 +160,7 @@
                     margin: 0;
                     width: 60px;
                     height: 29px;
-                    background-image: url('../img/arrow-infographic-mobile.svg');
+                    background-image: url('../../img/arrow-infographic-mobile.svg');
                 }
             }
         }

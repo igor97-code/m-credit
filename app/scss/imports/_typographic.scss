@@ -21,7 +21,9 @@
 .color-gray-opacity{
     color: $colorGrayBorderButton !important;
 }
-
+.color-text {
+    color: $colorText !important;
+}
 
 .section {
     margin: 0;
@@ -116,14 +118,15 @@
     }
 
     a {
-        &.link {
+        &:not(.button) {
             color: $colorLink;
-            &:hover {
-                text-decoration: none;
-            }
         }
 
-        @include mobile {
+        &.link {
+            color: $colorLink;
+        }
+
+        @include desktop {
             &:hover {
                 text-decoration: none;
             }

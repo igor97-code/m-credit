@@ -13,22 +13,22 @@
             border-radius: 6px 6px 0 0;
 
             &.bg-1{
-                background-image: url(../img/services/1.jpg);
+                background-image: url(../../img/services/1.jpg);
             }
             &.bg-2{
-                background-image: url(../img/services/2.jpg);
+                background-image: url(../../img/services/2.jpg);
             }
             &.bg-3{
-                background-image: url(../img/services/3.jpg);
+                background-image: url(../../img/services/3.jpg);
             }
             &.bg-4{
-                background-image: url(../img/services/4.jpg);
+                background-image: url(../../img/services/4.jpg);
             }
             &.bg-5{
-                background-image: url(../img/services/5.jpg);
+                background-image: url(../../img/services/5.jpg);
             }
             &.bg-6{
-                background-image: url(../img/services/6.jpg);
+                background-image: url(../../img/services/6.jpg);
             }
 
             &:before{
@@ -77,13 +77,13 @@
         }
 
         &-1{
-            background-image: url(../img/services/bg-s1.jpg);
+            background-image: url(../../img/services/bg-s1.jpg);
         }
         &-2{
-            background-image: url(../img/services/bg-s2.jpg);
+            background-image: url(../../img/services/bg-s2.jpg);
         }
         &-3{
-            background-image: url(../img/services/bg-s3.jpg);
+            background-image: url(../../img/services/bg-s3.jpg);
         }
     }
 }

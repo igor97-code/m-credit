@@ -1,183 +1,116 @@
-@import './components/variables';
-@import './components/icons';
-@import './components/base';
+@import 'imports/variables';
+@import 'imports/icons';
+@import 'imports/preloaders';
+@import 'imports/base';
+
 
 // хелперы: обнуления отступов и т.п.
-@import './components/helper';
+@import 'imports/helper';
 
 // сетка
-@import './components/grid';
+@import 'imports/grid';
 
 // все инпаты, ползунки и т.п.
-@import './components/forms';
+@import 'imports/forms';
 
 // все кнопки
-@import './components/buttons';
+@import 'imports/buttons';
 
 // все стили для заголовков, текстов и т.п.
-@import './components/typographic';
+@import 'imports/typographic';
 
 // хедер
-@import './components/header';
+@import 'imports/header';
 
 // все меню
-@import './components/menu';
+@import 'imports/menu';
 
 // все слайдеры/swiper
-@import './components/sliders';
+@import 'imports/sliders';
 
 // калькулятор
-@import './components/calculator';
+@import 'imports/calculator';
 
 // инфографика: блоки с иконками и т.п.
-@import './components/infographic';
+@import 'imports/infographic';
 
 // продукты
-@import './components/products';
+@import 'imports/products';
 
 // мобильное приложение
-@import './components/mobile-application';
+@import 'imports/mobile-application';
 
 // кредитный рейтинг
-@import './components/credit-rating';
+@import 'imports/credit-rating';
 
 // новости на главном и страница новости
-@import './components/news';
+@import 'imports/news';
 
 // отзывы на главном
-@import './components/comments';
+@import 'imports/comments';
 
 // пресса о нас на главном и на странице пресса
-@import './components/press';
+@import 'imports/press';
 
 // комментарии экспертов на главноми на странице комментриев экспертов
-@import './components/experts';
+@import 'imports/experts';
 
 // наши достижения на главном
-@import './components/progresses';
+@import 'imports/progresses';
 
 // наши партнеры на главном
-@import './components/partners';
+@import 'imports/partners';
 
 // хлебные крошки
-@import './components/breadcrumbs';
+@import 'imports/breadcrumbs';
 
 // ipad
-@import './components/ipad';
+@import 'imports/ipad';
 
 // Документы
-@import './components/documents';
+@import 'imports/documents';
 
 // Виды займов
-@import './components/loan-types';
+@import 'imports/loan-types';
 
 // Услуги
-@import './components/services';
+@import 'imports/services';
 
 // Статьи
-@import './components/articles.scss';
+@import 'imports/articles';
 
 // МикАгенты
-@import './components/agents.scss';
+@import 'imports/agents';
 
 // Инвестор
-@import './components/investors.scss';
+@import 'imports/investors';
 
 // Привелегии
-@import './components/liberties.scss';
+@import 'imports/liberties';
 
 // О компании
-@import './components/about.scss';
+@import 'imports/about';
 
 // Сеоблоки
-@import './components/seo.scss';
+@import 'imports/seo';
 
 // Вопросы и ответы
-@import './components/faq.scss';
+@import 'imports/faq';
 
 // Вопросы и ответы
-@import './components/mig-app.scss';
+@import 'imports/mig-app';
 
 // Авторизация
-@import './components/login';
+@import 'imports/login';
+
 // iphone
-@import './components/iphone';
+@import 'imports/iphone';
+
 // eclipse/kreditnyy-reiting
-@import './components/credit-rating-images';
-// Вопросы и ответы
-.question-list {
-    display: block;
-    margin: 20px 0;
-    padding: 1px 0;
+@import 'imports/credit-rating-images';
 
-    .group {
-        display: block;
-        margin: 30px 0 0 0;
-        padding: 1px 0;
-
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-
-    .question {
-        position: relative;
-        z-index: 3;
-        margin: 0 0 0 1px;
-        padding: 0;
-        border-top: 1px dotted $colorBorder;
-
-        &.active {
-            .arrow {
-                transform: rotate(-180deg);
-            }
-            .answer {
-                display: block;
-            }
-        }
-    }
-
-    .question-title {
-        position: relative;
-        margin: 0;
-        padding: 15px 90px 15px 0;
-        font-size: 20px;
-        line-height: 1.2em;
-        font-weight: 400;
-        color: $colorText;
-
-        &:hover {
-            opacity: .8;
-        }
-    }
-
-    .arrow {
-        display: block;
-        position: absolute;
-        z-index: 1;
-        right: 0;
-        top: 50%;
-        margin: -6px 0 0 0;
-        font-size: 12px;
-        color: $colorGray;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.5em;
-        color: $colorText;
-
-        &.theme {
-            color: $colorMain;
-            font-size: 20px;
-            line-height: 1.2em;
-            font-weight: 400;
-        }
-    }
-
-
-}
-// END Вопросы и ответы
+// Погашение займа
+@import 'imports/loan_repayment';
 
 
 // Акции и конкурсы
@@ -217,8 +150,5 @@
 // END Акции и конкурсы
 
 
-
-
-
 // Footer
-@import './components/footer';
+@import 'imports/footer';

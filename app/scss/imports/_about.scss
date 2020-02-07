@@ -34,7 +34,7 @@
             width: 75px;
             height: 75px;
             margin: 0 auto;
-            background: url(../img/logo.svg) $colorWhite center center/cover no-repeat;
+            background: url(../../img/logo.svg) $colorWhite center center/cover no-repeat;
             display: block;
             position: relative;
             top: -12px;
@@ -228,7 +228,7 @@
             top: 30px;
 
             span {
-                background: $colorWhite url(../img/about/quote-1.png) center center no-repeat;
+                background: $colorWhite url(../../img/about/quote-1.png) center center no-repeat;
                 width: 23px;
                 height: 16px;
                 display: block;
@@ -247,7 +247,7 @@
             bottom: 30px;
 
             span {
-                background: $colorWhite url(../img/about/quote-2.png) center center no-repeat;
+                background: $colorWhite url(../../img/about/quote-2.png) center center no-repeat;
                 width: 23px;
                 height: 16px;
                 display: block;
@@ -305,7 +305,7 @@
             .logo {
                 width: 62px;
                 height: 62px;
-                background: url(../img/logo.svg) center center/cover no-repeat $colorWhite;
+                background: url(../../img/logo.svg) center center/cover no-repeat $colorWhite;
                 top: -12px;
                 border-radius: 50%;
             }

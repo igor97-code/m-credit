@@ -235,70 +235,110 @@
         <div class="header-margin"></div>
         <div class="main-menu-margin"></div>
 
+        <div class="section gray">
+            <h1 style="display: none;">Погасить займ по номеру договора</h1>
+            <div class="loan-repayment">
+                <div class="form with-preloader-block">
+                    <div class="step" data-step="1">
+                        <div class="top text-align-center">
+                            <p class="big-text color-white m-b-0"><b>Пожалуйста, введите номер договора</b></p>
+                            <p class="text color-white m-t-0">также вы можете ввести ваш номер телефона, код услуги
+                                <br>или EAN карты МигКредит</p>
+                        </div>
 
-        <input type="hidden" id="notzaglushka" value="<? if(isset($_GET['zaglushka']) AND $_GET['zaglushka'] == 'not'){ ?>1<? }else{ ?>0<? }; ?>">
+                        <div class="step-content m-t-40 m-b-40">
+                            <label class="field">
+                                <input type="password" id="dogovor_num" name="dogovor_num"
+                                       data-validate="number_dogovor" data-placeholder="Введите номер"
+                                       data-error_message="Введен некорректный параметр,<br><span class='color-gray'>воспользуйтесь подсказкой внизу</span>"
+                                       value="" maxlength="13" class="input input-text placeholder validate">
+                                <span class="error-message"></span>
+                            </label>
 
-        <div id="login_page" class="section login-page">
-            <div class="container">
-                <form action="#" class="form" method="POST">
-                    <div class="auth-icon color-white">
-                        <i class="icon-user1"></i>
-                    </div>
-                    <p id="caption" class="caption"></p>
-                    <label id="field_phone" class="field">
-                        <input type="tel" id="phone" name="phone" data-validate="mobile_phone"
-                               data-placeholder="Контактный телефон" data-mask_tpl="phone_plus7" data-masktpl="phone"
-                               value="" class="input input-text placeholder  validate input-mask">
-                    </label>
-                    <label id="field_password" class="field">
-                        <input type="password" id="password" name="password" data-validate="required"
-                               data-placeholder="Введите пароль"
-                               value="" class="input input-text placeholder validate">
-                    </label>
-                    <label id="field_recaptcha" class="field" style="display: none">
-                        <div class="g-recaptcha" data-callback="recaptchaValidate"
-                             data-sitekey="6Lc6Ep0UAAAAABqEvpKM1i88vFlsSUTHB_Dk0y_Q"></div>
-                    </label>
-                    <div id="error_message" class="error-message hide"></div>
-                    <button type="submit" id="button_submit" class="button button-big">Войти</button>
-                    <div id="links" class="links">
-                        <div class="row">
-                            <div class="col w-50 w-50-tablet">
-                                <div class="left">
-                                    <p><a href="/lk_access/" class="item" id="link_reg">Зарегистрироваться</a></p>
-                                    <a href="#" class="item hide" id="link_username"></a>
+                            <p class="color-main text-align-center">
+                                <a href="#" class="color-main" id="show_modal_loan_repayment">
+                                    <span class="hint">?</span>Подсказка по заполнению
+                                </a>
+                            </p>
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step-content">
+                            <div class="row">
+                                <div class="col w-50 float-right">
+                                    <button type="submit" class="button">Далее</button>
                                 </div>
-                            </div>
-                            <div class="col w-50 w-50-tablet">
-                                <div class="right">
-                                    <p><a href="#" class="item" id="link_access">Восстановить доступ</a></p>
-                                    <div class="item" id="restore_timer"></div>
+                                <div class="col w-50">
+                                    <a href="/" class="button button-text">Отмена</a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <div class="hide">
-                        <input type="hidden" id="user_phone" value="">
-                        <input type="hidden" id="user_name" value="">
-                        <input type="hidden" id="restore_seconds" value="">
+
+                    <div class="step hide" data-step="2">
+                        <div class="top text-align-center">
+                            <p class="big-text color-white">Пожалуйста, проверьте данные и введите сумму к оплате</p>
+                            <div class="agreement-info text-align-left">
+                                <p class="m-b-10">
+                                    № договора займа или код услуги:
+                                    <span id="dogovor_num_text">
+                                        <!--<?= $loan['contract'] ?>-->
+                                    </span>
+                                </p>
+                                <p class="m-t-10">
+                                    ФИО:
+                                    <span id="dogovor_fio_text">
+                                        <!--<?= $loan['lastname'] ?>****** <?= $loan['name'] ?>
+                                        <?= $loan['patronymic'] ?>-->
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="step-content m-t-30 m-b-30">
+                            <label class="field">
+                                <input type="tel" id="payment_sum" name="payment_sum"
+                                       data-validate="payment_sum" data-placeholder="Сумма к оплате"
+                                       data-min="10" data-max="100000"
+                                       value="" class="input input-text input-money placeholder validate">
+                                <span class="error-message"></span>
+                            </label>
+                            <!-- data-max="<?= number_format($loan['max_sum'], 0, '.', '') ?>" -->
+
+                            <label class="field">
+                                <input type="password" id="email" name="email"
+                                       data-validate="email" data-placeholder="E-mail"
+                                       value="" maxlength="50" class="input input-text placeholder validate">
+                                <span class="error-message"></span>
+                                <p class="small-text">заполните поле если хотите получить подтверждение о платеже по e-mail</p>
+                            </label>
+                            <!-- value="<?= ($loan['email']!=''?$loan['email']:'') ?>" -->
+
+                        </div>
+
+                        <div class="line"></div>
+
+                        <div class="step-content">
+                            <div class="row">
+                                <div class="col w-50 float-right">
+                                    <button type="submit" class="button" id="submit_step2">Далее</button>
+                                </div>
+                                <div class="col w-50">
+                                    <a href="/" class="button button-text goto-step" data-step="1">Отмена</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </form>
-                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+                    <div class="step hide" data-step="final"></div>
+                </div>
             </div>
         </div>
 
-
-    </div>
-
-    <div class="section p-all-0">
-        <div class="container text-align-center seo-content">
-            <div class="asterisk">
-                *Согласно исследованию РА «Эксперт», компания МигКредит является лидером Российского рынка среди
-                МФО по обьему портфеля.
-            </div>
-        </div>
-    </div>
-    <div class="footer-margin"></div>
+        <div class="footer-margin"></div>
     </div>
 
     <!-- footer -->
@@ -382,6 +422,23 @@
     </div>
 
     <script src="./js/script.js"></script>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(16671268, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/16671268" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
 </body>
 
 </html>

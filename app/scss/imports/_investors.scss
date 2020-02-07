@@ -1,7 +1,7 @@
 .investor-head {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../img/investors/bg-invest.png);
+    background-image: url(../../img/investors/bg-invest.png);
 
     @include mobile{
         padding-bottom: 0;
@@ -61,7 +61,7 @@
 
 .investor-form{
     padding-bottom: 180px;
-    background-image: url(../img/investors/form-bg.png);
+    background-image: url(../../img/investors/form-bg.png);
     background-position: bottom center;
     background-repeat: no-repeat;
 

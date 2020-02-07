@@ -43,7 +43,8 @@ function validateField($field) {
 
     var val = jQuery.trim($field.val()),
         plh = $field.data('placeholder'),
-        type = $field.data('validate');
+        type = $field.data('validate'),
+        errorMessage = $field.attr('data-error_message');
 
     switch (type) {
 
@@ -151,8 +152,6 @@ function validateField($field) {
         /*№ договора*/
         case 'number_dogovor':
             //проверка поля
-            val = getClearVal(val);
-
             var firstSymbol = val.substr(0, 1);
             var otherSymbol = val.substr(1, val.length - 1);
 
@@ -168,8 +167,6 @@ function validateField($field) {
         /*№ договора*/
         case 'number_dogovor_empty':
             //проверка поля
-            val = getClearVal(val);
-
             if (val) {
                 var firstSymbol = val.substr(0, 1),
                     otherSymbol = val.substr(1, val.length - 1);
@@ -190,11 +187,23 @@ function validateField($field) {
             //проверка на латиницу/цифры
             if (val.search(regPass) == -1 || !val.match(/[0-9]+/) || !val.match(/[A-Z]+/) || val.length < 8) {
                 error++;
-                errorMessage = 'Не менее 8 знаков, минимум 1 заглавная буква и 1 цифра';
+                message = 'Не менее 8 знаков, минимум 1 заглавная буква и 1 цифра';
             }
 
             break;
+
+        //денежный формат
+        case 'money':
+            val = getMoneyInputValue($field);
+            if (!val || val.search(regNum) === -1) {
+                error++;
+                message = 'Только цифры';
+            }
+            break;
     }
+
+    // еслии задано кастомное сообщение об ошибке - выводим его
+    if (errorMessage) message = errorMessage;
 
     //если поле заполнено не корректно
     //возвращаем 
@@ -372,10 +381,47 @@ function initMask() {
     });
 }
 
+// Дененжный формат
+function initMoneyInput() {
+    $('.input-money').each(function () {
+        var $field = $(this);
+        if ($field.hasClass('mask-ready')) return;
+
+        $field
+            .inputmask({
+                alias: 'numeric',
+                digits: 0,
+                digitsOptional: false,
+                radixPoint: '.',
+                placeholder: '',
+                groupSeparator: ' ',
+                autoGroup: true,
+                min: 0,
+                max: 999999,
+                suffix: ' ₽',
+                allowMinus: false,
+                rightAlign: false,
+                showMaskOnHover: false
+            });
+
+        $field.addClass('mask-ready');
+    });
+
 // очистка значения от спецсимволов(маски ввода)
 function getClearVal(val) {
     var result = val;
     result = result.replace('+7', '');
-    result = result.replace(/[()\_-\s]/g, '');
+    result = result.replace(/[()\_\-\s]/g, '');
     return result;
+}
+
+/**
+ * Получение значения с инпата в денежном формате
+ * @param {HTMLElement} $input - сам инпат
+ * @result {Number} value input
+ */
+function getMoneyInputValue($input) {
+    return +$input.inputmask('unmaskedvalue') || 0;
+
+}
 }

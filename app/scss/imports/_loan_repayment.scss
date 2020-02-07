@@ -1,0 +1,47 @@
+.loan-repayment {
+    margin: 0 auto;
+    max-width: 700px;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.20);
+    border-radius: 5px;
+    overflow: hidden;
+
+    .line {
+        margin: 0;
+        background: $colorBorder;
+        height: 1px;
+    }
+
+    .step-content {
+        max-width: 390px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .hint {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 10px;
+        width: 20px;
+        height: 20px;
+        background: $colorMain;
+        color: #fff;
+        line-height: 20px;
+        border-radius: 50%;
+    }
+
+    .top {
+        margin: 0;
+        padding: 20px;
+        background: $colorMain;
+    }
+
+    .agreement-info {
+        background: #fff;
+        margin: 20px 0;
+        padding: 20px 70px;
+        border: 1px solid #c2c7d0;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.20);
+        border-radius: 5px;
+    }
+}

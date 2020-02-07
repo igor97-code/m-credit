@@ -268,17 +268,9 @@ function resizeModal() {
 function initCalculators() {
     var $calculators = $('[data-calculator]');
     if (!$calculators.length) return;
-
-    // данные калькулятора для расчетов
-    var calculatorData = calculatorTestData;
-    setTimeout(function () {
-        $calculators.each(function () {
-            init($(this));
-        });
-    }, 1500);
-
+    
     $.ajax({
-        url: 'https://migcredit.ru/ajax/calc2.php',
+        url: 'https://test3.migcredit.ru/ajax/calc2.php',
         success: function (data) {
             calculatorData = data;
             $calculators.each(function () {
@@ -293,7 +285,7 @@ function initCalculators() {
             $termLabel = $calculator.find('[data-term_label]'),
             $termMin = $calculator.find('[data-term_min]'),
             $termMinLabel = $calculator.find('[data-term_min_label]'),
-            $termMax = $calculator.find('[data-term_max_label]'),
+            $termMax = $calculator.find('[data-term_max]'),
             $termMaxLabel = $calculator.find('[data-term_max_label]'),
             $sum = $calculator.find('[data-sum]'),
             $sumMin = $calculator.find('[data-sum_min]'),
@@ -394,7 +386,7 @@ function initCalculators() {
                 var termValue = calculatorData.item[sum].data[term].term,
                     termLabel = calculatorData.item[sum].data[term].term_type_ru;
 
-                $term.val(termValue);
+                $term.html(termValue);
                 $termLabel.html(termLabel);
 
                 //переинициализация позунка периода
@@ -1513,6 +1505,7 @@ function initLoginPage() {
 
     // fullscreen();
     initPlaceholders();
+    initMoneyInput();
 
     hidePreloader();
 
@@ -1880,6 +1873,371 @@ function initLoginPage() {
     function hidePreloader() {
         $authPage.removeClass('load');
     }
+}
+
+
+// погашение займа
+initLoanRepayment();
+
+function initLoanRepayment() {
+    var ContractStatus;
+    $(document).ready(function() {
+
+        $('#hint_online .close').on('click', function(){
+            $('#hint_online').hide('fade');
+            $.post('/ajax/hint.php', {
+                'action': 'close'
+            },function (data) {});
+            return false;
+        });
+
+        $('#dogovor_num').on('change', function() {
+            if (!validateForm('number_dogovor','dogovor_num')) {
+                $('#dogovor_num').parent().addClass('error');
+            } else {
+                $('#dogovor_num').parent().removeClass('error');
+            }
+        });
+
+        $('#submit_step1').on('click', function(){
+
+            var error = 0;
+
+            if (!validateForm('number_dogovor','dogovor_num')) {
+                $('#dogovor_num').parent().addClass('error');
+
+                error++;
+            }
+
+            if (error == 0) {
+                $('#form_wrapper').addClass('load');
+                var contract = jQuery.trim($('#dogovor_num').val());
+
+                $.ajax({
+                    url: 'api/pne.getContract',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        'contract': contract
+                    },
+
+                    success: function(data){
+                        if (data.status == 1) {
+                            //переход на шаг2
+                            if (data.loan_status == 0) {
+                                $('#dogovor_num_text').text(data.contract);
+                                $('#dogovor_fio_text').text(data.lastname+' '+data.name+' '+data.patronymic);
+                                $('#dogovor_max_sum').text(data.max_sum.replace('.',','));
+                                $('#form_wrapper').removeClass('load');
+                                ContractStatus = data.ContractStatus;
+                                nextStep('step2');
+                            } else {
+                                $('#form_wrapper').removeClass('load');
+                                nextStep('final', data.loan_status, data.error);
+                            }
+                        } else {
+                            $('#form_wrapper').removeClass('load');
+                            nextStep('final','3');
+                        }
+                    },
+                    error: function(data){
+                        $('#form_wrapper').removeClass('load');
+                        nextStep('final','3');
+                    },
+                    timeout: 120000
+                });
+
+                yaCounter16671268.reachGoal('loan_repayment_screen_1_button');
+            }
+
+
+            return false;
+
+        });
+
+        //возврат к повторному вводу № договора
+        $('body').on('click', '#return_step1', function(){
+            //console.log('click!');
+            $('#form_step1').show();
+            $('#form_step2').hide();
+            $('#form_final').hide();
+            $('#form_wrapper').show();
+            $('#dogovor_num_text').text('');
+            $('#dogovor_fio_text').text('');
+            $('#dogovor_max_sum').text('');
+            $('#dogovor_num').val('').trigger('blur');
+            return false;
+        });
+
+        $('#payment_sum').on('change', function(){
+            var val = $(this).val();
+            val = val.replace(/\s+/g,'');
+            val = val.replace(',','.');
+
+            $(this).val(val);
+
+            if (val.search(/\./) == -1) {
+                if (val == '') {
+                    val = 0;
+                }
+                $(this).val(val+'.00');
+
+            } else {
+                var valArr = val.split('.');
+                var valFloat = valArr[1];
+
+                if (valFloat == '') {
+                    $(this).val(val+'00');
+                }
+                if (valFloat.length*1 == 1) {
+                    $(this).val(val+'0');
+                }
+            }
+
+            if (validateForm('number_float','payment_sum')) {
+                var sum = jQuery.trim($(this).val())*1;
+                if (sum > 100000) {
+                    $('#payment_sum').parent().addClass('error');
+                    $('.error-message.payment_sum').html('Максимальная сумма операции – 100 000 руб.');
+
+                } else if (sum < 10) {
+                    $('#payment_sum').parent().addClass('error');
+                    $('.error-message.payment_sum').html('Минимальная сумма операции - 10 руб.');
+                } else {
+                    $('#payment_sum').parent().removeClass('error');
+                    $('.error-message.payment_sum').html('');
+                }
+            }
+
+        });
+
+        $('#email').on('change', function() {
+            if (!validateForm('email_empty', 'email')) {
+                $('#email').parent().addClass('error');
+                $('.error-message.email').text('Укажите корректный адрес электронной почты');
+
+            } else {
+                $('#payment_sum').parent().removeClass('error');
+                $('.error-message.email').html('');
+            }
+        });
+
+
+        //отправка введенной суммы
+        $('#submit_step2').on('click', function(){
+            if (!$(this).hasClass('disable')) {
+                var error = 0;
+
+                var payment_sum = jQuery.trim($('#payment_sum').val())*1;
+
+                var max_sum = $('#dogovor_max_sum').text().replace(',','.').replace(/\s+/g,'');
+
+                //console.log(!validateForm('number_float','payment_sum')+' ||| '+payment_sum+' > '+max_sum);
+
+                if (!validateForm('number_float','payment_sum') || payment_sum <= 0) {
+                    $('#payment_sum').parent().addClass('error');
+                    $('.error-message.payment_sum').html('Пожалуйста, проверьте введенную сумму');
+                    error++;
+
+                } else if (payment_sum > 100000) {
+                    $('#payment_sum').parent().addClass('error');
+                    $('.error-message.payment_sum').html('Максимальная сумма операции – 100 000 руб.');
+                    error++;
+
+                } else if (payment_sum < 10) {
+                    $('#payment_sum').parent().addClass('error');
+                    $('.error-message.payment_sum').html('Минимальная сумма операции - 10 руб.');
+                    error++;
+                }
+
+
+                if (!validateForm('email_empty', 'email')) {
+                    $('#email').parent().addClass('error');
+                    $('.error-message.email').text('Укажите корректный адрес электронной почты');
+
+                    error++;
+                }
+
+                if (error == 0) {
+                    $('#form_wrapper').addClass('load');
+                    var email = jQuery.trim($('#email').val());
+                    var mobile = jQuery.trim($('#ismobile').text());
+
+                    $.ajax({
+                        url: 'api/pne.sendSum',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            'payment_sum': payment_sum,
+                            'email': email,
+                            'mobile': mobile
+                        },
+
+                        success: function(data){
+                            if (data.status == 1) {
+                                //редирект на ariuspay
+                                if (data.loan_status == 0) {
+                                    window.location.replace(data.url);
+                                } else {
+                                    nextStep('final', data.loan_status, data.error);
+                                    $('#form_wrapper').removeClass('load');
+                                }
+
+                            } else {
+                                nextStep('final','3');
+                                $('#form_wrapper').removeClass('load');
+                            }
+                        },
+                        error: function(data){
+                            $('#form_wrapper').removeClass('load');
+                            nextStep('final','3');
+                        },
+                        timeout: 120000
+                    });
+
+                    yaCounter16671268.reachGoal('loan_repayment_screen_2_button');
+                }
+            }
+
+
+
+
+            return false;
+        });
+
+        //отказ
+        $('#cancel').on('click', function(){
+            $.post('api/pne.clearLoan',{});
+            $('#form_step1').show();
+            $('#form_step2').hide();
+            $('#dogovor_num_text').text('');
+            $('#dogovor_fio_text').text('');
+            $('#dogovor_max_sum').text('');
+            $('#dogovor_num').val('').trigger('blur').parent().removeClass('error');
+            $('#payment_sum').val('').trigger('blur').parent().removeClass('error');
+            $('#email').val('').trigger('blur').parent().removeClass('error');
+
+            return false;
+        });
+
+        // показ/закрытие подсказки
+        $('#show_modal_loan_repayment').on('click', function() {
+            $('#modal_loan_repayment').show();
+            return false;
+        });
+        $('#close_modal_loan_repayment').on('click', function() {
+            $('#modal_loan_repayment').hide();
+            return false;
+        });
+
+
+        //PLACEHOLDERS
+        initPlaceholders();
+
+
+        jQuery(document).on('yacounter16671268inited', function () {
+            if ($('#loan_repayment_final_screen').length) {
+                if ($('#form_final').hasClass('ok')) {
+                    yaCounter16671268.reachGoal('loan_repayment_screen_final');
+                } else if ($('#form_final').hasClass('false')) {
+                    yaCounter16671268.reachGoal('loan_repayment_screen_fail');
+                }
+            }
+        });
+
+
+    });//END READY
+
+
+    function nextStep(step, status, desc) {
+
+        //console.log(step+' '+status);
+
+        switch (step) {
+
+            case 'step2':
+                $('#form_wrapper').removeClass('load');
+                $('#form_step1').hide();
+                $('#form_step2').show();
+                break;
+
+            case 'final':
+
+                //скрываем все шаги формы и удаляем их
+                $('#form_wrapper').hide().removeClass('load');
+
+
+                if (status == '1') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Время ожидания истекло. Пожалуйста, повторите попытку<br /><br /><a id="return_step1" href="#" class="inline">Ввести номер договора или код услуги</a></p>';
+                }
+
+                if (status == '2') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Превышено количество попыток. Проверьте корректность введенных данных или обратитесь в Контактный центр Компании 8-800-7000-908.</p>';
+                }
+
+                if (status == '3') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Сожалеем, возникла техническая ошибка. Попробуйте еще раз<br /><br /><a id="return_step1" href="#" class="inline">Ввести номер договора или код услуги</a></p>';
+                }
+
+                if (status == '4') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Проверьте корректность введенных данных.<br /><br /><a id="return_step1" class="inline" href="#">Ввести номер договора или код услуги</a></p>';
+                }
+
+                if (status == '5') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Пожалуйста, проверьте введенную сумму</p>';
+                }
+
+                if (status == '6') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Сумма превышает максимальный допустимый размер единовременного платежа 75000 руб. Пожалуйста, скорректируйте сумму</p>';
+                }
+
+                if (status == '7') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Сумма превышает Вашу задолженность по кредиту '+$('#dogovor_max_sum').text()+'. Пожалуйста, скорректируйте сумму платежа</p>';
+                }
+
+                if (status == '8') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Обработка операции, ожидайте</p>';
+                }
+
+                if (status == '9') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>Оплата не прошла, воспользуетесь другой картой</p>';
+                }
+
+                if (status == '10') {
+                    var finalClass = 'final-step ok';
+                    var finalMessage = '<p>Оплата прошла успешно, благодарим Вас!</p>';
+                }
+
+                //Ошибка от шины + текст сообщения от шины
+                if (status == '99') {
+                    var finalClass = 'final-step false';
+                    var finalMessage = '<p>'+desc+' <br /><br /><a id="return_step1" class="inline" href="#">Ввести номер договора или код услуги</a></p>';
+                }
+
+
+                $('#form_final').attr('class', finalClass).html(finalMessage).show('fade', 800);
+
+                if (status == '10') {
+                    yaCounter16671268.reachGoal('loan_repayment_screen_final');
+
+                } else {
+                    yaCounter16671268.reachGoal('loan_repayment_screen_fail');
+                }
+
+                break;
+
+        }
+    }
+
 }
 
 

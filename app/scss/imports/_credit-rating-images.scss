@@ -3,7 +3,7 @@
     display: block;
     width: 313px;
     margin:0 auto;
-    background: url(../img/ellipse.png) no-repeat center / cover;
+    background: url(../../img/ellipse.png) no-repeat center / cover;
 
     overflow: hidden;
     &:before{
@@ -23,7 +23,7 @@
     display: block;
     width: 333px;
     margin:0 auto;
-    background: url(../img/credit-rating.png) no-repeat center / cover;
+    background: url(../../img/credit-rating.png) no-repeat center / cover;
 
     overflow: hidden;
     &:before{
@@ -86,7 +86,7 @@
     }
     .check{
         &:before {
-            content: url(../img/cradit-check.png) !important;
+            content: url(../../img/cradit-check.png) !important;
         }
     }
 }
